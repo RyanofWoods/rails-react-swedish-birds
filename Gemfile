@@ -34,6 +34,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
+gem "pundit"
 
 group :development, :test do
   gem 'pry-byebug'
