@@ -4,14 +4,4 @@ class Bird < ApplicationRecord
 
   belongs_to :family
   has_many :observations
-
-  def seen?
-    return nil unless user_signed_in?
-
-    if Observation.find_by(user: current_user, bird: self)
-      true
-    else
-      false
-    end
-  end
 end
