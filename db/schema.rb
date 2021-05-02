@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_144516) do
+ActiveRecord::Schema.define(version: 2021_05_02_080754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2021_05_01_144516) do
     t.index ["order_id"], name: "index_families_on_order_id"
   end
 
+  create_table "observations", force: :cascade do |t|
+    t.bigint "bird_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bird_id"], name: "index_observations_on_bird_id"
+    t.index ["user_id"], name: "index_observations_on_user_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "english_name"
     t.string "swedish_name"
@@ -59,4 +68,6 @@ ActiveRecord::Schema.define(version: 2021_05_01_144516) do
 
   add_foreign_key "birds", "families"
   add_foreign_key "families", "orders"
+  add_foreign_key "observations", "birds"
+  add_foreign_key "observations", "users"
 end
