@@ -40,6 +40,8 @@ class Family extends Component {
       <div className="family-birds-container">
         <h1>{`FamilyName (0/100)`}</h1>
 
+        <a href="/families">Go Back</a>
+
         <ul className="list-group">
           {
             birds.map((bird) => {
