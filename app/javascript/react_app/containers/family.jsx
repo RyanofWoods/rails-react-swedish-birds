@@ -26,11 +26,11 @@ class Family extends Component {
   }
 
   render() {
-    const { birds, totalSeen, totalBirds } = this.props;
+    const { birds, totalSeen, totalBirds, englishName } = this.props;
 
     return (
       <div>
-        <h1>{this.props.match.params.familyName} ({totalSeen}/{totalBirds})</h1>
+        <h1>{englishName} ({totalSeen}/{totalBirds})</h1>
         <a className="mb-3" href="/families">
           Go Back
         </a>
@@ -51,9 +51,12 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    birds: state.selectedFamilyData.birds,
+    scientificName: state.selectedFamilyData.family_scientific_name,
+    englishName: state.selectedFamilyData.family_english_name,
+    swedishName: state.selectedFamilyData.family_swedish_name,
     totalSeen: state.selectedFamilyData.total_seen,
-    totalBirds: state.selectedFamilyData.total_birds
+    totalBirds: state.selectedFamilyData.total_birds,
+    birds: state.selectedFamilyData.birds
   };
 }
 
