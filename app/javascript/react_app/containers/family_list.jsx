@@ -8,10 +8,13 @@ class FamilyList extends Component {
     this.props.fetchFamilies();
   }
 
-  render_family ({ scientific_name, english_name, swedish_name }) {
+  render_family ({ scientific_name, english_name, swedish_name, total_seen, total_birds }) {
     return (
       <a href={`/families/${scientific_name}`} key={scientific_name}>
         <li className="list-group-item">
+          <p className="family-list-item-numbers">
+            ({total_seen}/{total_birds})
+          </p>
           <p>
             {english_name} / {swedish_name}
           </p>
