@@ -7,7 +7,7 @@ import "@fortawesome/fontawesome-free/css/all";
 
 class Family extends Component {
   componentDidMount() {
-    this.props.fetchFamily(this.props.match.params.family_name);
+    this.props.fetchFamily(this.props.match.params.familyName);
   }
 
   render_bird({ scientific_name, english_name, swedish_name, seen }) {
@@ -28,7 +28,7 @@ class Family extends Component {
   render() {
     return (
       <div>
-        <h1>{`FamilyName (0/100)`}</h1>
+        <h1>{`${this.props.match.params.familyName} (0/100)`}</h1>
         <a className="mb-3" href="/families">
           Go Back
         </a>
