@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import "@fortawesome/fontawesome-free/css/all";
 import "./family.scss";
 
@@ -14,28 +15,8 @@ class Family extends Component {
       </li>
     );
   }
-  render() {
-    const birds = [
-      {
-          "scientific_name": "Branta bernicla",
-          "english_name": "Brant Goose",
-          "swedish_name": "Prutgås",
-          "seen": true
-      },
-      {
-          "scientific_name": "Branta ruficollis",
-          "english_name": "Red-breasted Goose",
-          "swedish_name": "Rödhalsad Gås",
-          "seen": false
-      },
-      {
-          "scientific_name": "Branta canadensis",
-          "english_name": "Canada Goose",
-          "swedish_name": "Kanadagås",
-          "seen": false
-      }
-    ]
 
+  render() {
     return (
       <div className="family-birds-container">
         <h1>{`FamilyName (0/100)`}</h1>
@@ -44,7 +25,7 @@ class Family extends Component {
 
         <ul className="list-group">
           {
-            birds.map((bird) => {
+            this.props.birds.map((bird) => {
               return this.render_bird(bird);
             })
           }
@@ -54,4 +35,10 @@ class Family extends Component {
   }
 };
 
-export default Family;
+function mapStateToProps(state) {
+  return {
+    birds: state.selectedFamilyBirds,
+  };
+}
+
+export default connect(mapStateToProps, null)(Family);
