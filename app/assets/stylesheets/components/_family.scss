@@ -9,8 +9,16 @@
 
   li {
     display: flex;
+    position: relative;
     align-items: center;
     margin-bottom: 0.25rem;
+
+    div.progress-indicator {
+      position: absolute;
+      left: 0px;
+      width: 8px;
+      height: 100%;
+    }
 
     i {
       font-size: 24px;
