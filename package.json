@@ -19,6 +19,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

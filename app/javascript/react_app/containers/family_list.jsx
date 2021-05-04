@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchFamilies } from '../actions';
 
 class FamilyList extends Component {
+  componentDidMount() {
+    this.props.fetchFamilies();
+  }
+
   render_family ({ scientific_name, english_name, swedish_name }) {
     return (
       <a href={`/families/${scientific_name}`}>
@@ -11,6 +17,7 @@ class FamilyList extends Component {
       </a>
     );
   }
+
   render() {
     return (
       <ul className="list-group">
@@ -24,10 +31,14 @@ class FamilyList extends Component {
   }
 };
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchFamilies }, dispatch);
+}
+
 function mapStateToProps(state) {
   return {
     families: state.families
   }
 }
 
-export default connect(mapStateToProps, null)(FamilyList);
+export default connect(mapStateToProps, mapDispatchToProps)(FamilyList);
