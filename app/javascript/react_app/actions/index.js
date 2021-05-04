@@ -29,3 +29,25 @@ export function fetchFamily(family) {
     payload: promise,
   };
 }
+
+export function markSeen(birdScientificName) {
+  const url = BASE_URL + `/birds/${birdScientificName}/observations`;
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').attributes.content.value;
+
+  const promise = fetch(url,
+    {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken
+      },
+      credentials: "same-origin"
+    }).then((r) => r.json()
+  );
+
+  return {
+    type: MARK_SEEN,
+    payload: promise,
+  };
+}

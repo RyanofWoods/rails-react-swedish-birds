@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { fetchFamily } from "../actions";
+import { markSeen } from "../actions";
 
 import "@fortawesome/fontawesome-free/css/all";
 
@@ -10,13 +11,22 @@ class Family extends Component {
     this.props.fetchFamily(this.props.match.params.familyName);
   }
 
+  handleClick = (scientific_name) => {
+    this.props.markSeen(scientific_name);
+  };
+
   render_bird({ scientific_name, english_name, swedish_name, seen }) {
     let seenClasses = "far fa-";
-    seenClasses += seen ? "check-square" : "square";
+    seenClasses += seen ? "check-square" : "square pointer";
+
+    let iconProps = {
+      className: seenClasses,
+      ...(!seen && { onClick: () => this.handleClick(scientific_name) }), // add click event only for birds not seen yet
+    };
 
     return (
       <li className="list-group-item" key={scientific_name}>
-        <i className={seenClasses} />
+        <i {...iconProps} />
         <div>
           <p>{english_name}</p>
           <p>{swedish_name}</p>
@@ -30,7 +40,9 @@ class Family extends Component {
 
     return (
       <div>
-        <h1>{englishName} ({totalSeen}/{totalBirds})</h1>
+        <h1>
+          {englishName} ({totalSeen}/{totalBirds})
+        </h1>
         <a className="mb-3" href="/families">
           Go Back
         </a>
@@ -46,7 +58,7 @@ class Family extends Component {
 };
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchFamily }, dispatch);
+  return bindActionCreators({ fetchFamily, markSeen }, dispatch);
 }
 
 function mapStateToProps(state) {

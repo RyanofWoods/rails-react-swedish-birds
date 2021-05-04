@@ -13,6 +13,6 @@ class Api::V1::ObservationsController < Api::V1::BaseController
   private
 
   def set_bird
-    @bird = Bird.find(params[:bird_id])
+    @bird = Bird.find_by(scientific_name: params[:bird_id].capitalize)
   end
 end
