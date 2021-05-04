@@ -14,14 +14,16 @@ import selectedFamilyReducer from './reducers/selected_family_reducer';
 // reducers
 const reducers = combineReducers({
   familiesData: familiesReducer,
-  selectedFamilyBirds: selectedFamilyReducer,
+  selectedFamilyData: selectedFamilyReducer,
 });
 
 const initialState = {
   familiesData: {
     families: []
   },
-  selectedFamilyBirds: []
+  selectedFamilyData: {
+    birds: []
+  }
 };
 
 // root, store and middlewares

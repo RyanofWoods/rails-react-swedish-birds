@@ -46,8 +46,8 @@ function mapStateToProps(state) {
   return {
     families: state.familiesData.families,
     totalFamilies: state.familiesData.total_families,
-    totalBirds: state.familiesData.total_birds,
-    totalSeen: state.familiesData.total_seen
+    totalSeen: state.familiesData.total_seen,
+    totalBirds: state.familiesData.total_birds
   }
 }
 

@@ -1,11 +1,15 @@
 import { FETCH_FAMILY } from '../actions';
 
-const selectedFamilyReducer = (state = [], action) => {
-  console.log(action);
+const selectedFamilyReducer = (state, action) => {
+  if (state === undefined) {
+    return {
+      birds: [],
+    };
+  }
 
   switch (action.type) {
     case FETCH_FAMILY:
-      return action.payload.birds;
+      return action.payload;
     default:
       return state;
   }

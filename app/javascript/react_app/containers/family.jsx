@@ -26,15 +26,17 @@ class Family extends Component {
   }
 
   render() {
+    const { birds, totalSeen, totalBirds } = this.props;
+
     return (
       <div>
-        <h1>{`${this.props.match.params.familyName} (0/100)`}</h1>
+        <h1>{this.props.match.params.familyName} ({totalSeen}/{totalBirds})</h1>
         <a className="mb-3" href="/families">
           Go Back
         </a>
 
         <ul className="list-group">
-          {this.props.birds.map((bird) => {
+          {birds.map((bird) => {
             return this.render_bird(bird);
           })}
         </ul>
@@ -49,7 +51,9 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    birds: state.selectedFamilyBirds,
+    birds: state.selectedFamilyData.birds,
+    totalSeen: state.selectedFamilyData.total_seen,
+    totalBirds: state.selectedFamilyData.total_birds
   };
 }
 
