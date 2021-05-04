@@ -8,9 +8,9 @@ const App = () => {
     <div className="container mt-4">
       <BrowserRouter>
         <Switch>
-          <Route path='/families/:id' component={Family} />
-          <Route path='/' component={FamilyList} />
-          <Route path='/families' component={FamilyList} />
+          <Route path="/families/:family_name" component={Family} />
+          <Route path="/" component={FamilyList} />
+          <Route path="/families" component={FamilyList} />
         </Switch>
       </BrowserRouter>
     </div>

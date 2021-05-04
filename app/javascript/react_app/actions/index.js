@@ -16,3 +16,16 @@ export function fetchFamilies() {
     payload: promise
   }
 }
+
+export function fetchFamily(family) {
+  const url = BASE_URL + `/families/${family}`;
+
+  const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
+    r.json()
+  );
+
+  return {
+    type: FETCH_FAMILY,
+    payload: promise,
+  };
+}

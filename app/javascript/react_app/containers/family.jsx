@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import { fetchFamily } from "../actions";
+
 import "@fortawesome/fontawesome-free/css/all";
 import "./family.scss";
 
 class Family extends Component {
-  render_bird ({ scientific_name, english_name, swedish_name, seen }) {
-    let seenClasses = 'far fa-';
-    seenClasses += seen ? 'check-square' : 'square'
- 
+  componentDidMount() {
+    console.log(this.props.match.params.family_name);
+    this.props.fetchFamily(this.props.match.params.family_name);
+  }
+
+  render_bird({ scientific_name, english_name, swedish_name, seen }) {
+    let seenClasses = "far fa-";
+    seenClasses += seen ? "check-square" : "square";
+
     return (
       <li className="list-group-item" key={scientific_name}>
         <i className={seenClasses} />
-        <p>{english_name} / {swedish_name}</p>
+        <p>
+          {english_name} / {swedish_name}
+        </p>
       </li>
     );
   }
@@ -24,16 +34,18 @@ class Family extends Component {
         <a href="/families">Go Back</a>
 
         <ul className="list-group">
-          {
-            this.props.birds.map((bird) => {
-              return this.render_bird(bird);
-            })
-          }
+          {this.props.birds.map((bird) => {
+            return this.render_bird(bird);
+          })}
         </ul>
       </div>
     );
   }
 };
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchFamily }, dispatch);
+}
 
 function mapStateToProps(state) {
   return {
@@ -41,4 +53,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, null)(Family);
+export default connect(mapStateToProps, mapDispatchToProps)(Family);
