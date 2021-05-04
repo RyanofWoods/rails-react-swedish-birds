@@ -1,0 +1,23 @@
+.container ul.list-group {
+  a:hover, a:hover p, a p {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+
+    i {
+      font-size: 24px;
+      margin: 0 2rem 0 1rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

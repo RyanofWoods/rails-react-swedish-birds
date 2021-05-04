@@ -5,7 +5,7 @@ import Family from '../containers/family';
 
 const App = () => {
   return (
-    <div className="container mt-4">
+    <div className="container my-4">
       <BrowserRouter>
         <Switch>
           <Route path="/families/:family_name" component={Family} />

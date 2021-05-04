@@ -4,11 +4,9 @@ import { bindActionCreators } from "redux";
 import { fetchFamily } from "../actions";
 
 import "@fortawesome/fontawesome-free/css/all";
-import "./family.scss";
 
 class Family extends Component {
   componentDidMount() {
-    console.log(this.props.match.params.family_name);
     this.props.fetchFamily(this.props.match.params.family_name);
   }
 
@@ -19,19 +17,21 @@ class Family extends Component {
     return (
       <li className="list-group-item" key={scientific_name}>
         <i className={seenClasses} />
-        <p>
-          {english_name} / {swedish_name}
-        </p>
+        <div>
+          <p>{english_name}</p>
+          <p>{swedish_name}</p>
+        </div>
       </li>
     );
   }
 
   render() {
     return (
-      <div className="family-birds-container">
+      <div>
         <h1>{`FamilyName (0/100)`}</h1>
-
-        <a href="/families">Go Back</a>
+        <a className="mb-3" href="/families">
+          Go Back
+        </a>
 
         <ul className="list-group">
           {this.props.birds.map((bird) => {
