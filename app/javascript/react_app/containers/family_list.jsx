@@ -56,7 +56,7 @@ class FamilyList extends Component {
 
     return (
       <div>
-        <h1>All {totalFamilies} Swedish families: </h1>
+        <h1>All {totalFamilies} families: </h1>
         <h3 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
         </h3>
