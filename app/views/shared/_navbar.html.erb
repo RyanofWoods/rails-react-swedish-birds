@@ -4,7 +4,7 @@
   <% if user_signed_in? %>
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/RyanofWoods", id: "dropdownMenuLink", class: "avatar ml-auto pointer", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     
-    <ul class="navbar-nav">
+    <ul class="navbar-nav nav-collapse">
       <li class="nav-item dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink" aria-labelledby="navbarDropdown">
         <%# link_to "Settings", "#", class: "dropdown-item" %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-item dropdown-item" %>
@@ -13,7 +13,7 @@
 
   <% else %>
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
       </li>

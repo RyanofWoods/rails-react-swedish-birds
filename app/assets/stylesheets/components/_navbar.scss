@@ -1,12 +1,12 @@
 .navbar-lewagon {
   background: white;
 }
-.navbar-expand-sm .navbar-nav {
+.navbar-expand-sm .nav-collapse {
   width: 100%;
 }
 
 @media (min-width: 576px) {
-  .navbar-expand-sm .navbar-nav {
+  .navbar-expand-sm  .nav-collapse {
     width: 0;
   }
 }
