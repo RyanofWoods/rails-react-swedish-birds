@@ -6,7 +6,7 @@ import { markSeen } from "../actions";
 
 import "@fortawesome/fontawesome-free/css/all";
 
-class Family extends Component {
+class BirdList extends Component {
   componentDidMount() {
     this.props.fetchFamily(this.props.match.params.familyName);
   }
@@ -72,4 +72,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Family);
+export default connect(mapStateToProps, mapDispatchToProps)(BirdList);
