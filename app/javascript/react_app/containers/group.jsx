@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-class Family extends Component {
-
+class Group extends Component {
   render() {
     const { scientific_name, english_name, swedish_name, total_seen, total_birds } = this.props;
   
@@ -28,4 +27,4 @@ class Family extends Component {
   }
 }
 
-export default Family;
+export default Group;

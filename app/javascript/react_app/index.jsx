@@ -8,20 +8,20 @@ import reduxPromise from 'redux-promise';
 
 // internal modules;
 import App from './components/app';
-import familiesReducer from './reducers/families_reducer';
-import selectedFamilyReducer from './reducers/selected_family_reducer';
+import groupsReducer from './reducers/groups_reducer';
+import selectedGroupReducer from './reducers/selected_group_reducer';
 
 // reducers
 const reducers = combineReducers({
-  familiesData: familiesReducer,
-  selectedFamilyData: selectedFamilyReducer,
+  groupsData: groupsReducer,
+  selectedGroupData: selectedGroupReducer,
 });
 
 const initialState = {
-  familiesData: {
+  groupsData: {
     groups: []
   },
-  selectedFamilyData: {
+  selectedGroupData: {
     birds: []
   }
 };
