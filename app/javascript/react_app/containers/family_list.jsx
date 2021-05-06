@@ -71,11 +71,11 @@ class FamilyList extends Component {
   }
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ fetchFamilies }, dispatch);
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     families: state.familiesData.families,
     totalFamilies: state.familiesData.total_families,

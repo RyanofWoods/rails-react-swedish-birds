@@ -31,7 +31,7 @@ class BirdList extends Component {
   }
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     scientificName: state.selectedFamilyData.family_scientific_name,
     englishName: state.selectedFamilyData.family_english_name,
@@ -42,7 +42,7 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ fetchFamily }, dispatch);
 }
 

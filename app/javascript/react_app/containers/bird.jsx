@@ -45,7 +45,7 @@ class Bird extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ markSeen }, dispatch);
 }
 
