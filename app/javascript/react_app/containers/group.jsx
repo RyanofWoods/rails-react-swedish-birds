@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-class Family extends Component {
-
+class Group extends Component {
   render() {
     const { scientific_name, english_name, swedish_name, total_seen, total_birds } = this.props;
   
@@ -11,7 +10,7 @@ class Family extends Component {
     };
 
     return (
-      <a href={`/families/${scientific_name}`}>
+      <a href={`/groups/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
           <div className="progress sighting-progress">
             <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
@@ -28,4 +27,4 @@ class Family extends Component {
   }
 }
 
-export default Family;
+export default Group;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
-import { fetchFamily } from "../actions";
+import { fetchGroup } from "../actions";
 import { HashLink } from "react-router-hash-link";
 import Bird from "./bird";
 
 class BirdList extends Component {
   componentDidMount() {
-    this.props.fetchFamily(this.props.match.params.familyName);
+    this.props.fetchGroup(this.props.match.params.groupName);
   }
 
   render() {
@@ -18,7 +18,7 @@ class BirdList extends Component {
         <h1>
           {englishName} ({totalSeen}/{totalBirds})
         </h1>
-        <HashLink to={`/families#${scientificName}`}>Go Back</HashLink>
+        <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
         <ul className="list-group mt-3">
           {birds.map((birdProps) => {
             return <Bird key={birdProps.scientific_name} {...birdProps} />;
@@ -31,17 +31,17 @@ class BirdList extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    scientificName: state.selectedFamilyData.family_scientific_name,
-    englishName: state.selectedFamilyData.family_english_name,
-    swedishName: state.selectedFamilyData.family_swedish_name,
-    totalSeen: state.selectedFamilyData.total_seen,
-    totalBirds: state.selectedFamilyData.total_birds,
-    birds: state.selectedFamilyData.birds
+    scientificName: state.selectedGroupData.group_scientific_name,
+    englishName: state.selectedGroupData.group_english_name,
+    swedishName: state.selectedGroupData.group_swedish_name,
+    totalSeen: state.selectedGroupData.total_seen,
+    totalBirds: state.selectedGroupData.total_birds,
+    birds: state.selectedGroupData.birds
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ fetchFamily }, dispatch);
+  return bindActionCreators({ fetchGroup }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BirdList);

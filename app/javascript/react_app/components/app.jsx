@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import FamilyList from '../containers/family_list';
+import GroupList from '../containers/group_list';
 import BirdList from '../containers/bird_list';
 
 const App = () => {
@@ -8,9 +8,9 @@ const App = () => {
     <div className="container my-4">
       <BrowserRouter>
         <Switch>
-          <Route path="/families/:familyName" component={BirdList} />
-          <Route path="/" component={FamilyList} />
-          <Route path="/families" component={FamilyList} />
+          <Route path="/groups/:groupName" component={BirdList} />
+          <Route path="/" component={GroupList} />
+          <Route path="/groups" component={GroupList} />
         </Switch>
       </BrowserRouter>
     </div>

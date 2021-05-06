@@ -1,31 +1,31 @@
 const BASE_URL = '/api/v1';
 
 // actions
-export const FETCH_FAMILIES = 'FETCH_FAMILIES';
-export const FETCH_FAMILY = 'FETCH_FAMILY';
+export const FETCH_GROUPS = 'FETCH_GROUPS';
+export const FETCH_GROUP = 'FETCH_GROUP';
 export const MARK_SEEN = 'MARK_SEEN';
 
-export function fetchFamilies() {
-  const url = BASE_URL + '/families'
+export function fetchGroups() {
+  const url = BASE_URL + '/groups'
 
   const promise = fetch(url, { credentials: 'same-origin' })
   .then(r => r.json());
 
   return {
-    type: FETCH_FAMILIES,
+    type: FETCH_GROUPS,
     payload: promise
   }
 }
 
-export function fetchFamily(family) {
-  const url = BASE_URL + `/families/${family}`;
+export function fetchGroup(group) {
+  const url = BASE_URL + `/families/${group}`;
 
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()
   );
 
   return {
-    type: FETCH_FAMILY,
+    type: FETCH_GROUP,
     payload: promise,
   };
 }

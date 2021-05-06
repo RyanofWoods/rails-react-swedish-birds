@@ -4,8 +4,6 @@ import { bindActionCreators } from "redux";
 import { markSeen } from "../actions";
 import Modal from './modal';
 
-
-
 class Bird extends Component {
   state = {
     showModal: false

@@ -1,6 +1,6 @@
-import { FETCH_FAMILY, MARK_SEEN } from "../actions";
+import { FETCH_GROUP, MARK_SEEN } from "../actions";
 
-const selectedFamilyReducer = (state, action) => {
+const selectedGroupReducer = (state, action) => {
   const updatedState = (name, seen) => {
     const stateCopy = { ...state };
     
@@ -19,7 +19,7 @@ const selectedFamilyReducer = (state, action) => {
   }
 
   switch (action.type) {
-    case FETCH_FAMILY:
+    case FETCH_GROUP:
       return action.payload;
     case MARK_SEEN:
       if (action.payload.error) {
@@ -35,4 +35,4 @@ const selectedFamilyReducer = (state, action) => {
   }
 }
 
-export default selectedFamilyReducer;
+export default selectedGroupReducer;
