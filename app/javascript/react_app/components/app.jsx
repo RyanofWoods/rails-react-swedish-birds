@@ -8,9 +8,9 @@ const App = () => {
     <div className="container my-4">
       <BrowserRouter>
         <Switch>
-          <Route path="/families/:groupName" component={BirdList} />
+          <Route path="/groups/:groupName" component={BirdList} />
           <Route path="/" component={GroupList} />
-          <Route path="/families" component={GroupList} />
+          <Route path="/groups" component={GroupList} />
         </Switch>
       </BrowserRouter>
     </div>

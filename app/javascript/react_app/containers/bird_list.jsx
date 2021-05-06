@@ -18,7 +18,7 @@ class BirdList extends Component {
         <h1>
           {englishName} ({totalSeen}/{totalBirds})
         </h1>
-        <HashLink to={`/families#${scientificName}`}>Go Back</HashLink>
+        <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
         <ul className="list-group mt-3">
           {birds.map((birdProps) => {
             return <Bird key={birdProps.scientific_name} {...birdProps} />;

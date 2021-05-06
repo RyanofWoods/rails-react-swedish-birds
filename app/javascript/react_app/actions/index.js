@@ -6,7 +6,7 @@ export const FETCH_GROUP = 'FETCH_GROUP';
 export const MARK_SEEN = 'MARK_SEEN';
 
 export function fetchGroups() {
-  const url = BASE_URL + '/families'
+  const url = BASE_URL + '/groups'
 
   const promise = fetch(url, { credentials: 'same-origin' })
   .then(r => r.json());
@@ -18,7 +18,7 @@ export function fetchGroups() {
 }
 
 export function fetchGroup(group) {
-  const url = BASE_URL + `/families/${group}`;
+  const url = BASE_URL + `/groups/${group}`;
 
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()

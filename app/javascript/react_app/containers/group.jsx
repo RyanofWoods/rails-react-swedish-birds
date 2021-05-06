@@ -10,7 +10,7 @@ class Group extends Component {
     };
 
     return (
-      <a href={`/families/${scientific_name}`}>
+      <a href={`/groups/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
           <div className="progress sighting-progress">
             <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
