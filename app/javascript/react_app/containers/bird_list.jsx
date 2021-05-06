@@ -2,37 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { fetchFamily } from "../actions";
-import { markSeen } from "../actions";
-
-import "@fortawesome/fontawesome-free/css/all";
+import Bird from "./bird";
 
 class BirdList extends Component {
   componentDidMount() {
     this.props.fetchFamily(this.props.match.params.familyName);
-  }
-
-  handleClick = (scientific_name) => {
-    this.props.markSeen(scientific_name);
-  };
-
-  render_bird({ scientific_name, english_name, swedish_name, seen }) {
-    let seenClasses = "far fa-";
-    seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
-
-    let iconProps = {
-      className: seenClasses,
-      ...(!seen && { onClick: () => this.handleClick(scientific_name) }), // add click event only for birds not seen yet
-    };
-
-    return (
-      <li className="list-group-item" key={scientific_name}>
-        <i {...iconProps} />
-        <div>
-          <p>{english_name}</p>
-          <p>{swedish_name}</p>
-        </div>
-      </li>
-    );
   }
 
   render() {
@@ -48,18 +22,14 @@ class BirdList extends Component {
         </a>
 
         <ul className="list-group">
-          {birds.map((bird) => {
-            return this.render_bird(bird);
+          {birds.map((birdProps) => {
+            return <Bird key={birdProps.scientific_name} {...birdProps} />;
           })}
         </ul>
       </div>
     );
   }
 };
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchFamily, markSeen }, dispatch);
-}
 
 function mapStateToProps(state) {
   return {
@@ -70,6 +40,10 @@ function mapStateToProps(state) {
     totalBirds: state.selectedFamilyData.total_birds,
     birds: state.selectedFamilyData.birds
   };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchFamily }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BirdList);
