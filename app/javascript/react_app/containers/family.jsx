@@ -17,7 +17,7 @@ class Family extends Component {
 
   render_bird({ scientific_name, english_name, swedish_name, seen }) {
     let seenClasses = "far fa-";
-    seenClasses += seen ? "check-square" : "square pointer";
+    seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
 
     let iconProps = {
       className: seenClasses,
