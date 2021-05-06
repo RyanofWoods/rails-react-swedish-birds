@@ -19,7 +19,7 @@ const reducers = combineReducers({
 
 const initialState = {
   familiesData: {
-    families: []
+    groups: []
   },
   selectedFamilyData: {
     birds: []

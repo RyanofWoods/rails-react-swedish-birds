@@ -34,8 +34,9 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    families: state.familiesData.families,
+    families: state.familiesData.groups,
     totalFamilies: state.familiesData.total_families,
     totalSeen: state.familiesData.total_seen,
     totalBirds: state.familiesData.total_birds
