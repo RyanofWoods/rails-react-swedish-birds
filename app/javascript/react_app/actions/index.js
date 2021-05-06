@@ -18,7 +18,7 @@ export function fetchGroups() {
 }
 
 export function fetchGroup(group) {
-  const url = BASE_URL + `/groups/${group}`;
+  const url = BASE_URL + `/families/${group}`;
 
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()
