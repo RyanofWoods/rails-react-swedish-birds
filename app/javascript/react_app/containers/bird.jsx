@@ -2,14 +2,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { markSeen } from "../actions";
+import Modal from './modal';
 
 import "@fortawesome/fontawesome-free/css/all";
 
 class Bird extends Component {
-  handleClick = (scientific_name) => {
-    this.props.markSeen(scientific_name);
-  };
+  state = {
+    showModal: false
+  }
 
+  toggleModal = () => {
+    this.setState({ showModal: !this.state.showModal });
+  }
+  
   render() {
     const { scientific_name, english_name, swedish_name, seen } = this.props;
 
@@ -18,7 +23,7 @@ class Bird extends Component {
 
     let iconProps = {
       className: seenClasses,
-      ...(!seen && { onClick: () => this.handleClick(scientific_name) }), // add click event only for birds not seen yet
+      ...(!seen && { onClick: this.toggleModal }), // add click event only for birds not seen yet
     };
 
     return (
@@ -28,6 +33,13 @@ class Bird extends Component {
           <p>{english_name}</p>
           <p>{swedish_name}</p>
         </div>
+        {
+          this.state.showModal && (
+            <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => this.props.markSeen(scientific_name)}>
+              <p>Are you sure you want to mark this bird as seen?</p>
+            </Modal>
+          )
+        }
       </li>
     );
   }
