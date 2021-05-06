@@ -3,9 +3,24 @@ class Api::V1::FamiliesController < Api::V1::BaseController
   after_action :verify_authorized, only: [:index, :show]
 
   def index
-    @families = policy_scope(Family)
-    @total_families = Family.count
+    permitted_group_by = ['family', 'order']
+
+    if permitted_group_by.include?(params[:group_by])
+      @group_by = params[:group_by]
+    else
+      @group_by = 'family' # default
+    end
+
+    if @group_by == 'order'
+      @groups = policy_scope(Order)
+      @total_groups = Order.count
+    else
+      @groups = policy_scope(Family)
+      @total_groups = Family.count
+    end
+
     @total_birds = authorize Bird.count, policy_class: FamilyPolicy
+
     # can check observations, as user & bird pairs must be unique
     @total_seen = authorize Observation.count, policy_class: FamilyPolicy
   end

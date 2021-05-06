@@ -3,4 +3,5 @@ class Order < ApplicationRecord
   validates :scientific_name, :swedish_name, uniqueness: true
 
   has_many :families
+  has_many :birds, through: :families
 end

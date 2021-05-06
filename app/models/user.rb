@@ -12,6 +12,10 @@ class User < ApplicationRecord
     Observation.joins(:bird).where('birds.family': family, user: self).count
   end 
 
+  def order_birds_seen_count(order)
+    Observation.joins(:bird).where('birds.family.order': order, user: self).count
+  end 
+
   def seen_bird?(bird)
     if Observation.find_by(user: self, bird: bird)
       true
