@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { markSeen } from "../actions";
 import Modal from './modal';
 
-import "@fortawesome/fontawesome-free/css/all";
+
 
 class Bird extends Component {
   state = {
