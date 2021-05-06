@@ -33,7 +33,7 @@ class Family extends Component {
 
     return (
       <a href={`/families/${scientific_name}`}>
-        <li className="list-group-item">
+        <li className="list-group-item" id={scientific_name}>
           <div className="progress-indicator" style={progressStyle} />
           <p className="family-list-item-numbers pl-1">
             ({total_seen}/{total_birds})

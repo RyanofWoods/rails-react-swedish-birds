@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { fetchFamily } from "../actions";
+import { HashLink } from "react-router-hash-link";
 import Bird from "./bird";
 
 class BirdList extends Component {
@@ -10,18 +11,15 @@ class BirdList extends Component {
   }
 
   render() {
-    const { birds, totalSeen, totalBirds, englishName } = this.props;
+    const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
 
     return (
       <div>
         <h1>
           {englishName} ({totalSeen}/{totalBirds})
         </h1>
-        <a className="mb-3" href="/families">
-          Go Back
-        </a>
-
-        <ul className="list-group">
+        <HashLink to={`/families#${scientificName}`}>Go Back</HashLink>
+        <ul className="list-group mt-3">
           {birds.map((birdProps) => {
             return <Bird key={birdProps.scientific_name} {...birdProps} />;
           })}
