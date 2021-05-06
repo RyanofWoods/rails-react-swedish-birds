@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
 class Family extends Component {
 
@@ -14,7 +13,9 @@ class Family extends Component {
     return (
       <a href={`/families/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
-          <div className="progress-indicator" style={progressStyle} />
+          <div className="progress sighting-progress">
+            <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
           <p className="family-list-item-numbers pl-1">
             ({total_seen}/{total_birds})
           </p>
