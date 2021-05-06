@@ -2,33 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Family extends Component {
-  getRGB(numerator, denominator) {
-    const deci = numerator / denominator; // percentage as decimal
-    const startColor = [235, 55, 40]; // color at 0% - rgb -> red
-    const endColor = [55, 235, 40]; // color at 100% - rgb -> green
-    const colorArray = [];
-
-    for (let i = 0; i < 3; i++) {
-      // if they are the same number push immediately
-      if (startColor[i] === endColor[i]) {
-        colorArray.push(startColor[i]);
-      } else {
-        // calculate difference
-        const diff = endColor[i] - startColor[i];
-
-        // add difference * percent onto lowest number
-        colorArray.push(startColor[i] + Math.floor(diff * deci));
-      }
-    }
-
-    return `rgb(${colorArray.join(",")})`;
-  }
 
   render() {
     const { scientific_name, english_name, swedish_name, total_seen, total_birds } = this.props;
   
+    const progress = (total_seen / total_birds) * 100;
     const progressStyle = {
-      backgroundColor: this.getRGB(total_seen, total_birds),
+      width: `${progress}%`,
     };
 
     return (
