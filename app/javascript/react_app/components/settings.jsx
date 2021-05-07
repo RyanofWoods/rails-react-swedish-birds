@@ -7,20 +7,23 @@ class Settings extends Component {
 
     // defaults
     let groupBy = 'family' 
-    let confirmationOnSeen = true;
+    let seenConfirmation = true;
 
-    if (localStorage.getItem("settings")) {
-      confirmationOnSeen = localStorage.getItem("settings").groupBy || confirmationOnSeen;
+    if (localStorage.getItem("settings") !== null) {
+      const parsedSettings = JSON.parse(localStorage.getItem("settings"))
+
+      // set it if it exists, otherwise use default
+      groupBy = parsedSettings.groupBy || groupBy;
 
       // cannot do shorthand || for this as it could be falsy
-      if (localStorage.getItem("settings").confirmOnSeen !== undefined) {
-        confirmationOnSeen = localStorage.getItem("settings").confirmOnSeen;
+      if (parsedSettings.seenConfirmation !== undefined) {
+        seenConfirmation = localStorage.getItem("settings").seenConfirmation;
       }
     }
   
     this.state = {
       showModal: true,
-      settings: { confirmationOnSeen, groupBy },
+      settings: { seenConfirmation, groupBy },
     };
   }
 
@@ -36,7 +39,7 @@ class Settings extends Component {
   }
 
   saveSettings = () => {
-    console.log(this.state)
+    localStorage.setItem("settings", JSON.stringify(this.state.settings));
   }
 
   render() {
@@ -47,13 +50,13 @@ class Settings extends Component {
       action: this.saveSettings
     };
 
-    const { confirmationOnSeen, groupBy } = this.state.settings;
+    const { seenConfirmation, groupBy } = this.state.settings;
 
     return (
       this.state.showModal && (
         <Modal {...modalProps}>
           <div className="form-check mb-3">
-            <input className="form-check-input" type="checkbox" defaultChecked={confirmationOnSeen} onChange={(event) => this.settingsChange('confirm', event.target.checked)} />
+            <input className="form-check-input" type="checkbox" defaultChecked={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
             <label className="form-check-label" >
               Confirmation when marking a bird as seen?
             </label>
