@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get '/settings', to: 'pages#settings'
+
   get '/groups', to: 'pages#home'
   get '/groups/:id', to: 'pages#home'
 

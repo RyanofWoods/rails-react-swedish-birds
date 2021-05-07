@@ -11,17 +11,18 @@ class Settings extends Component {
   };
 
   render() {
+    const modalProps = {
+      title: 'Settings',
+      confirmButtonText: 'Save',
+      close: this.toggleModal,
+      action: () => this.props.markSeen(scientific_name)
+    };
+
     return (
       this.state.showModal && (
-        <Modal
-          title="Settings"
-          confirmButtonText={"Save"}
-          close={this.toggleModal}
-          action={() => this.props.markSeen(scientific_name)}
-        >
+        <Modal {...modalProps}>
           <p>Save your settings?</p>
-        </Modal>
-        
+        </Modal>  
       )
     );
   }
