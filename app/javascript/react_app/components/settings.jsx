@@ -2,12 +2,27 @@ import React, { Component } from "react";
 import Modal from './modal';
 
 class Settings extends Component {
-  state = {
-    showModal: true,
-    settings: { confirm: true,
-                groupBy: 'order'
-              }
-  };
+  constructor(props) {
+    super(props);
+
+    // defaults
+    let groupBy = 'family' 
+    let confirmationOnSeen = true;
+
+    if (localStorage.getItem("settings")) {
+      confirmationOnSeen = localStorage.getItem("settings").groupBy || confirmationOnSeen;
+
+      // cannot do shorthand || for this as it could be falsy
+      if (localStorage.getItem("settings").confirmOnSeen !== undefined) {
+        confirmationOnSeen = localStorage.getItem("settings").confirmOnSeen;
+      }
+    }
+  
+    this.state = {
+      showModal: true,
+      settings: { confirmationOnSeen, groupBy },
+    };
+  }
 
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal });
@@ -32,13 +47,13 @@ class Settings extends Component {
       action: this.saveSettings
     };
 
-    const { confirm, groupBy } = this.state.settings;
+    const { confirmationOnSeen, groupBy } = this.state.settings;
 
     return (
       this.state.showModal && (
         <Modal {...modalProps}>
           <div className="form-check mb-3">
-            <input className="form-check-input" type="checkbox" defaultChecked={confirm} onChange={(event) => this.settingsChange('confirm', event.target.checked)} />
+            <input className="form-check-input" type="checkbox" defaultChecked={confirmationOnSeen} onChange={(event) => this.settingsChange('confirm', event.target.checked)} />
             <label className="form-check-label" >
               Confirmation when marking a bird as seen?
             </label>
