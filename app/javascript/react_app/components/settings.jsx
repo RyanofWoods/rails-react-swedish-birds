@@ -2,31 +2,10 @@ import React, { Component } from "react";
 import Modal from './modal';
 
 class Settings extends Component {
-  constructor(props) {
-    super(props);
-
-    // defaults
-    let groupBy = 'family' 
-    let seenConfirmation = true;
-
-    if (localStorage.getItem("settings") !== null) {
-      const parsedSettings = JSON.parse(localStorage.getItem("settings"))
-
-      // set it if it exists, otherwise use default
-      groupBy = parsedSettings.groupBy || groupBy;
-
-      // cannot do shorthand || for this as it could be falsy
-      if (parsedSettings.seenConfirmation !== undefined) {
-        seenConfirmation = localStorage.getItem("settings").seenConfirmation;
-      }
-    }
+  state = {
+    showModal: true
+  };
   
-    this.state = {
-      showModal: true,
-      settings: { seenConfirmation, groupBy },
-    };
-  }
-
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal });
   };
@@ -39,7 +18,6 @@ class Settings extends Component {
   }
 
   saveSettings = () => {
-    localStorage.setItem("settings", JSON.stringify(this.state.settings));
   }
 
   render() {

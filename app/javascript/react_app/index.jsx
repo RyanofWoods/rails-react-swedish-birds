@@ -10,11 +10,13 @@ import reduxPromise from 'redux-promise';
 import App from './components/app';
 import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
+import settingsReducer from './reducers/settings_reducer';
 
 // reducers
 const reducers = combineReducers({
   groupsData: groupsReducer,
   selectedGroupData: selectedGroupReducer,
+  settingsData: settingsReducer,
 });
 
 const initialState = {
@@ -23,7 +25,8 @@ const initialState = {
   },
   selectedGroupData: {
     birds: []
-  }
+  },
+  settings: {}
 };
 
 // root, store and middlewares

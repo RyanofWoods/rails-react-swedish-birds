@@ -1,9 +1,12 @@
 const BASE_URL = '/api/v1';
+const LOCAL_SETTINGS = 'swedishBirdsSettings'
 
 // actions
 export const FETCH_GROUPS = 'FETCH_GROUPS';
 export const FETCH_GROUP = 'FETCH_GROUP';
 export const MARK_SEEN = 'MARK_SEEN';
+export const LOAD_SETTINGS = 'LOAD_SETTINGS';
+export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
 export function fetchGroups() {
   const url = BASE_URL + '/groups'
@@ -49,5 +52,41 @@ export function markSeen(birdScientificName) {
   return {
     type: MARK_SEEN,
     payload: promise,
+  };
+}
+
+export function loadSettings() {
+  // defaults
+  let groupBy = 'family' 
+  let seenConfirmation = true;
+
+  if (localStorage.getItem(LOCAL_SETTINGS) !== null) {
+    const parsedSettings = JSON.parse(localStorage.getItem(LOCAL_SETTINGS))
+
+    // set it if it exists, otherwise use default
+    groupBy = parsedSettings.groupBy || groupBy;
+
+    // cannot do shorthand || for this as it could be falsy
+    if (parsedSettings.seenConfirmation !== undefined) {
+      seenConfirmation = localStorage.getItem(LOCAL_SETTINGS).seenConfirmation;
+    }
+  }
+
+  const settings = { groupBy, seenConfirmation }
+
+  return {
+    type: LOAD_SETTINGS,
+    payload: settings,
+  };
+}
+
+export function saveSettings(settings) {
+  // save in localStorage
+  localStorage.setItem(LOCAL_SETTINGS, JSON.stringify(settings));
+
+  // and save in redux state
+  return {
+    type: SAVE_SETTINGS,
+    payload: settings,
   };
 }
