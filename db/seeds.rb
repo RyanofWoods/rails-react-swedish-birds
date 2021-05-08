@@ -12,9 +12,9 @@ def csv_to_models
   family = nil
 
   CSV.foreach(csv_file_path, csv_options) do |row|
-    unless order&.english_name&.downcase == row[:order_english]&.downcase
+    unless order&.scientific_name&.downcase == row[:order_scientific]&.downcase
       # we have to create the order
-      order = Order.create!(english_name: row[:order_english].capitalize,
+      order = Order.create!(scientific_name: row[:order_scientific].capitalize,
                             swedish_name: row[:order_swedish].capitalize)
     end
 
