@@ -60,8 +60,15 @@ export function loadSettings() {
   let groupBy = 'family' 
   let seenConfirmation = true;
 
-  if (localStorage.getItem(LOCAL_SETTINGS) !== null) {
-    const parsedSettings = JSON.parse(localStorage.getItem(LOCAL_SETTINGS))
+  if (localStorage.getItem(LOCAL_SETTINGS)) {
+    let parsedSettings = '';
+
+    try {
+      const x = localStorage.getItem(LOCAL_SETTINGS);
+      parsedSettings = JSON.parse(x);
+    } catch (err) {
+      console.log(err.message);
+    }
 
     // set it if it exists, otherwise use default
     groupBy = parsedSettings.groupBy || groupBy;
