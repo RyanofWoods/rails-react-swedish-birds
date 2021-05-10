@@ -11,7 +11,6 @@ class GroupList extends Component {
 
   render() {
     const { groups, totalGroups, totalBirds, totalSeen } = this.props;
-
     return (
       <div>
         <h1>All {totalGroups} families: </h1>
