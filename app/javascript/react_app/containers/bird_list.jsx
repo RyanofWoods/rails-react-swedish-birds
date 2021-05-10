@@ -7,12 +7,14 @@ import Bird from "./bird";
 
 class BirdList extends Component {
   componentDidMount() {
-    this.props.fetchGroup(this.props.match.params.groupName);
+    const { groupedBy, groupName } = this.props.match.params;
+
+    this.props.fetchGroup(groupedBy, groupName);
   }
 
   render() {
     const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
-    console.log(this.props.match)
+
     return (
       <div>
         <h1>

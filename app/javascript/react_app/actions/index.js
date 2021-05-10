@@ -22,9 +22,9 @@ export function fetchGroups(groupBy) {
   }
 }
 
-export function fetchGroup(group) {
-  const url = BASE_URL + `/families/${group}`;
-
+export function fetchGroup(groupedBy, groupName) {
+  const url = BASE_URL + `/${groupedBy}/${groupName}`;
+  debugger
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()
   );
