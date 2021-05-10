@@ -9,11 +9,12 @@ export const MARK_SEEN = 'MARK_SEEN';
 export const LOAD_SETTINGS = 'LOAD_SETTINGS';
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
-export function fetchGroups() {
-  const url = BASE_URL + '/groups'
+export function fetchGroups(groupBy) {
+  // group_by param must be singular
+  const url = BASE_URL + `/groups?group_by=${groupBy}`;
 
   const promise = fetch(url, { credentials: 'same-origin' })
-  .then(r => r.json());
+    .then(r => r.json());
 
   return {
     type: FETCH_GROUPS,
