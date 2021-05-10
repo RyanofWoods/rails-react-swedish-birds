@@ -1,59 +1,77 @@
 import React, { Component } from "react";
-import { connect, Provider } from "react-redux";
+import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { saveSettings } from "../actions";
-import Modal from '../components/modal';
-import { store } from '../index';
+import SETTING_DEFAULTS from "../setting_defaults";
 
-class Settings extends Component { 
-  toggleModal = () => {
-    this.setState({ showModal: !this.state.showModal });
-  };
+class Settings extends Component {
+  state = {
+    settingsHasInitialized: false,
+    settings: SETTING_DEFAULTS,
+  }
+  componentDidMount () {
+    // override state.settings defaults with user settings
+    const settingsCopy = { ...this.state.settings };
 
-  settingsChange = (id, value) => {
-    const settingsCpy = this.state.settings;
-    settingsCpy[id] = value;
-  
-    this.setState({ settings: settingsCpy })
+    for (const [key, value] of Object.entries(this.props.settings)) {
+      settingsCopy[key] = value;
+    }
+
+    const newState = {
+      settingsHasInitialized: true,
+      settings: settingsCopy,
+    };
+
+    this.setState(newState);
   }
 
-  saveSettings = () => {
-    saveSettings(this.state.settings)
+  settingsChange = (id, value) => {
+    // do not need to force a re-render
+    const settingsCopy = { ...this.state.settings};
+
+    settingsCopy[id] = value;
+    this.setState({ settings: settingsCopy })
+  }
+
+  saveSettings = (event) => {
+    event.preventDefault();
+    this.props.saveSettings(this.state.settings)
+    alert("Settings saved!");
   }
 
   render() {
-    const modalProps = {
-      title: "Settings",
-      confirmButtonText: "Save",
-      close: this.toggleModal,
-      action: this.saveSettings
-    };
-
-    const { seenConfirmation, groupBy } = this.state.settings;
+    const { groupBy, seenConfirmation } = this.state.settings;
 
     return (
-      <Provider store={store}>
-        <Modal {...modalProps}>
-          <div className="form-check mb-3">
-            <input className="form-check-input" type="checkbox" defaultChecked={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
-            <label className="form-check-label" >
-              Confirmation when marking a bird as seen?
-            </label>
-          </div>
-
+      <form onSubmit={this.saveSettings}>
+        <h2>Settings:</h2>
+        <div className="form-check mb-3">
+          <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
+          <label className="form-check-label" >
+            Confirmation when marking a bird as seen?
+          </label>
+        </div>
+        <div className="form-group">
           <label className="mr-2" >Group birds by:</label>
-          <select defaultValue={groupBy} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
+          <select value={groupBy} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
             <option value="family">Family</option>
             <option value="order">Order</option>
           </select>
-        </Modal>  
-      </Provider>
+        </div>
+        <button className="btn btn-primary">Submit</button>
+      </form>
     )
   }
+};
+
+const mapStateToProps = (state) => {
+  return {
+    settings: state.settingsData
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ saveSettings }, dispatch);
 };
 
-export default connect(null, mapDispatchToProps)(Settings);
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

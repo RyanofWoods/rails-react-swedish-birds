@@ -1,14 +1,27 @@
-import { LOAD_SETTINGS, SAVE_SETTINGS } from "../actions";
+import { LOCAL_SETTINGS, LOAD_SETTINGS, SAVE_SETTINGS } from "../actions";
 
 const settingsReducer = (state = {}, action) => {
+  if (typeof action.payload !== "object") {
+    return state
+  }
+
+  const settingsCopy = { ...state };
+
+  // get current state and update changed settings
+  for (const [key, value] of Object.entries(action.payload)) {
+    settingsCopy[key] = value;
+  }
+  
+  console.log(settingsCopy)
   switch (action.type) {
     case LOAD_SETTINGS:
-      return action.payload;
+      return settingsCopy
     case SAVE_SETTINGS:
-      return action.payload;
+      localStorage.setItem(LOCAL_SETTINGS, JSON.stringify(settingsCopy));
+      return settingsCopy
     default:
       return state;
   }
-}
+};
 
 export default settingsReducer;

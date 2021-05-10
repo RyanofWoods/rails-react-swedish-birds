@@ -1,5 +1,6 @@
 const BASE_URL = '/api/v1';
-const LOCAL_SETTINGS = 'swedishBirdsSettings'
+
+export const LOCAL_SETTINGS = 'swedishBirdsSettings';
 
 // actions
 export const FETCH_GROUPS = 'FETCH_GROUPS';
@@ -55,43 +56,31 @@ export function markSeen(birdScientificName) {
   };
 }
 
-export function loadSettings() {
-  // defaults
-  let groupBy = 'family' 
-  let seenConfirmation = true;
+const parseLocalStorageSettings = () => {
+  const settings = localStorage.getItem(LOCAL_SETTINGS);
 
-  if (localStorage.getItem(LOCAL_SETTINGS)) {
-    let parsedSettings = '';
-
+  if (settings) {
     try {
-      const x = localStorage.getItem(LOCAL_SETTINGS);
-      parsedSettings = JSON.parse(x);
+      return JSON.parse(settings)
     } catch (err) {
       console.log(err.message);
+      return {}
     }
-
-    // set it if it exists, otherwise use default
-    groupBy = parsedSettings.groupBy || groupBy;
-
-    // cannot do shorthand || for this as it could be falsy
-    if (parsedSettings.seenConfirmation !== undefined) {
-      seenConfirmation = localStorage.getItem(LOCAL_SETTINGS).seenConfirmation;
-    }
+  } else {
+    return {}
   }
+}
 
-  const settings = { groupBy, seenConfirmation }
+export function loadSettings() {
+  const userSettings = parseLocalStorageSettings();
 
   return {
     type: LOAD_SETTINGS,
-    payload: settings,
+    payload: userSettings,
   };
 }
 
 export function saveSettings(settings) {
-  // save in localStorage
-  localStorage.setItem(LOCAL_SETTINGS, JSON.stringify(settings));
-
-  // and save in redux state
   return {
     type: SAVE_SETTINGS,
     payload: settings,
