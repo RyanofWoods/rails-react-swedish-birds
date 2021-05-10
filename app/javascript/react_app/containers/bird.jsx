@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { markSeen } from "../actions";
-import Modal from './modal';
+import Modal from '../components/modal';
 
 class Bird extends Component {
   state = {

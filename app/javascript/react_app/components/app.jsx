@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import GroupList from '../containers/group_list';
 import BirdList from '../containers/bird_list';
+import Settings from '../containers/settings';
 
 const App = () => {
   return (
     <div className="container my-4">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/groups/:groupName" component={BirdList} />
-          <Route path="/" component={GroupList} />
-          <Route path="/groups" component={GroupList} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+      <Switch>
+        <Route path="/settings" component={Settings} />
+        <Route path="/groups/:groupName" component={BirdList} />
+        <Route exact path="/">
+          <Redirect to='/groups' />
+        </Route>
+        <Route path="/groups" component={GroupList} />
+      </Switch>
+  </div>
   );
 };
 

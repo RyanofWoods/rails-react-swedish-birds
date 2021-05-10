@@ -1,9 +1,13 @@
 const BASE_URL = '/api/v1';
 
+export const LOCAL_SETTINGS = 'swedishBirdsSettings';
+
 // actions
 export const FETCH_GROUPS = 'FETCH_GROUPS';
 export const FETCH_GROUP = 'FETCH_GROUP';
 export const MARK_SEEN = 'MARK_SEEN';
+export const LOAD_SETTINGS = 'LOAD_SETTINGS';
+export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
 export function fetchGroups() {
   const url = BASE_URL + '/groups'
@@ -49,5 +53,36 @@ export function markSeen(birdScientificName) {
   return {
     type: MARK_SEEN,
     payload: promise,
+  };
+}
+
+const parseLocalStorageSettings = () => {
+  const settings = localStorage.getItem(LOCAL_SETTINGS);
+
+  if (settings) {
+    try {
+      return JSON.parse(settings)
+    } catch (err) {
+      console.log(err.message);
+      return {}
+    }
+  } else {
+    return {}
+  }
+}
+
+export function loadSettings() {
+  const userSettings = parseLocalStorageSettings();
+
+  return {
+    type: LOAD_SETTINGS,
+    payload: userSettings,
+  };
+}
+
+export function saveSettings(settings) {
+  return {
+    type: SAVE_SETTINGS,
+    payload: settings,
   };
 }

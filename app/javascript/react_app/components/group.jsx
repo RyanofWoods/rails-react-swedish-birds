@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class Group extends Component {
   render() {
@@ -10,7 +11,7 @@ class Group extends Component {
     };
 
     return (
-      <a href={`/groups/${scientific_name}`}>
+      <Link to={`/groups/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
           <div className="progress sighting-progress">
             <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
@@ -22,7 +23,7 @@ class Group extends Component {
             {english_name} / {swedish_name}
           </p>
         </li>
-      </a>
+      </Link>
     );
   }
 }

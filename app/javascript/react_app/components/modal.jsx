@@ -6,16 +6,20 @@ class Modal extends Component {
     this.props.close()
   };
 
+  checkBackdropClick = (event) => {
+    if (event.target == event.currentTarget) this.props.close();
+  }
+
   render () {
-    const { title, confirmButtonText } = this.props;
+    const { title, confirmButtonText, close } = this.props;
 
     return (
-      <div className="modal-component-backdrop" onClick={this.props.close}>
-        <div className="modal-component" role="document">
+      <div className="modal-component-backdrop" onClick={this.checkBackdropClick}>
+        <div className="modal-component">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title">{title}</h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" className="close" aria-label="Close" onClick={close}>
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -26,7 +30,7 @@ class Modal extends Component {
               <button type="button" className="btn btn-primary hover-pointer" onClick={this.handleClick}>
                 {confirmButtonText}
               </button>
-              <button type="button" className="btn btn-secondary hover-pointer" onClick={this.props.close} data-dismiss="modal">
+              <button type="button" className="btn btn-secondary hover-pointer" onClick={close}>
                 Close
               </button>
             </div>

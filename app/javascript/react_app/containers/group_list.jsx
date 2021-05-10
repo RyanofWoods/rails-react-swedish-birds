@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchGroups } from '../actions';
-import Group from './group';
+import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
@@ -11,7 +11,6 @@ class GroupList extends Component {
 
   render() {
     const { groups, totalGroups, totalBirds, totalSeen } = this.props;
-
     return (
       <div>
         <h1>All {totalGroups} families: </h1>
