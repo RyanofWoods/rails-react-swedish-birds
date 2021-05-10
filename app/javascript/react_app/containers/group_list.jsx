@@ -6,27 +6,19 @@ import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
-    const { groupedBy, fetchGroups} = this.props;
-    const URLGroupPlural = this.props.match.params.groupBy;
-    let URLGroupSingular = '';
+    const { groupedBy, fetchGroups, groupSingular} = this.props;
 
-    if (URLGroupPlural === 'orders') {
-      URLGroupSingular = 'order'
-    } else {
-      URLGroupSingular = 'family'
-    }
-
-     if (URLGroupSingular !== groupedBy) {
-       fetchGroups(URLGroupSingular);
+     if (groupSingular !== groupedBy) {
+       fetchGroups(groupSingular);
      } 
   }
 
   render() {
-    const { groups, totalGroups, totalBirds, totalSeen, match } = this.props;
+    const { groups, totalGroups, totalBirds, totalSeen, match, groupPlural } = this.props;
 
     return (
       <div>
-        <h1>All {totalGroups} {match.params.groupBy}: </h1>
+        <h1>All {totalGroups} {groupPlural}: </h1>
         <h3 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
         </h3>
