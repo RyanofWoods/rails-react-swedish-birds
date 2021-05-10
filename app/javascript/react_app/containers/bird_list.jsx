@@ -15,19 +15,21 @@ class BirdList extends Component {
   render() {
     const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
 
-    return (
-      <div>
-        <h1>
-          {englishName} ({totalSeen}/{totalBirds})
-        </h1>
-        <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
-        <ul className="list-group mt-3">
-          {birds.map((birdProps) => {
-            return <Bird key={birdProps.scientific_name} {...birdProps} />;
-          })}
-        </ul>
-      </div>
-    );
+    const title = englishName || scientificName;
+
+      return (
+        <div>
+          <h1>
+            {title} ({totalSeen}/{totalBirds})
+          </h1>
+          <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
+          <ul className="list-group mt-3">
+            {birds.map((birdProps) => {
+              return <Bird key={birdProps.scientific_name} {...birdProps} />;
+            })}
+          </ul>
+        </div>
+      );
   }
 };
 
