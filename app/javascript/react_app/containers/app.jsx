@@ -26,14 +26,14 @@ class App extends Component {
 
           <Route path="/settings" component={Settings} />
 
-          <Route path="/families/" component={GroupList}>
+          <Route path="/families/">
             <GroupList groupPlural={"families"} groupSingular={"family"} />
           </Route>
-          <Route path="/orders/" component={GroupList}>
+          <Route path="/orders/">
             <GroupList groupPlural={"orders"} groupSingular={"order"} />
           </Route>
 
-          <Route path="/groups/:groupName" component={BirdList} />
+          <Route path="/:groups/:groupName" component={BirdList} />
 
           <Route path="/">{this.handleGroupRedirect()}</Route>
         </Switch>

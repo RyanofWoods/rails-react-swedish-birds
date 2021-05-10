@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 
 class Group extends Component {
   render() {
-    const { scientific_name, english_name, swedish_name, total_seen, total_birds } = this.props;
+    const { scientific_name, english_name, swedish_name, total_seen, total_birds, groupedBy } = this.props;
   
     const progress = (total_seen / total_birds) * 100;
     const progressStyle = {
@@ -11,7 +11,7 @@ class Group extends Component {
     };
 
     return (
-      <Link to={`/groups/${scientific_name}`}>
+      <Link to={`/${groupedBy}/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
           <div className="progress sighting-progress">
             <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>

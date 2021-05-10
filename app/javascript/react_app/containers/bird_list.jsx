@@ -12,7 +12,7 @@ class BirdList extends Component {
 
   render() {
     const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
-
+    console.log(this.props.match)
     return (
       <div>
         <h1>

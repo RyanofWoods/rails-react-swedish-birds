@@ -14,7 +14,7 @@ class GroupList extends Component {
   }
 
   render() {
-    const { groups, totalGroups, totalBirds, totalSeen, match, groupPlural } = this.props;
+    const { groups, totalGroups, totalBirds, totalSeen, groupPlural } = this.props;
 
     return (
       <div>
@@ -25,7 +25,7 @@ class GroupList extends Component {
 
         <ul className="list-group">
           {groups.map((group) => {
-            return <Group key={group.scientific_name} {...group}/>;
+            return <Group key={group.scientific_name} groupedBy={groupPlural} {...group}/>;
           })}
         </ul>
       </div>
