@@ -14,14 +14,16 @@ class Bird extends Component {
   }
   
   render() {
-    const { scientific_name, english_name, swedish_name, seen } = this.props;
+    const { scientific_name, english_name, swedish_name, seen, seenConfirmation, markSeen } = this.props;
 
     let seenClasses = "far fa-";
     seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
 
     let iconProps = {
       className: seenClasses,
-      ...(!seen && { onClick: this.toggleModal }), // add click event only for birds not seen yet
+      // add click event only for birds not seen yet
+      ...(!seen && seenConfirmation && { onClick: this.toggleModal }), // confirmation modal
+      ...(!seen && !seenConfirmation && { onClick: () => markSeen(scientific_name) }), // no confirmation modal
     };
 
     return (
@@ -33,7 +35,7 @@ class Bird extends Component {
         </div>
         {
           this.state.showModal && (
-            <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => this.props.markSeen(scientific_name)}>
+            <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => markSeen(scientific_name)}>
               <p>Are you sure you want to mark this bird as seen?</p>
             </Modal>
           )
@@ -43,8 +45,14 @@ class Bird extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    seenConfirmation: state.settingsData.seenConfirmation
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ markSeen }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Bird);
+export default connect(mapStateToProps, mapDispatchToProps)(Bird);
