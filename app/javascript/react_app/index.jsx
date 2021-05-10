@@ -5,12 +5,17 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
+import { BrowserRouter } from "react-router-dom";
 
 // internal modules;
-import App from './containers/app';
+import App from './components/app';
+
 import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
 import settingsReducer from './reducers/settings_reducer';
+
+import SETTING_DEFAULTS from './setting_defaults';
+import { loadSettings } from "./actions";
 
 // reducers
 const reducers = combineReducers({
@@ -21,11 +26,12 @@ const reducers = combineReducers({
 
 const initialState = {
   groupsData: {
-    groups: []
+    groups: [],
   },
   selectedGroupData: {
-    birds: []
-  }
+    birds: [],
+  },
+  settingsData: SETTING_DEFAULTS,
 };
 
 // root, store and middlewares
@@ -33,11 +39,17 @@ const composeEnhancers = __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middlewares = composeEnhancers(applyMiddleware(logger, reduxPromise));
 const store = createStore(reducers, initialState, middlewares);
 
+console.log("hello?")
+// override defauly settings with user settings
+store.dispatch(loadSettings());
+
 const root = document.getElementById('root')
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   root
 )
