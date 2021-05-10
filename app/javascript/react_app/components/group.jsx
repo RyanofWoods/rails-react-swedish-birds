@@ -10,6 +10,14 @@ class Group extends Component {
       width: `${progress}%`,
     };
 
+    let groupText = '';
+
+    if (groupedBy === 'orders') {
+      groupText = `${scientific_name} / ${swedish_name}`
+    } else {
+      groupText = `${english_name} / ${swedish_name}`
+    }
+
     return (
       <Link to={`/${groupedBy}/${scientific_name}`}>
         <li className="list-group-item" id={scientific_name}>
@@ -20,7 +28,7 @@ class Group extends Component {
             ({total_seen}/{total_birds})
           </p>
           <p>
-            {english_name} / {swedish_name}
+            {groupText}
           </p>
         </li>
       </Link>
