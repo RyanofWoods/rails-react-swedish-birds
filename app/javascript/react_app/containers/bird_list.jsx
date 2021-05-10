@@ -7,25 +7,29 @@ import Bird from "./bird";
 
 class BirdList extends Component {
   componentDidMount() {
-    this.props.fetchGroup(this.props.match.params.groupName);
+    const { groupedBy, groupName } = this.props.match.params;
+
+    this.props.fetchGroup(groupedBy, groupName);
   }
 
   render() {
     const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
 
-    return (
-      <div>
-        <h1>
-          {englishName} ({totalSeen}/{totalBirds})
-        </h1>
-        <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
-        <ul className="list-group mt-3">
-          {birds.map((birdProps) => {
-            return <Bird key={birdProps.scientific_name} {...birdProps} />;
-          })}
-        </ul>
-      </div>
-    );
+    const title = englishName || scientificName;
+
+      return (
+        <div>
+          <h1>
+            {title} ({totalSeen}/{totalBirds})
+          </h1>
+          <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
+          <ul className="list-group mt-3">
+            {birds.map((birdProps) => {
+              return <Bird key={birdProps.scientific_name} {...birdProps} />;
+            })}
+          </ul>
+        </div>
+      );
   }
 };
 
