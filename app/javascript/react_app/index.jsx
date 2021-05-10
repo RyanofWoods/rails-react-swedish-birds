@@ -14,6 +14,7 @@ import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
 import settingsReducer from './reducers/settings_reducer';
 
+// modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
 import { loadSettings } from "./actions";
 
