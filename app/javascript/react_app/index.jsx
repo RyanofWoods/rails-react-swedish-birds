@@ -39,7 +39,6 @@ const composeEnhancers = __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middlewares = composeEnhancers(applyMiddleware(logger, reduxPromise));
 const store = createStore(reducers, initialState, middlewares);
 
-console.log("hello?")
 // override defauly settings with user settings
 store.dispatch(loadSettings());
 

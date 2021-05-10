@@ -12,7 +12,6 @@ const settingsReducer = (state = {}, action) => {
     settingsCopy[key] = value;
   }
   
-  console.log(settingsCopy)
   switch (action.type) {
     case LOAD_SETTINGS:
       return settingsCopy
