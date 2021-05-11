@@ -14,7 +14,7 @@ class GroupList extends Component {
   }
 
   render() {
-    const { groups, totalGroups, totalBirds, totalSeen, groupPlural } = this.props;
+    const { groups, totalGroups, totalBirds, totalSeen, groupPlural, langPref } = this.props;
 
     return (
       <div>
@@ -25,7 +25,7 @@ class GroupList extends Component {
 
         <ul className="list-group">
           {groups.map((group) => {
-            return <Group key={group.scientific_name} groupedBy={groupPlural} {...group}/>;
+            return <Group key={group.scientific_name} groupedBy={groupPlural} langPref={langPref} {...group}/>;
           })}
         </ul>
       </div>
@@ -43,8 +43,9 @@ const mapStateToProps = (state) => {
     groups: state.groupsData.groups,
     totalGroups: state.groupsData.total_groups,
     totalSeen: state.groupsData.total_seen,
-    totalBirds: state.groupsData.total_birds
-  }
+    totalBirds: state.groupsData.total_birds,
+    langPref: state.settingsData.language,
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupList);

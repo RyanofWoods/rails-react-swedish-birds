@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, } from 'react-router-dom';
-import { connect } from "react-redux";
 
 class Group extends Component {
   render() {
@@ -38,10 +37,4 @@ class Group extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    langPref: state.settingsData.language,
-  };
-};
-
-export default connect(mapStateToProps)(Group);
+export default Group;
