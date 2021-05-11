@@ -8,6 +8,7 @@ class Api::V1::OrdersController < Api::V1::BaseController
     authorize @order
 
     @order_scientific_name = @order&.scientific_name
+    @order_english_name = @order&.english_name
     @order_swedish_name = @order&.swedish_name
     @order_birds = @order&.birds
     @total_birds = @order&.birds.count
