@@ -15,6 +15,7 @@ def csv_to_models
     unless order&.scientific_name&.downcase == row[:order_scientific]&.downcase
       # we have to create the order
       order = Order.create!(scientific_name: row[:order_scientific].capitalize,
+                            english_name: row[:order_english],
                             swedish_name: row[:order_swedish].capitalize)
     end
 
