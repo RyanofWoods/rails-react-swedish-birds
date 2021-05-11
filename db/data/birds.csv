@@ -86,14 +86,14 @@ Streptopelia turtur,European Turtle Dove,turturduva,Columbidae,Pigeons and Doves
 Streptopelia orientalis,Oriental Turtle Dove,större turturduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
 Streptopelia decaocto,Eurasian Collared Dove,turkduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
 Zenaida macroura,Mourning Dove,spetsstjärtad duva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Rallus aquaticus,Water Rail,vattenrall,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Crex crex,Corn Crake,kornknarr,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Porzana carolina,Sora,karolinasumphöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Porzana porzana,Spotted Crake,småfläckig sumphöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Gallinula chloropus,Common Moorhen,rörhöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Fulica atra,Eurasian Coot,sothöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Zapornia pusilla,Baillon's Crake,dvärgsumphöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Zapornia parva,Little Crake,mindre sumphöna,Rallidae,Rails Crakes and Coots,Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Rallus aquaticus,Water Rail,vattenrall,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Crex crex,Corn Crake,kornknarr,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Porzana carolina,Sora,karolinasumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Porzana porzana,Spotted Crake,småfläckig sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Gallinula chloropus,Common Moorhen,rörhöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Fulica atra,Eurasian Coot,sothöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Zapornia pusilla,Baillon's Crake,dvärgsumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
+Zapornia parva,Little Crake,mindre sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
 Grus canadensis,Sandhill Crane,prärietrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
 Grus virgo,Demoiselle Crane,jungfrutrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
 Grus grus,Common Crane,trana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
@@ -539,6 +539,6 @@ Spizelloides arborea,American Tree Sparrow,tundrasparv,Passerellidae,New World S
 Junco hyemalis,Dark-eyed Junco,mörkögd junco,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
 Zonotrichia albicollis,White-throated Sparrow,vitstrupig sparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
 Melospiza melodia,Song Sparrow,sångsparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Xanthocephalus xanthocephalus,Yellow-headed Blackbird,gulhuvad ängstrupial,Icteridae,New World blackbirds,Trupialer,PASSERIFORMES,Perching birds,TÄTTINGAR
+Xanthocephalus xanthocephalus,Yellow-headed Blackbird,gulhuvad ängstrupial,Icteridae,New World Blackbirds,Trupialer,PASSERIFORMES,Perching birds,TÄTTINGAR
 Pheucticus ludovicianus,Rose-breasted Grosbeak,brokig kardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR
 Passerina cyanea,Indigo Bunting,turkoskardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR
