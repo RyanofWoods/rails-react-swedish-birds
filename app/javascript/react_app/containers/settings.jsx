@@ -9,6 +9,7 @@ class Settings extends Component {
     settingsHasInitialized: false,
     settings: SETTING_DEFAULTS,
   }
+
   componentDidMount () {
     // override state.settings defaults with user settings
     const settingsCopy = { ...this.state.settings };
@@ -40,24 +41,36 @@ class Settings extends Component {
   }
 
   render() {
-    const { groupBy, seenConfirmation } = this.state.settings;
+    const { groupBy, seenConfirmation, language } = this.state.settings;
 
     return (
       <form onSubmit={this.saveSettings}>
         <h2>Settings:</h2>
+
         <div className="form-check mb-3">
           <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
           <label className="form-check-label" >
             Confirmation when marking a bird as seen?
           </label>
         </div>
+
         <div className="form-group">
-          <label className="mr-2" >Group birds by:</label>
+          <label className="mr-2">Group birds by:</label>
           <select value={groupBy} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
             <option value="family">Family</option>
             <option value="order">Order</option>
           </select>
         </div>
+
+        <div className="form-group">
+          <label className="mr-2">Language preference with names:</label>
+          <select value={language} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('language', event.target.value)}>
+            <option value="en">English</option>
+            <option value="se">Swedish</option>
+            <option value="both">Both</option>
+          </select>
+        </div>
+
         <button className="btn btn-primary">Submit</button>
       </form>
     )

@@ -3,12 +3,23 @@ import { Link, } from 'react-router-dom';
 
 class Group extends Component {
   render() {
-    const { scientific_name, english_name, swedish_name, total_seen, total_birds, groupedBy } = this.props;
+    const { scientific_name, english_name, swedish_name, total_seen, total_birds, groupedBy, langPref } = this.props;
   
     const progress = (total_seen / total_birds) * 100;
     const progressStyle = {
       width: `${progress}%`,
     };
+
+    const textContent = () => {
+      switch (langPref) {
+        case 'en':
+          return english_name;
+        case 'se':
+            return swedish_name;
+        default:
+          return `${english_name} / ${swedish_name}`;
+      }
+    }
 
     return (
       <Link to={`/${groupedBy}/${scientific_name}`}>
@@ -19,9 +30,7 @@ class Group extends Component {
           <p className="family-list-item-numbers pl-1">
             ({total_seen}/{total_birds})
           </p>
-          <p>
-            {english_name} / {swedish_name}
-          </p>
+          <p>{textContent()}</p>
         </li>
       </Link>
     );

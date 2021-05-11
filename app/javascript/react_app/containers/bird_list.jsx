@@ -13,7 +13,7 @@ class BirdList extends Component {
   }
 
   render() {
-    const { birds, totalSeen, totalBirds, englishName, scientificName } = this.props;
+    const { birds, totalSeen, totalBirds, englishName, scientificName, langPref } = this.props;
 
     const title = englishName || scientificName;
 
@@ -25,7 +25,7 @@ class BirdList extends Component {
           <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
           <ul className="list-group mt-3">
             {birds.map((birdProps) => {
-              return <Bird key={birdProps.scientific_name} {...birdProps} />;
+              return <Bird key={birdProps.scientific_name} langPref={langPref} {...birdProps} />;
             })}
           </ul>
         </div>
@@ -40,7 +40,8 @@ const mapStateToProps = (state) => {
     swedishName: state.selectedGroupData.group_swedish_name,
     totalSeen: state.selectedGroupData.total_seen,
     totalBirds: state.selectedGroupData.total_birds,
-    birds: state.selectedGroupData.birds
+    birds: state.selectedGroupData.birds,
+    langPref: state.settingsData.language,
   };
 }
 

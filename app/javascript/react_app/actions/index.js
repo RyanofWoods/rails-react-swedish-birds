@@ -24,7 +24,6 @@ export function fetchGroups(groupBy) {
 
 export function fetchGroup(groupedBy, groupName) {
   const url = BASE_URL + `/${groupedBy}/${groupName}`;
-  debugger
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()
   );
