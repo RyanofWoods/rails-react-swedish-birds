@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchGroups } from '../actions';
+
 import Group from '../components/group';
 
 class GroupList extends Component {
@@ -44,7 +45,7 @@ const mapStateToProps = (state) => {
     totalGroups: state.groupsData.total_groups,
     totalSeen: state.groupsData.total_seen,
     totalBirds: state.groupsData.total_birds,
-    langPref: state.settingsData.language,
+    langPref: state.settingsData.language
   };
 }
 
