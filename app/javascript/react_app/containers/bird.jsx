@@ -14,7 +14,7 @@ class Bird extends Component {
   }
   
   render() {
-    const { scientific_name, english_name, swedish_name, seen, seenConfirmation, markSeen } = this.props;
+    const { scientific_name, english_name, swedish_name, seen, seenConfirmation, markSeen, langPref } = this.props;
 
     let seenClasses = "far fa-";
     seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
@@ -26,13 +26,21 @@ class Bird extends Component {
       ...(!seen && !seenConfirmation && { onClick: () => markSeen(scientific_name) }), // no confirmation modal
     };
 
+    const textContent = () => {
+      switch (langPref) {
+        case "en":
+          return english_name;
+        case "se":
+          return swedish_name;
+        default:
+          return `${english_name} / ${swedish_name}`;
+      }
+    };
+  
     return (
       <li className="list-group-item">
         <i {...iconProps} />
-        <div>
-          <p>{english_name}</p>
-          <p>{swedish_name}</p>
-        </div>
+        <p>{textContent()}</p>
         {
           this.state.showModal && (
             <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => markSeen(scientific_name)}>
