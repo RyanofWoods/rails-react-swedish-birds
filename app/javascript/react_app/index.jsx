@@ -36,7 +36,7 @@ const initialState = {
 };
 
 // root, store and middlewares
-const composeEnhancers = __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middlewares = composeEnhancers(applyMiddleware(logger, reduxPromise));
 const store = createStore(reducers, initialState, middlewares);
 
