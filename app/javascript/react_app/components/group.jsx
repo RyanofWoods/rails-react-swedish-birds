@@ -13,11 +13,16 @@ class Group extends Component {
     const textContent = () => {
       switch (langPref) {
         case 'en':
-          return english_name;
+          return <p>{english_name}</p>;
         case 'se':
-            return swedish_name;
+            return <p>{swedish_name}</p>;
         default:
-          return `${english_name} / ${swedish_name}`;
+          return (
+            <div>
+              <p>{english_name}</p>
+              <p>{swedish_name}</p>
+            </div>
+          );
       }
     }
 
@@ -30,7 +35,7 @@ class Group extends Component {
           <p className="family-list-item-numbers pl-1">
             ({total_seen}/{total_birds})
           </p>
-          <p>{textContent()}</p>
+          {textContent()}
         </li>
       </Link>
     );
