@@ -29,18 +29,23 @@ class Bird extends Component {
     const textContent = () => {
       switch (langPref) {
         case "en":
-          return english_name;
+          return <p>{english_name}</p>;
         case "se":
-          return swedish_name;
+          return <p>{swedish_name}</p>;
         default:
-          return `${english_name} / ${swedish_name}`;
+          return (
+            <div>
+              <p>{english_name}</p>
+              <p>{swedish_name}</p>
+            </div>
+          );
       }
     };
   
     return (
       <li className="list-group-item">
         <i {...iconProps} />
-        <p>{textContent()}</p>
+        {textContent()}
         {
           this.state.showModal && (
             <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => markSeen(scientific_name)}>
