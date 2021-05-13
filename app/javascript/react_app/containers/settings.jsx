@@ -3,42 +3,41 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { saveSettings } from "../actions";
 import SETTING_DEFAULTS from "../setting_defaults";
+import Modal from "../components/modal";
 
 class Settings extends Component {
-  state = {
-    settingsHasInitialized: false,
-    settings: SETTING_DEFAULTS,
+  constructor(props) {
+    super(props);
+
+    // setting defaults overriden with user settings
+    this.state = this.loadSettings();;    
   }
 
-  componentDidMount () {
-    // override state.settings defaults with user settings
-    const settingsCopy = { ...this.state.settings };
-
+  loadSettings() {
+    // load setting defaults
+    const settingsCopy = { ...SETTING_DEFAULTS };
+    
+    // override settings defaults with user settings
     for (const [key, value] of Object.entries(this.props.settings)) {
       settingsCopy[key] = value;
     }
 
-    const newState = {
-      settingsHasInitialized: true,
-      settings: settingsCopy,
-    };
-
-    this.setState(newState);
+    return { settings: settingsCopy};
   }
 
   settingsChange = (id, value) => {
     // do not need to force a re-render
-    const settingsCopy = { ...this.state.settings};
+    const settingsCopy = { ...this.state.settings };
 
     settingsCopy[id] = value;
-    this.setState({ settings: settingsCopy })
-  }
+    this.setState({ settings: settingsCopy });
+  };
 
   saveSettings = (event) => {
     event.preventDefault();
-    this.props.saveSettings(this.state.settings)
+    this.props.saveSettings(this.state.settings);
     alert("Settings saved!");
-  }
+  };
 
   render() {
     const { groupBy, seenConfirmation, language } = this.state.settings;
