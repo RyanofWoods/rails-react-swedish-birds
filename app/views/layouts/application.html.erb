@@ -15,20 +15,16 @@
 
   <body>
     <div class="page-container">
-      <div>
-        <%= render "shared/navbar" %>
-      </div>
 
-      <div class="content-container">
-        <%= render 'shared/flashes' %>
+      <%= render 'shared/flashes' %>
 
-        <%= yield %>
-        <%= yield :after_js %>
-      </div>
+      <%= yield %>
+      <%= yield :after_js %>
 
       <div>
         <%= render "shared/footer" %>
       </div>
+
     </div>  
   </body>
 </html>
