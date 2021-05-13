@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import GroupList from './group_list';
 import BirdList from './bird_list';
 import Settings from './settings';
+import Navbar from '../components/navbar';
 
 class App extends Component {
   handleGroupRedirect () {
@@ -18,25 +19,31 @@ class App extends Component {
 
   render () {
     return (
-      <div className="container my-4">
-        <Switch>
-          <Route exact path="/">
-            {this.handleGroupRedirect()}
-          </Route>
+      <div>
+        <Navbar/>
 
-          <Route path="/settings" component={Settings} />
+        <div className="content-container">
+          <div className="container my-4">
+            <Switch>
+              <Route exact path="/">
+                {this.handleGroupRedirect()}
+              </Route>
 
-          <Route path="/:groupedBy/:groupName" component={BirdList} />
+              <Route path="/settings" component={Settings} />
 
-          <Route path="/families/">
-            <GroupList groupPlural={"families"} groupSingular={"family"} />
-          </Route>
-          <Route path="/orders/">
-            <GroupList groupPlural={"orders"} groupSingular={"order"} />
-          </Route>
+              <Route path="/:groupedBy/:groupName" component={BirdList} />
 
-          <Route path="/">{this.handleGroupRedirect()}</Route>
-        </Switch>
+              <Route path="/families/">
+                <GroupList groupPlural={"families"} groupSingular={"family"} />
+              </Route>
+              <Route path="/orders/">
+                <GroupList groupPlural={"orders"} groupSingular={"order"} />
+              </Route>
+
+              <Route path="/">{this.handleGroupRedirect()}</Route>
+            </Switch>
+          </div>
+        </div>
       </div>
     );
   }
