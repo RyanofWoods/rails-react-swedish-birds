@@ -24,7 +24,6 @@ export function fetchGroups(groupBy, populationThreshold = 9) {
 
 export function fetchGroup(groupedBy, groupName, populationThreshold = 9) {
   const url = BASE_URL + `/${groupedBy}/${groupName}?population_category_at_least=${populationThreshold}`;
-  console.log(url)
   const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
     r.json()
   );
