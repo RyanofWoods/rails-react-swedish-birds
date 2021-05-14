@@ -43,8 +43,8 @@ class Bird extends Component {
     };
   
     return (
-      <li className="list-group-item justify-content-between">
-        <div className="d-flex align-items-center">
+      <li className="list-group-item bird-card">
+        <div className="bird-card-info">
           <i {...iconProps} />
           {textContent()}
         </div>
