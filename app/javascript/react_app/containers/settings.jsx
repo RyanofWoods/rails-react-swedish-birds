@@ -42,6 +42,23 @@ class Settings extends Component {
   render() {
     const { groupBy, seenConfirmation, language, populationThreshold } = this.state.settings;
 
+    const populationText = () => {
+      switch (+populationThreshold) {
+        case 5:
+          return "Include birds to the rarest of less than 100 observations in Sweden."
+        case 6:
+          return "Include yearly guest birds which do not breed here."
+        case 7:
+          return "Include birds which may be seen only once, every year or several years.";
+        case 8:
+          return "Include birds which may be seen once or a few times every 10 years."
+        case 9:
+          return "Include birds which have only been seen once or few times in Sweden ever.";
+        default:
+          return ""
+      }
+    }
+
     return (
       <form onSubmit={this.saveSettings}>
         <h2>Settings:</h2>
@@ -72,8 +89,8 @@ class Settings extends Component {
 
         <div className="form-group">
           <label className="mr-2">Population threshold:</label>
-          <p></p>
-          <input type="range" className="form-range w-100 hover-pointer" value={populationThreshold} min="5" max="9" />
+          <p><em>{populationText()}</em></p>
+          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', event.target.value)}/>
         </div>
 
         <button className="btn btn-primary">Submit</button>
