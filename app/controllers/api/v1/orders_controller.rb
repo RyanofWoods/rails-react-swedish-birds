@@ -10,8 +10,10 @@ class Api::V1::OrdersController < Api::V1::BaseController
     @order_scientific_name = @order&.scientific_name
     @order_english_name = @order&.english_name
     @order_swedish_name = @order&.swedish_name
-    @order_birds = @order&.birds
-    @total_birds = @order&.birds.count
+
+    @order_birds = @order&.birds_with_population_higher_or_equal_to(params[:population_category_at_least])
+    @total_birds = @order_birds.count
+
     @total_seen = current_user.order_birds_seen_count(@order)
   end
 
