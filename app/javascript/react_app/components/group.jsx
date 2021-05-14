@@ -32,7 +32,7 @@ class Group extends Component {
           <div className="progress sighting-progress">
             <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <p className="family-list-item-numbers pl-1">
+          <p className="group-list-item-numbers pl-1">
             ({total_seen}/{total_birds})
           </p>
           {textContent()}
