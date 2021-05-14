@@ -27,10 +27,15 @@ def csv_to_models
                               order: order)
     end
     
-    Bird.create!(scientific_name: row[:bird_scientific],
+    bird = Bird.new(scientific_name: row[:bird_scientific],
                 english_name: row[:bird_english],
                 swedish_name: row[:bird_swedish].titleize,
+                details: row[:bird_details],
                 family: family)
+
+    bird.population_category = row[:bird_population] unless row[:bird_population] == "nil"
+
+    bird.save!
   end
 
   puts "Added to the database:"
