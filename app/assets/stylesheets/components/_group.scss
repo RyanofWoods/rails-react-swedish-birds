@@ -20,17 +20,20 @@
     display: flex;
     position: relative;
     align-items: center;
-    padding: 12px 20px 18px 20px;
+    padding: 12px 30px 12px 30px;
     margin-bottom: 0.5rem;
     
+    &.group-item-with-progress {
+      padding-bottom: 18px;
+    }
     i {
       font-size: 24px;
-      margin: 0 2rem 0 1rem;
+      margin-right: 24px;
     }
     p {
       margin-bottom: 0;
     }
-    .family-list-item-numbers {
+    .group-list-item-numbers {
       min-width: 50px;
       margin-right: 1rem;
     }
