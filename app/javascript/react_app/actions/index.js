@@ -9,9 +9,9 @@ export const MARK_SEEN = 'MARK_SEEN';
 export const LOAD_SETTINGS = 'LOAD_SETTINGS';
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
-export function fetchGroups(groupBy) {
+export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
-  const url = BASE_URL + `/groups?group_by=${groupBy}`;
+  const url = BASE_URL + `/groups?group_by=${groupBy}&population_category_at_least=${populationThreshold}`;
 
   const promise = fetch(url, { credentials: 'same-origin' })
     .then(r => r.json());

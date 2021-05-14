@@ -7,11 +7,9 @@ import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
-    const { groupedBy, fetchGroups, groupSingular} = this.props;
+    const { groupedBy, fetchGroups, groupSingular, popThres } = this.props;
 
-     if (groupSingular !== groupedBy) {
-       fetchGroups(groupSingular);
-     } 
+    fetchGroups(groupSingular, popThres); 
   }
 
   render() {
@@ -45,7 +43,8 @@ const mapStateToProps = (state) => {
     totalGroups: state.groupsData.total_groups,
     totalSeen: state.groupsData.total_seen,
     totalBirds: state.groupsData.total_birds,
-    langPref: state.settingsData.language
+    langPref: state.settingsData.language,
+    popThres: state.settingsData.populationThreshold
   };
 }
 
