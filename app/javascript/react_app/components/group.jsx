@@ -28,9 +28,16 @@ class Group extends Component {
 
     return (
       <Link to={`/${groupedBy}/${scientific_name}`}>
-        <li className="list-group-item" id={scientific_name}>
+        <li className="list-group-item group-item-with-progress" id={scientific_name}>
           <div className="progress sighting-progress">
-            <div className="progress-bar" role="progressbar" style={progressStyle} aria-valuenow={Math.floor(progress)} aria-valuemin="0" aria-valuemax="100"></div>
+            <div
+              className="progress-bar"
+              role="progressbar"
+              style={progressStyle}
+              aria-valuenow={Math.floor(progress)}
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
           </div>
           <p className="group-list-item-numbers pl-1">
             ({total_seen}/{total_birds})
