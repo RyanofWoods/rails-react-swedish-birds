@@ -7,9 +7,12 @@ import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
-    const { groupedBy, fetchGroups, groupSingular, userPopThres } = this.props;
+    const { groupedBy, populationThreshold, fetchGroups, groupSingular, userPopThres } = this.props;
 
-    fetchGroups(groupSingular, userPopThres); 
+    // check if we need to re-fetch the groups based on the url && user settings
+    if (groupedBy !== groupSingular || userPopThres !== populationThreshold) {
+      fetchGroups(groupSingular, userPopThres); 
+    }
   }
 
   render() {
