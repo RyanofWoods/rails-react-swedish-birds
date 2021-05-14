@@ -9,7 +9,7 @@ class BirdList extends Component {
   componentDidMount() {
     const { groupedBy, groupName } = this.props.match.params;
 
-    this.props.fetchGroup(groupedBy, groupName);
+    this.props.fetchGroup(groupedBy, groupName, this.props.popThres);
   }
 
   render() {
@@ -42,6 +42,7 @@ const mapStateToProps = (state) => {
     totalBirds: state.selectedGroupData.total_birds,
     birds: state.selectedGroupData.birds,
     langPref: state.settingsData.language,
+    popThres: state.settingsData.populationThreshold
   };
 }
 
