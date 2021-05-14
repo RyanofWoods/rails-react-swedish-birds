@@ -14,7 +14,7 @@ class Bird extends Component {
   }
   
   render() {
-    const { scientific_name, english_name, swedish_name, seen, seenConfirmation, markSeen, langPref } = this.props;
+    const { scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref } = this.props;
 
     let seenClasses = "far fa-";
     seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
@@ -43,9 +43,14 @@ class Bird extends Component {
     };
   
     return (
-      <li className="list-group-item">
-        <i {...iconProps} />
-        {textContent()}
+      <li className="list-group-item justify-content-between">
+        <div className="d-flex align-items-center">
+          <i {...iconProps} />
+          {textContent()}
+        </div>
+
+        <p>{details}</p>
+
         {
           this.state.showModal && (
             <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => markSeen(scientific_name)}>
