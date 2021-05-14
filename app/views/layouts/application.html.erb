@@ -14,13 +14,17 @@
   </head>
 
   <body>
-    <div class="page-container">
+    <div id="page-container">
+      <div id="navbar-container">
+      </div>
+      
+      <div id="content-container">
+        <%= yield %>
+        <%= yield :after_js %>
 
-      <%= render 'shared/flashes' %>
-
-      <%= yield %>
-      <%= yield :after_js %>
-
+        <%= render 'shared/flashes' %>
+      </div>
+  
       <div>
         <%= render "shared/footer" %>
       </div>

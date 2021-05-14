@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from "react-redux";
 
@@ -20,29 +21,27 @@ class App extends Component {
   render () {
     return (
       <React.Fragment>
-        <Navbar/>
+        {ReactDOM.createPortal(<Navbar />, document.getElementById('navbar-container'))}
 
-        <div className="content-container">
-          <div className="container my-4">
-            <Switch>
-              <Route exact path="/">
-                {this.handleGroupRedirect()}
-              </Route>
+        <div className="container my-4">
+          <Switch>
+            <Route exact path="/">
+              {this.handleGroupRedirect()}
+            </Route>
 
-              <Route path="/settings" component={Settings} />
+            <Route path="/settings" component={Settings} />
 
-              <Route path="/:groupedBy/:groupName" component={BirdList} />
+            <Route path="/:groupedBy/:groupName" component={BirdList} />
 
-              <Route path="/families/">
-                <GroupList groupPlural={"families"} groupSingular={"family"} />
-              </Route>
-              <Route path="/orders/">
-                <GroupList groupPlural={"orders"} groupSingular={"order"} />
-              </Route>
+            <Route path="/families/">
+              <GroupList groupPlural={"families"} groupSingular={"family"} />
+            </Route>
+            <Route path="/orders/">
+              <GroupList groupPlural={"orders"} groupSingular={"order"} />
+            </Route>
 
-              <Route path="/">{this.handleGroupRedirect()}</Route>
-            </Switch>
-          </div>
+            <Route path="/">{this.handleGroupRedirect()}</Route>
+          </Switch>
         </div>
       </React.Fragment>
     );
