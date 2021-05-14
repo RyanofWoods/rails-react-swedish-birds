@@ -15,9 +15,13 @@ class User < ApplicationRecord
     Observation.joins(:bird).where('birds.family_id = :family and user_id = :user and birds.population_category <= :pop_cat',
                                   { family: family.id, user: self.id, pop_cat: population_category.to_i }).count
   end 
+  
+  def order_birds_seen_count(order, population_category = nil)
+    # this captures all the birds apart from the ones with unknown population (pop_cat 100)
+    population_category = 9 unless population_category
 
-  def order_birds_seen_count(order)
-    Observation.joins(:bird).where('birds.family.order': order, user: self).count
+    Observation.joins(bird: :family).where('families.order_id = :order and user_id = :user and birds.population_category <= :pop_cat',
+                                  { order: order.id, user: self.id, pop_cat: population_category.to_i }).count
   end 
 
   def seen_bird?(bird)

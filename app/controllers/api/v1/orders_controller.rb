@@ -14,7 +14,7 @@ class Api::V1::OrdersController < Api::V1::BaseController
     @order_birds = @order&.birds_with_population_higher_or_equal_to(params[:population_category_at_least])
     @total_birds = @order_birds.count
 
-    @total_seen = current_user.order_birds_seen_count(@order)
+    @total_seen = authorize current_user.order_birds_seen_count(@order, params[:population_category_at_least]), policy_class: FamilyPolicy
   end
 
   private
