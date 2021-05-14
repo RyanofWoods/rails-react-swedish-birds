@@ -20,7 +20,7 @@ class GroupList extends Component {
 
     return (
       <div>
-        <h1>All {totalGroups} {groupPlural}: </h1>
+        <h1>{totalGroups} {groupPlural}: </h1>
         <h3 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
         </h3>
