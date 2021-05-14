@@ -8,8 +8,8 @@ json.groups @groups do |group|
   json.total_birds group.birds.count
 
   if @group_by == 'family'
-    json.total_seen current_user.family_birds_seen_count(group)
+    json.total_seen current_user.family_birds_seen_count(group, @pop_cat)
   elsif @group_by == 'order'
-    json.total_seen current_user.order_birds_seen_count(group)
+    json.total_seen current_user.order_birds_seen_count(group, @pop_cat)
   end
 end

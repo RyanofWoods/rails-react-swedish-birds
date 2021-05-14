@@ -23,6 +23,9 @@ class Api::V1::FamiliesController < Api::V1::BaseController
 
     # can check observations, as user & bird pairs must be unique
     @total_seen = authorize Observation.count, policy_class: FamilyPolicy
+
+    # used for total birds and total seen statistics in family/order iteration
+    @pop_cat = params[:population_category_at_least]
   end
 
   def show
