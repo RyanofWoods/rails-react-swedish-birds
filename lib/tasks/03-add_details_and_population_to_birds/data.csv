@@ -1,0 +1,544 @@
+bird_scientific,bird_details,bird_population
+Branta bernicla,F 3,3
+Branta ruficollis,T**,7
+Branta canadensis,Hs+f 3,3
+Branta leucopsis,Hf 4 / F 3,3
+Anser rossii,[T***],8
+Anser caerulescens,[T**],7
+Anser anser,Hf 3,3
+Anser fabalis,Hf 4 / F 3 / V 3-4,3
+Anser brachyrhynchus,F 4,4
+Anser albifrons,F 4,4
+Anser erythropus,Hf 5,5
+Cygnus olor,Hs+f 4,4
+Cygnus columbianus,F 4,4
+Cygnus cygnus,Hf 4 / F / V,4
+Alopochen aegyptiaca,[T**],7
+Tadorna tadorna,Hf 3-4 / (V),4
+Tadorna ferruginea,T**,7
+Anas formosa,[T***],8
+Anas querquedula,Hf 4,4
+Anas discors,T***,8
+Anas clypeata,Hf 4,4
+Anas strepera,Hf 4 / V,4
+Anas falcata,[T***],8
+Anas penelope,Hf 3 / (V),3
+Anas americana,T**,7
+Anas platyrhynchos,Hf (s) 2-3 / V,3
+Anas rubripes,T***,8
+Anas acuta,Hf 4 / (V),4
+Anas crecca,Hf (V) 3,3
+Anas carolinensis,T*,6
+Netta rufina,T**,7
+Aythya ferina,Hf 4 / F 3 / (V),3
+Aythya nyroca,T**,7
+Aythya collaris,T**,7
+Aythya fuligula,Hf 3 / V 3,3
+Aythya marila,Hf 4,4
+Aythya affinis,T***,8
+Polysticta stelleri,T* / V 5,5
+Somateria spectabilis,T* / F 5,5
+Somateria mollissima,Hf 2 / F / V,2
+Histrionicus histrionicus,T***,8
+Melanitta perspicillata,T**,7
+Melanitta fusca,Hf 3 / F / (V),3
+Melanitta deglandi,-,nil
+Melanitta stejnegeri,-,nil
+Melanitta nigra,Hf 4 / F 3 / (V),3
+Melanitta americana,T***,8
+Clangula hyemalis,Hf 4 / V 2,2
+Bucephala albeola,[T***],8
+Bucephala clangula,Hs+f 3 / V,3
+Mergellus albellus,Hf 4-5,4
+Lophodytes cucullatus,[T**],7
+Mergus merganser,Hf 3 / V,3
+Mergus serrator,Hf 3 / V,3
+Oxyura jamaicensis,[T**],7
+Oxyura leucocephala,-,nil
+Tetrastes bonasia,Hs 3,3
+Tetrao urogallus,Hs 3,3
+Lyrurus tetrix,Hs 2,2
+Lagopus muta,Hs 3,3
+Lagopus lagopus,Hs 2-3,2
+Perdix perdix,Hs 4,4
+Coturnix coturnix,T*,6
+Phasianus colchicus,Hs 3,3
+Caprimulgus europaeus,Hf 4,4
+Caprimulgus aegyptius,T***,8
+Hirundapus caudacutus,T***,8
+Chaetura pelagica,T***,8
+Apus melba,T***,8
+Apus apus,Hf 2,2
+Apus pallidus,T***,8
+Apus pacificus,T***,8
+Apus affinis,T***,8
+Apus caffer,-,nil
+Otis tarda,T***,8
+Chlamydotis macqueenii,T***,8
+Tetrax tetrax,T***,8
+Clamator glandarius,T***,8
+Cuculus canorus,Hf 3,3
+Syrrhaptes paradoxus,T***,8
+Columba livia,[Hs 2],2
+Columba oenas,Hf 3,3
+Columba palumbus,Hf 2 / V,2
+Streptopelia turtur,T*,6
+Streptopelia orientalis,T**,7
+Streptopelia decaocto,Hs (f) 4,4
+Zenaida macroura,[T***],8
+Rallus aquaticus,Hf 3-4 / (V),4
+Crex crex,Hf 4,4
+Porzana carolina,T***,8
+Porzana porzana,Hf 4,4
+Gallinula chloropus,Hf 3-4 / (V),4
+Fulica atra,Hs+f 3,3
+Zapornia pusilla,T***,8
+Zapornia parva,T**,7
+Grus canadensis,-,nil
+Grus virgo,T***,8
+Grus grus,Hf 3,3
+Tachybaptus ruficollis,Hf 4 (V),4
+Podiceps grisegena,Hf 4,4
+Podiceps cristatus,Hf 3 / (V),3
+Podiceps auritus,Hf 4 / (V),4
+Podiceps nigricollis,Hf 5,5
+Phoenicopterus roseus,[T**],7
+Burhinus oedicnemus,T***,8
+Haematopus ostralegus,Hf 3,3
+Himantopus himantopus,T***,8
+Recurvirostra avosetta,Hf 4,4
+Vanellus vanellus,Hf 2,2
+Vanellus cinereus,???,nil
+Vanellus gregarius,T***,8
+Vanellus leucurus,T***,8
+Pluvialis apricaria,Hf 3,3
+Pluvialis fulva,T**,7
+Pluvialis dominica,T***,8
+Pluvialis squatarola,F 3-4,4
+Charadrius hiaticula,Hf 3,3
+Charadrius dubius,Hf 4,4
+Charadrius alexandrinus,T*,6
+Charadrius mongolus,T***,8
+Charadrius leschenaultii,T***,8
+Charadrius asiaticus,Hf 4,4
+Charadrius morinellus,Hf 4,4
+Bartramia longicauda,T***,8
+Numenius phaeopus,Hf 4,4
+Numenius minutus,T***,8
+Numenius arquata,Hf 3,3
+Limosa lapponica,Hf 5 / F 4,4
+Limosa limosa,Hf 4,4
+Limosa haemastica,T***,8
+Arenaria interpres,Hf 4,4
+Calidris tenuirostris,T***,8
+Calidris canutus,F 3-4,4
+Calidris pugnax,Hf 3,3
+Calidris falcinellus,Hf 4 / F 4-5,4
+Calidris acuminata,T***,8
+Calidris himantopus,T***,8
+Calidris ferruginea,F 4,4
+Calidris temminckii,Hf 4,4
+Calidris subminuta,T***,8
+Calidris ruficollis,T***,8
+Calidris alba,F 4,4
+Calidris alpina,Hf 3,3
+Calidris maritima,Hf 4 / V,4
+Calidris bairdii,T***,8
+Calidris minuta,F 4,4
+Calidris fuscicollis,T**,7
+Calidris subruficollis,T**,7
+Calidris melanotos,T**,7
+Calidris pusilla,T***,8
+Calidris mauri,T***,8
+Limnodromus scolopaceus,T***,8
+Limnodromus griseus,-,nil
+Scolopax rusticola,Hf 3,3
+Lymnocryptes minimus,Hf 4,4
+Gallinago media,Hf 4,4
+Gallinago gallinago,Hf 2 / (V),2
+Gallinago delicata,-,nil
+Xenus cinereus,T**,7
+Phalaropus tricolor,T***,8
+Phalaropus lobatus,Hf 3,3
+Phalaropus fulicarius,T**,7
+Actitis hypoleucos,Hf 3,3
+Actitis macularius,T***,8
+Tringa ochropus,Hf 3,3
+Tringa solitaria,T***,8
+Tringa brevipes,T****,9
+Tringa flavipes,T***,8
+Tringa totanus,Hf 3 / (V),3
+Tringa stagnatilis,T*,6
+Tringa glareola,Hf 3,3
+Tringa erythropus,Hf 4,4
+Tringa nebularia,Hf 3,3
+Tringa melanoleuca,T***,8
+Cursorius cursor,T***,8
+Glareola pratincola,T***,8
+Glareola maldivarum,T***,8
+Glareola nordmanni,T***,8
+Rissa tridactyla,Hf 5 / F 4 / V 3-5,4
+Pagophila eburnea,T***,8
+Xema sabini,T*,6
+Chroicocephalus genei,T***,8
+Chroicocephalus philadelphia,T***,8
+Chroicocephalus ridibundus,Hf 2 / (V),2
+Hydrocoloeus minutus,Hf 4-5,4
+Rhodostethia rosea,T***,8
+Leucophaeus atricilla,T***,8
+Leucophaeus pipixcan,T***,8
+Ichthyaetus melanocephalus,T*,6
+Ichthyaetus ichthyaetus,T***,8
+Larus canus,Hf (s) 2,2
+Larus delawarensis,T***,8
+Larus marinus,Hs+f 4,4
+Larus hyperboreus,(V 5),5
+Larus glaucoides,T**,7
+Larus argentatus,Hs+f 3,3
+Larus cachinnans,F 4-5 / V 5,5
+Larus michahellis,F / V 5,5
+Larus fuscus,Hf 3,3
+Gelochelidon nilotica,T***,8
+Hydroprogne caspia,Hf 4,4
+Thalasseus sandvicensis,Hf 4,4
+Sternula albifrons,Hf 4,4
+Onychoprion anaethetus,T***,8
+Onychoprion fuscatus,T***,8
+Sterna dougallii,T***,8
+Sterna hirundo,Hf 3,3
+Sterna paradisaea,Hf 3,3
+Sterna forsteri,T***,8
+Chlidonias hybrida,T***,8
+Chlidonias leucopterus,T*,6
+Chlidonias niger,Hf 4,4
+Stercorarius skua,T*,6
+Stercorarius pomarinus,F 4-5,5
+Stercorarius parasiticus,Hf 4,4
+Stercorarius longicaudus,Hf 3-4,4
+Alle alle,F 4-5 / (V 5),5
+Uria lomvia,T***,8
+Uria aalge,Hf 4 / V,4
+Alca torda,Hf 4 / V,4
+Pinguinus impennis,???,nil
+Cepphus grylle,Hf 3  / V,3
+Aethia psittacula,T****,9
+Fratercula arctica,T*,6
+Fratercula cirrhata,T****,9
+Gavia stellata,Hf 4 / F 3 / V,3
+Gavia arctica,Hf 4 / F 3 / V 4,3
+Gavia pacifica,-,nil
+Gavia immer,T* / F 5,5
+Gavia adamsii,F 4,4
+Thalassarche melanophris,T***,8
+Thalassarche chlororhynchos,T****,9
+Hydrobates pelagicus,T**,7
+Oceanodroma leucorhoa,T*,6
+Fulmarus glacialis,T*,6
+Pterodroma feae/madeira,T***,8
+Calonectris borealis/diomedea,T**,7
+Ardenna grisea,T*,6
+Ardenna gravis,T***,8
+Puffinus puffinus,T*,6
+Puffinus mauretanicus,T***,8
+Ciconia nigra,T*,6
+Ciconia ciconia,T* ,6
+Fregata magnificens,-,nil
+Morus bassanus,T*,6
+Microcarbo pygmaeus,T***,8
+Phalacrocorax carbo,Hs+f 3-4 / V,3
+Phalacrocorax aristotelis,Hs 5 / V 4,4
+Plegadis falcinellus,T***,8
+Platalea leucorodia,T**,7
+Botaurus stellaris,Hf 4 / (V),4
+Botaurus lentiginosus,T***,8
+Ixobrychus minutus,T***,8
+Nycticorax nycticorax,T***,8
+Ardeola ralloides,T***,8
+Bubulcus ibis,T***,8
+Ardea cinerea,Hf (s) 4,4
+Ardea purpurea,T***,8
+Ardea alba,T*,6
+Egretta garzetta,T**,7
+Pelecanus onocrotalus,[T***],8
+Pandion haliaetus,Hf 4,4
+Elanus caeruleus,T***,8
+Neophron percnopterus,T***,8
+Pernis apivorus,Hf 4,4
+Gyps fulvus,[T***],8
+Aegypius monachus,-,nil
+Circaetus gallicus,T***,8
+Clanga pomarina,T**,7
+Clanga clanga,T**,7
+Hieraaetus pennatus,T***,8
+Aquila nipalensis,T**,7
+Aquila heliaca,T***,8
+Aquila chrysaetos,Hs (f) 4,4
+Accipiter nisus,Hf 3 / V 4,3
+Accipiter gentilis,Hs 4 / F,4
+Circus aeruginosus,Hf 4,4
+Circus cyaneus,Hf 4 / (V),4
+Circus macrourus,T*,6
+Circus pygargus,Hf 5,5
+Milvus milvus,Hs+f 4,4
+Milvus migrans,T*,6
+Haliaeetus albicilla,Hs (f) 4-5,5
+Buteo lagopus,Hf 4 / (V),4
+Buteo rufinus,T***,8
+Buteo buteo,Hf 3 / V 4,3
+Tyto alba,Hs 5,5
+Otus scops,T***,8
+Bubo scandiacus,Hs (f) 5 / (T*),5
+Bubo bubo,Hs 3,3
+Strix aluco,Hs 3,3
+Strix uralensis,Hs 4,4
+Strix nebulosa,Hs 4-5,5
+Surnia ulula,Hs (f) 4,4
+Glaucidium passerinum,Hs 4,4
+Athene noctua,T***,8
+Aegolius funereus,Hs (f) 3-4,4
+Asio otus,Hf (s) 4,4
+Asio flammeus,Hf (s) 5,5
+Upupa epops,T* ,6
+Coracias garrulus,T**,7
+Alcedo atthis,Hs+f 4-5,5
+Merops persicus,T***,8
+Merops apiaster,T*,6
+Jynx torquilla,Hf 4,4
+Picoides tridactylus,Hs 4,4
+Dendrocoptes medius,T***,8
+Dryobates minor,Hs 3-4,4
+Dendrocopos major,Hs 2-3,3
+Dendrocopos leucotos,Hs 5,5
+Dryocopus martius,Hs 2-3,3
+Picus viridis,Hs 3,3
+Picus canus,Hs 4,4
+Falco naumanni,T***,8
+Falco tinnunculus,Hf 4 / (V),4
+Falco vespertinus,T*,6
+Falco amurensis,T***,8
+Falco eleonorae,T***,8
+Falco columbarius,Hf 4 / (V),4
+Falco subbuteo,Hf 4,4
+Falco cherrug,[T***],8
+Falco rusticolus,Hs (f) 5,5
+Falco peregrinus,Hf 5 / (V),5
+Lanius cristatus,T***,8
+Lanius collurio,Hf 3,3
+Lanius isabellinus,T***,8
+Lanius phoenicuroides,T***,8
+Lanius schach,T***,8
+Lanius minor,T**,7
+Lanius excubitor,Hf 4 / (V),4
+Lanius elegans,???,nil
+Lanius senator,T**,7
+Lanius nubicus,T***,8
+Oriolus oriolus,Hf 5,5
+Perisoreus infaustus,Hs 3,3
+Garrulus glandarius,Hs 2,2
+Pica pica,Hs 2,2
+Nucifraga caryocatactes,Hs (f) 4,4
+Pyrrhocorax graculus,-,nil
+Corvus monedula,Hs 3,3
+Corvus dauuricus,T***,8
+Corvus frugilegus,Hf (s) 3,3
+Corvus corone,T*,6
+Corvus corax,Hs 3,3
+Bombycilla garrulus,Hf 4 / V,4
+Periparus ater,Hs (f) 2,2
+Lophophanes cristatus,Hf 3,3
+Poecile cinctus,Hs 4,4
+Poecile palustris,Hs 2,2
+Poecile montanus,Hs 2,2
+Cyanistes caeruleus,Hs (f) 2,2
+Cyanistes cyanus,T***,8
+Parus major,Hs (f) 1,1
+Remiz pendulinus,Hf 5,5
+Panurus biarmicus,Hs+f 4,4
+Lullula arborea,Hf 4,4
+Alauda leucoptera,T***,8
+Alauda arvensis,Hf 1 / (V),1
+Galerida cristata,T**,7
+Eremophila alpestris,Hf 4 / (V),4
+Calandrella brachydactyla,T**,7
+Melanocorypha bimaculata,T***,8
+Melanocorypha calandra,T***,8
+Melanocorypha yeltoniensis,T***,8
+Alaudala rufescens,T***,8
+Riparia riparia,Hf 3,3
+Hirundo rustica,Hf 2,2
+Ptyonoprogne rupestris,T***,8
+Delichon urbicum,Hf 2,2
+Cecropis daurica,T**,7
+Petrochelidon pyrrhonota,-,nil
+Cettia cetti,T***,8
+Aegithalos caudatus,Hs (f) 3,3
+Phylloscopus sibilatrix,Hf 2,2
+Phylloscopus bonelli,T***,8
+Phylloscopus orientalis,T***,8
+Phylloscopus humei,T**,7
+Phylloscopus inornatus,T*,6
+Phylloscopus proregulus,T*,6
+Phylloscopus schwarzi,T**,7
+Phylloscopus fuscatus,T**,7
+Phylloscopus neglectus,T****,9
+Phylloscopus trochilus,Hf 1,1
+Phylloscopus collybita,Hf 2 / (V),2
+Phylloscopus ibericus,T***,8
+Phylloscopus coronatus,-,nil
+Phylloscopus nitidus,T***,8
+Phylloscopus plumbeitarsus,T***,8
+Phylloscopus trochiloides,T*,6
+Phylloscopus borealis,Hf 5,5
+Acrocephalus arundinaceus,Hf 4,4
+Acrocephalus paludicola,T***,8
+Acrocephalus schoenobaenus,Hf 2-3,3
+Acrocephalus agricola,T***,8
+Acrocephalus dumetorum,T*,6
+Acrocephalus scirpaceus,Hf 3,3
+Acrocephalus palustris,Hf 3,3
+Iduna caligata,T**,7
+Iduna rama,T***,8
+Iduna pallida,T***,8
+Iduna opaca,T***,8
+Hippolais polyglotta,T***,8
+Hippolais icterina,Hf 3,3
+Helopsaltes certhiola,-,nil
+Locustella lanceolata,T***,8
+Locustella fluviatilis,T*,6
+Locustella luscinioides,Hf 5,5
+Locustella naevia,Hf 4,4
+Cisticola juncidis,T***,8
+Sylvia atricapilla,Hf 2 / (V),2
+Sylvia borin,Hf 1-2,2
+Curruca nisoria,Hf 4,4
+Curruca curruca,Hf 2,2
+Curruca nana,T***,8
+Curruca melanocephala,T***,8
+Curruca iberiae,T**,7
+Curruca subalpina,T***,8
+Curruca cantillans,T*,6
+Curruca communis,Hf 2,2
+Curruca undata,T***,8
+Regulus ignicapilla,Hf 5,5
+Regulus regulus,Hs+f 1-2,2
+Troglodytes troglodytes,Hf (s) 2,2
+Sitta europaea,Hs 3,3
+Certhia familiaris,Hs 2,2
+Certhia brachydactyla,T**,7
+Pastor roseus,T**,7
+Sturnus vulgaris,H1 / (V),1
+Geokichla sibirica,T***,8
+Zoothera aurea,T***,8
+Catharus fuscescens,T***,8
+Catharus ustulatus,T***,8
+Catharus guttatus,T***,8
+Turdus torquatus,Hf 4,4
+Turdus merula,Hs+f 1,1
+Turdus obscurus,T***,8
+Turdus atrogularis,T**,7
+Turdus naumanni,-,nil
+Turdus eunomus,-,nil
+Turdus pilaris,Hf 2 / V,2
+Turdus iliacus,Hf 1,1
+Turdus philomelos,Hf 1,1
+Turdus viscivorus,Hf 3-4,4
+Turdus migratorius,T***,8
+Muscicapa striata,Hf 2,2
+Muscicapa dauurica,T***,8
+Erithacus rubecula,Hf 1 / (V),1
+Luscinia svecica,Hf 3,3
+Luscinia luscinia,Hf 3,3
+Luscinia megarhynchos,T**,7
+Irania gutturalis,T***,8
+Calliope calliope,-,nil
+Tarsiger cyanurus,T**,7
+Ficedula albicilla,T***,8
+Ficedula parva,Hf 4,4
+Ficedula hypoleuca,Hf 2,2
+Ficedula albicollis,Hf 4,4
+Phoenicurus ochruros,Hf 4,4
+Phoenicurus phoenicurus,Hf 2-3,3
+Phoenicurus auroreus,???,nil
+Monticola saxatilis,T***,8
+Monticola solitarius,T***,8
+Saxicola rubetra,Hf 3,3
+Saxicola rubicola,-,nil
+Saxicola maurus,-,nil
+Saxicola stejnegeri,???,nil
+Saxicola caprata,-,nil
+Oenanthe oenanthe,Hf 3,3
+Oenanthe isabellina,T***,8
+Oenanthe deserti,T**,7
+Oenanthe hispanica,T***,8
+Oenanthe melanoleuca,???,nil
+Oenanthe pleschanka,T***,8
+Cinclus cinclus,Hf 4 / V,4
+Passer domesticus,Hs 2,2
+Passer hispaniolensis,-,nil
+Passer montanus,Hs 2,2
+Prunella collaris,T***,8
+Prunella montanella,T***,8
+Prunella atrogularis,T***,8
+Prunella modularis,Hf 2,2
+Motacilla flava,Hf 3,3
+Motacilla citreola,T*,6
+Motacilla cinerea,Hf 4,4
+Motacilla alba,Hf 2,2
+Anthus richardi ,T*,6
+Anthus godlewskii,T***,8
+Anthus campestris,Hf 4,4
+Anthus pratensis,Hf 1,1
+Anthus trivialis,Hf 1,1
+Anthus hodgsoni,T**,7
+Anthus gustavi,T***,8
+Anthus cervinus,Hf 4,4
+Anthus rubescens,T***,8
+Anthus spinoletta,V 5,5
+Anthus petrosus,Hf (s) 4,4
+Fringilla coelebs,Hf 1 / (V),1
+Fringilla montifringilla,Hf 1 / V 2-5,1
+Coccothraustes coccothraustes,Hs+f 3,3
+Pinicola enucleator,Hs (f) 4,4
+Pyrrhula pyrrhula,Hs (f) 2,2
+Bucanetes githagineus,T***,8
+Carpodacus erythrinus,Hf 4,4
+Carpodacus sibiricus,T****,9
+Carpodacus roseus,T****,9
+Chloris chloris,Hs+f 1-2,2
+Linaria flavirostris,Hf 5 / F 3 / (V),3
+Linaria cannabina,Hf 2,2
+Acanthis flammea,Hs+f 1-2,2
+Loxia pytyopsittacus,Hs+f 3,3
+Loxia curvirostra,Hs+f 2-3,3
+Loxia bifasciata,T*,6
+Carduelis carduelis,Hs+f 3,3
+Serinus serinus,Hf 5,5
+Spinus spinus,Hs+f 2,2
+Calcarius lapponicus,Hs 2-3,3
+Plectrophenax nivalis,Hf 3 / F / (V),3
+Emberiza calandra,Hs 5,5
+Emberiza citrinella,Hs (f) 1-2,1
+Emberiza leucocephalos,T***,8
+Emberiza cia,T***,8
+Emberiza buchanani,-,nil
+Emberiza cineracea,-,nil
+Emberiza hortulana,Hf 4,4
+Emberiza caesia,T***,8
+Emberiza cirlus,T***,8
+Emberiza fucata,T****,9
+Emberiza pusilla,Hf 5,5
+Emberiza chrysophrys,T***,8
+Emberiza rustica,Hf 3-4,4
+Emberiza aureola,T***,8
+Emberiza melanocephala,T***,8
+Emberiza bruniceps,[T***],8
+Emberiza spodocephala,-,nil
+Emberiza pallasi,-,nil
+Emberiza schoeniclus,Hf 2 / (V),2
+Spizelloides arborea,???,nil
+Junco hyemalis,-,nil
+Zonotrichia albicollis,T***,8
+Melospiza melodia,-,nil
+Xanthocephalus xanthocephalus,T****,9
+Pheucticus ludovicianus,T***,8
+Passerina cyanea,[T***],8
