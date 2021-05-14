@@ -40,7 +40,7 @@ class Settings extends Component {
   };
 
   render() {
-    const { groupBy, seenConfirmation, language } = this.state.settings;
+    const { groupBy, seenConfirmation, language, populationThreshold } = this.state.settings;
 
     return (
       <form onSubmit={this.saveSettings}>
@@ -68,6 +68,12 @@ class Settings extends Component {
             <option value="se">Swedish</option>
             <option value="both">Both</option>
           </select>
+        </div>
+
+        <div className="form-group">
+          <label className="mr-2">Population threshold:</label>
+          <p></p>
+          <input type="range" className="form-range w-100 hover-pointer" value={populationThreshold} min="5" max="9" />
         </div>
 
         <button className="btn btn-primary">Submit</button>
