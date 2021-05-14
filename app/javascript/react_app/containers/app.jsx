@@ -19,7 +19,7 @@ class App extends Component {
 
   render () {
     return (
-      <div>
+      <React.Fragment>
         <Navbar/>
 
         <div className="content-container">
@@ -44,7 +44,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 };
