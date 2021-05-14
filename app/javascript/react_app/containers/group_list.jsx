@@ -7,13 +7,13 @@ import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
-    const { groupedBy, fetchGroups, groupSingular, popThres } = this.props;
+    const { groupedBy, fetchGroups, groupSingular, userPopThres } = this.props;
 
-    fetchGroups(groupSingular, popThres); 
+    fetchGroups(groupSingular, userPopThres); 
   }
 
   render() {
-    const { groups, totalGroups, totalBirds, totalSeen, groupPlural, langPref } = this.props;
+    const { groups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref } = this.props;
 
     return (
       <div>
@@ -24,7 +24,7 @@ class GroupList extends Component {
 
         <ul className="list-group">
           {groups.map((group) => {
-            return <Group key={group.scientific_name} groupedBy={groupPlural} langPref={langPref} {...group}/>;
+            return <Group key={group.scientific_name} groupedBy={groupPlural} langPref={userLangPref} {...group}/>;
           })}
         </ul>
       </div>
@@ -38,13 +38,14 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    groupedBy: state.groupsData.grouped_by,
+    groupedBy: state.groupsData.grouped_by, // whether the data is grouped by 'order' or 'family'
+    populationThreshold: state.groupsData.population_threshold, // threshold used to filter the data
     groups: state.groupsData.groups,
     totalGroups: state.groupsData.total_groups,
     totalSeen: state.groupsData.total_seen,
     totalBirds: state.groupsData.total_birds,
-    langPref: state.settingsData.language,
-    popThres: state.settingsData.populationThreshold
+    userLangPref: state.settingsData.language,
+    userPopThres: state.settingsData.populationThreshold
   };
 }
 
