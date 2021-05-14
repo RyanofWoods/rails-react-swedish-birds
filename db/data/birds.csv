@@ -1,544 +1,544 @@
-bird_scientific,bird_english,bird_swedish,family_scientific,family_english,family_swedish,order_scientific,order_english,order_swedish
-Branta bernicla,Brant Goose,prutgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Branta ruficollis,Red-breasted Goose,rödhalsad gås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Branta canadensis,Canada Goose,kanadagås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Branta leucopsis,Barnacle Goose,vitkindad gås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser rossii,Ross's Goose,dvärgsnögås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser caerulescens,Snow Goose,snögås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser anser,Greylag Goose,grågås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser fabalis,Bean Goose,sädgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser brachyrhynchus,Pink-footed Goose,spetsbergsgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser albifrons,Greater White-fronted Goose,bläsgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anser erythropus,Lesser White-fronted Goose,fjällgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Cygnus olor,Mute Swan,knölsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Cygnus columbianus,Tundra Swan,mindre sångsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Cygnus cygnus,Whooper Swan,sångsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Alopochen aegyptiaca,Egyptian Goose,nilgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Tadorna tadorna,Common Shelduck,gravand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Tadorna ferruginea,Ruddy Shelduck,rostand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas formosa,Baikal Teal,gulkindad kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas querquedula,Garganey,årta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas discors,Blue-winged Teal,blåvingad årta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas clypeata,Northern Shoveler,skedand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas strepera,Gadwall,snatterand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas falcata,Falcated Duck,praktand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas penelope,Eurasian Wigeon,bläsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas americana,American Wigeon,amerikansk bläsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas platyrhynchos,Mallard,gräsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas rubripes,American Black Duck,svartand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas acuta,Northern Pintail,stjärtand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas crecca,Eurasian Teal,kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Anas carolinensis,Green-winged Teal,amerikansk kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Netta rufina,Red-crested Pochard,rödhuvad dykand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya ferina,Common Pochard,brunand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya nyroca,Ferruginous Duck,vitögd dykand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya collaris,Ring-necked Duck,ringand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya fuligula,Tufted Duck,vigg,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya marila,Greater Scaup,bergand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Aythya affinis,Lesser Scaup,mindre bergand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Polysticta stelleri,Steller's Eider,alförrädare,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Somateria spectabilis,King Eider,praktejder,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Somateria mollissima,Common Eider,ejder,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Histrionicus histrionicus,Harlequin Duck,strömand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta perspicillata,Surf Scoter,vitnackad svärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta fusca,Velvet Scoter,svärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta deglandi,White-winged Scoter,amerikansk knölsvärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta stejnegeri,Stejneger's Scoter,sibirisk knölsvärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta nigra,Common Scoter,sjöorre,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Melanitta americana,Black Scoter,amerikansk sjöorre,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Clangula hyemalis,Long-tailed Duck,alfågel,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Bucephala albeola,Bufflehead,buffelhuvud,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Bucephala clangula,Common Goldeneye,knipa,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Mergellus albellus,Smew,salskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Lophodytes cucullatus,Hooded Merganser,kamskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Mergus merganser,Common Merganser,storskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Mergus serrator,Red-breasted Merganser,småskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Oxyura jamaicensis,Ruddy Duck,amerikansk kopparand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Oxyura leucocephala,White-headed Duck,kopparand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR
-Tetrastes bonasia,Hazel Grouse,järpe,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Tetrao urogallus,Western Capercaillie,tjäder,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Lyrurus tetrix,Black Grouse,orre,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Lagopus muta,Rock Ptarmigan,fjällripa,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Lagopus lagopus,Willow Ptarmigan,dalripa,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Perdix perdix,Grey Partridge,rapphöna,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Coturnix coturnix,Common Quail,vaktel,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Phasianus colchicus,Common Pheasant,fasan,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR
-Caprimulgus europaeus,European Nightjar,nattskärra,Caprimulgidae,Nightjars,Nattskärror,CAPRIMULGIFORMES,Nightjars,SKÄRRFÅGLAR
-Caprimulgus aegyptius,Egyptian Nightjar,ökennattskärra,Caprimulgidae,Nightjars,Nattskärror,CAPRIMULGIFORMES,Nightjars,SKÄRRFÅGLAR
-Hirundapus caudacutus,White-throated Needletail,taggstjärtseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Chaetura pelagica,Chimney Swift,skorstensseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus melba,Alpine Swift,alpseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus apus,Common Swift,tornseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus pallidus,Pallid Swift,blek tornseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus pacificus,Pacific Swift,orientseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus affinis,Little Swift,stubbstjärtseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Apus caffer,White-rumped Swift,vitgumpseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR
-Otis tarda,Great Bustard,stortrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR
-Chlamydotis macqueenii,Macqueen's Bustard,kragtrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR
-Tetrax tetrax,Little Bustard,småtrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR
-Clamator glandarius,Great Spotted Cuckoo,skatgök,Cuculidae,Cuckoos,Gökar,CUCULIFORMES,Cuckoos,GÖKFÅGLAR
-Cuculus canorus,Common Cuckoo,gök,Cuculidae,Cuckoos,Gökar,CUCULIFORMES,Cuckoos,GÖKFÅGLAR
-Syrrhaptes paradoxus,Pallas's Sandgrouse,stäppflyghöna,Pteroclidae,Sandgrouse,Flyghöns,PTEROCLIFORMES,Sandgrouses,FLYGHÖNSFÅGLAR
-Columba livia,Rock Dove / Feral Pigeon,klippduva / tamduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Columba oenas,Stock Dove,skogsduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Columba palumbus,Common Wood Pigeon,ringduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Streptopelia turtur,European Turtle Dove,turturduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Streptopelia orientalis,Oriental Turtle Dove,större turturduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Streptopelia decaocto,Eurasian Collared Dove,turkduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Zenaida macroura,Mourning Dove,spetsstjärtad duva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR
-Rallus aquaticus,Water Rail,vattenrall,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Crex crex,Corn Crake,kornknarr,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Porzana carolina,Sora,karolinasumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Porzana porzana,Spotted Crake,småfläckig sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Gallinula chloropus,Common Moorhen,rörhöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Fulica atra,Eurasian Coot,sothöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Zapornia pusilla,Baillon's Crake,dvärgsumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Zapornia parva,Little Crake,mindre sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Grus canadensis,Sandhill Crane,prärietrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Grus virgo,Demoiselle Crane,jungfrutrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Grus grus,Common Crane,trana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR
-Tachybaptus ruficollis,Little Grebe,smådopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR
-Podiceps grisegena,Red-necked Grebe,gråhakedopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR
-Podiceps cristatus,Great Crested Grebe,skäggdopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR
-Podiceps auritus,Horned Grebe,svarthakedopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR
-Podiceps nigricollis,Black-necked Grebe,svarthalsad dopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR
-Phoenicopterus roseus,Greater Flamingo,större flamingo,Phoenicopteridae,Flamingos,Flamingor,PHOENICOPTERIFORMES,Flamingos,FLAMINGOFÅGLAR
-Burhinus oedicnemus,Eurasian Stone-curlew,tjockfot,Burhinidae,Stone-curlews,Tjockfotar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Haematopus ostralegus,Eurasian Oystercatcher,strandskata,Haematopodidae,Oystercatchers,Strandskator,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Himantopus himantopus,Black-winged Stilt,styltlöpare,Recurvirostridae,Stilts and Avocets,Skärfläckor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Recurvirostra avosetta,Pied Avocet,skärfläcka,Recurvirostridae,Stilts and Avocets,Skärfläckor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Vanellus vanellus,Northern Lapwing,tofsvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Vanellus cinereus,Grey-headed Lapwing,gråhuvad vipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Vanellus gregarius,Sociable Lapwing,stäppvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Vanellus leucurus,White-tailed Lapwing,sumpvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pluvialis apricaria,European Golden Plover,ljungpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pluvialis fulva,Pacific Golden Plover,sibirisk tundrapipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pluvialis dominica,American Golden Plover,amerikansk tundrapipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pluvialis squatarola,Grey Plover,kustpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius hiaticula,Common Ringed Plover,större strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius dubius,Little Ringed Plover,mindre strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius alexandrinus,Kentish Plover,svartbent strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius mongolus,Lesser Sand Plover,mongolpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius leschenaultii,Greater Sand Plover,ökenpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius asiaticus,Caspian Plover,kaspisk pipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Charadrius morinellus,Eurasian Dotterel,fjällpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Bartramia longicauda,Upland Sandpiper,piparsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Numenius phaeopus,Eurasian Whimbrel,småspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Numenius minutus,Little Curlew,dvärgspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Numenius arquata,Eurasian Curlew,storspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Limosa lapponica,Bar-tailed Godwit,myrspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Limosa limosa,Black-tailed Godwit,rödspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Limosa haemastica,Hudsonian Godwit,hudsonspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Arenaria interpres,Ruddy Turnstone,roskarl,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris tenuirostris,Great Knot,kolymasnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris canutus,Red Knot,kustsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris pugnax,Ruff,brushane,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris falcinellus,Broad-billed Sandpiper,myrsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris acuminata,Sharp-tailed Sandpiper,spetsstjärtad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris himantopus,Stilt Sandpiper,styltsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris ferruginea,Curlew Sandpiper,spovsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris temminckii,Temminck's Stint,mosnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris subminuta,Long-toed Stint,långtåsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris ruficollis,Red-necked Stint,rödhalsad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris alba,Sanderling,sandlöpare,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris alpina,Dunlin,kärrsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris maritima,Purple Sandpiper,skärsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris bairdii,Baird's Sandpiper,gulbröstad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris minuta,Little Stint,småsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris fuscicollis,White-rumped Sandpiper,vitgumpsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris subruficollis,Buff-breasted Sandpiper,prärielöpare,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris melanotos,Pectoral Sandpiper,tuvsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris pusilla,Semipalmated Sandpiper,sandsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Calidris mauri,Western Sandpiper,tundrasnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Limnodromus scolopaceus,Long-billed Dowitcher,större beckasinsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Limnodromus griseus,Short-billed Dowitcher,mindre beckasinsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Scolopax rusticola,Eurasian Woodcock,morkulla,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Lymnocryptes minimus,Jack Snipe,dvärgbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Gallinago media,Great Snipe,dubbelbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Gallinago gallinago,Common Snipe,enkelbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Gallinago delicata,Wilson's Snipe,wilsonbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Xenus cinereus,Terek Sandpiper,tereksnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Phalaropus tricolor,Wilson's Phalarope,wilsonsimsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Phalaropus lobatus,Red-necked Phalarope,smalnäbbad simsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Phalaropus fulicarius,Red Phalarope,brednäbbad simsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Actitis hypoleucos,Common Sandpiper,drillsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Actitis macularius,Spotted Sandpiper,fläckdrillsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa ochropus,Green Sandpiper,skogssnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa solitaria,Solitary Sandpiper,amerikansk skogssnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa brevipes,Grey-tailed Tattler,sibirisk gråsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa flavipes,Lesser Yellowlegs,mindre gulbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa totanus,Common Redshank,rödbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa stagnatilis,Marsh Sandpiper,dammsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa glareola,Wood Sandpiper,grönbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa erythropus,Spotted Redshank,svartsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa nebularia,Common Greenshank,gluttsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Tringa melanoleuca,Greater Yellowlegs,större gulbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Cursorius cursor,Cream-colored Courser,ökenlöpare,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Glareola pratincola,Collared Pratincole,rödvingad vadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Glareola maldivarum,Oriental Pratincole,orientvadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Glareola nordmanni,Black-winged Pratincole,svartvingad vadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Rissa tridactyla,Black-legged Kittiwake,tretåig mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pagophila eburnea,Ivory Gull,ismås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Xema sabini,Sabine's Gull,tärnmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chroicocephalus genei,Slender-billed Gull,långnäbbad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chroicocephalus philadelphia,Bonaparte's Gull,trädmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chroicocephalus ridibundus,Black-headed Gull,skrattmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Hydrocoloeus minutus,Little Gull,dvärgmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Rhodostethia rosea,Ross's Gull,rosenmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Leucophaeus atricilla,Laughing Gull,sotvingad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Leucophaeus pipixcan,Franklin's Gull,präriemås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Ichthyaetus melanocephalus,Mediterranean Gull,svarthuvad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Ichthyaetus ichthyaetus,Pallas's Gull,svarthuvad trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus canus,Mew Gull,fiskmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus delawarensis,Ring-billed Gull,ringnäbbad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus marinus,Great Black-backed Gull,havstrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus hyperboreus,Glaucous Gull,vittrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus glaucoides,Iceland Gull,vitvingad trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus argentatus,Herring Gull,gråtrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus cachinnans,Caspian Gull,kaspisk trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus michahellis,Yellow-legged Gull,medelhavstrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Larus fuscus,Lesser Black-backed Gull,silltrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Gelochelidon nilotica,Gull-billed Tern,sandtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Hydroprogne caspia,Caspian Tern,skräntärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Thalasseus sandvicensis,Sandwich Tern,kentsk tärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Sternula albifrons,Little Tern,småtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Onychoprion anaethetus,Bridled Tern,tygeltärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Onychoprion fuscatus,Sooty Tern,sottärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Sterna dougallii,Roseate Tern,rosentärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Sterna hirundo,Common Tern,fisktärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Sterna paradisaea,Arctic Tern,silvertärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Sterna forsteri,Forster's Tern,kärrtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chlidonias hybrida,Whiskered Tern,skäggtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chlidonias leucopterus,White-winged Tern,vitvingad tärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Chlidonias niger,Black Tern,svarttärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Stercorarius skua,Great Skua,storlabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Stercorarius pomarinus,Pomarine Jaeger,bredstjärtad labb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Stercorarius parasiticus,Parasitic Jaeger,kustlabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Stercorarius longicaudus,Long-tailed Jaeger,fjällabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Alle alle,Little Auk,alkekung,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Uria lomvia,Thick-billed Murre,spetsbergsgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Uria aalge,Common Murre,sillgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Alca torda,Razorbill,tordmule,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Pinguinus impennis,Great Auk,garfågel,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Cepphus grylle,Black Guillemot,tobisgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Aethia psittacula,Parakeet Auklet,papegojalka,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Fratercula arctica,Atlantic Puffin,lunnefågel,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Fratercula cirrhata,Tufted Puffin,tofslunne,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR
-Gavia stellata,Red-throated Loon,smålom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR
-Gavia arctica,Black-throated Loon,storlom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR
-Gavia pacifica,Pacific Loon,stillahavslom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR
-Gavia immer,Common Loon,svartnäbbad islom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR
-Gavia adamsii,Yellow-billed Loon,vitnäbbad islom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR
-Thalassarche melanophris,Black-browed Albatross,svartbrynad albatross,Diomedeidae,Albatrosses,Albatrosser,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Thalassarche chlororhynchos,Yellow-nosed Albatross,mindre albatross,Diomedeidae,Albatrosses,Albatrosser,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Hydrobates pelagicus,European Storm Petrel,stormsvala,Hydrobatidae,Northern Storm Petrels,Nordstormsvalor,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Oceanodroma leucorhoa,Leach's Storm Petrel,klykstjärtad stormsvala,Hydrobatidae,Northern Storm Petrels,Nordstormsvalor,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Fulmarus glacialis,Northern Fulmar,stormfågel,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Pterodroma feae/madeira,Fea's Petrel/Zino's Petrel,atlantpetrell/madeirapetrell,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Calonectris borealis/diomedea,Cory's/Scopoli's Shearwater,gulnäbbad lira/scopolilira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Ardenna grisea,Sooty Shearwater,grålira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Ardenna gravis,Great Shearwater,större lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Puffinus puffinus,Manx Shearwater,mindre lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Puffinus mauretanicus,Balearic Shearwater,balearisk lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR
-Ciconia nigra,Black Stork,svart stork,Ciconiidae,Storks,Storkar,CICONIIFORMES,Storks,STORKFÅGLAR
-Ciconia ciconia,White Stork,vit stork,Ciconiidae,Storks,Storkar,CICONIIFORMES,Storks,STORKFÅGLAR
-Fregata magnificens,Magnificent Frigatebird,praktfregattfågel,Fregatidae,Frigatebirds,Fregattfåglar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR
-Morus bassanus,Northern Gannet,havssula,Sulidae,Gannets,Sulor,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR
-Microcarbo pygmaeus,Pygmy Cormorant,dvärgskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR
-Phalacrocorax carbo,Great Cormorant,storskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR
-Phalacrocorax aristotelis,European Shag,toppskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR
-Plegadis falcinellus,Glossy Ibis,bronsibis,Threskiornithidae,Ibises and Spoonbills,Ibisar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Platalea leucorodia,Eurasian Spoonbill,skedstork,Threskiornithidae,Ibises and Spoonbills,Ibisar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Botaurus stellaris,Eurasian Bittern,rördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Botaurus lentiginosus,American Bittern,amerikansk rördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Ixobrychus minutus,Little Bittern,dvärgrördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Nycticorax nycticorax,Black-crowned Night Heron,natthäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Ardeola ralloides,Squacco Heron,rallhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Bubulcus ibis,Cattle Egret,kohäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Ardea cinerea,Grey Heron,gråhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Ardea purpurea,Purple Heron,purpurhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Ardea alba,Great Egret,ägretthäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Egretta garzetta,Little Egret,silkeshäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Pelecanus onocrotalus,Great White Pelican,vit pelikan,Pelecanidae,Pelicans,Pelikaner,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR
-Pandion haliaetus,Osprey,fiskgjuse,Pandionidae,Ospreys,Fiskgjusar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Elanus caeruleus,Black-winged Kite,svartvingad glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Neophron percnopterus,Egyptian Vulture,smutsgam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Pernis apivorus,European Honey Buzzard,bivråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Gyps fulvus,Griffon Vulture,gåsgam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Aegypius monachus,Cinereous Vulture,grågam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Circaetus gallicus,Short-toed Snake Eagle,ormörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Clanga pomarina,Lesser Spotted Eagle,mindre skrikörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Clanga clanga,Greater Spotted Eagle,större skrikörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Hieraaetus pennatus,Booted Eagle,dvärgörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Aquila nipalensis,Steppe Eagle,stäppörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Aquila heliaca,Eastern Imperial Eagle,kejsarörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Aquila chrysaetos,Golden Eagle,kungsörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Accipiter nisus,Eurasian Sparrowhawk,sparvhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Accipiter gentilis,Northern Goshawk,duvhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Circus aeruginosus,Western Marsh Harrier,brun kärrhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Circus cyaneus,Hen Harrier,blå kärrhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Circus macrourus,Pallid Harrier,stäpphök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Circus pygargus,Montagu's Harrier,ängshök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Milvus milvus,Red Kite,röd glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Milvus migrans,Black Kite,brun glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Haliaeetus albicilla,White-tailed Eagle,havsörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Buteo lagopus,Rough-legged Buzzard,fjällvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Buteo rufinus,Long-legged Buzzard,örnvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Buteo buteo,Common Buzzard,ormvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR
-Tyto alba,Western Barn Owl,tornuggla,Tytonidae,Barn Owls,Tornugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Otus scops,Eurasian Scops Owl,dvärguv,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Bubo scandiacus,Snowy Owl,fjälluggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Bubo bubo,Eurasian Eagle-Owl,berguv,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Strix aluco,Tawny Owl,kattuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Strix uralensis,Ural Owl,slaguggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Strix nebulosa,Great Grey Owl,lappuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Surnia ulula,Northern Hawk-Owl,hökuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Glaucidium passerinum,Eurasian Pygmy Owl,sparvuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Athene noctua,Little Owl,minervauggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Aegolius funereus,Boreal Owl,pärluggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Asio otus,Long-eared Owl,hornuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Asio flammeus,Short-eared Owl,jorduggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR
-Upupa epops,Eurasian Hoopoe,härfågel,Upupidae,Hoopoes,Härfåglar,BUCEROTIFORMES,Hoopoes,HÄRFÅGLAR OCH NÄSHORNSFÅGLAR
-Coracias garrulus,European Roller,blåkråka,Coraciidae,Rollers,Blåkråkor,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR
-Alcedo atthis,Common Kingfisher,kungsfiskare,Alcedinidae,Kingfishers,Kungsfiskare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR
-Merops persicus,Blue-cheeked Bee-eater,grön biätare,Meropidae,Bee-eaters,Biätare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR
-Merops apiaster,European Bee-eater,biätare,Meropidae,Bee-eaters,Biätare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR
-Jynx torquilla,Eurasian Wryneck,göktyta,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Picoides tridactylus,Eurasian Three-toed Woodpecker,tretåig hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Dendrocoptes medius,Middle Spotted Woodpecker,mellanspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Dryobates minor,Lesser Spotted Woodpecker,mindre hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Dendrocopos major,Great Spotted Woodpecker,större hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Dendrocopos leucotos,White-backed Woodpecker,vitryggig hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Dryocopus martius,Black Woodpecker,spillkråka,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Picus viridis,European Green Woodpecker,gröngöling,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Picus canus,Grey-headed Woodpecker,gråspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR
-Falco naumanni,Lesser Kestrel,rödfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco tinnunculus,Common Kestrel,tornfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco vespertinus,Red-footed Falcon,aftonfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco amurensis,Amur Falcon,amurfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco eleonorae,Eleonora's Falcon,eleonorafalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco columbarius,Merlin,stenfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco subbuteo,Eurasian Hobby,lärkfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco cherrug,Saker Falcon,tatarfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco rusticolus,Gyrfalcon,jaktfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Falco peregrinus,Peregrine Falcon,pilgrimsfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR
-Lanius cristatus,Brown Shrike,brun törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius collurio,Red-backed Shrike,törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius isabellinus,Isabelline Shrike,isabellatörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius phoenicuroides,Red-tailed Shrike,turkestantörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius schach,Long-tailed Shrike,rostgumpad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius minor,Lesser Grey Shrike,svartpannad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius excubitor,Great Grey Shrike,varfågel,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius elegans,Southern Grey Shrike,ökenvarfågel,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius senator,Woodchat Shrike,rödhuvad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lanius nubicus,Masked Shrike,masktörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oriolus oriolus,Eurasian Golden Oriole,sommargylling,Oriolidae,Orioles,Gyllingar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Perisoreus infaustus,Siberian Jay,lavskrika,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Garrulus glandarius,Eurasian Jay,nötskrika,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pica pica,Eurasian Magpie,skata,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Nucifraga caryocatactes,Spotted Nutcracker,nötkråka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pyrrhocorax graculus,Alpine Chough,alpkaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Corvus monedula,Western Jackdaw,kaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Corvus dauuricus,Daurian Jackdaw,klippkaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Corvus frugilegus,Rook,råka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Corvus corone,Carrion Crow,kråka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Corvus corax,Northern Raven,korp,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Bombycilla garrulus,Bohemian Waxwing,sidensvans,Bombycillidae,Waxwings,Sidensvansar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Periparus ater,Coal Tit,svartmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lophophanes cristatus,European Crested Tit,tofsmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Poecile cinctus,Grey-headed Chickadee,lappmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Poecile palustris,Marsh Tit,entita,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Poecile montanus,Willow Tit,talltita,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cyanistes caeruleus,Eurasian Blue Tit,blåmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cyanistes cyanus,Azure Tit,azurmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Parus major,Great Tit,talgoxe,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Remiz pendulinus,Eurasian Penduline Tit,pungmes,Remizidae,Penduline Tits,Pungmesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Panurus biarmicus,Bearded Reedling,skäggmes,Panuridae,Bearded Reedling,Skäggmesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Lullula arborea,Woodlark,trädlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Alauda leucoptera,White-winged Lark,vitvingad lärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Alauda arvensis,Eurasian Skylark,sånglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Galerida cristata,Crested Lark,tofslärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Eremophila alpestris,Common Horned Lark,berglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Calandrella brachydactyla,Greater Short-toed Lark,korttålärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Melanocorypha bimaculata,Bimaculated Lark,asiatisk kalanderlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Melanocorypha calandra,Calandra Lark,kalanderlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Melanocorypha yeltoniensis,Black Lark,svartlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Alaudala rufescens,Lesser Short-toed Lark,dvärglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Riparia riparia,Sand Martin,backsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Hirundo rustica,Barn Swallow,ladusvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Ptyonoprogne rupestris,Eurasian Crag Martin,klippsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Delichon urbicum,Common House Martin,hussvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cecropis daurica,Red-rumped Swallow,rostgumpsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Petrochelidon pyrrhonota,American Cliff Swallow,stensvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cettia cetti,Cetti's Warbler,cettisångare,Cettiidae,Cettia Bush Warblers,Cettisångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Aegithalos caudatus,Long-tailed Tit,stjärtmes,Aegithalidae,Bushtits,Stjärtmesar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus sibilatrix,Wood Warbler,grönsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus bonelli,Western Bonelli's Warbler,bergsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus orientalis,Eastern Bonelli's Warbler,balkansångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus humei,Hume's Leaf Warbler,bergtajgasångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus inornatus,Yellow-browed Warbler,tajgasångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus proregulus,Pallas's Leaf Warbler,kungsfågelsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus schwarzi,Radde's Warbler,videsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus fuscatus,Dusky Warbler,brunsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus neglectus,Plain Leaf Warbler,dvärgsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus trochilus,Willow Warbler,lövsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus collybita,Common Chiffchaff,gransångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus ibericus,Iberian Chiffchaff,iberisk gransångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus coronatus,Eastern Crowned Warbler,östlig kronsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus nitidus,Green Warbler,kaukasisk lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus plumbeitarsus,Two-barred Warbler,sibirisk lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus trochiloides,Greenish Warbler,lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phylloscopus borealis,Arctic Warbler,nordsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus arundinaceus,Great Reed Warbler,trastsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus paludicola,Aquatic Warbler,vattensångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus schoenobaenus,Sedge Warbler,sävsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus agricola,Paddyfield Warbler,fältsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus dumetorum,Blyth's Reed Warbler,busksångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus scirpaceus,Eurasian Reed Warbler,rörsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acrocephalus palustris,Marsh Warbler,kärrsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Iduna caligata,Booted Warbler,stäppsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Iduna rama,Sykes's Warbler,saxaulsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Iduna pallida,Eastern Olivaceous Warbler,eksångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Iduna opaca,Western Olivaceous Warbler,macchiasångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Hippolais polyglotta,Melodious Warbler,polyglottsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Hippolais icterina,Icterine Warbler,härmsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Helopsaltes certhiola,Pallas's Grasshopper Warbler,starrsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Locustella lanceolata,Lanceolated Warbler,träsksångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Locustella fluviatilis,River Warbler,flodsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Locustella luscinioides,Savi's Warbler,vassångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Locustella naevia,Common Grasshopper Warbler,gräshoppsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cisticola juncidis,Zitting Cisticola,grässångare,Cisticolidae,Cisticolas and allies,Cistikolor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Sylvia atricapilla,Eurasian Blackcap,svarthätta,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Sylvia borin,Garden Warbler,trädgårdssångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca nisoria,Barred Warbler,höksångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca curruca,Lesser Whitethroat,ärtsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca nana,Asian Desert Warbler,ökensångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca melanocephala,Sardinian Warbler,sammetshätta,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca iberiae,Western Subalpine Warbler,rostsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca subalpina,Moltoni's Warbler,moltonisångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca cantillans,Eastern Subalpine Warbler,rödstrupig sångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca communis,Common Whitethroat,törnsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Curruca undata,Dartford Warbler,provencesångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR
-Regulus ignicapilla,Common Firecrest,brandkronad kungsfågel,Regulidae,Goldcrests and Kinglets,Kungsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Regulus regulus,Goldcrest,kungsfågel,Regulidae,Goldcrests and Kinglets,Kungsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Troglodytes troglodytes,Eurasian Wren,gärdsmyg,Troglodytidae,Wrens,Gärdsmygar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Sitta europaea,Eurasian Nuthatch,nötväcka,Sittidae,Nuthatches,Nötväckor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Certhia familiaris,Eurasian Treecreeper,trädkrypare,Certhiidae,Treecreepers,Trädkrypare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Certhia brachydactyla,Short-toed Treecreeper,trädgårdsträdkrypare,Certhiidae,Treecreepers,Trädkrypare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pastor roseus,Rosy Starling,rosenstare,Sturnidae,Starlings,Starar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Sturnus vulgaris,Common Starling,stare,Sturnidae,Starlings,Starar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Geokichla sibirica,Siberian Thrush,sibirisk trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Zoothera aurea,White's Thrush,guldtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Catharus fuscescens,Veery,rostskogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Catharus ustulatus,Swainson's Thrush,beigekindad skogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Catharus guttatus,Hermit Thrush,eremitskogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus torquatus,Ring Ouzel,ringtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus merula,Common Blackbird,koltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus obscurus,Eyebrowed Thrush,gråhalsad trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus atrogularis,Black-throated Thrush,svarthalsad trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus naumanni,Naumann's Thrush,rödtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus eunomus,Dusky Thrush,bruntrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus pilaris,Fieldfare,björktrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus iliacus,Redwing,rödvingetrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus philomelos,Song Thrush,taltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus viscivorus,Mistle Thrush,dubbeltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Turdus migratorius,American Robin,vandringstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Muscicapa striata,Spotted Flycatcher,grå flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Muscicapa dauurica,Asian Brown Flycatcher,glasögonflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Erithacus rubecula,European Robin,rödhake,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Luscinia svecica,Bluethroat,blåhake,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Luscinia luscinia,Thrush Nightingale,näktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Luscinia megarhynchos,Common Nightingale,sydnäktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Irania gutturalis,White-throated Robin,vitstrupig näktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Calliope calliope,Siberian Rubythroat,rubinnäktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Tarsiger cyanurus,Red-flanked Bluetail,tajgablåstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Ficedula albicilla,Taiga Flycatcher,tajgaflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Ficedula parva,Red-breasted Flycatcher,mindre flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Ficedula hypoleuca,European Pied Flycatcher,svartvit flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Ficedula albicollis,Collared Flycatcher,halsbandsflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phoenicurus ochruros,Black Redstart,svart rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phoenicurus phoenicurus,Common Redstart,rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Phoenicurus auroreus,Daurian Redstart,svartryggig rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Monticola saxatilis,Common Rock Thrush,stentrast,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Monticola solitarius,Blue Rock Thrush,blåtrast,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Saxicola rubetra,Whinchat,buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Saxicola rubicola,European Stonechat,svarthakad buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Saxicola maurus,Siberian Stonechat,vitgumpad buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Saxicola stejnegeri,Stejneger's Stonechat,amurbuskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Saxicola caprata,Pied Bush Chat,svart buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe oenanthe,Northern Wheatear,stenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe isabellina,Isabelline Wheatear,isabellastenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe deserti,Desert Wheatear,ökenstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe hispanica,Western Black-eared Wheatear,västlig medelhavsstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe melanoleuca,Eastern Black-eared Wheatear,östlig medelhavsstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Oenanthe pleschanka,Pied Wheatear,nunnestenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR
-Cinclus cinclus,White-throated Dipper,strömstare,Cinclidae,Dippers,Strömstarar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Passer domesticus,House Sparrow,gråsparv,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Passer hispaniolensis,Spanish Sparrow,spansk sparv,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Passer montanus,Eurasian Tree Sparrow,pilfink,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Prunella collaris,Alpine Accentor,alpjärnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Prunella montanella,Siberian Accentor,sibirisk järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Prunella atrogularis,Black-throated Accentor,svartstrupig järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Prunella modularis,Dunnock,järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Motacilla flava,Yellow Wagtail,gulärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Motacilla citreola,Citrine Wagtail,citronärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Motacilla cinerea,Grey Wagtail,forsärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Motacilla alba,White Wagtail,sädesärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus richardi ,Richard's Pipit,större piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus godlewskii,Blyth's Pipit,mongolpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus campestris,Tawny Pipit,fältpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus pratensis,Meadow Pipit,ängspiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus trivialis,Tree Pipit,trädpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus hodgsoni,Olive-backed Pipit,sibirisk piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus gustavi,Pechora Pipit,tundrapiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus cervinus,Red-throated Pipit,rödstrupig piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus rubescens,Buff-bellied Pipit,hedpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus spinoletta,Water Pipit,vattenpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Anthus petrosus,Eurasian Rock Pipit,skärpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR
-Fringilla coelebs,Common Chaffinch,bofink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Fringilla montifringilla,Brambling,bergfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Coccothraustes coccothraustes,Hawfinch,stenknäck,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pinicola enucleator,Pine Grosbeak,tallbit,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pyrrhula pyrrhula,Eurasian Bullfinch,domherre,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Bucanetes githagineus,Trumpeter Finch,ökentrumpetare,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Carpodacus erythrinus,Common Rosefinch,rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Carpodacus sibiricus,Long-tailed Rosefinch,långstjärtad rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Carpodacus roseus,Pallas's Rosefinch,sibirisk rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Chloris chloris,European Greenfinch,grönfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Linaria flavirostris,Twite,vinterhämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Linaria cannabina,Common Linnet,hämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Acanthis flammea,Redpoll,gråsiska,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Loxia pytyopsittacus,Parrot Crossbill,större korsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Loxia curvirostra,Red Crossbill,mindre korsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Loxia bifasciata,Two-barred Crossbill,bändelkorsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Carduelis carduelis,European Goldfinch,steglits,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Serinus serinus,European Serin,gulhämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Spinus spinus,Eurasian Siskin,grönsiska,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Calcarius lapponicus,Lapland Longspur,lappsparv,Calcariidae,Longspurs and Snow Buntings,Sporrsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Plectrophenax nivalis,Snow Bunting,snösparv,Calcariidae,Longspurs and Snow Buntings,Sporrsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza calandra,Corn Bunting,kornsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza citrinella,Yellowhammer,gulsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza leucocephalos,Pine Bunting,tallsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza cia,Rock Bunting,klippsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza buchanani,Grey-necked Bunting,bergortolan,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza cineracea,Cinereous Bunting,gulgrå sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza hortulana,Ortolan Bunting,ortolansparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza caesia,Cretzschmar's Bunting,rostsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza cirlus,Cirl Bunting,häcksparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza fucata,Chestnut-eared Bunting,rödkindad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza pusilla,Little Bunting,dvärgsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza chrysophrys,Yellow-browed Bunting,gulbrynad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza rustica,Rustic Bunting,videsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza aureola,Yellow-breasted Bunting,gyllensparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza melanocephala,Black-headed Bunting,svarthuvad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza bruniceps,Red-headed Bunting,stäppsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza spodocephala,Black-faced Bunting,gråhuvad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza pallasi,Pallas's Reed Bunting,dvärgsävsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Emberiza schoeniclus,Common Reed Bunting,sävsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Spizelloides arborea,American Tree Sparrow,tundrasparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Junco hyemalis,Dark-eyed Junco,mörkögd junco,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Zonotrichia albicollis,White-throated Sparrow,vitstrupig sparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Melospiza melodia,Song Sparrow,sångsparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR
-Xanthocephalus xanthocephalus,Yellow-headed Blackbird,gulhuvad ängstrupial,Icteridae,New World Blackbirds,Trupialer,PASSERIFORMES,Perching birds,TÄTTINGAR
-Pheucticus ludovicianus,Rose-breasted Grosbeak,brokig kardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR
-Passerina cyanea,Indigo Bunting,turkoskardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR
+bird_scientific,bird_english,bird_swedish,family_scientific,family_english,family_swedish,order_scientific,order_english,order_swedish,bird_details,bird_population
+Branta bernicla,Brant Goose,prutgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,F 3,3
+Branta ruficollis,Red-breasted Goose,rödhalsad gås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Branta canadensis,Canada Goose,kanadagås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hs+f 3,3
+Branta leucopsis,Barnacle Goose,vitkindad gås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / F 3,3
+Anser rossii,Ross's Goose,dvärgsnögås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T***],8
+Anser caerulescens,Snow Goose,snögås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T**],7
+Anser anser,Greylag Goose,grågås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3,3
+Anser fabalis,Bean Goose,sädgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / F 3 / V 3-4,3
+Anser brachyrhynchus,Pink-footed Goose,spetsbergsgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,F 4,4
+Anser albifrons,Greater White-fronted Goose,bläsgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,F 4,4
+Anser erythropus,Lesser White-fronted Goose,fjällgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 5,5
+Cygnus olor,Mute Swan,knölsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hs+f 4,4
+Cygnus columbianus,Tundra Swan,mindre sångsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,F 4,4
+Cygnus cygnus,Whooper Swan,sångsvan,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / F / V,4
+Alopochen aegyptiaca,Egyptian Goose,nilgås,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T**],7
+Tadorna tadorna,Common Shelduck,gravand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3-4 / (V),4
+Tadorna ferruginea,Ruddy Shelduck,rostand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Anas formosa,Baikal Teal,gulkindad kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T***],8
+Anas querquedula,Garganey,årta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4,4
+Anas discors,Blue-winged Teal,blåvingad årta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T***,8
+Anas clypeata,Northern Shoveler,skedand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4,4
+Anas strepera,Gadwall,snatterand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / V,4
+Anas falcata,Falcated Duck,praktand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T***],8
+Anas penelope,Eurasian Wigeon,bläsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3 / (V),3
+Anas americana,American Wigeon,amerikansk bläsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Anas platyrhynchos,Mallard,gräsand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf (s) 2-3 / V,3
+Anas rubripes,American Black Duck,svartand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T***,8
+Anas acuta,Northern Pintail,stjärtand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / (V),4
+Anas crecca,Eurasian Teal,kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf (V) 3,3
+Anas carolinensis,Green-winged Teal,amerikansk kricka,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T*,6
+Netta rufina,Red-crested Pochard,rödhuvad dykand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Aythya ferina,Common Pochard,brunand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / F 3 / (V),3
+Aythya nyroca,Ferruginous Duck,vitögd dykand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Aythya collaris,Ring-necked Duck,ringand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Aythya fuligula,Tufted Duck,vigg,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3 / V 3,3
+Aythya marila,Greater Scaup,bergand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4,4
+Aythya affinis,Lesser Scaup,mindre bergand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T***,8
+Polysticta stelleri,Steller's Eider,alförrädare,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T* / V 5,5
+Somateria spectabilis,King Eider,praktejder,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T* / F 5,5
+Somateria mollissima,Common Eider,ejder,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 2 / F / V,2
+Histrionicus histrionicus,Harlequin Duck,strömand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T***,8
+Melanitta perspicillata,Surf Scoter,vitnackad svärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T**,7
+Melanitta fusca,Velvet Scoter,svärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3 / F / (V),3
+Melanitta deglandi,White-winged Scoter,amerikansk knölsvärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,-,nil
+Melanitta stejnegeri,Stejneger's Scoter,sibirisk knölsvärta,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,-,nil
+Melanitta nigra,Common Scoter,sjöorre,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / F 3 / (V),3
+Melanitta americana,Black Scoter,amerikansk sjöorre,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,T***,8
+Clangula hyemalis,Long-tailed Duck,alfågel,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4 / V 2,2
+Bucephala albeola,Bufflehead,buffelhuvud,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T***],8
+Bucephala clangula,Common Goldeneye,knipa,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hs+f 3 / V,3
+Mergellus albellus,Smew,salskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 4-5,4
+Lophodytes cucullatus,Hooded Merganser,kamskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T**],7
+Mergus merganser,Common Merganser,storskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3 / V,3
+Mergus serrator,Red-breasted Merganser,småskrake,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,Hf 3 / V,3
+Oxyura jamaicensis,Ruddy Duck,amerikansk kopparand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,[T**],7
+Oxyura leucocephala,White-headed Duck,kopparand,Anatidae,"Ducks, Geese and Swans",Änder,ANSERIFORMES,"Waterfowl: Ducks, Geese and Swans",ANDFÅGLAR,-,nil
+Tetrastes bonasia,Hazel Grouse,järpe,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 3,3
+Tetrao urogallus,Western Capercaillie,tjäder,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 3,3
+Lyrurus tetrix,Black Grouse,orre,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 2,2
+Lagopus muta,Rock Ptarmigan,fjällripa,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 3,3
+Lagopus lagopus,Willow Ptarmigan,dalripa,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 2-3,2
+Perdix perdix,Grey Partridge,rapphöna,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 4,4
+Coturnix coturnix,Common Quail,vaktel,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,T*,6
+Phasianus colchicus,Common Pheasant,fasan,Phasianidae,Pheasants and allies,Fasanfåglar,GALLIFORMES,"Landfowl: Grouse, Quail and Pheasants",HÖNSFÅGLAR,Hs 3,3
+Caprimulgus europaeus,European Nightjar,nattskärra,Caprimulgidae,Nightjars,Nattskärror,CAPRIMULGIFORMES,Nightjars,SKÄRRFÅGLAR,Hf 4,4
+Caprimulgus aegyptius,Egyptian Nightjar,ökennattskärra,Caprimulgidae,Nightjars,Nattskärror,CAPRIMULGIFORMES,Nightjars,SKÄRRFÅGLAR,T***,8
+Hirundapus caudacutus,White-throated Needletail,taggstjärtseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Chaetura pelagica,Chimney Swift,skorstensseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Apus melba,Alpine Swift,alpseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Apus apus,Common Swift,tornseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,Hf 2,2
+Apus pallidus,Pallid Swift,blek tornseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Apus pacificus,Pacific Swift,orientseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Apus affinis,Little Swift,stubbstjärtseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,T***,8
+Apus caffer,White-rumped Swift,vitgumpseglare,Apodidae,Swifts,Seglare,APODIFORMES,Swifts,SEGLAR- OCH KOLIBRIFÅGLAR,-,nil
+Otis tarda,Great Bustard,stortrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR,T***,8
+Chlamydotis macqueenii,Macqueen's Bustard,kragtrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR,T***,8
+Tetrax tetrax,Little Bustard,småtrapp,Otididae,Bustards,Trappar,OTIDIFORMES,Bustards,TRAPPFÅGLAR,T***,8
+Clamator glandarius,Great Spotted Cuckoo,skatgök,Cuculidae,Cuckoos,Gökar,CUCULIFORMES,Cuckoos,GÖKFÅGLAR,T***,8
+Cuculus canorus,Common Cuckoo,gök,Cuculidae,Cuckoos,Gökar,CUCULIFORMES,Cuckoos,GÖKFÅGLAR,Hf 3,3
+Syrrhaptes paradoxus,Pallas's Sandgrouse,stäppflyghöna,Pteroclidae,Sandgrouse,Flyghöns,PTEROCLIFORMES,Sandgrouses,FLYGHÖNSFÅGLAR,T***,8
+Columba livia,Rock Dove / Feral Pigeon,klippduva / tamduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,[Hs 2],2
+Columba oenas,Stock Dove,skogsduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,Hf 3,3
+Columba palumbus,Common Wood Pigeon,ringduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,Hf 2 / V,2
+Streptopelia turtur,European Turtle Dove,turturduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,T*,6
+Streptopelia orientalis,Oriental Turtle Dove,större turturduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,T**,7
+Streptopelia decaocto,Eurasian Collared Dove,turkduva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,Hs (f) 4,4
+Zenaida macroura,Mourning Dove,spetsstjärtad duva,Columbidae,Pigeons and Doves,Duvor,COLUMBIFORMES,Pigeons and Doves,DUVFÅGLAR,[T***],8
+Rallus aquaticus,Water Rail,vattenrall,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hf 3-4 / (V),4
+Crex crex,Corn Crake,kornknarr,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hf 4,4
+Porzana carolina,Sora,karolinasumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,T***,8
+Porzana porzana,Spotted Crake,småfläckig sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hf 4,4
+Gallinula chloropus,Common Moorhen,rörhöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hf 3-4 / (V),4
+Fulica atra,Eurasian Coot,sothöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hs+f 3,3
+Zapornia pusilla,Baillon's Crake,dvärgsumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,T***,8
+Zapornia parva,Little Crake,mindre sumphöna,Rallidae,"Rails, Crakes and Coots",Rallar,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,T**,7
+Grus canadensis,Sandhill Crane,prärietrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,-,nil
+Grus virgo,Demoiselle Crane,jungfrutrana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,T***,8
+Grus grus,Common Crane,trana,Gruidae,Cranes,Tranor,GRUIFORMES,"Marshbirds: Rails, Crakes, Coots and Cranes",TRANFÅGLAR,Hf 3,3
+Tachybaptus ruficollis,Little Grebe,smådopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR,Hf 4 (V),4
+Podiceps grisegena,Red-necked Grebe,gråhakedopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR,Hf 4,4
+Podiceps cristatus,Great Crested Grebe,skäggdopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR,Hf 3 / (V),3
+Podiceps auritus,Horned Grebe,svarthakedopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR,Hf 4 / (V),4
+Podiceps nigricollis,Black-necked Grebe,svarthalsad dopping,Podicipedidae,Grebes,Doppingar,PODICIPEDIFORMES,Grebes,DOPPINGFÅGLAR,Hf 5,5
+Phoenicopterus roseus,Greater Flamingo,större flamingo,Phoenicopteridae,Flamingos,Flamingor,PHOENICOPTERIFORMES,Flamingos,FLAMINGOFÅGLAR,[T**],7
+Burhinus oedicnemus,Eurasian Stone-curlew,tjockfot,Burhinidae,Stone-curlews,Tjockfotar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Haematopus ostralegus,Eurasian Oystercatcher,strandskata,Haematopodidae,Oystercatchers,Strandskator,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Himantopus himantopus,Black-winged Stilt,styltlöpare,Recurvirostridae,Stilts and Avocets,Skärfläckor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Recurvirostra avosetta,Pied Avocet,skärfläcka,Recurvirostridae,Stilts and Avocets,Skärfläckor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Vanellus vanellus,Northern Lapwing,tofsvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 2,2
+Vanellus cinereus,Grey-headed Lapwing,gråhuvad vipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,???,nil
+Vanellus gregarius,Sociable Lapwing,stäppvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Vanellus leucurus,White-tailed Lapwing,sumpvipa,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Pluvialis apricaria,European Golden Plover,ljungpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Pluvialis fulva,Pacific Golden Plover,sibirisk tundrapipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Pluvialis dominica,American Golden Plover,amerikansk tundrapipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Pluvialis squatarola,Grey Plover,kustpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 3-4,4
+Charadrius hiaticula,Common Ringed Plover,större strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Charadrius dubius,Little Ringed Plover,mindre strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Charadrius alexandrinus,Kentish Plover,svartbent strandpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Charadrius mongolus,Lesser Sand Plover,mongolpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Charadrius leschenaultii,Greater Sand Plover,ökenpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Charadrius asiaticus,Caspian Plover,kaspisk pipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Charadrius morinellus,Eurasian Dotterel,fjällpipare,Charadriidae,Plovers,Pipare,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Bartramia longicauda,Upland Sandpiper,piparsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Numenius phaeopus,Eurasian Whimbrel,småspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Numenius minutus,Little Curlew,dvärgspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Numenius arquata,Eurasian Curlew,storspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Limosa lapponica,Bar-tailed Godwit,myrspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 5 / F 4,4
+Limosa limosa,Black-tailed Godwit,rödspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Limosa haemastica,Hudsonian Godwit,hudsonspov,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Arenaria interpres,Ruddy Turnstone,roskarl,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Calidris tenuirostris,Great Knot,kolymasnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris canutus,Red Knot,kustsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 3-4,4
+Calidris pugnax,Ruff,brushane,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Calidris falcinellus,Broad-billed Sandpiper,myrsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4 / F 4-5,4
+Calidris acuminata,Sharp-tailed Sandpiper,spetsstjärtad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris himantopus,Stilt Sandpiper,styltsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris ferruginea,Curlew Sandpiper,spovsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4,4
+Calidris temminckii,Temminck's Stint,mosnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Calidris subminuta,Long-toed Stint,långtåsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris ruficollis,Red-necked Stint,rödhalsad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris alba,Sanderling,sandlöpare,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4,4
+Calidris alpina,Dunlin,kärrsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Calidris maritima,Purple Sandpiper,skärsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4 / V,4
+Calidris bairdii,Baird's Sandpiper,gulbröstad snäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris minuta,Little Stint,småsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4,4
+Calidris fuscicollis,White-rumped Sandpiper,vitgumpsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Calidris subruficollis,Buff-breasted Sandpiper,prärielöpare,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Calidris melanotos,Pectoral Sandpiper,tuvsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Calidris pusilla,Semipalmated Sandpiper,sandsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Calidris mauri,Western Sandpiper,tundrasnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Limnodromus scolopaceus,Long-billed Dowitcher,större beckasinsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Limnodromus griseus,Short-billed Dowitcher,mindre beckasinsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,-,nil
+Scolopax rusticola,Eurasian Woodcock,morkulla,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Lymnocryptes minimus,Jack Snipe,dvärgbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Gallinago media,Great Snipe,dubbelbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Gallinago gallinago,Common Snipe,enkelbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 2 / (V),2
+Gallinago delicata,Wilson's Snipe,wilsonbeckasin,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,-,nil
+Xenus cinereus,Terek Sandpiper,tereksnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Phalaropus tricolor,Wilson's Phalarope,wilsonsimsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Phalaropus lobatus,Red-necked Phalarope,smalnäbbad simsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Phalaropus fulicarius,Red Phalarope,brednäbbad simsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Actitis hypoleucos,Common Sandpiper,drillsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Actitis macularius,Spotted Sandpiper,fläckdrillsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Tringa ochropus,Green Sandpiper,skogssnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Tringa solitaria,Solitary Sandpiper,amerikansk skogssnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Tringa brevipes,Grey-tailed Tattler,sibirisk gråsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T****,9
+Tringa flavipes,Lesser Yellowlegs,mindre gulbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Tringa totanus,Common Redshank,rödbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3 / (V),3
+Tringa stagnatilis,Marsh Sandpiper,dammsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Tringa glareola,Wood Sandpiper,grönbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Tringa erythropus,Spotted Redshank,svartsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Tringa nebularia,Common Greenshank,gluttsnäppa,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Tringa melanoleuca,Greater Yellowlegs,större gulbena,Scolopacidae,Sandpipers and Snipes,Snäppor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Cursorius cursor,Cream-colored Courser,ökenlöpare,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Glareola pratincola,Collared Pratincole,rödvingad vadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Glareola maldivarum,Oriental Pratincole,orientvadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Glareola nordmanni,Black-winged Pratincole,svartvingad vadarsvala,Glareolidae,Coursers and Pratincoles,Vadarsvalor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Rissa tridactyla,Black-legged Kittiwake,tretåig mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 5 / F 4 / V 3-5,4
+Pagophila eburnea,Ivory Gull,ismås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Xema sabini,Sabine's Gull,tärnmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Chroicocephalus genei,Slender-billed Gull,långnäbbad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Chroicocephalus philadelphia,Bonaparte's Gull,trädmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Chroicocephalus ridibundus,Black-headed Gull,skrattmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 2 / (V),2
+Hydrocoloeus minutus,Little Gull,dvärgmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4-5,4
+Rhodostethia rosea,Ross's Gull,rosenmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Leucophaeus atricilla,Laughing Gull,sotvingad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Leucophaeus pipixcan,Franklin's Gull,präriemås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Ichthyaetus melanocephalus,Mediterranean Gull,svarthuvad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Ichthyaetus ichthyaetus,Pallas's Gull,svarthuvad trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Larus canus,Mew Gull,fiskmås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf (s) 2,2
+Larus delawarensis,Ring-billed Gull,ringnäbbad mås,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Larus marinus,Great Black-backed Gull,havstrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hs+f 4,4
+Larus hyperboreus,Glaucous Gull,vittrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,(V 5),5
+Larus glaucoides,Iceland Gull,vitvingad trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T**,7
+Larus argentatus,Herring Gull,gråtrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hs+f 3,3
+Larus cachinnans,Caspian Gull,kaspisk trut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4-5 / V 5,5
+Larus michahellis,Yellow-legged Gull,medelhavstrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F / V 5,5
+Larus fuscus,Lesser Black-backed Gull,silltrut,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Gelochelidon nilotica,Gull-billed Tern,sandtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Hydroprogne caspia,Caspian Tern,skräntärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Thalasseus sandvicensis,Sandwich Tern,kentsk tärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Sternula albifrons,Little Tern,småtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Onychoprion anaethetus,Bridled Tern,tygeltärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Onychoprion fuscatus,Sooty Tern,sottärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Sterna dougallii,Roseate Tern,rosentärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Sterna hirundo,Common Tern,fisktärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Sterna paradisaea,Arctic Tern,silvertärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3,3
+Sterna forsteri,Forster's Tern,kärrtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Chlidonias hybrida,Whiskered Tern,skäggtärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Chlidonias leucopterus,White-winged Tern,vitvingad tärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Chlidonias niger,Black Tern,svarttärna,Laridae,"Gulls, Terns and Skimmers",Måsfåglar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Stercorarius skua,Great Skua,storlabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Stercorarius pomarinus,Pomarine Jaeger,bredstjärtad labb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4-5,5
+Stercorarius parasiticus,Parasitic Jaeger,kustlabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4,4
+Stercorarius longicaudus,Long-tailed Jaeger,fjällabb,Stercorariidae,Skuas,Labbar,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3-4,4
+Alle alle,Little Auk,alkekung,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,F 4-5 / (V 5),5
+Uria lomvia,Thick-billed Murre,spetsbergsgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T***,8
+Uria aalge,Common Murre,sillgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4 / V,4
+Alca torda,Razorbill,tordmule,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 4 / V,4
+Pinguinus impennis,Great Auk,garfågel,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,???,nil
+Cepphus grylle,Black Guillemot,tobisgrissla,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,Hf 3  / V,3
+Aethia psittacula,Parakeet Auklet,papegojalka,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T****,9
+Fratercula arctica,Atlantic Puffin,lunnefågel,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T*,6
+Fratercula cirrhata,Tufted Puffin,tofslunne,Alcidae,Auks,Alkor,CHARADRIIFORMES,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks",VADARFÅGLAR,T****,9
+Gavia stellata,Red-throated Loon,smålom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR,Hf 4 / F 3 / V,3
+Gavia arctica,Black-throated Loon,storlom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR,Hf 4 / F 3 / V 4,3
+Gavia pacifica,Pacific Loon,stillahavslom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR,-,nil
+Gavia immer,Common Loon,svartnäbbad islom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR,T* / F 5,5
+Gavia adamsii,Yellow-billed Loon,vitnäbbad islom,Gaviidae,Loons,Lommar,GAVIIFORMES,Loons,LOMFÅGLAR,F 4,4
+Thalassarche melanophris,Black-browed Albatross,svartbrynad albatross,Diomedeidae,Albatrosses,Albatrosser,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T***,8
+Thalassarche chlororhynchos,Yellow-nosed Albatross,mindre albatross,Diomedeidae,Albatrosses,Albatrosser,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T****,9
+Hydrobates pelagicus,European Storm Petrel,stormsvala,Hydrobatidae,Northern Storm Petrels,Nordstormsvalor,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T**,7
+Oceanodroma leucorhoa,Leach's Storm Petrel,klykstjärtad stormsvala,Hydrobatidae,Northern Storm Petrels,Nordstormsvalor,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T*,6
+Fulmarus glacialis,Northern Fulmar,stormfågel,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T*,6
+Pterodroma feae/madeira,Fea's Petrel/Zino's Petrel,atlantpetrell/madeirapetrell,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T***,8
+Calonectris borealis/diomedea,Cory's/Scopoli's Shearwater,gulnäbbad lira/scopolilira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T**,7
+Ardenna grisea,Sooty Shearwater,grålira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T*,6
+Ardenna gravis,Great Shearwater,större lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T***,8
+Puffinus puffinus,Manx Shearwater,mindre lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T*,6
+Puffinus mauretanicus,Balearic Shearwater,balearisk lira,Procellariidae,Petrels and Shearwaters,Liror,PROCELLARIIFORMES,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses",STORMFÅGLAR,T***,8
+Ciconia nigra,Black Stork,svart stork,Ciconiidae,Storks,Storkar,CICONIIFORMES,Storks,STORKFÅGLAR,T*,6
+Ciconia ciconia,White Stork,vit stork,Ciconiidae,Storks,Storkar,CICONIIFORMES,Storks,STORKFÅGLAR,T* ,6
+Fregata magnificens,Magnificent Frigatebird,praktfregattfågel,Fregatidae,Frigatebirds,Fregattfåglar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR,-,nil
+Morus bassanus,Northern Gannet,havssula,Sulidae,Gannets,Sulor,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR,T*,6
+Microcarbo pygmaeus,Pygmy Cormorant,dvärgskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR,T***,8
+Phalacrocorax carbo,Great Cormorant,storskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR,Hs+f 3-4 / V,3
+Phalacrocorax aristotelis,European Shag,toppskarv,Phalacrocoracidae,Cormorants and Shags,Skarvar,SULIFORMES,"Cormorants, Shags and Frigatebirds",SULFÅGLAR,Hs 5 / V 4,4
+Plegadis falcinellus,Glossy Ibis,bronsibis,Threskiornithidae,Ibises and Spoonbills,Ibisar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Platalea leucorodia,Eurasian Spoonbill,skedstork,Threskiornithidae,Ibises and Spoonbills,Ibisar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T**,7
+Botaurus stellaris,Eurasian Bittern,rördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,Hf 4 / (V),4
+Botaurus lentiginosus,American Bittern,amerikansk rördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Ixobrychus minutus,Little Bittern,dvärgrördrom,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Nycticorax nycticorax,Black-crowned Night Heron,natthäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Ardeola ralloides,Squacco Heron,rallhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Bubulcus ibis,Cattle Egret,kohäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Ardea cinerea,Grey Heron,gråhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,Hf (s) 4,4
+Ardea purpurea,Purple Heron,purpurhäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T***,8
+Ardea alba,Great Egret,ägretthäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T*,6
+Egretta garzetta,Little Egret,silkeshäger,Ardeidae,Herons and Bitterns,Hägrar,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,T**,7
+Pelecanus onocrotalus,Great White Pelican,vit pelikan,Pelecanidae,Pelicans,Pelikaner,PELECANIFORMES,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns",PELIKANFÅGLAR,[T***],8
+Pandion haliaetus,Osprey,fiskgjuse,Pandionidae,Ospreys,Fiskgjusar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 4,4
+Elanus caeruleus,Black-winged Kite,svartvingad glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Neophron percnopterus,Egyptian Vulture,smutsgam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Pernis apivorus,European Honey Buzzard,bivråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 4,4
+Gyps fulvus,Griffon Vulture,gåsgam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,[T***],8
+Aegypius monachus,Cinereous Vulture,grågam,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,-,nil
+Circaetus gallicus,Short-toed Snake Eagle,ormörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Clanga pomarina,Lesser Spotted Eagle,mindre skrikörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T**,7
+Clanga clanga,Greater Spotted Eagle,större skrikörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T**,7
+Hieraaetus pennatus,Booted Eagle,dvärgörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Aquila nipalensis,Steppe Eagle,stäppörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T**,7
+Aquila heliaca,Eastern Imperial Eagle,kejsarörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Aquila chrysaetos,Golden Eagle,kungsörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hs (f) 4,4
+Accipiter nisus,Eurasian Sparrowhawk,sparvhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 3 / V 4,3
+Accipiter gentilis,Northern Goshawk,duvhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hs 4 / F,4
+Circus aeruginosus,Western Marsh Harrier,brun kärrhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 4,4
+Circus cyaneus,Hen Harrier,blå kärrhök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 4 / (V),4
+Circus macrourus,Pallid Harrier,stäpphök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T*,6
+Circus pygargus,Montagu's Harrier,ängshök,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 5,5
+Milvus milvus,Red Kite,röd glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hs+f 4,4
+Milvus migrans,Black Kite,brun glada,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T*,6
+Haliaeetus albicilla,White-tailed Eagle,havsörn,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hs (f) 4-5,5
+Buteo lagopus,Rough-legged Buzzard,fjällvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 4 / (V),4
+Buteo rufinus,Long-legged Buzzard,örnvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,T***,8
+Buteo buteo,Common Buzzard,ormvråk,Accipitridae,"Kites, Hawks and Eagles",Hökartade rovfåglar,ACCIPITRIFORMES,Raptors,HÖKFÅGLAR,Hf 3 / V 4,3
+Tyto alba,Western Barn Owl,tornuggla,Tytonidae,Barn Owls,Tornugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 5,5
+Otus scops,Eurasian Scops Owl,dvärguv,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,T***,8
+Bubo scandiacus,Snowy Owl,fjälluggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs (f) 5 / (T*),5
+Bubo bubo,Eurasian Eagle-Owl,berguv,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 3,3
+Strix aluco,Tawny Owl,kattuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 3,3
+Strix uralensis,Ural Owl,slaguggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 4,4
+Strix nebulosa,Great Grey Owl,lappuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 4-5,5
+Surnia ulula,Northern Hawk-Owl,hökuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs (f) 4,4
+Glaucidium passerinum,Eurasian Pygmy Owl,sparvuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs 4,4
+Athene noctua,Little Owl,minervauggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,T***,8
+Aegolius funereus,Boreal Owl,pärluggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hs (f) 3-4,4
+Asio otus,Long-eared Owl,hornuggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hf (s) 4,4
+Asio flammeus,Short-eared Owl,jorduggla,Strigidae,Owls,Ugglor,STRIGIFORMES,Owls,UGGLEFÅGLAR,Hf (s) 5,5
+Upupa epops,Eurasian Hoopoe,härfågel,Upupidae,Hoopoes,Härfåglar,BUCEROTIFORMES,Hoopoes,HÄRFÅGLAR OCH NÄSHORNSFÅGLAR,T* ,6
+Coracias garrulus,European Roller,blåkråka,Coraciidae,Rollers,Blåkråkor,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR,T**,7
+Alcedo atthis,Common Kingfisher,kungsfiskare,Alcedinidae,Kingfishers,Kungsfiskare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR,Hs+f 4-5,5
+Merops persicus,Blue-cheeked Bee-eater,grön biätare,Meropidae,Bee-eaters,Biätare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR,T***,8
+Merops apiaster,European Bee-eater,biätare,Meropidae,Bee-eaters,Biätare,CORACIIFORMES,Kingfishers and allies: Rollers and Bee-eaters,PRAKTFÅGLAR,T*,6
+Jynx torquilla,Eurasian Wryneck,göktyta,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hf 4,4
+Picoides tridactylus,Eurasian Three-toed Woodpecker,tretåig hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 4,4
+Dendrocoptes medius,Middle Spotted Woodpecker,mellanspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,T***,8
+Dryobates minor,Lesser Spotted Woodpecker,mindre hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 3-4,4
+Dendrocopos major,Great Spotted Woodpecker,större hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 2-3,3
+Dendrocopos leucotos,White-backed Woodpecker,vitryggig hackspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 5,5
+Dryocopus martius,Black Woodpecker,spillkråka,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 2-3,3
+Picus viridis,European Green Woodpecker,gröngöling,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 3,3
+Picus canus,Grey-headed Woodpecker,gråspett,Picidae,Woodpeckers,Hackspettar,PICIFORMES,Woodpeckers and allies,HACKSPETTARTADE FÅGLAR,Hs 4,4
+Falco naumanni,Lesser Kestrel,rödfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,T***,8
+Falco tinnunculus,Common Kestrel,tornfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,Hf 4 / (V),4
+Falco vespertinus,Red-footed Falcon,aftonfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,T*,6
+Falco amurensis,Amur Falcon,amurfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,T***,8
+Falco eleonorae,Eleonora's Falcon,eleonorafalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,T***,8
+Falco columbarius,Merlin,stenfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,Hf 4 / (V),4
+Falco subbuteo,Eurasian Hobby,lärkfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,Hf 4,4
+Falco cherrug,Saker Falcon,tatarfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,[T***],8
+Falco rusticolus,Gyrfalcon,jaktfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,Hs (f) 5,5
+Falco peregrinus,Peregrine Falcon,pilgrimsfalk,Falconidae,Falcons,Falkar,FALCONIFORMES,Falcons,FALKFÅGLAR,Hf 5 / (V),5
+Lanius cristatus,Brown Shrike,brun törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Lanius collurio,Red-backed Shrike,törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Lanius isabellinus,Isabelline Shrike,isabellatörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Lanius phoenicuroides,Red-tailed Shrike,turkestantörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Lanius schach,Long-tailed Shrike,rostgumpad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Lanius minor,Lesser Grey Shrike,svartpannad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Lanius excubitor,Great Grey Shrike,varfågel,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4 / (V),4
+Lanius elegans,Southern Grey Shrike,ökenvarfågel,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,???,nil
+Lanius senator,Woodchat Shrike,rödhuvad törnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Lanius nubicus,Masked Shrike,masktörnskata,Laniidae,Shrikes,Törnskator,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Oriolus oriolus,Eurasian Golden Oriole,sommargylling,Oriolidae,Orioles,Gyllingar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Perisoreus infaustus,Siberian Jay,lavskrika,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 3,3
+Garrulus glandarius,Eurasian Jay,nötskrika,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Pica pica,Eurasian Magpie,skata,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Nucifraga caryocatactes,Spotted Nutcracker,nötkråka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 4,4
+Pyrrhocorax graculus,Alpine Chough,alpkaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Corvus monedula,Western Jackdaw,kaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 3,3
+Corvus dauuricus,Daurian Jackdaw,klippkaja,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Corvus frugilegus,Rook,råka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf (s) 3,3
+Corvus corone,Carrion Crow,kråka,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Corvus corax,Northern Raven,korp,Corvidae,Crows and Jays,Kråkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 3,3
+Bombycilla garrulus,Bohemian Waxwing,sidensvans,Bombycillidae,Waxwings,Sidensvansar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4 / V,4
+Periparus ater,Coal Tit,svartmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 2,2
+Lophophanes cristatus,European Crested Tit,tofsmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Poecile cinctus,Grey-headed Chickadee,lappmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 4,4
+Poecile palustris,Marsh Tit,entita,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Poecile montanus,Willow Tit,talltita,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Cyanistes caeruleus,Eurasian Blue Tit,blåmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 2,2
+Cyanistes cyanus,Azure Tit,azurmes,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Parus major,Great Tit,talgoxe,Paridae,Tits,Mesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 1,1
+Remiz pendulinus,Eurasian Penduline Tit,pungmes,Remizidae,Penduline Tits,Pungmesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Panurus biarmicus,Bearded Reedling,skäggmes,Panuridae,Bearded Reedling,Skäggmesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 4,4
+Lullula arborea,Woodlark,trädlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Alauda leucoptera,White-winged Lark,vitvingad lärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Alauda arvensis,Eurasian Skylark,sånglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1 / (V),1
+Galerida cristata,Crested Lark,tofslärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Eremophila alpestris,Common Horned Lark,berglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4 / (V),4
+Calandrella brachydactyla,Greater Short-toed Lark,korttålärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Melanocorypha bimaculata,Bimaculated Lark,asiatisk kalanderlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Melanocorypha calandra,Calandra Lark,kalanderlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Melanocorypha yeltoniensis,Black Lark,svartlärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Alaudala rufescens,Lesser Short-toed Lark,dvärglärka,Alaudidae,Larks,Lärkor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Riparia riparia,Sand Martin,backsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Hirundo rustica,Barn Swallow,ladusvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Ptyonoprogne rupestris,Eurasian Crag Martin,klippsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Delichon urbicum,Common House Martin,hussvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Cecropis daurica,Red-rumped Swallow,rostgumpsvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Petrochelidon pyrrhonota,American Cliff Swallow,stensvala,Hirundinidae,Swallows,Svalor,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Cettia cetti,Cetti's Warbler,cettisångare,Cettiidae,Cettia Bush Warblers,Cettisångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Aegithalos caudatus,Long-tailed Tit,stjärtmes,Aegithalidae,Bushtits,Stjärtmesar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 3,3
+Phylloscopus sibilatrix,Wood Warbler,grönsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Phylloscopus bonelli,Western Bonelli's Warbler,bergsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Phylloscopus orientalis,Eastern Bonelli's Warbler,balkansångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Phylloscopus humei,Hume's Leaf Warbler,bergtajgasångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Phylloscopus inornatus,Yellow-browed Warbler,tajgasångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Phylloscopus proregulus,Pallas's Leaf Warbler,kungsfågelsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Phylloscopus schwarzi,Radde's Warbler,videsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Phylloscopus fuscatus,Dusky Warbler,brunsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Phylloscopus neglectus,Plain Leaf Warbler,dvärgsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T****,9
+Phylloscopus trochilus,Willow Warbler,lövsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1,1
+Phylloscopus collybita,Common Chiffchaff,gransångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2 / (V),2
+Phylloscopus ibericus,Iberian Chiffchaff,iberisk gransångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Phylloscopus coronatus,Eastern Crowned Warbler,östlig kronsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Phylloscopus nitidus,Green Warbler,kaukasisk lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Phylloscopus plumbeitarsus,Two-barred Warbler,sibirisk lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Phylloscopus trochiloides,Greenish Warbler,lundsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Phylloscopus borealis,Arctic Warbler,nordsångare,Phylloscopidae,Leaf Warblers and allies,Lövsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Acrocephalus arundinaceus,Great Reed Warbler,trastsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Acrocephalus paludicola,Aquatic Warbler,vattensångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Acrocephalus schoenobaenus,Sedge Warbler,sävsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2-3,3
+Acrocephalus agricola,Paddyfield Warbler,fältsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Acrocephalus dumetorum,Blyth's Reed Warbler,busksångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Acrocephalus scirpaceus,Eurasian Reed Warbler,rörsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Acrocephalus palustris,Marsh Warbler,kärrsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Iduna caligata,Booted Warbler,stäppsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Iduna rama,Sykes's Warbler,saxaulsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Iduna pallida,Eastern Olivaceous Warbler,eksångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Iduna opaca,Western Olivaceous Warbler,macchiasångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Hippolais polyglotta,Melodious Warbler,polyglottsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Hippolais icterina,Icterine Warbler,härmsångare,Acrocephalidae,Reed Warblers and allies,Rörsångare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Helopsaltes certhiola,Pallas's Grasshopper Warbler,starrsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Locustella lanceolata,Lanceolated Warbler,träsksångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Locustella fluviatilis,River Warbler,flodsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Locustella luscinioides,Savi's Warbler,vassångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Locustella naevia,Common Grasshopper Warbler,gräshoppsångare,Locustellidae,Grassbirds and allies,Gräsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Cisticola juncidis,Zitting Cisticola,grässångare,Cisticolidae,Cisticolas and allies,Cistikolor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Sylvia atricapilla,Eurasian Blackcap,svarthätta,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2 / (V),2
+Sylvia borin,Garden Warbler,trädgårdssångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1-2,2
+Curruca nisoria,Barred Warbler,höksångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Curruca curruca,Lesser Whitethroat,ärtsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Curruca nana,Asian Desert Warbler,ökensångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Curruca melanocephala,Sardinian Warbler,sammetshätta,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Curruca iberiae,Western Subalpine Warbler,rostsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Curruca subalpina,Moltoni's Warbler,moltonisångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Curruca cantillans,Eastern Subalpine Warbler,rödstrupig sångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Curruca communis,Common Whitethroat,törnsångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Curruca undata,Dartford Warbler,provencesångare,Sylviidae,Sylviid Babblers,Sylvior,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Regulus ignicapilla,Common Firecrest,brandkronad kungsfågel,Regulidae,Goldcrests and Kinglets,Kungsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Regulus regulus,Goldcrest,kungsfågel,Regulidae,Goldcrests and Kinglets,Kungsfåglar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 1-2,2
+Troglodytes troglodytes,Eurasian Wren,gärdsmyg,Troglodytidae,Wrens,Gärdsmygar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf (s) 2,2
+Sitta europaea,Eurasian Nuthatch,nötväcka,Sittidae,Nuthatches,Nötväckor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 3,3
+Certhia familiaris,Eurasian Treecreeper,trädkrypare,Certhiidae,Treecreepers,Trädkrypare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Certhia brachydactyla,Short-toed Treecreeper,trädgårdsträdkrypare,Certhiidae,Treecreepers,Trädkrypare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Pastor roseus,Rosy Starling,rosenstare,Sturnidae,Starlings,Starar,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Sturnus vulgaris,Common Starling,stare,Sturnidae,Starlings,Starar,PASSERIFORMES,Perching birds,TÄTTINGAR,H1 / (V),1
+Geokichla sibirica,Siberian Thrush,sibirisk trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Zoothera aurea,White's Thrush,guldtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Catharus fuscescens,Veery,rostskogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Catharus ustulatus,Swainson's Thrush,beigekindad skogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Catharus guttatus,Hermit Thrush,eremitskogstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Turdus torquatus,Ring Ouzel,ringtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Turdus merula,Common Blackbird,koltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 1,1
+Turdus obscurus,Eyebrowed Thrush,gråhalsad trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Turdus atrogularis,Black-throated Thrush,svarthalsad trast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Turdus naumanni,Naumann's Thrush,rödtrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Turdus eunomus,Dusky Thrush,bruntrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Turdus pilaris,Fieldfare,björktrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2 / V,2
+Turdus iliacus,Redwing,rödvingetrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1,1
+Turdus philomelos,Song Thrush,taltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1,1
+Turdus viscivorus,Mistle Thrush,dubbeltrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3-4,4
+Turdus migratorius,American Robin,vandringstrast,Turdidae,Thrushes,Trastar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Muscicapa striata,Spotted Flycatcher,grå flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Muscicapa dauurica,Asian Brown Flycatcher,glasögonflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Erithacus rubecula,European Robin,rödhake,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1 / (V),1
+Luscinia svecica,Bluethroat,blåhake,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Luscinia luscinia,Thrush Nightingale,näktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Luscinia megarhynchos,Common Nightingale,sydnäktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Irania gutturalis,White-throated Robin,vitstrupig näktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Calliope calliope,Siberian Rubythroat,rubinnäktergal,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Tarsiger cyanurus,Red-flanked Bluetail,tajgablåstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Ficedula albicilla,Taiga Flycatcher,tajgaflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Ficedula parva,Red-breasted Flycatcher,mindre flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Ficedula hypoleuca,European Pied Flycatcher,svartvit flugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Ficedula albicollis,Collared Flycatcher,halsbandsflugsnappare,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Phoenicurus ochruros,Black Redstart,svart rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Phoenicurus phoenicurus,Common Redstart,rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2-3,3
+Phoenicurus auroreus,Daurian Redstart,svartryggig rödstjärt,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,???,nil
+Monticola saxatilis,Common Rock Thrush,stentrast,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Monticola solitarius,Blue Rock Thrush,blåtrast,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Saxicola rubetra,Whinchat,buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Saxicola rubicola,European Stonechat,svarthakad buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Saxicola maurus,Siberian Stonechat,vitgumpad buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Saxicola stejnegeri,Stejneger's Stonechat,amurbuskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,???,nil
+Saxicola caprata,Pied Bush Chat,svart buskskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Oenanthe oenanthe,Northern Wheatear,stenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Oenanthe isabellina,Isabelline Wheatear,isabellastenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Oenanthe deserti,Desert Wheatear,ökenstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Oenanthe hispanica,Western Black-eared Wheatear,västlig medelhavsstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Oenanthe melanoleuca,Eastern Black-eared Wheatear,östlig medelhavsstenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,???,nil
+Oenanthe pleschanka,Pied Wheatear,nunnestenskvätta,Muscicapidae,Old World Flycatchers,Flugsnappare,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Cinclus cinclus,White-throated Dipper,strömstare,Cinclidae,Dippers,Strömstarar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4 / V,4
+Passer domesticus,House Sparrow,gråsparv,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Passer hispaniolensis,Spanish Sparrow,spansk sparv,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Passer montanus,Eurasian Tree Sparrow,pilfink,Passeridae,Old World Sparrows,Sparvfinkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2,2
+Prunella collaris,Alpine Accentor,alpjärnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Prunella montanella,Siberian Accentor,sibirisk järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Prunella atrogularis,Black-throated Accentor,svartstrupig järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Prunella modularis,Dunnock,järnsparv,Prunellidae,Accentors,Järnsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Motacilla flava,Yellow Wagtail,gulärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3,3
+Motacilla citreola,Citrine Wagtail,citronärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Motacilla cinerea,Grey Wagtail,forsärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Motacilla alba,White Wagtail,sädesärla,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Anthus richardi ,Richard's Pipit,större piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Anthus godlewskii,Blyth's Pipit,mongolpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Anthus campestris,Tawny Pipit,fältpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Anthus pratensis,Meadow Pipit,ängspiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1,1
+Anthus trivialis,Tree Pipit,trädpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1,1
+Anthus hodgsoni,Olive-backed Pipit,sibirisk piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T**,7
+Anthus gustavi,Pechora Pipit,tundrapiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Anthus cervinus,Red-throated Pipit,rödstrupig piplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Anthus rubescens,Buff-bellied Pipit,hedpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Anthus spinoletta,Water Pipit,vattenpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,V 5,5
+Anthus petrosus,Eurasian Rock Pipit,skärpiplärka,Motacillidae,Wagtails and Pipits,Ärlor,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf (s) 4,4
+Fringilla coelebs,Common Chaffinch,bofink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1 / (V),1
+Fringilla montifringilla,Brambling,bergfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 1 / V 2-5,1
+Coccothraustes coccothraustes,Hawfinch,stenknäck,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 3,3
+Pinicola enucleator,Pine Grosbeak,tallbit,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 4,4
+Pyrrhula pyrrhula,Eurasian Bullfinch,domherre,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 2,2
+Bucanetes githagineus,Trumpeter Finch,ökentrumpetare,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Carpodacus erythrinus,Common Rosefinch,rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Carpodacus sibiricus,Long-tailed Rosefinch,långstjärtad rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,T****,9
+Carpodacus roseus,Pallas's Rosefinch,sibirisk rosenfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,T****,9
+Chloris chloris,European Greenfinch,grönfink,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 1-2,2
+Linaria flavirostris,Twite,vinterhämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5 / F 3 / (V),3
+Linaria cannabina,Common Linnet,hämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2,2
+Acanthis flammea,Redpoll,gråsiska,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 1-2,2
+Loxia pytyopsittacus,Parrot Crossbill,större korsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 3,3
+Loxia curvirostra,Red Crossbill,mindre korsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 2-3,3
+Loxia bifasciata,Two-barred Crossbill,bändelkorsnäbb,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,T*,6
+Carduelis carduelis,European Goldfinch,steglits,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 3,3
+Serinus serinus,European Serin,gulhämpling,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Spinus spinus,Eurasian Siskin,grönsiska,Fringillidae,Finches,Finkar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs+f 2,2
+Calcarius lapponicus,Lapland Longspur,lappsparv,Calcariidae,Longspurs and Snow Buntings,Sporrsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 2-3,3
+Plectrophenax nivalis,Snow Bunting,snösparv,Calcariidae,Longspurs and Snow Buntings,Sporrsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3 / F / (V),3
+Emberiza calandra,Corn Bunting,kornsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs 5,5
+Emberiza citrinella,Yellowhammer,gulsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hs (f) 1-2,1
+Emberiza leucocephalos,Pine Bunting,tallsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza cia,Rock Bunting,klippsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza buchanani,Grey-necked Bunting,bergortolan,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Emberiza cineracea,Cinereous Bunting,gulgrå sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Emberiza hortulana,Ortolan Bunting,ortolansparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 4,4
+Emberiza caesia,Cretzschmar's Bunting,rostsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza cirlus,Cirl Bunting,häcksparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza fucata,Chestnut-eared Bunting,rödkindad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T****,9
+Emberiza pusilla,Little Bunting,dvärgsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 5,5
+Emberiza chrysophrys,Yellow-browed Bunting,gulbrynad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza rustica,Rustic Bunting,videsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 3-4,4
+Emberiza aureola,Yellow-breasted Bunting,gyllensparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza melanocephala,Black-headed Bunting,svarthuvad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Emberiza bruniceps,Red-headed Bunting,stäppsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,[T***],8
+Emberiza spodocephala,Black-faced Bunting,gråhuvad sparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Emberiza pallasi,Pallas's Reed Bunting,dvärgsävsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Emberiza schoeniclus,Common Reed Bunting,sävsparv,Emberizidae,Old World Buntings,Fältsparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,Hf 2 / (V),2
+Spizelloides arborea,American Tree Sparrow,tundrasparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,???,nil
+Junco hyemalis,Dark-eyed Junco,mörkögd junco,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Zonotrichia albicollis,White-throated Sparrow,vitstrupig sparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Melospiza melodia,Song Sparrow,sångsparv,Passerellidae,New World Sparrows,Amerikanska sparvar,PASSERIFORMES,Perching birds,TÄTTINGAR,-,nil
+Xanthocephalus xanthocephalus,Yellow-headed Blackbird,gulhuvad ängstrupial,Icteridae,New World Blackbirds,Trupialer,PASSERIFORMES,Perching birds,TÄTTINGAR,T****,9
+Pheucticus ludovicianus,Rose-breasted Grosbeak,brokig kardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR,T***,8
+Passerina cyanea,Indigo Bunting,turkoskardinal,Cardinalidae,Cardinals and Grosbeaks,Kardinaler,PASSERIFORMES,Perching birds,TÄTTINGAR,[T***],8
