@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 // internal modules;
 import App from './containers/app';
@@ -16,7 +16,7 @@ import settingsReducer from './reducers/settings_reducer';
 
 // modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
-import { loadSettings } from "./actions";
+import { loadSettings } from './actions';
 
 // reducers
 const reducers = combineReducers({
@@ -43,7 +43,7 @@ const store = createStore(reducers, initialState, middlewares);
 // override defauly settings with user settings
 store.dispatch(loadSettings());
 
-const root = document.getElementById('root')
+const root = document.getElementById('root');
 
 ReactDOM.render(
   <Provider store={store}>
@@ -51,6 +51,5 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </Provider>,
-  root
-)
-
+  root,
+);
