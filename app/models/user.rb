@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 class User < ApplicationRecord
   acts_as_token_authenticatable
 
@@ -30,8 +32,8 @@ class User < ApplicationRecord
                                            { order: order.id, user: id, pop_cat: population_category.to_i }).count
   end
 
-  def groups_data(groups, population_category = nil)
-    groups_class = groups.name.downcase
+  def groups_data(groups, population_category = POPULATION_DEFAULT)
+    grouped_by = groups.name.downcase
     total_seen = 0
     total_birds = 0
 
@@ -41,14 +43,10 @@ class User < ApplicationRecord
       group_bird_count = birds.count
 
       # the families/orders that have no birds with the given population range
-      if birds.size.zero?
+      if group_bird_count.zero?
         nil
       else
-        if groups_class == 'order'
-          group_seen_count = order_birds_seen_count(group, population_category)
-        else
-          group_seen_count = family_birds_seen_count(group, population_category)
-        end
+        group_seen_count = get_group_seen_count(group, grouped_by, population_category)
 
         total_seen += group_seen_count
         total_birds += group_bird_count
@@ -67,8 +65,8 @@ class User < ApplicationRecord
     groups = groups.compact
 
     {
-      grouped_by: groups_class,
-      population_threshold: population_category || POPULATION_DEFAULT,
+      grouped_by: grouped_by,
+      population_threshold: population_category,
       total_groups: groups.count,
       total_seen: total_seen,
       total_birds: total_birds,
@@ -81,6 +79,16 @@ class User < ApplicationRecord
       true
     else
       false
+    end
+  end
+
+  private
+
+  def get_group_seen_count(group, grouped_by, population_category)
+    if grouped_by == 'order'
+      group_seen_count = order_birds_seen_count(group, population_category)
+    else
+      group_seen_count = family_birds_seen_count(group, population_category)
     end
   end
 end
