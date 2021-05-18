@@ -3,8 +3,8 @@ import { FETCH_GROUPS } from '../actions';
 const groupsReducer = (state, action) => {
   if (state === undefined) {
     return {
-      groups: []
-    }
+      groups: [],
+    };
   }
 
   switch (action.type) {
@@ -13,6 +13,6 @@ const groupsReducer = (state, action) => {
     default:
       return state;
   }
-}
+};
 
 export default groupsReducer;
