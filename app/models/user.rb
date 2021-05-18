@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class User < ApplicationRecord
   acts_as_token_authenticatable
 
