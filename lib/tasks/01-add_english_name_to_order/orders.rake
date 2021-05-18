@@ -2,8 +2,7 @@ require 'csv'
 
 namespace :orders do
   desc "Update fields"
-    task add_english_name: :environment do
-
+  task add_english_name: :environment do
     csv_file_path = Rails.root.join('lib', 'tasks', '01-add_english_name_to_order', 'data.csv')
     csv_options = { col_sep: ',', headers: :first_row, header_converters: :symbol }
 
@@ -12,7 +11,7 @@ namespace :orders do
 
     CSV.foreach(csv_file_path, csv_options) do |row|
       order = nil
-    
+
       order = Order.find_by(scientific_name: row[:order_scientific].capitalize)
 
       if order
@@ -29,5 +28,5 @@ namespace :orders do
     end
 
     puts "#{counter} out of #{Order.count} orders now have an english name"
-  end  
+  end
 end
