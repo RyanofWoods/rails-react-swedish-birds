@@ -2,8 +2,7 @@ require 'csv'
 
 namespace :families do
   desc "Update fields"
-    task update_english_name: :environment do
-
+  task update_english_name: :environment do
     csv_file_path = Rails.root.join('lib', 'tasks', '02-update_family_english_name', 'data.csv')
     csv_options = { col_sep: ',', headers: :first_row, header_converters: :symbol }
 
@@ -12,7 +11,7 @@ namespace :families do
 
     CSV.foreach(csv_file_path, csv_options) do |row|
       family = nil
-    
+
       family = Family.find_by(scientific_name: row[:family_scientific])
 
       if family
@@ -29,5 +28,5 @@ namespace :families do
     end
 
     puts "#{counter} out of 18 families' english_name were updated"
-  end  
+  end
 end

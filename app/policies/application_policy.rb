@@ -36,7 +36,7 @@ class ApplicationPolicy
 
   private
 
-   def user_logged_in?
+  def user_logged_in?
     !@user.nil?
   end
 
