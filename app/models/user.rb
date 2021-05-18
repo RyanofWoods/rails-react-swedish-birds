@@ -86,9 +86,9 @@ class User < ApplicationRecord
 
   def get_group_seen_count(group, grouped_by, population_category)
     if grouped_by == 'order'
-      group_seen_count = order_birds_seen_count(group, population_category)
+      order_birds_seen_count(group, population_category)
     else
-      group_seen_count = family_birds_seen_count(group, population_category)
+      family_birds_seen_count(group, population_category)
     end
   end
 end
