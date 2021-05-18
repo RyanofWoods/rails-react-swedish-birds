@@ -42,3 +42,5 @@ Bundler/OrderedGems:
   Enabled: false
 Style/SymbolArray:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
