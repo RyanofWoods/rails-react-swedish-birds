@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { Route, Switch, Redirect } from 'react-router-dom'
-import { connect } from "react-redux";
+/* eslint-disable react/destructuring-assignment */
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import GroupList from './group_list';
 import BirdList from './bird_list';
@@ -9,49 +10,43 @@ import Settings from './settings';
 import Navbar from '../components/navbar';
 
 class App extends Component {
-  handleGroupRedirect () {
+  handleGroupRedirect() {
     switch (this.props.groupBy) {
       case 'order':
-        return <Redirect to="/orders/" />
+        return <Redirect to="/orders/" />;
       default:
-        return <Redirect to="/families" />
+        return <Redirect to="/families" />;
     }
   }
 
-  render () {
+  render() {
     return (
-      <React.Fragment>
+      <>
         {ReactDOM.createPortal(<Navbar />, document.getElementById('navbar-container'))}
 
         <div className="container my-4">
           <Switch>
-            <Route exact path="/">
-              {this.handleGroupRedirect()}
-            </Route>
-
             <Route path="/settings" component={Settings} />
 
             <Route path="/:groupedBy/:groupName" component={BirdList} />
 
             <Route path="/families/">
-              <GroupList groupPlural={"families"} groupSingular={"family"} />
+              <GroupList groupPlural="families" groupSingular="family" />
             </Route>
             <Route path="/orders/">
-              <GroupList groupPlural={"orders"} groupSingular={"order"} />
+              <GroupList groupPlural="orders" groupSingular="order" />
             </Route>
 
             <Route path="/">{this.handleGroupRedirect()}</Route>
           </Switch>
         </div>
-      </React.Fragment>
+      </>
     );
   }
-};
+}
 
-const mapStateToProps = (state) => {
-  return {
-    groupBy: state.settingsData.groupBy
-  };
-};
+const mapStateToProps = (state) => ({
+  groupBy: state.settingsData.groupBy,
+});
 
 export default connect(mapStateToProps)(App);
