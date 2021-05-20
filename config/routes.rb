@@ -15,6 +15,5 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
-  get '/settings', to: 'pages#home'
   get '/*path', to: 'pages#home'
 end
