@@ -10,7 +10,7 @@ import Group from '../components/group';
 class GroupList extends Component {
   componentDidMount() {
     const {
-      groupedBy, populationThreshold, fetchGroups, groupSingular, userPopThres
+      groupedBy, populationThreshold, fetchGroups, groupSingular, userPopThres,
     } = this.props;
 
     // check if we need to re-fetch the groups based on the url && user settings
@@ -20,7 +20,9 @@ class GroupList extends Component {
   }
 
   render() {
-    const { groups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref } = this.props;
+    const {
+      groups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref,
+    } = this.props;
 
     return (
       <div>
