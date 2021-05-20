@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { HashLink } from 'react-router-hash-link';
 import { fetchGroup } from '../actions';
 
-import Wrapper from '../components/wrapper';
 import Bird from './bird';
 
 class BirdList extends Component {
