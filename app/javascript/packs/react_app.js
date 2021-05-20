@@ -1,1 +1,1 @@
-import '../react_app';
+import '../react_app'
