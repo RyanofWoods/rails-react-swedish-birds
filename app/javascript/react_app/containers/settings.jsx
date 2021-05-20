@@ -1,28 +1,27 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { saveSettings } from "../actions";
-import SETTING_DEFAULTS from "../setting_defaults";
-import Modal from "../components/modal";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { saveSettings } from '../actions';
+import SETTING_DEFAULTS from '../setting_defaults';
 
 class Settings extends Component {
   constructor(props) {
     super(props);
 
+    const loadSettings = () => {
+      // load setting defaults
+      const settingsCopy = { ...SETTING_DEFAULTS };
+
+      // override settings defaults with user settings
+      for (const [key, value] of Object.entries(this.props.settings)) {
+        settingsCopy[key] = value;
+      }
+
+      return { settings: settingsCopy };
+    };
+
     // setting defaults overriden with user settings
-    this.state = this.loadSettings();;    
-  }
-
-  loadSettings() {
-    // load setting defaults
-    const settingsCopy = { ...SETTING_DEFAULTS };
-    
-    // override settings defaults with user settings
-    for (const [key, value] of Object.entries(this.props.settings)) {
-      settingsCopy[key] = value;
-    }
-
-    return { settings: settingsCopy};
+    this.state = loadSettings();
   }
 
   settingsChange = (id, value) => {
@@ -31,33 +30,36 @@ class Settings extends Component {
 
     settingsCopy[id] = value;
     this.setState({ settings: settingsCopy });
-  };
+  }
 
   saveSettings = (event) => {
     event.preventDefault();
     this.props.saveSettings(this.state.settings);
-    alert("Settings saved!");
-  };
+    // eslint-disable-next-line no-alert
+    alert('Settings saved!');
+  }
 
   render() {
-    const { groupBy, seenConfirmation, language, populationThreshold } = this.state.settings;
+    const {
+      groupBy, seenConfirmation, language, populationThreshold,
+    } = this.state.settings;
 
     const populationText = () => {
       switch (+populationThreshold) {
         case 5:
-          return "Include birds to the rarest of less than 100 observations in Sweden."
+          return 'Include birds to the rarest of less than 100 observations in Sweden.';
         case 6:
-          return "Include yearly guest birds which do not breed here."
+          return 'Include yearly guest birds which do not breed here.';
         case 7:
-          return "Include birds which may be seen only once, every year or several years.";
+          return 'Include birds which may be seen only once, every year or several years.';
         case 8:
-          return "Include birds which may be seen once or a few times every 10 years."
+          return 'Include birds which may be seen once or a few times every 10 years.';
         case 9:
-          return "Include birds which have only been seen once or few times in Sweden ever.";
+          return 'Include birds which have only been seen once or few times in Sweden ever.';
         default:
-          return ""
+          return '';
       }
-    }
+    };
 
     return (
       <form onSubmit={this.saveSettings}>
@@ -65,9 +67,7 @@ class Settings extends Component {
 
         <div className="form-check mb-3">
           <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
-          <label className="form-check-label" >
-            Confirmation when marking a bird as seen?
-          </label>
+          <label className="form-check-label">Confirmation when marking a bird as seen? </label>
         </div>
 
         <div className="form-group">
@@ -90,23 +90,19 @@ class Settings extends Component {
         <div className="form-group">
           <label className="mr-2">Population threshold:</label>
           <p><em>{populationText()}</em></p>
-          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', event.target.value)}/>
+          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', +event.target.value)}/>
         </div>
 
-        <button className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
-    )
+    );
   }
-};
+}
 
-const mapStateToProps = (state) => {
-  return {
-    settings: state.settingsData
-  };
-};
+const mapStateToProps = (state) => ({
+  settings: state.settingsData,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ saveSettings }, dispatch);
-};
+const mapDispatchToProps = (dispatch) => bindActionCreators({ saveSettings }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);

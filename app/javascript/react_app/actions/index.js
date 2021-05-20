@@ -11,22 +11,20 @@ export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
-  const url = BASE_URL + `/groups?group_by=${groupBy}&population_category_at_least=${populationThreshold}`;
+  const url = `${BASE_URL}/groups?group_by=${groupBy}&population_category_at_least=${populationThreshold}`;
 
   const promise = fetch(url, { credentials: 'same-origin' })
-    .then(r => r.json());
+    .then((r) => r.json());
 
   return {
     type: FETCH_GROUPS,
-    payload: promise
-  }
+    payload: promise,
+  };
 }
 
 export function fetchGroup(groupedBy, groupName, populationThreshold = 9) {
-  const url = BASE_URL + `/${groupedBy}/${groupName}?population_category_at_least=${populationThreshold}`;
-  const promise = fetch(url, { credentials: "same-origin" }).then((r) =>
-    r.json()
-  );
+  const url = `${BASE_URL}/${groupedBy}/${groupName}?population_category_at_least=${populationThreshold}`;
+  const promise = fetch(url, { credentials: 'same-origin' }).then((r) => r.json());
 
   return {
     type: FETCH_GROUP,
@@ -35,20 +33,19 @@ export function fetchGroup(groupedBy, groupName, populationThreshold = 9) {
 }
 
 export function markSeen(birdScientificName) {
-  const url = BASE_URL + `/birds/${birdScientificName}/observations`;
+  const url = `${BASE_URL}/birds/${birdScientificName}/observations`;
   const csrfToken = document.querySelector('meta[name="csrf-token"]').attributes.content.value;
 
   const promise = fetch(url,
     {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken
+        'X-CSRF-Token': csrfToken,
       },
-      credentials: "same-origin"
-    }).then((r) => r.json()
-  );
+      credentials: 'same-origin',
+    }).then((r) => r.json());
 
   return {
     type: MARK_SEEN,
@@ -61,15 +58,16 @@ const parseLocalStorageSettings = () => {
 
   if (settings) {
     try {
-      return JSON.parse(settings)
+      return JSON.parse(settings);
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.log(err.message);
-      return {}
+      return {};
     }
   } else {
-    return {}
+    return {};
   }
-}
+};
 
 export function loadSettings() {
   const userSettings = parseLocalStorageSettings();
