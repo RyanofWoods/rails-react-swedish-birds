@@ -1,6 +1,6 @@
 class Api::V1::FamiliesController < Api::V1::BaseController
   before_action :set_family, only: [:show]
-  after_action :verify_authorized, only: [:index, :show]
+  after_action :verify_authorized, only: [:show]
 
   def show
     return unless @family && user_signed_in?
