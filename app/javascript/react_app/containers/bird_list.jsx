@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { HashLink } from 'react-router-hash-link';
 import { fetchGroup } from '../actions';
+
+import Wrapper from '../components/wrapper';
 import Bird from './bird';
 
 class BirdList extends Component {
@@ -21,7 +23,7 @@ class BirdList extends Component {
     const title = englishName || scientificName;
 
     return (
-      <div>
+      <Wrapper>
         <h1>
           {title} ({totalSeen}/{totalBirds})
         </h1>
@@ -33,7 +35,7 @@ class BirdList extends Component {
             ))
           }
         </ul>
-      </div>
+      </Wrapper>
     );
   }
 }

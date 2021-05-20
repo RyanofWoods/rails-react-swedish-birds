@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchGroups } from '../actions';
 
+import Wrapper from '../components/wrapper';
 import Group from '../components/group';
 
 class GroupList extends Component {
@@ -24,7 +25,7 @@ class GroupList extends Component {
     } = this.props;
 
     return (
-      <div>
+      <Wrapper>
         <h1>{totalGroups} {groupPlural}: </h1>
         <h3 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
@@ -38,11 +39,11 @@ class GroupList extends Component {
                 groupedBy={groupPlural}
                 langPref={userLangPref}
                 {...group}
-              />
+                />
             ))
           }
         </ul>
-      </div>
+      </Wrapper>
     );
   }
 }

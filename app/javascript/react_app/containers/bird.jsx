@@ -52,7 +52,7 @@ class Bird extends Component {
           {textContent()}
         </div>
 
-        <p>{details}</p>
+        <small className="text-muted">{details}</small>
 
         {
           this.state.showModal && (
