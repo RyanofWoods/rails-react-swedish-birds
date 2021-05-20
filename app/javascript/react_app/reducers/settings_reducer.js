@@ -5,7 +5,7 @@ const settingsReducer = (state = {}, action) => {
     return state;
   }
 
-  // get current state and update changed settings
+  // save updated state without mutating state directly
   const updatedSettings = { ...state, ...action.payload };
 
   switch (action.type) {
