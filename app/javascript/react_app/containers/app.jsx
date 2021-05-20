@@ -8,6 +8,7 @@ import GroupList from './group_list';
 import BirdList from './bird_list';
 import Settings from './settings';
 import Navbar from '../components/navbar';
+import Wrapper from '../components/wrapper';
 
 class App extends Component {
   handleGroupRedirect() {
@@ -24,7 +25,7 @@ class App extends Component {
       <>
         {ReactDOM.createPortal(<Navbar />, document.getElementById('navbar-container'))}
 
-        <div className="container my-4">
+        <Wrapper>
           <Switch>
             <Route path="/settings" component={Settings} />
 
@@ -39,7 +40,7 @@ class App extends Component {
 
             <Route path="/">{this.handleGroupRedirect()}</Route>
           </Switch>
-        </div>
+        </Wrapper>
       </>
     );
   }

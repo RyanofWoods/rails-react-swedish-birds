@@ -23,7 +23,7 @@ class BirdList extends Component {
     const title = englishName || scientificName;
 
     return (
-      <Wrapper>
+      <>
         <h1>
           {title} ({totalSeen}/{totalBirds})
         </h1>
@@ -35,7 +35,7 @@ class BirdList extends Component {
             ))
           }
         </ul>
-      </Wrapper>
+      </>
     );
   }
 }

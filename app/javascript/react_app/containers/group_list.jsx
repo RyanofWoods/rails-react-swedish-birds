@@ -25,7 +25,7 @@ class GroupList extends Component {
     } = this.props;
 
     return (
-      <Wrapper>
+      <>
         <h1>{totalGroups} {groupPlural}: </h1>
         <h3 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
@@ -43,7 +43,7 @@ class GroupList extends Component {
             ))
           }
         </ul>
-      </Wrapper>
+      </>
     );
   }
 }
