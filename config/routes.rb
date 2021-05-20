@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      get '/groups', to: 'families#index'
+      get '/groups', to: 'groups#index'
       
       resources :families, only: [:show]
       resources :orders, only: [:show]

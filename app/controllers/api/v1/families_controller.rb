@@ -2,21 +2,6 @@ class Api::V1::FamiliesController < Api::V1::BaseController
   before_action :set_family, only: [:show]
   after_action :verify_authorized, only: [:index, :show]
 
-  def index
-    if params[:group_by] == 'order'
-      groups = Order.all
-    else
-      groups = Family.all
-    end
-
-    pop_cat = params[:population_category_at_least]
-
-    raw_data = authorize current_user.groups_data(groups, pop_cat),
-                         policy_class: FamilyPolicy
-
-    render json: raw_data
-  end
-
   def show
     return unless @family && user_signed_in?
 
