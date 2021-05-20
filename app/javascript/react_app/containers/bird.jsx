@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { markSeen } from "../actions";
+/* eslint-disable camelcase */
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { markSeen } from '../actions';
 import Modal from '../components/modal';
 
 class Bird extends Component {
@@ -12,14 +13,16 @@ class Bird extends Component {
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal });
   }
-  
+
   render() {
-    const { scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref } = this.props;
+    const {
+      scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref,
+    } = this.props;
 
-    let seenClasses = "far fa-";
-    seenClasses += seen ? "check-square" : "square hover-pointer hover-opacity";
+    let seenClasses = 'far fa-';
+    seenClasses += seen ? 'check-square' : 'square hover-pointer hover-opacity';
 
-    let iconProps = {
+    const iconProps = {
       className: seenClasses,
       // add click event only for birds not seen yet
       ...(!seen && seenConfirmation && { onClick: this.toggleModal }), // confirmation modal
@@ -28,9 +31,9 @@ class Bird extends Component {
 
     const textContent = () => {
       switch (langPref) {
-        case "en":
+        case 'en':
           return <p>{english_name}</p>;
-        case "se":
+        case 'se':
           return <p>{swedish_name}</p>;
         default:
           return (
@@ -41,7 +44,7 @@ class Bird extends Component {
           );
       }
     };
-  
+
     return (
       <li className="list-group-item bird-card">
         <div className="bird-card-info">
@@ -53,7 +56,7 @@ class Bird extends Component {
 
         {
           this.state.showModal && (
-            <Modal title="Confirm sighting" confirmButtonText={"Confirm"} close={this.toggleModal} action={() => markSeen(scientific_name)}>
+            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleModal} action={() => markSeen(scientific_name)}>
               <p>Are you sure you want to mark this bird as seen?</p>
             </Modal>
           )
@@ -63,14 +66,10 @@ class Bird extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    seenConfirmation: state.settingsData.seenConfirmation
-  };
-};
+const mapStateToProps = (state) => ({
+  seenConfirmation: state.settingsData.seenConfirmation,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ markSeen }, dispatch);
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({ markSeen }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bird);
