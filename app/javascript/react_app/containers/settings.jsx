@@ -2,26 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { saveSettings } from '../actions';
-import SETTING_DEFAULTS from '../setting_defaults';
 
 class Settings extends Component {
   constructor(props) {
     super(props);
 
-    const loadSettings = () => {
-      // load setting defaults
-      const settingsCopy = { ...SETTING_DEFAULTS };
-
-      // override settings defaults with user settings
-      for (const [key, value] of Object.entries(this.props.settings)) {
-        settingsCopy[key] = value;
-      }
-
-      return { settings: settingsCopy };
-    };
-
     // setting defaults overriden with user settings
-    this.state = loadSettings();
+    this.state = { settings: props.settings }
   }
 
   settingsChange = (id, value) => {

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchGroups } from '../actions';
 
-import Wrapper from '../components/wrapper';
 import Group from '../components/group';
 
 class GroupList extends Component {
