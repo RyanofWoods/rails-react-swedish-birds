@@ -3,9 +3,9 @@ class Api::V1::GroupsController < Api::V1::BaseController
 
   def index
     if params[:group_by] == 'order'
-      groups = Order.all
+      groups = Order.order(:created_at)
     else
-      groups = Family.all
+      groups = Family.order(:created_at)
     end
 
     pop_cat = params[:population_category_at_least]
