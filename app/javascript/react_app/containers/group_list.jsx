@@ -39,7 +39,7 @@ class GroupList extends Component {
                 groupedBy={groupPlural}
                 langPref={userLangPref}
                 {...group}
-                />
+              />
             ))
           }
         </ul>
