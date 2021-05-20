@@ -5,19 +5,15 @@ const settingsReducer = (state = {}, action) => {
     return state;
   }
 
-  const settingsCopy = { ...state };
-
   // get current state and update changed settings
-  for (const [key, value] of Object.entries(action.payload)) {
-    settingsCopy[key] = value;
-  }
+  const updatedSettings = { ...state, ...action.payload };
 
   switch (action.type) {
     case LOAD_SETTINGS:
-      return settingsCopy;
+      return updatedSettings;
     case SAVE_SETTINGS:
-      localStorage.setItem(LOCAL_SETTINGS, JSON.stringify(settingsCopy));
-      return settingsCopy;
+      localStorage.setItem(LOCAL_SETTINGS, JSON.stringify(updatedSettings));
+      return updatedSettings;
     default:
       return state;
   }
