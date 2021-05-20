@@ -1,25 +1,25 @@
 order_scientific,order_english
-Anseriformes,"Waterfowl: Ducks, Geese and Swans"
-Galliformes,"Landfowl: Grouse, Quail and Pheasants"
+Anseriformes,Waterfowl
+Galliformes,Landfowl
 Caprimulgiformes,Nightjars
 Apodiformes,Swifts
 Otidiformes,Bustards
 Cuculiformes,Cuckoos
 Pterocliformes,Sandgrouse
 Columbiformes,Pigeons and Doves
-Gruiformes,"Marshbirds: Rails, Crakes, Coots and Cranes"
+Gruiformes,Marshbirds
 Podicipediformes,Grebes
 Phoenicopteriformes,Flamingos
-Charadriiformes,"Shorebirds: Curlews, Oystercatchers, Stilts, Avocets, Plovers, Sandpipers, Snipes, Coursers, Pratincoles, Gulls, Terns, Skimmers, Skuas and Auks"
+Charadriiformes,Shorebirds
 Gaviiformes,Loons
-Procellariiformes,"Tube-nosed seabirds: Petrels, Storm petrels, Shearwaters and Albatrosses"
+Procellariiformes,Tube-nosed seabirds
 Ciconiiformes,Storks
-Suliformes,"Cormorants, Shags and Frigatebirds"
-Pelecaniformes,"Ibis, Herons, Pelicans, Egrets, Shoebill and Bitterns"
+Suliformes,Totipalmate water and diving birds
+Pelecaniformes,Pelicans and relatives
 Accipitriformes,Raptors
 Strigiformes,Owls
 Bucerotiformes,Hoopoes
-Coraciiformes,Kingfishers and allies: Rollers and Bee-eaters
+Coraciiformes,Kingfishers and allies
 Piciformes,Woodpeckers and allies
 Falconiformes,Falcons
 Passeriformes,Perching birds
