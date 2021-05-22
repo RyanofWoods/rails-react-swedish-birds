@@ -35,6 +35,8 @@ const initialState = {
   },
   selectedGroupData: {
     birds: [],
+    total_seen: 0,
+    total_birds: 0,
   },
   settingsData: SETTING_DEFAULTS,
 };
