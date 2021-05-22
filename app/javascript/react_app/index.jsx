@@ -29,6 +29,9 @@ const reducers = combineReducers({
 const initialState = {
   groupsData: {
     groups: [],
+    total_groups: 0,
+    total_seen: 0,
+    total_birds: 0,
   },
   selectedGroupData: {
     birds: [],
