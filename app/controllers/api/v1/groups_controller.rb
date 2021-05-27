@@ -8,7 +8,7 @@ class Api::V1::GroupsController < Api::V1::BaseController
       groups = Family.order(:created_at)
     end
 
-    pop_cat = params[:population_category_at_least]
+    pop_cat = params[:population_category_at_least].to_i if params[:population_category_at_least]
 
     raw_data = authorize current_user.groups_data(groups, pop_cat),
                          policy_class: GroupPolicy
