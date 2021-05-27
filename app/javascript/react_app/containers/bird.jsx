@@ -4,14 +4,20 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { markSeen } from '../actions';
 import Modal from '../components/modal';
+import DetailsModal from '../components/details_modal';
 
 class Bird extends Component {
   state = {
-    showSeenModal: false
+    showSeenModal: false,
+    showDetailsModal: false
   }
 
   toggleSeenModal = () => {
     this.setState({ showSeenModal: !this.state.showSeenModal });
+  }
+
+  toggleDetailsModal = () => {
+    this.setState({ showDetailsModal: !this.state.showDetailsModal });
   }
 
   render() {
@@ -52,13 +58,18 @@ class Bird extends Component {
           {textContent()}
         </div>
 
-        <small className="text-muted hover-pointer">{details}</small>
+        <small className="text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
 
         {
           this.state.showSeenModal && (
             <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={() => markSeen(scientific_name)}>
               <p>Are you sure you want to mark this bird as seen?</p>
             </Modal>
+          )
+        }
+        {
+          this.state.showDetailsModal && (
+            <DetailsModal close={this.toggleDetailsModal} />
           )
         }
       </li>
