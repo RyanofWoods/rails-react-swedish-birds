@@ -8,7 +8,11 @@ class Api::V1::ObservationsController < Api::V1::BaseController
     authorize @bird, policy_class: ObservationPolicy
 
     if Observation.create(bird: @bird, user: current_user)
-      render json: { scientific_name: @bird.scientific_name, seen: true }
+      render json: {
+                    bird_scientific_name: @bird.scientific_name,
+                    bird_order_scientific_name: @bird.family.order.scientific_name,
+                    bird_family_scientific_name: @bird.family.scientific_name,
+                    seen: true }
     else
       throw_error
     end
