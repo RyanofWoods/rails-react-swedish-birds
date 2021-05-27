@@ -19,7 +19,7 @@ class BirdList extends Component {
       birds, totalSeen, totalBirds, englishName, scientificName, langPref,
     } = this.props;
 
-    const title = englishName || scientificName;
+    const title = englishName || scientificName || '...';
 
     return (
       <>
