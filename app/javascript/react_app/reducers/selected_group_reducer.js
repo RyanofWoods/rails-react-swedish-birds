@@ -26,7 +26,7 @@ const selectedGroupReducer = (state, action) => {
         return state;
       }
       return updatedState(
-        action.payload.scientific_name,
+        action.payload.bird_scientific_name,
         action.payload.seen,
       );
     default:
