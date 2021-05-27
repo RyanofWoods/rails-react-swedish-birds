@@ -30,7 +30,9 @@ class User < ApplicationRecord
                                            { order: order.id, user: id, pop_cat: population_category.to_i }).count
   end
 
-  def groups_data(groups, population_category = POPULATION_DEFAULT)
+  def groups_data(groups, population_category = nil)
+    population_category ||= POPULATION_DEFAULT
+
     grouped_by = groups.name.downcase
     total_seen = 0
     total_birds = 0
