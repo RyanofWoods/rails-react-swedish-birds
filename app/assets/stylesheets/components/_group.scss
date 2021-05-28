@@ -35,16 +35,12 @@
     align-items: center;
     margin-bottom: 0.5rem;
     padding: 12px 15px 12px 15px;
+
     @include media-breakpoint-up(sm) {
       padding: 12px 30px 12px 30px;
     }
-
     &.group-item-with-progress {
       padding-bottom: 18px;
-    }
-    i {
-      font-size: 24px;
-      min-width: 40px;
     }
     p {
       margin-bottom: 0;

@@ -4,5 +4,12 @@
   .bird-card-info {
     display: flex;
     align-items: center;
+
+    i, div {
+      min-width: 40px;
+    }
+    i {
+      font-size: 24px;
+    }
   }
 }

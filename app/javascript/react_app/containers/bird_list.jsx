@@ -30,7 +30,7 @@ class BirdList extends Component {
         <ul className="list-group mt-3">
           <li key="group-header" className="list-group-item group-header bird-card">
             <div className="bird-card-info">
-              <i className="hover-pointer">-</i>
+              <div className="hover-pointer">-</div>
               <p className="hover-pointer">Names</p>
             </div>
             <p className="hover-pointer">Details</p>
