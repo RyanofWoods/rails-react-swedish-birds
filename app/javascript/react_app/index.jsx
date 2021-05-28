@@ -36,6 +36,7 @@ const initialState = {
   },
   selectedGroupData: {
     birds: [],
+    sortedBirds: [],
     total_seen: 0,
     total_birds: 0,
   },
