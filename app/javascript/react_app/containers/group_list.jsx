@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchGroups } from '../actions';
+import { fetchGroups, sortGroups } from '../actions';
 
 import Group from '../components/group';
 
@@ -20,7 +22,7 @@ class GroupList extends Component {
 
   render() {
     const {
-      groups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref,
+      sortedGroups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref,
     } = this.props;
 
     return (
@@ -32,13 +34,15 @@ class GroupList extends Component {
 
         <ul className="list-group">
           <li key="group-header" className="list-group-item group-header">
-            <p className="group-list-item-numbers pl-1 hover-pointer">
+            <p className="group-list-item-numbers pl-1 hover-pointer" onClick={() => this.props.sortGroups('seen')}>
               Seen
             </p>
-            <div className="hover-pointer"><p>Names</p></div>
+            <div className="hover-pointer">
+              <p onClick={() => this.props.sortGroups('name', userLangPref)}>Names</p>
+            </div>
           </li>
           {
-            groups.map((group) => (
+            sortedGroups.map((group) => (
               <Group
                 key={group.scientific_name}
                 groupedBy={groupPlural}
@@ -53,11 +57,12 @@ class GroupList extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchGroups }, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchGroups, sortGroups }, dispatch);
 
 const mapStateToProps = (state) => ({
   groupedBy: state.groupsData.grouped_by, // whether the data is grouped by 'order' or 'family'
   populationThreshold: state.groupsData.population_threshold, // threshold used to filter the data
+  sortedGroups: state.groupsData.sortedGroups,
   groups: state.groupsData.groups,
   totalGroups: state.groupsData.total_groups,
   totalSeen: state.groupsData.total_seen,
