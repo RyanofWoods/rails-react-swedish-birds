@@ -28,6 +28,13 @@ class BirdList extends Component {
         </h1>
         <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
         <ul className="list-group mt-3">
+          <li key="group-header" className="list-group-item group-header bird-card">
+            <div className="bird-card-info">
+              <i>-</i>
+              <p>Names</p>
+            </div>
+            <p>Details</p>
+          </li>
           {
             birds.map((birdProps) => (
               <Bird key={birdProps.scientific_name} langPref={langPref} {...birdProps} />
