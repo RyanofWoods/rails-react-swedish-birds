@@ -32,10 +32,10 @@ class GroupList extends Component {
 
         <ul className="list-group">
           <li key="group-header" className="list-group-item group-header">
-            <p className="group-list-item-numbers pl-1">
+            <p className="group-list-item-numbers pl-1 hover-pointer">
               Seen
             </p>
-            <div><p>Names</p></div>
+            <div className="hover-pointer"><p>Names</p></div>
           </li>
           {
             groups.map((group) => (

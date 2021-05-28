@@ -30,10 +30,10 @@ class BirdList extends Component {
         <ul className="list-group mt-3">
           <li key="group-header" className="list-group-item group-header bird-card">
             <div className="bird-card-info">
-              <i>-</i>
-              <p>Names</p>
+              <i className="hover-pointer">-</i>
+              <p className="hover-pointer">Names</p>
             </div>
-            <p>Details</p>
+            <p className="hover-pointer">Details</p>
           </li>
           {
             birds.map((birdProps) => (
