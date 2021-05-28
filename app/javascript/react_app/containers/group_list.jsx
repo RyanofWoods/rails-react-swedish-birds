@@ -26,11 +26,17 @@ class GroupList extends Component {
     return (
       <>
         <h1>{totalGroups} {groupPlural}: </h1>
-        <h3 className="mb-3">
+        <h4 className="mb-3">
           Birds seen: ({totalSeen}/{totalBirds})
-        </h3>
+        </h4>
 
         <ul className="list-group">
+          <li key="group-header" className="list-group-item group-header">
+            <p className="group-list-item-numbers pl-1">
+              Seen
+            </p>
+            <div><p>Names</p></div>
+          </li>
           {
             groups.map((group) => (
               <Group

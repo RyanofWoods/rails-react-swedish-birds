@@ -1,4 +1,17 @@
 .container ul.list-group {
+  li.group-header {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
+    z-index: 100; 
+    background-color: $primary !important;
+    color: #fff !important;
+    font-weight: bolder !important;
+    // leave left and right alone as they are responsive
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
   a:hover, a:hover p, a p {
     text-decoration: none;
     color: #000;
