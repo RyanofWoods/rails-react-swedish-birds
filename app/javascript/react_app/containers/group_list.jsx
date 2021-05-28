@@ -20,6 +20,30 @@ class GroupList extends Component {
     }
   }
 
+  sortedByIndicator(header) {
+    const { sortedBy } = this.props;
+    if (!sortedBy) return '';
+
+    const getSymbol = (orderedBy) => {
+      switch (orderedBy) {
+        case 'asc':
+          return '∧';
+        case 'desc':
+          return '∨';
+        default:
+          return '';
+      }
+    };
+
+    const [key] = Object.keys(this.props.sortedBy);
+
+    if (header !== key) {
+      return '';
+    }
+
+    return getSymbol(sortedBy[key]);
+  }
+
   render() {
     const {
       sortedGroups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref,
@@ -35,10 +59,10 @@ class GroupList extends Component {
         <ul className="list-group">
           <li key="group-header" className="list-group-item group-header">
             <p className="group-list-item-numbers pl-1 hover-pointer" onClick={() => this.props.sortGroups('seen')}>
-              Seen
+              Seen {this.sortedByIndicator('seen')}
             </p>
             <div className="hover-pointer">
-              <p onClick={() => this.props.sortGroups('name', userLangPref)}>Names</p>
+              <p onClick={() => this.props.sortGroups('name', userLangPref)}>Names {this.sortedByIndicator('name')}</p>
             </div>
           </li>
           {
@@ -63,6 +87,7 @@ const mapStateToProps = (state) => ({
   groupedBy: state.groupsData.grouped_by, // whether the data is grouped by 'order' or 'family'
   populationThreshold: state.groupsData.population_threshold, // threshold used to filter the data
   sortedGroups: state.groupsData.sortedGroups,
+  sortedBy: state.groupsData.sortedBy,
   groups: state.groupsData.groups,
   totalGroups: state.groupsData.total_groups,
   totalSeen: state.groupsData.total_seen,
