@@ -14,7 +14,7 @@ const groupsReducer = (state, action) => {
     const checkName = (state.groupBy === 'order') ? orderScientific : familyScientfic;
 
     const groupIndex = stateCopy.groups.findIndex(
-      (group) => group.scientific_name === checkName
+      (group) => group.scientific_name === checkName,
     );
 
     stateCopy.total_seen += 1;

@@ -29,9 +29,13 @@ const Modal = (props) => {
             {children}
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-primary hover-pointer" onClick={handleClick}>
-              {confirmButtonText}
-            </button>
+            {
+              action && (
+                <button type="button" className="btn btn-primary hover-pointer" onClick={handleClick}>
+                  {confirmButtonText}
+                </button>
+              )
+            }
             <button type="button" className="btn btn-secondary hover-pointer" onClick={close}>
               Close
             </button>

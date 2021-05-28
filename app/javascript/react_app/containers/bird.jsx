@@ -4,14 +4,20 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { markSeen } from '../actions';
 import Modal from '../components/modal';
+import DetailsModal from '../components/details_modal';
 
 class Bird extends Component {
   state = {
-    showModal: false
+    showSeenModal: false,
+    showDetailsModal: false
   }
 
-  toggleModal = () => {
-    this.setState({ showModal: !this.state.showModal });
+  toggleSeenModal = () => {
+    this.setState({ showSeenModal: !this.state.showSeenModal });
+  }
+
+  toggleDetailsModal = () => {
+    this.setState({ showDetailsModal: !this.state.showDetailsModal });
   }
 
   render() {
@@ -25,7 +31,7 @@ class Bird extends Component {
     const iconProps = {
       className: seenClasses,
       // add click event only for birds not seen yet
-      ...(!seen && seenConfirmation && { onClick: this.toggleModal }), // confirmation modal
+      ...(!seen && seenConfirmation && { onClick: this.toggleSeenModal }), // confirmation modal
       ...(!seen && !seenConfirmation && { onClick: () => markSeen(scientific_name) }), // no confirmation modal
     };
 
@@ -52,13 +58,18 @@ class Bird extends Component {
           {textContent()}
         </div>
 
-        <small className="text-muted">{details}</small>
+        <small className="text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
 
         {
-          this.state.showModal && (
-            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleModal} action={() => markSeen(scientific_name)}>
+          this.state.showSeenModal && (
+            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={() => markSeen(scientific_name)}>
               <p>Are you sure you want to mark this bird as seen?</p>
             </Modal>
+          )
+        }
+        {
+          this.state.showDetailsModal && (
+            <DetailsModal close={this.toggleDetailsModal} />
           )
         }
       </li>

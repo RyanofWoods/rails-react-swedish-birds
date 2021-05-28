@@ -12,12 +12,24 @@
 }
 .modal-component {
   position: fixed;
-  height: 40vh;
-  max-width: 500px;
+  height: fit-content;
+  max-width: 550px;
   z-index: 100;
+
+  .detailsModalItem {
+    display: flex;
+
+    & > :first-child {
+      min-width: 50px;
+    }
+  }
 }
 @media (max-width: 576px) {
   .modal-component {
     max-width: 90vw;
+    
+      & .detailsModalContent {
+      font-size: 12.5px;
+    }
   }
 }
