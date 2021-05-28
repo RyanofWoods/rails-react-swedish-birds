@@ -38,9 +38,9 @@ const selectedGroupReducer = (state, action) => {
         if (a[key] === b[key]) {
           return 0;
         } if (a[key]) {
-          return order === 'asc' ? -1 : 1;
+          return order === 'asc' ? 1 : -1;
         }
-        return order === 'asc' ? 1 : -1;
+        return order === 'asc' ? -1 : 1;
       }
 
       if (a[key] < b[key]) {
