@@ -62,7 +62,9 @@ class GroupList extends Component {
               Seen {this.sortedByIndicator('seen')}
             </p>
             <div className="hover-pointer">
-              <p onClick={() => this.props.sortGroups('name', userLangPref)}>Names {this.sortedByIndicator('name')}</p>
+              <p onClick={() => this.props.sortGroups('name', userLangPref)}>
+                Names {this.sortedByIndicator('name')}
+              </p>
             </div>
           </li>
           {
@@ -88,7 +90,6 @@ const mapStateToProps = (state) => ({
   populationThreshold: state.groupsData.population_threshold, // threshold used to filter the data
   sortedGroups: state.groupsData.sortedGroups,
   sortedBy: state.groupsData.sortedBy,
-  groups: state.groupsData.groups,
   totalGroups: state.groupsData.total_groups,
   totalSeen: state.groupsData.total_seen,
   totalBirds: state.groupsData.total_birds,
