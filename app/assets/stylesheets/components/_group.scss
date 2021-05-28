@@ -4,7 +4,7 @@
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 0px;
-    z-index: 100; 
+    z-index: 100;
     background-color: $primary !important;
     color: #fff !important;
     font-weight: bolder !important;
@@ -44,7 +44,7 @@
     }
     i {
       font-size: 24px;
-      margin-right: 24px;
+      min-width: 40px;
     }
     p {
       margin-bottom: 0;
