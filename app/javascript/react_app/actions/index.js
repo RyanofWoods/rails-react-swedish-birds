@@ -8,6 +8,8 @@ export const FETCH_GROUP = 'FETCH_GROUP';
 export const MARK_SEEN = 'MARK_SEEN';
 export const LOAD_SETTINGS = 'LOAD_SETTINGS';
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
+export const SORT_GROUPS = 'SORT_GROUPS';
+export const SORT_BIRDS = 'SORT_BIRDS';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
@@ -82,5 +84,19 @@ export function saveSettings(settings) {
   return {
     type: SAVE_SETTINGS,
     payload: settings,
+  };
+}
+
+export function sortGroups(clickedHeader, userLangPref) {
+  return {
+    type: SORT_GROUPS,
+    payload: { clickedHeader, userLangPref },
+  };
+}
+
+export function sortBirds(clickedHeader, userLangPref) {
+  return {
+    type: SORT_BIRDS,
+    payload: { clickedHeader, userLangPref },
   };
 }
