@@ -7,7 +7,9 @@ Rails.application.routes.draw do
       
       resources :families, only: [:show]
       resources :orders, only: [:show]
-      
+
+      resources :observations, only: [:index]
+
       resources :birds, only: [] do
         resources :observations, only: [:create]
       end

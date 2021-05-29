@@ -1,6 +1,14 @@
 class Api::V1::ObservationsController < Api::V1::BaseController
-  before_action :set_bird
-  after_action :verify_authorized, only: [:create]
+  before_action :set_bird, only: [:create]
+  after_action :verify_authorized, only: [:index, :create]
+
+  def index
+    throw_error unless user_signed_in?
+
+    authorize Observation
+
+    @observations = current_user.observations
+  end
 
   def create
     throw_error unless user_signed_in? && @bird
