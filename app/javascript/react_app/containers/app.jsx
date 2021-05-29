@@ -8,6 +8,7 @@ import GroupList from './group_list';
 import BirdList from './bird_list';
 import Settings from './settings';
 import Navbar from '../components/navbar';
+import FlashMessage from './flash_message';
 import Wrapper from '../components/wrapper';
 
 class App extends Component {
@@ -21,9 +22,12 @@ class App extends Component {
   }
 
   render() {
+    const { flashMessage } = this.props;
+
     return (
       <>
         {ReactDOM.createPortal(<Navbar />, document.getElementById('navbar-container'))}
+        {flashMessage && <FlashMessage message={flashMessage} />}
 
         <Wrapper>
           <Switch>
@@ -48,6 +52,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   groupBy: state.settingsData.groupBy,
+  flashMessage: state.flashMessage,
 });
 
 export default connect(mapStateToProps)(App);

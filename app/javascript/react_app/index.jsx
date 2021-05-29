@@ -14,6 +14,7 @@ import App from './containers/app';
 import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
 import settingsReducer from './reducers/settings_reducer';
+import flashMessageReducer from './reducers/flash_message_reducer';
 
 // modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
@@ -24,6 +25,7 @@ const reducers = combineReducers({
   groupsData: groupsReducer,
   selectedGroupData: selectedGroupReducer,
   settingsData: settingsReducer,
+  flashMessage: flashMessageReducer,
 });
 
 const initialState = {
@@ -41,6 +43,7 @@ const initialState = {
     total_birds: 0,
   },
   settingsData: SETTING_DEFAULTS,
+  flashMessage: null,
 };
 
 // root, store and middlewares
