@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { saveSettings } from '../actions';
+import { saveSettings, setFlashMessage } from "../actions";
 
 class Settings extends Component {
   constructor(props) {
@@ -22,8 +22,7 @@ class Settings extends Component {
   saveSettings = (event) => {
     event.preventDefault();
     this.props.saveSettings(this.state.settings);
-    // eslint-disable-next-line no-alert
-    alert('Settings saved!');
+    this.props.setFlashMessage("Settings saved!");
   }
 
   render() {
@@ -90,6 +89,6 @@ const mapStateToProps = (state) => ({
   settings: state.settingsData,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ saveSettings }, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ saveSettings, setFlashMessage }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);
