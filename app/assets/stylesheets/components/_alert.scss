@@ -2,5 +2,12 @@
   position: fixed;
   bottom: 16px;
   right: 16px;
-  z-index: 1000;
+  z-index: 80;
+  background-color: $primary;
+  color: #fff;
+
+  button {
+    color: inherit;
+    margin-left: 6px;
+  }
 }

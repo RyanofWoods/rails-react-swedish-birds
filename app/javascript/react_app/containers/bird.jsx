@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { markSeen } from '../actions';
+import { markSeen, setFlashMessage } from '../actions';
 import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
 
@@ -20,6 +20,11 @@ class Bird extends Component {
     this.setState({ showDetailsModal: !this.state.showDetailsModal });
   }
 
+  handleMarkSeen = () => {
+    this.props.markSeen(this.props.scientific_name);
+    this.props.setFlashMessage("Bird marked as seen!");
+  }
+
   render() {
     const {
       scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref,
@@ -32,7 +37,7 @@ class Bird extends Component {
       className: seenClasses,
       // add click event only for birds not seen yet
       ...(!seen && seenConfirmation && { onClick: this.toggleSeenModal }), // confirmation modal
-      ...(!seen && !seenConfirmation && { onClick: () => markSeen(scientific_name) }), // no confirmation modal
+      ...(!seen && !seenConfirmation && { onClick: this.handleMarkSeen }), // no confirmation modal
     };
 
     const textContent = () => {
@@ -62,7 +67,7 @@ class Bird extends Component {
 
         {
           this.state.showSeenModal && (
-            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={() => markSeen(scientific_name)}>
+            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={this.handleMarkSeen}>
               <p>Are you sure you want to mark this bird as seen?</p>
             </Modal>
           )
@@ -81,6 +86,6 @@ const mapStateToProps = (state) => ({
   seenConfirmation: state.settingsData.seenConfirmation,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ markSeen }, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ markSeen, setFlashMessage }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bird);
