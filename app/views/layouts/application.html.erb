@@ -3,7 +3,18 @@
   <head>
     <title>Swedish Birds</title>
     <%= favicon_link_tag %>
-  
+
+    <!-- Icons for mobile/tablets -->
+    <!-- iOS -->
+    <%= favicon_link_tag 'green_owl_120.png', rel: 'apple-touch-icon', type: 'image/png' %>  
+    <%= favicon_link_tag 'green_owl_152.png', rel: 'apple-touch-icon', type: 'image/png', sizes:'152x152' %>  
+    <%= favicon_link_tag 'green_owl_167.png', rel: 'apple-touch-icon', type: 'image/png', sizes:'167x167' %>  
+    <%= favicon_link_tag 'green_owl_180.png', rel: 'apple-touch-icon', type: 'image/png', sizes:'180x180' %>
+
+    <!-- Android -->
+    <%= favicon_link_tag 'green_owl_128.png', rel: 'icon', type: 'image/png', sizes:'128x128' %>
+    <%= favicon_link_tag 'green_owl_192.png', rel: 'icon', type: 'image/png', sizes:'192x192' %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

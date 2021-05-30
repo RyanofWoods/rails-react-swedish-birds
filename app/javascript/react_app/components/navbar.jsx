@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/images/owl.png';
+import logo from '../../../assets/images/transparent_64.png';
 
 const Navbar = () => (
   <div className="navbar navbar-expand-sm navbar-light">
