@@ -57,7 +57,7 @@ class BirdList extends Component {
         <ul className="list-group mt-3">
           <li key="group-header" className="list-group-item group-header">
             <p className="list-item-start hover-pointer" onClick={() => this.props.sortBirds('seen')}>
-              {this.sortedByIndicator('seen') || '-'}
+              Seen {this.sortedByIndicator('seen')}
             </p>
             <p className="list-item-grow hover-pointer" onClick={() => this.props.sortBirds('name', userLangPref)}>
               Names {this.sortedByIndicator('name')}
