@@ -46,7 +46,10 @@ const initialState = {
   },
   settingsData: SETTING_DEFAULTS,
   flashMessage: null,
-  lifelistData: [],
+  lifelistData: {
+    lifelist: [],
+    sortedLifelist: [],
+  },
 };
 
 // root, store and middlewares

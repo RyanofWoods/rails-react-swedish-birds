@@ -4,6 +4,7 @@ const groupsReducer = (state, action) => {
   if (state === undefined) {
     return {
       groups: [],
+      sortedGroups: [],
     };
   }
 
