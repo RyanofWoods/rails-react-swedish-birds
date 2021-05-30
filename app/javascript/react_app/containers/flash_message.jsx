@@ -18,7 +18,7 @@ class FlashMessage extends Component {
     const { message, isInfo } = this.props;
 
     return (
-      <div className={`alert m1 ${isInfo && 'alert-info'}`}>
+      <div className={`alert alert-dismissible ${isInfo ? 'alert-info' : ''} m-1`}>
         {message}
 
         <button type="button" className="close" aria-label="Close" onClick={this.props.clearFlashMessage}>
