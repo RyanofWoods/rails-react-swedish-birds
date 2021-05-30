@@ -9,6 +9,7 @@ import BirdList from './bird_list';
 import Settings from './settings';
 import Navbar from '../components/navbar';
 import FlashMessage from './flash_message';
+import Lifelist from './lifelist';
 import Wrapper from '../components/wrapper';
 
 class App extends Component {
@@ -31,6 +32,8 @@ class App extends Component {
 
         <Wrapper>
           <Switch>
+            <Route path="/lifelist" component={Lifelist} />
+
             <Route path="/settings" component={Settings} />
 
             <Route path="/:groupedBy/:groupName" component={BirdList} />

@@ -12,6 +12,7 @@ export const SORT_GROUPS = 'SORT_GROUPS';
 export const SORT_BIRDS = 'SORT_BIRDS';
 export const SET_FLASH_MESSAGE = 'SET_FLASH_MESSAGE';
 export const CLEAR_FLASH_MESSAGE = 'CLEAR_FLASH_MESSAGE';
+export const FETCH_LIFELIST = 'FETCH_LIFELIST';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
@@ -114,5 +115,16 @@ export function clearFlashMessage() {
   return {
     type: CLEAR_FLASH_MESSAGE,
     payload: null,
+  };
+}
+
+export function fetchLifelist() {
+  const url = `${BASE_URL}/observations`;
+  const promise = fetch(url, { credentials: 'same-origin' })
+    .then((r) => r.json());
+
+  return {
+    type: FETCH_LIFELIST,
+    payload: promise,
   };
 }

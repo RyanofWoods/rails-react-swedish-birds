@@ -15,6 +15,7 @@ import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
 import settingsReducer from './reducers/settings_reducer';
 import flashMessageReducer from './reducers/flash_message_reducer';
+import lifelistReducer from './reducers/lifelist_reducer';
 
 // modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
@@ -26,6 +27,7 @@ const reducers = combineReducers({
   selectedGroupData: selectedGroupReducer,
   settingsData: settingsReducer,
   flashMessage: flashMessageReducer,
+  lifelistData: lifelistReducer,
 });
 
 const initialState = {
@@ -44,6 +46,7 @@ const initialState = {
   },
   settingsData: SETTING_DEFAULTS,
   flashMessage: null,
+  lifelistData: [],
 };
 
 // root, store and middlewares
