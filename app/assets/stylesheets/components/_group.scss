@@ -19,7 +19,6 @@
   a:hover {
     opacity: 0.7;
   }
-  
   .sighting-progress {
     position: absolute;
     bottom: 0;
@@ -28,7 +27,6 @@
     width: 100%;
     border-radius: 0;
   }
-  
   li {
     display: flex;
     position: relative;
@@ -36,6 +34,9 @@
     margin-bottom: 0.5rem;
     padding: 12px 15px 12px 15px;
 
+    i {
+      font-size: 24px;
+    }
     @include media-breakpoint-up(sm) {
       padding: 12px 30px 12px 30px;
     }
@@ -45,9 +46,15 @@
     p {
       margin-bottom: 0;
     }
-    .group-list-item-numbers {
+    .list-item-start {
       min-width: 64px;
       margin-right: 1rem;
+    }
+    .list-item-grow {
+      flex-grow: 1;
+    }
+    .list-item-end {
+      justify-self: end;
     }
   }
 }

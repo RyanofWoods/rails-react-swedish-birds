@@ -58,7 +58,7 @@ class GroupList extends Component {
 
         <ul className="list-group">
           <li key="group-header" className="list-group-item group-header">
-            <p className="group-list-item-numbers pl-1 hover-pointer" onClick={() => this.props.sortGroups('seen')}>
+            <p className="list-item-start hover-pointer" onClick={() => this.props.sortGroups('seen')}>
               Seen {this.sortedByIndicator('seen')}
             </p>
             <div className="hover-pointer">

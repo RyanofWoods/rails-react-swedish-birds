@@ -55,16 +55,14 @@ class BirdList extends Component {
         </h1>
         <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
         <ul className="list-group mt-3">
-          <li key="group-header" className="list-group-item group-header bird-card">
-            <div className="bird-card-info">
-              <div className="hover-pointer pl-1" onClick={() => this.props.sortBirds('seen')}>
-                {this.sortedByIndicator('seen') || '-'}
-              </div>
-              <p className="hover-pointer" onClick={() => this.props.sortBirds('name', userLangPref)}>
-                Names {this.sortedByIndicator('name')}
-              </p>
-            </div>
-            <p className="hover-pointer" onClick={() => this.props.sortBirds('details')}>
+          <li key="group-header" className="list-group-item group-header">
+            <p className="list-item-start hover-pointer" onClick={() => this.props.sortBirds('seen')}>
+              {this.sortedByIndicator('seen') || '-'}
+            </p>
+            <p className="list-item-grow hover-pointer" onClick={() => this.props.sortBirds('name', userLangPref)}>
+              Names {this.sortedByIndicator('name')}
+            </p>
+            <p className="list-item-end hover-pointer" onClick={() => this.props.sortBirds('details')}>
               {this.sortedByIndicator('details')} Details
             </p>
           </li>

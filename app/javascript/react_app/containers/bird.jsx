@@ -30,7 +30,7 @@ class Bird extends Component {
       scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref,
     } = this.props;
 
-    let seenClasses = 'far fa-';
+    let seenClasses = 'list-item-start far fa-';
     seenClasses += seen ? 'check-square' : 'square hover-pointer hover-opacity';
 
     const iconProps = {
@@ -43,12 +43,12 @@ class Bird extends Component {
     const textContent = () => {
       switch (langPref) {
         case 'en':
-          return <p>{english_name}</p>;
+          return <p className="list-item-grow">{english_name}</p>;
         case 'se':
-          return <p>{swedish_name}</p>;
+          return <p className="list-item-grow">{swedish_name}</p>;
         default:
           return (
-            <div>
+            <div className="list-item-grow">
               <p>{english_name}</p>
               <p>{swedish_name}</p>
             </div>
@@ -57,13 +57,11 @@ class Bird extends Component {
     };
 
     return (
-      <li className="list-group-item bird-card">
-        <div className="bird-card-info">
-          <i {...iconProps} />
-          {textContent()}
-        </div>
+      <li className="list-group-item">
+        <i {...iconProps} />
+        {textContent()}
 
-        <small className="text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
+        <small className="list-item-end text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
 
         {
           this.state.showSeenModal && (
