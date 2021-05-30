@@ -4,7 +4,14 @@
 .navbar-expand-sm .nav-collapse {
   width: 100%;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
 
+  p {
+    margin: 0 0 0 8px;
+  }
+}
 @media (min-width: 576px) {
   .navbar-expand-sm  .nav-collapse {
     width: 0;
