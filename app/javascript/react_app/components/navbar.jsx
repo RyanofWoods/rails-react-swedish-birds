@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/owl.png';
 
 const Navbar = () => (
-  <div className="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div className="navbar navbar-expand-sm navbar-light">
     <Link to="/" className="navbar-brand hover-pointer hover-opacity">
       <img src={logo} className="avatar" alt="logo" />
       <p>Swedish Birds</p>
     </Link>
 
     <span className="navbar-toggler-icon ml-auto hover-pointer hover-opacity" id="dropdownMenuLink" data-toggle="dropdown" />
+
     <ul className="navbar-nav nav-collapse">
       <li className="nav-item dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
         <Link to="/lifelist" className="dropdown-item">Lifelist</Link>
