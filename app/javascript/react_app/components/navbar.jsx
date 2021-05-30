@@ -10,6 +10,7 @@ const Navbar = () => (
 
     <ul className="navbar-nav nav-collapse">
       <li className="nav-item dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+        <Link to="/lifelist" className="dropdown-item">Lifelist</Link>
         <Link to="/settings" className="dropdown-item">Settings</Link>
 
         <a href="/users/sign_out" data-method="delete" className="dropdown-item">Log out</a>

@@ -22,12 +22,12 @@ const Group = (props) => {
   const textContent = () => {
     switch (langPref) {
       case 'en':
-        return <p>{english_name}</p>;
+        return <p className="list-item-grow">{english_name}</p>;
       case 'se':
-        return <p>{swedish_name}</p>;
+        return <p className="list-item-grow">{swedish_name}</p>;
       default:
         return (
-          <div>
+          <div className="list-item-grow">
             <p>{english_name}</p>
             <p>{swedish_name}</p>
           </div>
@@ -52,7 +52,7 @@ const Group = (props) => {
             aria-valuemax="100"
           />
         </div>
-        <p className="group-list-item-numbers pl-1">
+        <p className="list-item-start">
           ({total_seen}/{total_birds})
         </p>
         {textContent()}
