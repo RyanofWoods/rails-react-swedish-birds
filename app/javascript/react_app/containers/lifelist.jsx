@@ -66,7 +66,7 @@ class Lifelist extends Component {
         <ol className="list-group">
           <li key="group-header" className="list-group-item group-header mt-2">
             <p
-              className="pr-4 hover-pointer"
+              className="list-item-start-small hover-pointer"
               onClick={() => this.props.sortLifelist('index')}
             >
               {sortedByIndicator('index') || '#'}
@@ -87,7 +87,7 @@ class Lifelist extends Component {
 
           {lifelist.map(({ created_at, bird, index }) => (
             <li className="list-group-item" key={bird.scientific_name}>
-              <p className="pr-4">{index}</p>
+              <p className="list-item-start-small">{index}</p>
               {nameContent(bird)}
               <small className="list-item-end text-muted">
                 {dateContent(created_at)}
