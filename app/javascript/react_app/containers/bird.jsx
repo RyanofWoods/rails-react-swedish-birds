@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { markSeen, setFlashMessage } from '../actions';
 import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
+import Checkbox from '../components/checkbox';
 
 class Bird extends Component {
   state = {
@@ -27,14 +28,12 @@ class Bird extends Component {
 
   render() {
     const {
-      scientific_name, english_name, swedish_name, details, seen, seenConfirmation, markSeen, langPref,
+      scientific_name, english_name, swedish_name, details, seen, seenConfirmation, langPref,
     } = this.props;
 
-    let seenClasses = 'list-item-start far fa-';
-    seenClasses += seen ? 'check-square' : 'square hover-pointer hover-opacity';
-
-    const iconProps = {
-      className: seenClasses,
+    const checkboxProps = {
+      checked: seen,
+      id: scientific_name,
       // add click event only for birds not seen yet
       ...(!seen && seenConfirmation && { onClick: this.toggleSeenModal }), // confirmation modal
       ...(!seen && !seenConfirmation && { onClick: this.handleMarkSeen }), // no confirmation modal
@@ -58,7 +57,10 @@ class Bird extends Component {
 
     return (
       <li className="list-group-item">
-        <i {...iconProps} />
+        <div className="list-item-start">
+          <Checkbox {...checkboxProps} />
+        </div>
+
         {textContent()}
 
         <small className="list-item-end text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
