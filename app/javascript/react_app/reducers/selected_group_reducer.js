@@ -18,19 +18,11 @@ const selectedGroupReducer = (state, action) => {
     return stateCopy;
   };
 
-  const sortBirds = (birds, sortBy, userLangPref = null) => {
-    if (!sortBy) return birds;
+  const sortBirds = (birds, sortBy) => {
+    if (!sortBy) return [...birds];
 
-    let [key] = Object.keys(sortBy);
+    const [key] = Object.keys(sortBy);
     const order = sortBy[key];
-
-    if (key === 'name') {
-      if (userLangPref === 'se') {
-        key = 'swedish_name';
-      } else {
-        key = 'english_name';
-      }
-    }
 
     const sortedBirds = [...birds].sort((a, b) => {
       // handle by booleans
@@ -56,22 +48,49 @@ const selectedGroupReducer = (state, action) => {
   };
 
   const handleSortHeaderClick = ({ clickedHeader, userLangPref }) => {
+    const { sortedBy } = state;
     let newSortedBy = {};
 
-    // if the key exists, increment it null > asc > desc
-    if (state.sortedBy && clickedHeader in state.sortedBy) {
-      if (state.sortedBy[clickedHeader] === 'asc') {
-        newSortedBy[clickedHeader] = 'desc';
+    const newSort = () => {
+      let key;
+
+      if (clickedHeader === 'name') {
+        if (userLangPref === 'se') {
+          key = 'swedish_name';
+        } else {
+          key = 'english_name';
+        }
       } else {
-        newSortedBy = null;
+        key = clickedHeader;
+      }
+      newSortedBy[key] = 'asc';
+    };
+
+    // if the key exists, increment it null > asc > desc
+    if (sortedBy) {
+      if (clickedHeader in sortedBy || (clickedHeader === 'name' && (Object.keys(sortedBy)[0] === 'english_name' || Object.keys(sortedBy)[0] === 'swedish_name'))) {
+        const key = (clickedHeader === 'name') ? Object.keys(sortedBy)[0] : clickedHeader;
+
+        if (sortedBy[key] === 'asc') {
+          newSortedBy[key] = 'desc';
+        } else if (userLangPref === 'both' && key === 'english_name') {
+          // increment through two languages before going back to null
+          // en asc > en desc > se asc > se desc > null
+          newSortedBy.swedish_name = 'asc';
+        } else {
+          newSortedBy = null;
+        }
+      } else {
+        // new header click
+        newSort();
       }
     } else {
-      // it is null or a different clicked header
-      newSortedBy[clickedHeader] = 'asc';
+      // was null
+      newSort();
     }
 
     return {
-      sortedBirds: sortBirds(state.birds, newSortedBy, userLangPref),
+      sortedBirds: sortBirds(state.birds, newSortedBy),
       sortedBy: newSortedBy,
     };
   };

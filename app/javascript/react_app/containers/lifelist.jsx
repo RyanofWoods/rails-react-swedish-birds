@@ -37,7 +37,7 @@ class Lifelist extends Component {
     };
 
     const sortedByIndicator = (header) => {
-      if (!sortedBy) return null;
+      if (!sortedBy) return '';
 
       const getSymbol = (orderedBy) => {
         switch (orderedBy) {
@@ -46,17 +46,29 @@ class Lifelist extends Component {
           case 'desc':
             return '∨';
           default:
-            return null;
+            return '';
         }
       };
 
-      const [key] = Object.keys(this.props.sortedBy);
+      const getShorthand = (lang) => {
+        switch (lang) {
+          case 'english_name':
+            return 'EN';
+          case 'swedish_name':
+            return 'SE';
+          default:
+            return '';
+        }
+      };
 
-      if (header !== key) {
-        return null;
+      const [key] = Object.keys(sortedBy);
+
+      if (header === key) {
+        return getSymbol(sortedBy[key]);
+      } if (header === 'name' && (key === 'english_name' || key === 'swedish_name')) {
+        return `(${getShorthand(key)} ${getSymbol(sortedBy[key])})`;
       }
-
-      return getSymbol(sortedBy[key]);
+      return '';
     };
 
     return (

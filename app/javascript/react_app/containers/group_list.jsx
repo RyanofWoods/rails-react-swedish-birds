@@ -35,13 +35,25 @@ class GroupList extends Component {
       }
     };
 
-    const [key] = Object.keys(this.props.sortedBy);
+    const getShorthand = (lang) => {
+      switch (lang) {
+        case 'english_name':
+          return 'EN';
+        case 'swedish_name':
+          return 'SE';
+        default:
+          return '';
+      }
+    };
 
-    if (header !== key) {
-      return '';
+    const [key] = Object.keys(sortedBy);
+
+    if (header === key) {
+      return getSymbol(sortedBy[key]);
+    } if (header === 'name' && (key === 'english_name' || key === 'swedish_name')) {
+      return `(${getShorthand(key)} ${getSymbol(sortedBy[key])})`;
     }
-
-    return getSymbol(sortedBy[key]);
+    return '';
   }
 
   render() {
