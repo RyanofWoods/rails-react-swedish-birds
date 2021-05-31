@@ -20,6 +20,7 @@ const groupsReducer = (state, action) => {
 
     stateCopy.total_seen += 1;
 
+    // also updates sortedGroups as they are object references
     if (groupIndex !== -1) {
       stateCopy.groups[groupIndex].total_seen += 1;
     }
@@ -92,8 +93,8 @@ const groupsReducer = (state, action) => {
       };
     case MARK_SEEN:
       return updatedState(
-        action.payload.family_scientific_name,
-        action.payload.order_scientific_name,
+        action.payload.bird_family_scientific_name,
+        action.payload.bird_order_scientific_name,
       );
     case SORT_GROUPS:
       return {
