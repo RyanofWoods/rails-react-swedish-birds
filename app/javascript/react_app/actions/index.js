@@ -15,6 +15,7 @@ export const CLEAR_FLASH_MESSAGE = 'CLEAR_FLASH_MESSAGE';
 export const FETCH_LIFELIST = 'FETCH_LIFELIST';
 export const SORT_LIFELIST = 'SORT_LIFELIST';
 export const SET_PREV_LOCATION = 'SET_PREV_LOCATION';
+export const SET_GROUP_LIST_SCROLL_POSITION = 'SET_GROUP_LIST_SCROLL_POSITION';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
@@ -142,5 +143,12 @@ export function setPrevLocation(location) {
   return {
     type: SET_PREV_LOCATION,
     payload: location,
+  };
+}
+
+export function setGroupListScrollPos(x, y) {
+  return {
+    type: SET_GROUP_LIST_SCROLL_POSITION,
+    payload: { x, y },
   };
 }
