@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
-import { BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 // internal modules;
 import App from './containers/app';
@@ -16,6 +16,7 @@ import selectedGroupReducer from './reducers/selected_group_reducer';
 import settingsReducer from './reducers/settings_reducer';
 import flashMessageReducer from './reducers/flash_message_reducer';
 import lifelistReducer from './reducers/lifelist_reducer';
+import prevLocationReducer from './reducers/prev_location_reducer';
 
 // modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
@@ -28,6 +29,7 @@ const reducers = combineReducers({
   settingsData: settingsReducer,
   flashMessage: flashMessageReducer,
   lifelistData: lifelistReducer,
+  prevLocation: prevLocationReducer,
 });
 
 const initialState = {
@@ -50,6 +52,7 @@ const initialState = {
     lifelist: [],
     sortedLifelist: [],
   },
+  prevLocation: '/',
 };
 
 // root, store and middlewares
@@ -65,7 +68,7 @@ const root = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <Route component={App} />
     </BrowserRouter>
   </Provider>,
   root,
