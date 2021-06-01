@@ -14,6 +14,7 @@ export const SET_FLASH_MESSAGE = 'SET_FLASH_MESSAGE';
 export const CLEAR_FLASH_MESSAGE = 'CLEAR_FLASH_MESSAGE';
 export const FETCH_LIFELIST = 'FETCH_LIFELIST';
 export const SORT_LIFELIST = 'SORT_LIFELIST';
+export const SET_PREV_LOCATION = 'SET_PREV_LOCATION';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
@@ -134,5 +135,12 @@ export function fetchLifelist() {
   return {
     type: FETCH_LIFELIST,
     payload: promise,
+  };
+}
+
+export function setPrevLocation(location) {
+  return {
+    type: SET_PREV_LOCATION,
+    payload: location,
   };
 }
