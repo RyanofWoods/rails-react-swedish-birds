@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby '2.6.6'
 
@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # authentication and authorisation
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
-gem "pundit"
+gem 'pundit'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
