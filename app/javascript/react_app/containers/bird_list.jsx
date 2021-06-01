@@ -5,10 +5,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { HashLink } from 'react-router-hash-link';
 import { fetchGroup, sortBirds } from '../actions';
 
 import Bird from './bird';
+import BackLink from '../components/back_link';
 
 class BirdList extends Component {
   componentDidMount() {
@@ -65,7 +65,8 @@ class BirdList extends Component {
         <h1>
           {title} ({totalSeen}/{totalBirds})
         </h1>
-        <HashLink to={`/groups#${scientificName}`}>Go Back</HashLink>
+        <BackLink to="/" />
+
         <ul className="list-group mt-3">
           <li key="group-header" className="list-group-item group-header">
             <p className="list-item-start hover-pointer" onClick={() => this.props.sortBirds('seen')}>

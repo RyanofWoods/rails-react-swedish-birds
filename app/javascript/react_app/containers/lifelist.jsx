@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchLifelist, sortLifelist } from '../actions';
 
+import BackLink from '../components/back_link';
+
 class Lifelist extends Component {
   componentDidMount() {
     this.props.fetchLifelist();
@@ -74,6 +76,8 @@ class Lifelist extends Component {
     return (
       <>
         <h1>Lifelist</h1>
+
+        <BackLink to="/" />
 
         <ol className="list-group">
           <li key="group-header" className="list-group-item group-header mt-2">

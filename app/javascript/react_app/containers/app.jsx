@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { setPrevLocation } from '../actions';
 
 import GroupList from './group_list';
 import BirdList from './bird_list';
@@ -13,6 +16,15 @@ import Lifelist from './lifelist';
 import Wrapper from '../components/wrapper';
 
 class App extends Component {
+  componentDidUpdate(prevProps) {
+    const oldLoc = prevProps.location.pathname;
+    const newLoc = this.props.location.pathname;
+
+    if (oldLoc !== newLoc) {
+      this.props.setPrevLocation(oldLoc);
+    }
+  }
+
   handleGroupRedirect() {
     switch (this.props.groupBy) {
       case 'order':
@@ -58,4 +70,6 @@ const mapStateToProps = (state) => ({
   flashMessage: state.flashMessage,
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ setPrevLocation }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { saveSettings, setFlashMessage } from "../actions";
+import BackLink from "../components/back_link";
 
 class Settings extends Component {
   constructor(props) {
@@ -51,7 +52,9 @@ class Settings extends Component {
       <form onSubmit={this.saveSettings}>
         <h2>Settings:</h2>
 
-        <div className="form-check mb-3">
+        <BackLink/>
+
+        <div className="form-check my-3">
           <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
           <label className="form-check-label">Confirmation when marking a bird as seen? </label>
         </div>
