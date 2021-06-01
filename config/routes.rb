@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get '/groups', to: 'groups#index'
+      get 'birds/search', to: 'birds#search'
       
       resources :families, only: [:show]
       resources :orders, only: [:show]
