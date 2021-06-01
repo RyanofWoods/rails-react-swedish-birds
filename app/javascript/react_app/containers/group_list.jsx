@@ -4,20 +4,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchGroups, sortGroups } from '../actions';
+import { fetchGroups, sortGroups, setGroupListScrollPos } from '../actions';
 
 import Group from '../components/group';
 
 class GroupList extends Component {
   componentDidMount() {
     const {
-      groupedBy, populationThreshold, groupSingular, userPopThres,
+      groupedBy, populationThreshold, groupSingular, userPopThres, prevScrollPos,
     } = this.props;
 
     // check if we need to re-fetch the groups based on the url && user settings
     if (groupedBy !== groupSingular || userPopThres !== populationThreshold) {
       this.props.fetchGroups(groupSingular, userPopThres);
     }
+
+    // scroll back to the last position on this page
+    window.scrollTo(prevScrollPos.x, prevScrollPos.y);
+  }
+
+  componentWillUnmount() {
+    this.props.setGroupListScrollPos(window.scrollX, window.scrollY);
   }
 
   sortedByIndicator(header) {
@@ -95,7 +102,10 @@ class GroupList extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchGroups, sortGroups }, dispatch);
+// eslint-disable-next-line arrow-body-style
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ fetchGroups, sortGroups, setGroupListScrollPos }, dispatch);
+};
 
 const mapStateToProps = (state) => ({
   groupedBy: state.groupsData.grouped_by, // whether the data is grouped by 'order' or 'family'
@@ -107,6 +117,7 @@ const mapStateToProps = (state) => ({
   totalBirds: state.groupsData.total_birds,
   userLangPref: state.settingsData.language,
   userPopThres: state.settingsData.populationThreshold,
+  prevScrollPos: state.groupListScrollPos,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupList);
