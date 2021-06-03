@@ -10,6 +10,7 @@ import { fetchGroup, sortBirds } from '../actions';
 
 import Bird from './bird';
 import BackLink from '../components/back_link';
+import GroupHeader from '../components/group_header';
 
 class BirdList extends Component {
   componentDidMount() {
@@ -25,8 +26,8 @@ class BirdList extends Component {
       const e = document.getElementById(hash.slice(1));
 
       if (e) {
-        const header = document.getElementsByClassName('group-header');
-        const headerHeight = header ? header[0].getBoundingClientRect().height : 0;
+        const header = document.getElementById('group-header');
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
 
         const yPos = e.getBoundingClientRect().top - headerHeight;
 
@@ -35,48 +36,23 @@ class BirdList extends Component {
     }
   }
 
-  sortedByIndicator(header) {
-    const { sortedBy } = this.props;
-    if (!sortedBy) return '';
-
-    const getSymbol = (orderedBy) => {
-      switch (orderedBy) {
-        case 'asc':
-          return '∧';
-        case 'desc':
-          return '∨';
-        default:
-          return '';
-      }
-    };
-
-    const getShorthand = (lang) => {
-      switch (lang) {
-        case 'english_name':
-          return 'EN';
-        case 'swedish_name':
-          return 'SE';
-        default:
-          return '';
-      }
-    };
-
-    const [key] = Object.keys(sortedBy);
-
-    if (header === key) {
-      return getSymbol(sortedBy[key]);
-    } if (header === 'name' && (key === 'english_name' || key === 'swedish_name')) {
-      return `(${getShorthand(key)} ${getSymbol(sortedBy[key])})`;
-    }
-    return '';
-  }
-
   render() {
     const {
-      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref,
+      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref, sortedBy
     } = this.props;
 
     const title = englishName || scientificName || '...';
+
+    const groupHeaderProps = {
+      sortedBy,
+      action: this.props.sortBirds,
+      userLangPref,
+      columns: [
+        { title: 'Seen', sortRef: 'seen' },
+        { title: 'Names', sortRef: 'name' },
+        { title: 'Details', sortRef: 'details' },
+      ],
+    };
 
     return (
       <>
@@ -86,17 +62,8 @@ class BirdList extends Component {
         <BackLink to="/" />
 
         <ul className="list-group mt-3">
-          <li key="group-header" className="list-group-item group-header">
-            <p className="list-item-start hover-pointer" onClick={() => this.props.sortBirds('seen')}>
-              Seen {this.sortedByIndicator('seen')}
-            </p>
-            <p className="list-item-grow hover-pointer" onClick={() => this.props.sortBirds('name', userLangPref)}>
-              Names {this.sortedByIndicator('name')}
-            </p>
-            <p className="list-item-end hover-pointer" onClick={() => this.props.sortBirds('details')}>
-              {this.sortedByIndicator('details')} Details
-            </p>
-          </li>
+          <GroupHeader {...groupHeaderProps} />
+
           {
             sortedBirds.map((birdProps) => (
               <Bird key={birdProps.scientific_name} langPref={userLangPref} {...birdProps} />

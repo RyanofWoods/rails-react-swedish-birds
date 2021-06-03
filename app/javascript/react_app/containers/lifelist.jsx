@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import { fetchLifelist, sortLifelist } from '../actions';
 
 import BackLink from '../components/back_link';
+import GroupHeader from '../components/group_header';
 
 class Lifelist extends Component {
   componentDidMount() {
@@ -38,39 +39,17 @@ class Lifelist extends Component {
       }
     };
 
-    const sortedByIndicator = (header) => {
-      if (!sortedBy) return '';
-
-      const getSymbol = (orderedBy) => {
-        switch (orderedBy) {
-          case 'asc':
-            return '∧';
-          case 'desc':
-            return '∨';
-          default:
-            return '';
-        }
-      };
-
-      const getShorthand = (lang) => {
-        switch (lang) {
-          case 'english_name':
-            return 'EN';
-          case 'swedish_name':
-            return 'SE';
-          default:
-            return '';
-        }
-      };
-
-      const [key] = Object.keys(sortedBy);
-
-      if (header === key) {
-        return getSymbol(sortedBy[key]);
-      } if (header === 'name' && (key === 'english_name' || key === 'swedish_name')) {
-        return `(${getShorthand(key)} ${getSymbol(sortedBy[key])})`;
-      }
-      return '';
+    const groupHeaderProps = {
+      sortedBy,
+      action: this.props.sortLifelist,
+      userLangPref,
+      columns: [
+        {
+          title: '#', sortRef: 'index', replace: true, small: true,
+        },
+        { title: 'Names', sortRef: 'name' },
+        { title: 'Date', sortRef: 'date' },
+      ],
     };
 
     return (
@@ -80,26 +59,7 @@ class Lifelist extends Component {
         <BackLink to="/" />
 
         <ol className="list-group">
-          <li key="group-header" className="list-group-item group-header mt-2">
-            <p
-              className="list-item-start-small hover-pointer"
-              onClick={() => this.props.sortLifelist('index')}
-            >
-              {sortedByIndicator('index') || '#'}
-            </p>
-            <p
-              className="list-item-grow hover-pointer"
-              onClick={() => this.props.sortLifelist('name', userLangPref)}
-            >
-              Names {sortedByIndicator('name')}
-            </p>
-            <p
-              className="list-item-end hover-pointer"
-              onClick={() => this.props.sortLifelist('created_at')}
-            >
-              {sortedByIndicator('created_at')} Date
-            </p>
-          </li>
+          <GroupHeader {...groupHeaderProps} />
 
           {lifelist.map(({ created_at, bird, index }) => (
             <li className="list-group-item" key={bird.scientific_name}>
