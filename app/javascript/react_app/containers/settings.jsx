@@ -20,11 +20,12 @@ class Settings extends Component {
   }
 
   settingsChange(id, value) {
-    // do not need to force a re-render
-    const settingsCopy = { ...this.state.settings };
+    this.setState((prevState) => {
+      const copy = { ...prevState };
+      copy.settings[id] = value;
 
-    settingsCopy[id] = value;
-    this.setState({ settings: settingsCopy });
+      return copy;
+    });
   }
 
   saveSettings(event) {
