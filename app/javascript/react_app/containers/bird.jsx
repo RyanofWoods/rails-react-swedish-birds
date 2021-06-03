@@ -33,11 +33,11 @@ class Bird extends Component {
   }
 
   toggleDetailsModal() {
-    this.setState({ showDetailsModal: !this.state.showDetailsModal });
+    this.setState((prevState) => ({ showDetailsModal: !prevState.showDetailsModal }));
   }
 
   toggleSeenModal() {
-    this.setState({ showSeenModal: !this.state.showSeenModal });
+    this.setState((prevState) => ({ showSeenModal: !prevState.showSeenModal }));
   }
 
   render() {
