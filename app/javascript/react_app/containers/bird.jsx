@@ -7,7 +7,7 @@ import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
 import Checkbox from '../components/checkbox';
 
-import { dashify } from '../utils';
+import { dashify, nameContent } from '../utils';
 
 class Bird extends Component {
   state = {
@@ -41,29 +41,13 @@ class Bird extends Component {
       ...(!seen && !seenConfirmation && { onClick: this.handleMarkSeen }), // no confirmation modal
     };
 
-    const textContent = () => {
-      switch (langPref) {
-        case 'en':
-          return <p className="list-item-grow">{english_name}</p>;
-        case 'se':
-          return <p className="list-item-grow">{swedish_name}</p>;
-        default:
-          return (
-            <div className="list-item-grow">
-              <p>{english_name}</p>
-              <p>{swedish_name}</p>
-            </div>
-          );
-      }
-    };
-
     return (
       <li id={dashify(scientific_name)} className="list-group-item">
         <div className="list-item-start">
           <Checkbox {...checkboxProps} />
         </div>
 
-        {textContent()}
+        {nameContent({ scientific_name, english_name, swedish_name }, langPref)}
 
         <small className="list-item-end text-muted hover-pointer" onClick={this.toggleDetailsModal}>{details}</small>
 

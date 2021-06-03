@@ -3,6 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { nameContent } from '../utils';
+
 const Group = (props) => {
   const {
     scientific_name,
@@ -17,22 +19,6 @@ const Group = (props) => {
   const progress = (total_seen / total_birds) * 100;
   const progressStyle = {
     width: `${progress}%`,
-  };
-
-  const textContent = () => {
-    switch (langPref) {
-      case 'en':
-        return <p className="list-item-grow">{english_name}</p>;
-      case 'se':
-        return <p className="list-item-grow">{swedish_name}</p>;
-      default:
-        return (
-          <div className="list-item-grow">
-            <p>{english_name}</p>
-            <p>{swedish_name}</p>
-          </div>
-        );
-    }
   };
 
   return (
@@ -55,7 +41,7 @@ const Group = (props) => {
         <p className="list-item-start">
           ({total_seen}/{total_birds})
         </p>
-        {textContent()}
+        {nameContent({ scientific_name, english_name, swedish_name }, langPref)}
       </li>
     </Link>
   );
