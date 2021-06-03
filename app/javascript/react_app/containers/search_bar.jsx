@@ -98,6 +98,7 @@ class SearchBar extends Component {
       <div id="search-bar-container">
         <input
           type="text"
+          placeholder="Search for a bird..."
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
