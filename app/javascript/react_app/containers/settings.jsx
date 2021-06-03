@@ -1,17 +1,19 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { saveSettings, setFlashMessage } from "../actions";
+import { saveSettings, setFlashMessage } from '../actions';
 
-import BackLink from "../components/back_link";
+import BackLink from '../components/back_link';
 
 class Settings extends Component {
   constructor(props) {
     super(props);
 
     // setting defaults overriden with user settings
-    this.state = { settings: props.settings }
+    this.state = { settings: props.settings };
 
     this.settingsChange = this.settingsChange.bind(this);
     this.saveSettings = this.saveSettings.bind(this);
@@ -28,7 +30,7 @@ class Settings extends Component {
   saveSettings(event) {
     event.preventDefault();
     this.props.saveSettings(this.state.settings);
-    this.props.setFlashMessage("Settings saved!");
+    this.props.setFlashMessage('Settings saved!');
   }
 
   render() {
@@ -57,7 +59,7 @@ class Settings extends Component {
       <form onSubmit={this.saveSettings}>
         <h2>Settings:</h2>
 
-        <BackLink/>
+        <BackLink />
 
         <div className="form-check my-3">
           <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
@@ -84,7 +86,7 @@ class Settings extends Component {
         <div className="form-group">
           <label className="mr-2">Population threshold:</label>
           <p><em>{populationText()}</em></p>
-          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', +event.target.value)}/>
+          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', +event.target.value)} />
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
@@ -97,6 +99,9 @@ const mapStateToProps = (state) => ({
   settings: state.settingsData,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ saveSettings, setFlashMessage }, dispatch);
+// eslint-disable-next-line arrow-body-style
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ saveSettings, setFlashMessage }, dispatch);
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);
