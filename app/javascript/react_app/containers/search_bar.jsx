@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { fetchSearchBirds, clearSearchBirds } from '../actions';
+import { hashify } from "../utils";
 
 class SearchBar extends Component {
   constructor() {
@@ -71,10 +72,15 @@ class SearchBar extends Component {
       } else {
         url = `/families/${family.scientific_name}`;
       }
+      
+      const linkProps = {
+        to: {
+          pathname: url,
+          hash: hashify(scientific_name),
+        }
+      }
 
-      url += `#${scientific_name}`;
-
-      return <Link to={url}><div>{c}</div></Link>;
+      return <Link {...linkProps}><div>{c}</div></Link>;
     };
 
     const listItems = () => {
