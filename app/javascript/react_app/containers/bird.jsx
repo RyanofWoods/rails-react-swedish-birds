@@ -6,11 +6,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { markSeen, setFlashMessage } from '../actions';
+
 import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
 import Checkbox from '../components/checkbox';
 
+import { markSeen, setFlashMessage } from '../actions';
 import { dashify, nameContent } from '../utils';
 
 class Bird extends Component {
@@ -26,17 +27,17 @@ class Bird extends Component {
     this.handleMarkSeen = this.handleMarkSeen.bind(this);
   }
 
-  toggleSeenModal() {
-    this.setState({ showSeenModal: !this.state.showSeenModal });
+  handleMarkSeen() {
+    this.props.markSeen(this.props.scientific_name);
+    this.props.setFlashMessage("Bird marked as seen!");
   }
 
   toggleDetailsModal() {
     this.setState({ showDetailsModal: !this.state.showDetailsModal });
   }
 
-  handleMarkSeen() {
-    this.props.markSeen(this.props.scientific_name);
-    this.props.setFlashMessage("Bird marked as seen!");
+  toggleSeenModal() {
+    this.setState({ showSeenModal: !this.state.showSeenModal });
   }
 
   render() {
