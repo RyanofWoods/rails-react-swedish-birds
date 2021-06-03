@@ -9,6 +9,7 @@ import { fetchLifelist, sortLifelist } from '../actions';
 
 import BackLink from '../components/back_link';
 import GroupHeader from '../components/group_header';
+import { nameContent } from '../utils';
 
 class Lifelist extends Component {
   componentDidMount() {
@@ -21,22 +22,6 @@ class Lifelist extends Component {
     const dateContent = (created_at) => {
       const date = new Date(created_at);
       return new Intl.DateTimeFormat('en-GB').format(date);
-    };
-
-    const nameContent = ({ english_name, swedish_name }) => {
-      switch (userLangPref) {
-        case 'en':
-          return <p className="list-item-grow">{english_name}</p>;
-        case 'se':
-          return <p className="list-item-grow">{swedish_name}</p>;
-        default:
-          return (
-            <div className="list-item-grow">
-              <p>{english_name}</p>
-              <p>{swedish_name}</p>
-            </div>
-          );
-      }
     };
 
     const groupHeaderProps = {
@@ -64,7 +49,7 @@ class Lifelist extends Component {
           {lifelist.map(({ created_at, bird, index }) => (
             <li className="list-group-item" key={bird.scientific_name}>
               <p className="list-item-start-small">{index}</p>
-              {nameContent(bird)}
+              {nameContent(bird, userLangPref)}
               <small className="list-item-end text-muted">
                 {dateContent(created_at)}
               </small>
