@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -15,6 +16,23 @@ class BirdList extends Component {
     const { groupedBy, groupName } = this.props.match.params;
 
     this.props.fetchGroup(groupedBy, groupName, this.props.popThres);
+  }
+
+  componentDidUpdate() {
+    const { hash } = this.props.location;
+
+    if (hash !== '') {
+      const e = document.getElementById(hash.slice(1));
+
+      if (e) {
+        const header = document.getElementsByClassName('group-header');
+        const headerHeight = header ? header[0].getBoundingClientRect().height : 0;
+
+        const yPos = e.getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo(0, yPos);
+      }
+    }
   }
 
   sortedByIndicator(header) {

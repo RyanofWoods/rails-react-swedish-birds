@@ -16,6 +16,8 @@ export const FETCH_LIFELIST = 'FETCH_LIFELIST';
 export const SORT_LIFELIST = 'SORT_LIFELIST';
 export const SET_PREV_LOCATION = 'SET_PREV_LOCATION';
 export const SET_GROUP_LIST_SCROLL_POSITION = 'SET_GROUP_LIST_SCROLL_POSITION';
+export const FETCH_SEARCH_BIRDS = 'FETCH_SEARCH_BIRDS';
+export const CLEAR_SEARCH_BIRDS = 'CLEAR_SEARCH_BIRDS';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular
@@ -150,5 +152,25 @@ export function setGroupListScrollPos(x, y) {
   return {
     type: SET_GROUP_LIST_SCROLL_POSITION,
     payload: { x, y },
+  };
+}
+
+export function fetchSearchBirds(queryString, langPref = 'both', popThreshold = 6) {
+  const params = `?query_string=${queryString}&language_preference=${langPref}&population_category_at_least=${popThreshold}`;
+  const url = `${BASE_URL}/birds/search${params}`;
+
+  const promise = fetch(url, { credentials: 'same-origin' })
+    .then((r) => r.json());
+
+  return {
+    type: FETCH_SEARCH_BIRDS,
+    payload: promise,
+  };
+}
+
+export function clearSearchBirds() {
+  return {
+    type: CLEAR_SEARCH_BIRDS,
+    payload: [],
   };
 }

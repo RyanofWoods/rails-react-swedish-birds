@@ -18,6 +18,7 @@ import flashMessageReducer from './reducers/flash_message_reducer';
 import lifelistReducer from './reducers/lifelist_reducer';
 import prevLocationReducer from './reducers/prev_location_reducer';
 import groupListScrollPositionReducer from './reducers/group_list_scroll_position_reducer';
+import SearchReducer from './reducers/search_reducer';
 
 // modules for loading the app with setting defaults and then user settings
 import SETTING_DEFAULTS from './setting_defaults';
@@ -32,6 +33,7 @@ const reducers = combineReducers({
   lifelistData: lifelistReducer,
   prevLocation: prevLocationReducer,
   groupListScrollPos: groupListScrollPositionReducer,
+  birdSearchResults: SearchReducer,
 });
 
 const initialState = {
@@ -59,6 +61,7 @@ const initialState = {
     x: 0,
     y: 0,
   },
+  birdSearchResults: [],
 };
 
 // root, store and middlewares

@@ -7,6 +7,8 @@ import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
 import Checkbox from '../components/checkbox';
 
+import { dashify } from '../utils';
+
 class Bird extends Component {
   state = {
     showSeenModal: false,
@@ -56,7 +58,7 @@ class Bird extends Component {
     };
 
     return (
-      <li className="list-group-item">
+      <li id={dashify(scientific_name)} className="list-group-item">
         <div className="list-item-start">
           <Checkbox {...checkboxProps} />
         </div>

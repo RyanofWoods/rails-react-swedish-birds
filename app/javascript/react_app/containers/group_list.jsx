@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { fetchGroups, sortGroups, setGroupListScrollPos } from '../actions';
 
 import Group from '../components/group';
+import SearchBar from './search_bar';
 
 class GroupList extends Component {
   componentDidMount() {
@@ -75,7 +76,9 @@ class GroupList extends Component {
           Birds seen: ({totalSeen}/{totalBirds})
         </h4>
 
-        <ul className="list-group">
+        <SearchBar />
+
+        <ul className="list-group mt-4">
           <li key="group-header" className="list-group-item group-header">
             <p className="list-item-start hover-pointer" onClick={() => this.props.sortGroups('seen')}>
               Seen {this.sortedByIndicator('seen')}
