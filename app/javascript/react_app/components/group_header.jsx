@@ -93,7 +93,7 @@ const GroupHeader = ({
   };
 
   return (
-    <li key="group-header" className="list-group-item group-header">
+    <li key="group-header" id="group-header" className="list-group-item">
       {
         columns.map((column, index) => (
           content(column, index)

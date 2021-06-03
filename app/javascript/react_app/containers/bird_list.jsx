@@ -26,8 +26,8 @@ class BirdList extends Component {
       const e = document.getElementById(hash.slice(1));
 
       if (e) {
-        const header = document.getElementsByClassName('group-header');
-        const headerHeight = header ? header[0].getBoundingClientRect().height : 0;
+        const header = document.getElementById('group-header');
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
 
         const yPos = e.getBoundingClientRect().top - headerHeight;
 
