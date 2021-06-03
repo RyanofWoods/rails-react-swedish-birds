@@ -39,7 +39,7 @@ class BirdList extends Component {
 
   render() {
     const {
-      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref, sortedBy
+      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref, sortedBy,
     } = this.props;
 
     const title = englishName || scientificName || '...';
