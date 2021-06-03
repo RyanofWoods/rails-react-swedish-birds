@@ -5,11 +5,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { fetchLifelist, sortLifelist } from '../actions';
+import { nameContent } from '../utils';
 
 import BackLink from '../components/back_link';
 import GroupHeader from '../components/group_header';
-import { nameContent } from '../utils';
 
 class Lifelist extends Component {
   componentDidMount() {

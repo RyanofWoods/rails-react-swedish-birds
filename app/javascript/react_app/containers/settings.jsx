@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { saveSettings, setFlashMessage } from "../actions";
+
 import BackLink from "../components/back_link";
 
 class Settings extends Component {

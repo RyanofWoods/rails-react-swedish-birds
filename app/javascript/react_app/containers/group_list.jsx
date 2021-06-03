@@ -4,11 +4,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { fetchGroups, sortGroups, setGroupListScrollPos } from '../actions';
 
 import Group from '../components/group';
 import SearchBar from './search_bar';
-import GroupHeader from "../components/group_header";
+import GroupHeader from '../components/group_header';
 
 class GroupList extends Component {
   componentDidMount() {

@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { fetchSearchBirds, clearSearchBirds } from '../actions';
-import { hashify } from "../utils";
+import { hashify } from '../utils';
 
 class SearchBar extends Component {
   constructor() {
