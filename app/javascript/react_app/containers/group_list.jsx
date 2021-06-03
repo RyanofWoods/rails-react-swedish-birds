@@ -8,6 +8,7 @@ import { fetchGroups, sortGroups, setGroupListScrollPos } from '../actions';
 
 import Group from '../components/group';
 import SearchBar from './search_bar';
+import GroupHeader from "../components/group_header";
 
 class GroupList extends Component {
   componentDidMount() {
@@ -28,46 +29,20 @@ class GroupList extends Component {
     this.props.setGroupListScrollPos(window.scrollX, window.scrollY);
   }
 
-  sortedByIndicator(header) {
-    const { sortedBy } = this.props;
-    if (!sortedBy) return '';
-
-    const getSymbol = (orderedBy) => {
-      switch (orderedBy) {
-        case 'asc':
-          return '∧';
-        case 'desc':
-          return '∨';
-        default:
-          return '';
-      }
-    };
-
-    const getShorthand = (lang) => {
-      switch (lang) {
-        case 'english_name':
-          return 'EN';
-        case 'swedish_name':
-          return 'SE';
-        default:
-          return '';
-      }
-    };
-
-    const [key] = Object.keys(sortedBy);
-
-    if (header === key) {
-      return getSymbol(sortedBy[key]);
-    } if (header === 'name' && (key === 'english_name' || key === 'swedish_name')) {
-      return `(${getShorthand(key)} ${getSymbol(sortedBy[key])})`;
-    }
-    return '';
-  }
-
   render() {
     const {
-      sortedGroups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref,
+      sortedGroups, totalGroups, totalBirds, totalSeen, groupPlural, userLangPref, sortedBy,
     } = this.props;
+
+    const groupHeaderProps = {
+      sortedBy,
+      action: this.props.sortGroups,
+      userLangPref,
+      columns: [
+        { title: 'Seen', sortRef: 'seen' },
+        { title: 'Names', sortRef: 'name' },
+      ],
+    };
 
     return (
       <>
@@ -79,16 +54,8 @@ class GroupList extends Component {
         <SearchBar />
 
         <ul className="list-group mt-4">
-          <li key="group-header" className="list-group-item group-header">
-            <p className="list-item-start hover-pointer" onClick={() => this.props.sortGroups('seen')}>
-              Seen {this.sortedByIndicator('seen')}
-            </p>
-            <div className="hover-pointer">
-              <p onClick={() => this.props.sortGroups('name', userLangPref)}>
-                Names {this.sortedByIndicator('name')}
-              </p>
-            </div>
-          </li>
+          <GroupHeader {...groupHeaderProps}/>
+
           {
             sortedGroups.map((group) => (
               <Group
