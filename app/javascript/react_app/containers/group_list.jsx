@@ -55,7 +55,7 @@ class GroupList extends Component {
         <SearchBar />
 
         <ul className="list-group mt-4">
-          <GroupHeader {...groupHeaderProps}/>
+          <GroupHeader {...groupHeaderProps} />
 
           {
             sortedGroups.map((group) => (
