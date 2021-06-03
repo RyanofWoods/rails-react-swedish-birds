@@ -45,6 +45,8 @@ class Bird < ApplicationRecord
       x = { scientific_name: b.scientific_name }
       x[:english_name] = b.english_name unless lang == "se"
       x[:swedish_name] = b.swedish_name unless lang == "en"
+      x[:family] = { scientific_name: b.family.scientific_name }
+      x[:order] = { scientific_name: b.family.order.scientific_name }
       x
     end
   end
