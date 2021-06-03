@@ -5,15 +5,16 @@ class Checkbox extends Component {
   constructor(props) {
     super(props);
 
-    this._isMounted = false;
+    this.componentIsMounted = false;
 
     this.state = {
       animateClass: false,
     };
+    this.removeAnimateClass = this.removeAnimateClass.bind(this);
   }
 
   componentDidMount() {
-    this._isMounted = true;
+    this.componentIsMounted = true;
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -28,39 +29,40 @@ class Checkbox extends Component {
   }
 
   componentWillUnmount() {
-    this._isMounted = false;
+    this.componentIsMounted = false;
   }
 
   animate() {
     this.setState({ animateClass: true });
   }
 
-  removeAnimateClass = async () => {
+  async removeAnimateClass() {
     await setTimeout(() => {
-      if (this._isMounted) {
+      if (this.componentIsMounted) {
         this.setState({ animateClass: false });
       }
     }, 700);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   changeHandler() {
     return false;
   }
 
   render() {
     const { checked, onClick } = this.props;
-    let classes = "checkbox-input";
+    let classes = 'checkbox-input';
     classes += (this.state.animateClass) ? ' animate' : '';
 
     const props = {
-      type: "checkbox",
+      type: 'checkbox',
       className: classes,
       onClick,
       onChange: this.changeHandler,
       checked,
     };
 
-    return <input {...props}/>
+    return <input {...props} />;
   }
 }
 
