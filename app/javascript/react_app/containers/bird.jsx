@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/prop-types */
+/* eslint-disable quotes */
 /* eslint-disable camelcase */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -10,20 +14,27 @@ import Checkbox from '../components/checkbox';
 import { dashify, nameContent } from '../utils';
 
 class Bird extends Component {
-  state = {
-    showSeenModal: false,
-    showDetailsModal: false
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showSeenModal: false,
+      showDetailsModal: false,
+    };
+    this.toggleSeenModal = this.toggleSeenModal.bind(this);
+    this.toggleDetailsModal = this.toggleDetailsModal.bind(this);
+    this.handleMarkSeen = this.handleMarkSeen.bind(this);
   }
 
-  toggleSeenModal = () => {
+  toggleSeenModal() {
     this.setState({ showSeenModal: !this.state.showSeenModal });
   }
 
-  toggleDetailsModal = () => {
+  toggleDetailsModal() {
     this.setState({ showDetailsModal: !this.state.showDetailsModal });
   }
 
-  handleMarkSeen = () => {
+  handleMarkSeen() {
     this.props.markSeen(this.props.scientific_name);
     this.props.setFlashMessage("Bird marked as seen!");
   }
@@ -72,6 +83,9 @@ const mapStateToProps = (state) => ({
   seenConfirmation: state.settingsData.seenConfirmation,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ markSeen, setFlashMessage }, dispatch);
+// eslint-disable-next-line arrow-body-style
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ markSeen, setFlashMessage }, dispatch);
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bird);
