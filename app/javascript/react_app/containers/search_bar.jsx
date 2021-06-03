@@ -16,13 +16,17 @@ class SearchBar extends Component {
       showDropdown: false,
       input: "",
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   componentDidMount() {
     this.props.clearSearchBirds();
   }
 
-  handleChange = (event) => {
+  handleChange(event) {
     const { fetchSearchBirds, langPref, popThreshold } = this.props;
     const input = event.target.value;
 
@@ -30,11 +34,11 @@ class SearchBar extends Component {
     fetchSearchBirds(input, langPref, popThreshold);
   };
 
-  handleFocus = (event) => {
+  handleFocus(event) {
     this.setState({ showDropdown: true });
   };
 
-  handleBlur = (event) => {
+  handleBlur(event) {
     // don't hide dropdown if an anchor gets clicked
     if (!event.relatedTarget) {
       this.setState({ showDropdown: false });
