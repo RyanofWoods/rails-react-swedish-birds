@@ -12,9 +12,12 @@ class Settings extends Component {
 
     // setting defaults overriden with user settings
     this.state = { settings: props.settings }
+
+    this.settingsChange = this.settingsChange.bind(this);
+    this.saveSettings = this.saveSettings.bind(this);
   }
 
-  settingsChange = (id, value) => {
+  settingsChange(id, value) {
     // do not need to force a re-render
     const settingsCopy = { ...this.state.settings };
 
@@ -22,7 +25,7 @@ class Settings extends Component {
     this.setState({ settings: settingsCopy });
   }
 
-  saveSettings = (event) => {
+  saveSettings(event) {
     event.preventDefault();
     this.props.saveSettings(this.state.settings);
     this.props.setFlashMessage("Settings saved!");
