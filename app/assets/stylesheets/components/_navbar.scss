@@ -1,15 +1,26 @@
 .navbar-light {
   background: $body-bg;
 }
+.logo {
+  width: 60px;
+}
+.navbar-toggler-icon {
+  width: 2.2em;
+  height: 2.2em;
+}
 .navbar-expand-sm .nav-collapse {
   width: 100%;
 }
 .navbar-brand {
   display: flex;
   align-items: center;
+  font-family: $headers-font;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
 
   p {
-    margin: 0 0 0 8px;
+    margin: 0;
   }
 }
 @media (min-width: 576px) {

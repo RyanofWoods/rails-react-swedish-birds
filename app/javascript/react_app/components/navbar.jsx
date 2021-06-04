@@ -6,7 +6,7 @@ import logo from '../../../assets/images/transparent_64.png';
 const Navbar = () => (
   <div className="navbar navbar-expand-sm navbar-light">
     <Link to="/" className="navbar-brand hover-pointer hover-opacity">
-      <img src={logo} className="avatar" alt="logo" />
+      <img src={logo} className="logo" alt="logo" />
       <p>Swedish Birds</p>
     </Link>
 
