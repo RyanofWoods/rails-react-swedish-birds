@@ -19,7 +19,7 @@ const Modal = (props) => {
       <div className="modal-component">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">{title}</h5>
+            <h3 className="modal-title">{title}</h3>
             <button type="button" className="close" aria-label="Close" onClick={close}>
               <span aria-hidden="true">&times;</span>
             </button>
@@ -35,7 +35,7 @@ const Modal = (props) => {
                 </button>
               )
             }
-            <button type="button" className="btn btn-secondary hover-pointer" onClick={close}>
+            <button type="button" className="btn btn-dark hover-pointer" onClick={close}>
               Close
             </button>
           </div>

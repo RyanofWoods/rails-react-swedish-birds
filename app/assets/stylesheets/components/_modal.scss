@@ -13,9 +13,28 @@
 .modal-component {
   position: fixed;
   height: fit-content;
-  max-width: 550px;
+  max-width: 450px;
   z-index: 100;
 
+  .modal-header, .modal-footer {
+    border: none;
+  }
+  .modal-title {
+    font-weight: 900;
+    font-style: italic;
+  }
+  .modal-body {
+    min-height: 80px;
+    color: #6A6A6A;
+    margin: 0 1rem 0 1rem;
+    padding: 1rem 0 1rem 0;
+    border-top: 1px solid #000;
+  }
+  .modal-footer {
+    button {
+      width: 100%;
+    }
+  }
   .contentGroup {
     padding-top: 20px;
     
