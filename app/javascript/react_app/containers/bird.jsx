@@ -1,8 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
-/* eslint-disable quotes */
-/* eslint-disable camelcase */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -29,7 +24,7 @@ class Bird extends Component {
 
   handleMarkSeen() {
     this.props.markSeen(this.props.scientific_name);
-    this.props.setFlashMessage("Bird marked as seen!");
+    this.props.setFlashMessage('Bird marked as seen!');
   }
 
   toggleDetailsModal() {

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Switch, Redirect } from 'react-router-dom';
