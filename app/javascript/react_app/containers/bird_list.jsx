@@ -7,6 +7,7 @@ import { fetchGroup, sortBirds } from '../actions';
 import Bird from './bird';
 import BackLink from '../components/back_link';
 import GroupHeader from '../components/group_header';
+import PageTitle from '../components/page_title';
 
 class BirdList extends Component {
   componentDidMount() {
@@ -50,11 +51,15 @@ class BirdList extends Component {
       ],
     };
 
+    const titleProps = {
+      title,
+      totalSeen,
+      totalAmount: totalBirds,
+    };
+
     return (
       <>
-        <h1>
-          {title} ({totalSeen}/{totalBirds})
-        </h1>
+        <PageTitle {...titleProps} />
         <BackLink to="/" />
 
         <ul className="list-group mt-3">

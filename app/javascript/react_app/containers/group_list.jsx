@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { capitalize } from '../utils';
 import { fetchGroups, sortGroups, setGroupListScrollPos } from '../actions';
 
 import Group from '../components/group';
 import SearchBar from './search_bar';
 import GroupHeader from '../components/group_header';
+import PageTitle from '../components/page_title';
 
 class GroupList extends Component {
   componentDidMount() {
@@ -41,14 +43,15 @@ class GroupList extends Component {
         { title: 'Names', sortRef: 'name' },
       ],
     };
+    const titleProps = {
+      title: `${totalGroups} ${capitalize(groupPlural)}`,
+      totalSeen,
+      totalAmount: totalBirds,
+    };
 
     return (
       <>
-        <h1>{totalGroups} {groupPlural}: </h1>
-        <h4 className="mb-3">
-          Birds seen: ({totalSeen}/{totalBirds})
-        </h4>
-
+        <PageTitle {...titleProps} />
         <SearchBar />
 
         <ul className="list-group mt-4">
