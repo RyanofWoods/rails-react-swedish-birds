@@ -24,3 +24,7 @@ export function nameContent({ english_name, swedish_name }, LangPref) {
       );
   }
 }
+
+export function capitalize(string) {
+  return string ? string[0].toUpperCase() + string.slice(1).toLowerCase() : '';
+}
