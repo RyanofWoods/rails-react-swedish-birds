@@ -1,0 +1,27 @@
+#page-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+
+  * {
+    margin-bottom: 0.25rem;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  h3 {
+    align-self: flex-end;
+    margin-left: 5rem;
+    font-family: $body-font;
+    
+    span {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+}
