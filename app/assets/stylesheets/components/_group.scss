@@ -8,9 +8,14 @@
     background-color: $primary !important;
     color: #fff !important;
     font-weight: bolder !important;
+    font-size: 12px;
     // leave left and right alone as they are responsive
     padding-top: 4px !important;
     padding-bottom: 4px !important;
+
+    p {
+      font-family: $body-font !important;
+    }
   }
   a:hover, a:hover p, a p {
     text-decoration: none;
@@ -26,12 +31,17 @@
     height: 6px;
     width: 100%;
     border-radius: 0;
+    background-color: $secondary-muted;
+
+    .progress {
+      background-color: $secondary;
+    }
   }
   li {
     display: flex;
     position: relative;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     padding: 12px 15px 12px 15px;
 
     i {
@@ -41,21 +51,23 @@
       padding: 12px 30px 12px 30px;
     }
     &.group-item-with-progress {
-      padding-bottom: 18px;
+      padding-bottom: 28px;
     }
     p {
       margin-bottom: 0;
     }
     .list-item-start {
-      min-width: 64px;
       margin-right: 1rem;
+    }
+    .list-item-start {
+      min-width: 64px;
     }
     .list-item-start-small {
       min-width: 30px;
-      margin-right: 1rem;
     }
     .list-item-grow {
       flex-grow: 1;
+      font-family: $headers-font;
     }
     .list-item-end {
       justify-self: end;
