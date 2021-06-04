@@ -3,21 +3,21 @@ const BASE_URL = '/api/v1';
 export const LOCAL_SETTINGS = 'swedishBirdsSettings';
 
 // actions
-export const FETCH_GROUPS = 'FETCH_GROUPS';
-export const FETCH_GROUP = 'FETCH_GROUP';
-export const MARK_SEEN = 'MARK_SEEN';
 export const LOAD_SETTINGS = 'LOAD_SETTINGS';
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
+export const FETCH_GROUPS = 'FETCH_GROUPS';
 export const SORT_GROUPS = 'SORT_GROUPS';
+export const FETCH_GROUP = 'FETCH_GROUP';
 export const SORT_BIRDS = 'SORT_BIRDS';
-export const SET_FLASH_MESSAGE = 'SET_FLASH_MESSAGE';
-export const CLEAR_FLASH_MESSAGE = 'CLEAR_FLASH_MESSAGE';
+export const MARK_SEEN = 'MARK_SEEN';
 export const FETCH_LIFELIST = 'FETCH_LIFELIST';
 export const SORT_LIFELIST = 'SORT_LIFELIST';
-export const SET_PREV_LOCATION = 'SET_PREV_LOCATION';
-export const SET_GROUP_LIST_SCROLL_POSITION = 'SET_GROUP_LIST_SCROLL_POSITION';
 export const FETCH_SEARCH_BIRDS = 'FETCH_SEARCH_BIRDS';
 export const CLEAR_SEARCH_BIRDS = 'CLEAR_SEARCH_BIRDS';
+export const SET_FLASH_MESSAGE = 'SET_FLASH_MESSAGE';
+export const CLEAR_FLASH_MESSAGE = 'CLEAR_FLASH_MESSAGE';
+export const SET_PREV_LOCATION = 'SET_PREV_LOCATION';
+export const SET_GROUP_LIST_SCROLL_POSITION = 'SET_GROUP_LIST_SCROLL_POSITION';
 
 export function fetchGroups(groupBy, populationThreshold = 9) {
   // group_by param must be singular

@@ -1,45 +1,47 @@
-/* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { fetchSearchBirds, clearSearchBirds } from '../actions';
-import { hashify } from "../utils";
+import { hashify } from '../utils';
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showDropdown: false,
-      input: "",
+      input: '',
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   componentDidMount() {
     this.props.clearSearchBirds();
   }
 
-  handleChange = (event) => {
-    const { fetchSearchBirds, langPref, popThreshold } = this.props;
+  handleChange(event) {
+    const { langPref, popThreshold } = this.props;
     const input = event.target.value;
 
     this.state.input = input;
-    fetchSearchBirds(input, langPref, popThreshold);
-  };
+    this.props.fetchSearchBirds(input, langPref, popThreshold);
+  }
 
-  handleFocus = (event) => {
+  handleFocus() {
     this.setState({ showDropdown: true });
-  };
+  }
 
-  handleBlur = (event) => {
+  handleBlur(event) {
     // don't hide dropdown if an anchor gets clicked
     if (!event.relatedTarget) {
       this.setState({ showDropdown: false });
     }
-  };
+  }
 
   render() {
     const { results, langPref } = this.props;
@@ -52,47 +54,48 @@ class SearchBar extends Component {
       order,
     }) => {
       const c = [];
-      let url = "";
+      let url = '';
 
-      c.push(
+      c.push((
         <p key={scientific_name}>
           <em>{scientific_name}</em>
         </p>
-      );
+      ));
 
-      if (langPref !== "se") {
+      if (langPref !== 'se') {
         c.push(<p key={english_name}>{english_name}</p>); // add english_name for en & both
       }
-      if (langPref !== "en") {
+      if (langPref !== 'en') {
         c.push(<p key={swedish_name}>{swedish_name}</p>); // add english_name for se & both
       }
 
-      if (this.props.groupByPref === "order") {
+      if (this.props.groupByPref === 'order') {
         url = `/orders/${order.scientific_name}`;
       } else {
         url = `/families/${family.scientific_name}`;
       }
-      
+
       const linkProps = {
         to: {
           pathname: url,
           hash: hashify(scientific_name),
-        }
-      }
+        },
+      };
 
       return <Link {...linkProps}><div>{c}</div></Link>;
     };
 
     const listItems = () => {
-      if (results.length === 0 && this.state.input.length > 0)
+      if (results.length === 0 && this.state.input.length > 0) {
         return <li><div><p>Sorry, no results</p></div></li>;
+      }
 
       return results.map((bird) => (
         <li key={bird.scientific_name}>{listItemContent(bird)}</li>
       ));
     };
 
-    const dropdownClasses = this.state.showDropdown ? "" : " d-none";
+    const dropdownClasses = this.state.showDropdown ? '' : ' d-none';
 
     return (
       <div id="search-bar-container">

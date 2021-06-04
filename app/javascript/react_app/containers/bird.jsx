@@ -1,31 +1,38 @@
-/* eslint-disable camelcase */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { markSeen, setFlashMessage } from '../actions';
+import { dashify, nameContent } from '../utils';
+
 import Modal from '../components/modal';
 import DetailsModal from '../components/details_modal';
 import Checkbox from '../components/checkbox';
 
-import { dashify, nameContent } from '../utils';
-
 class Bird extends Component {
-  state = {
-    showSeenModal: false,
-    showDetailsModal: false
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showSeenModal: false,
+      showDetailsModal: false,
+    };
+    this.toggleSeenModal = this.toggleSeenModal.bind(this);
+    this.toggleDetailsModal = this.toggleDetailsModal.bind(this);
+    this.handleMarkSeen = this.handleMarkSeen.bind(this);
   }
 
-  toggleSeenModal = () => {
-    this.setState({ showSeenModal: !this.state.showSeenModal });
-  }
-
-  toggleDetailsModal = () => {
-    this.setState({ showDetailsModal: !this.state.showDetailsModal });
-  }
-
-  handleMarkSeen = () => {
+  handleMarkSeen() {
     this.props.markSeen(this.props.scientific_name);
-    this.props.setFlashMessage("Bird marked as seen!");
+    this.props.setFlashMessage('Bird marked as seen!');
+  }
+
+  toggleDetailsModal() {
+    this.setState((prevState) => ({ showDetailsModal: !prevState.showDetailsModal }));
+  }
+
+  toggleSeenModal() {
+    this.setState((prevState) => ({ showSeenModal: !prevState.showSeenModal }));
   }
 
   render() {
@@ -72,6 +79,9 @@ const mapStateToProps = (state) => ({
   seenConfirmation: state.settingsData.seenConfirmation,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ markSeen, setFlashMessage }, dispatch);
+// eslint-disable-next-line arrow-body-style
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ markSeen, setFlashMessage }, dispatch);
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bird);

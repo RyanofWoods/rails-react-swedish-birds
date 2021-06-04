@@ -1,15 +1,12 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { fetchLifelist, sortLifelist } from '../actions';
+import { nameContent } from '../utils';
 
 import BackLink from '../components/back_link';
 import GroupHeader from '../components/group_header';
-import { nameContent } from '../utils';
 
 class Lifelist extends Component {
   componentDidMount() {

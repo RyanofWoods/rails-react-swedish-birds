@@ -1,11 +1,7 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { fetchGroup, sortBirds } from '../actions';
 
 import Bird from './bird';
@@ -38,7 +34,7 @@ class BirdList extends Component {
 
   render() {
     const {
-      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref, sortedBy
+      sortedBirds, totalSeen, totalBirds, englishName, scientificName, userLangPref, sortedBy,
     } = this.props;
 
     const title = englishName || scientificName || '...';
