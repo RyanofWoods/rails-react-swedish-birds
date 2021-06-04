@@ -61,7 +61,7 @@ class Bird extends Component {
         {
           this.state.showSeenModal && (
             <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={this.handleMarkSeen}>
-              <p>Are you sure you want to mark this bird as seen?</p>
+              <p>Are you sure you want to mark this bird as seen? This cannot be reversed.</p>
             </Modal>
           )
         }
