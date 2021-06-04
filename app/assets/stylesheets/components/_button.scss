@@ -7,7 +7,7 @@
 }
 
 .btn-primary, .btn-dark {
-  &, &:hover {
-    color: #fff;
+  &, &:hover, &:active, &:focus {
+    color: #fff !important;
   }
 }
