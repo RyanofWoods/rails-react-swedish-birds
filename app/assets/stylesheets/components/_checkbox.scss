@@ -1,4 +1,4 @@
-.checkbox-input {
+input[type="checkbox"] {
   position: relative;
   transition: transform ease-in 0.1s;
   width: 24px;
@@ -6,19 +6,19 @@
   cursor: pointer;
   border-radius: 6px;
   border: 1px solid rgba(0,0,0,.25);
+  margin: 0 0.5rem 0 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
 }
-.checkbox-input:checked {
-  cursor: auto;
+input[type="checkbox"]:checked {
   background-color: $primary !important;
   color: #fff !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
   border: none;
 }
-.checkbox-input:before, .checkbox-input:after {
+input[type="checkbox"]:before, input[type="checkbox"]:after {
   position: absolute;
   content: '';
   display: block;
@@ -29,23 +29,23 @@
   transition: all ease-in-out 0.5s;
   background-repeat: no-repeat;
 }
-.checkbox-input:before {
+input[type="checkbox"]:before {
   display: none;
   top: -75%;
   background-image: radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 20%, $primary 20%, transparent 30%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 10%, $primary 15%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%);
   background-size: 40% 40%, 50% 50%, 45% 45%, 50% 50%, 48% 48%, 40% 40%, 45% 45%, 40% 40%, 48% 48%;
 }
-.checkbox-input:after {
+input[type="checkbox"]:after {
   display: none;
   bottom: -75%;
   background-image: radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 10%, $primary 15%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%);
   background-size: 45% 45%, 50% 50%, 48% 48%, 50% 50%, 45% 45%, 40% 40%, 50% 50%;
 }
-.checkbox-input.animate:before {
+input[type="checkbox"].animate:before {
   display: block;
   animation: topBubbles ease-in-out 0.75s forwards;
 }
-.checkbox-input.animate:after {
+input[type="checkbox"].animate:after {
   display: block;
   animation: bottomBubbles ease-in-out 0.75s forwards;
 }
