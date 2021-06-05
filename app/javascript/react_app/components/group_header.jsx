@@ -49,7 +49,7 @@ const GroupHeader = ({
 
     const t = [];
 
-    t.push(title);
+    t.push(title.toUpperCase());
     t.push(' ');
     t.push(indicator);
 

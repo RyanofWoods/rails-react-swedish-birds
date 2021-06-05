@@ -37,7 +37,7 @@ const Group = (props) => {
           />
         </div>
         <p className="list-item-start">
-          ({total_seen}/{total_birds})
+          <span>{total_seen}</span>/{total_birds}
         </p>
         {nameContent({ scientific_name, english_name, swedish_name }, langPref)}
       </li>
