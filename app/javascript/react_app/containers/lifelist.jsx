@@ -40,7 +40,7 @@ class Lifelist extends Component {
 
         <BackLink to="/" />
 
-        <ol className="list-group">
+        <ol className="list-group mt-3">
           <GroupHeader {...groupHeaderProps} />
 
           {lifelist.map(({ created_at, bird, index }) => (

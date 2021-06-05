@@ -61,7 +61,7 @@ class Settings extends Component {
 
         <BackLink />
 
-        <div className="form-group">
+        <div className="form-group mt-3">
           <label>Group birds by:</label>
           <select value={groupBy} className="form-control custom-select" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
             <option value="family">Family</option>
