@@ -1,0 +1,22 @@
+form {
+  .form-group {
+    margin: 1.5rem 0;
+  }
+  .form-group, .form-check {
+    color: $dark-gray;
+
+    label {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+  }
+  .form-check {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    label {
+      margin: 0;
+    }
+  }
+}

@@ -30,8 +30,14 @@
       </div>
       
       <div id="content-container">
-        <%= yield %>
-        <%= yield :after_js %>
+        <div class="container my-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+              <%= yield %>
+              <%= yield :after_js %>
+            </div>
+          </div>
+        </div>
 
         <%= render 'shared/flashes' %>
       </div>

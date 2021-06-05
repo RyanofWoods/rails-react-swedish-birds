@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { saveSettings, setFlashMessage } from '../actions';
 
+import PageTitle from '../components/page_title';
 import BackLink from '../components/back_link';
 
 class Settings extends Component {
@@ -56,26 +57,21 @@ class Settings extends Component {
 
     return (
       <form onSubmit={this.saveSettings}>
-        <h2>Settings:</h2>
+        <PageTitle title="Settings" />
 
         <BackLink />
 
-        <div className="form-check my-3">
-          <input className="form-check-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
-          <label className="form-check-label">Confirmation when marking a bird as seen? </label>
-        </div>
-
-        <div className="form-group">
-          <label className="mr-2">Group birds by:</label>
-          <select value={groupBy} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
+        <div className="form-group mt-3">
+          <label>Group birds by:</label>
+          <select value={groupBy} className="form-control custom-select" onChange={(event) => this.settingsChange('groupBy', event.target.value)}>
             <option value="family">Family</option>
             <option value="order">Order</option>
           </select>
         </div>
 
         <div className="form-group">
-          <label className="mr-2">Language preference with names:</label>
-          <select value={language} className="custom-select mb-3 mr-sm-2" onChange={(event) => this.settingsChange('language', event.target.value)}>
+          <label>Name language preference: </label>
+          <select value={language} className="form-control custom-select" onChange={(event) => this.settingsChange('language', event.target.value)}>
             <option value="en">English</option>
             <option value="se">Swedish</option>
             <option value="both">Both</option>
@@ -83,9 +79,16 @@ class Settings extends Component {
         </div>
 
         <div className="form-group">
-          <label className="mr-2">Population threshold:</label>
-          <p><em>{populationText()}</em></p>
-          <input value={populationThreshold} min="5" max="9" type="range" className="form-range w-100 hover-pointer" onChange={(event) => this.settingsChange('populationThreshold', +event.target.value)} />
+          <div className="form-check">
+            <input className="form-check-input checkbox-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
+            <label className="form-check-label">Ask for confirmation when marking a bird as seen? </label>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label>Population threshold:</label>
+          <h6><em>{populationText()}</em></h6>
+          <input value={populationThreshold} min="5" max="9" type="range" className="custom-range" onChange={(event) => this.settingsChange('populationThreshold', +event.target.value)} />
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>

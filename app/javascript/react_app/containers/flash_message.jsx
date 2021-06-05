@@ -15,10 +15,10 @@ class FlashMessage extends Component {
   }
 
   render() {
-    const { message, isInfo } = this.props;
+    const { message } = this.props;
 
     return (
-      <div className={`alert alert-dismissible ${isInfo ? 'alert-info' : ''} m-1`}>
+      <div className="alert alert-dismissible">
         {message}
 
         <button type="button" className="close" aria-label="Close" onClick={this.props.clearFlashMessage}>

@@ -49,13 +49,13 @@ class Checkbox extends Component {
   }
 
   render() {
-    const { checked, onClick } = this.props;
-    let classes = 'checkbox-input';
-    classes += (this.state.animateClass) ? ' animate' : '';
+    const { checked, onClick, classes } = this.props;
+    let newClasses = `${classes} checkbox-input`;
+    newClasses += (this.state.animateClass) ? ' animate' : '';
 
     const props = {
       type: 'checkbox',
-      className: classes,
+      className: newClasses,
       onClick,
       onChange: this.changeHandler,
       checked,

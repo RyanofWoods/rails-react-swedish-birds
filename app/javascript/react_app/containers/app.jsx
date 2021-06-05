@@ -12,7 +12,6 @@ import Settings from './settings';
 import Navbar from '../components/navbar';
 import FlashMessage from './flash_message';
 import Lifelist from './lifelist';
-import Wrapper from '../components/wrapper';
 
 class App extends Component {
   componentDidUpdate(prevProps) {
@@ -41,24 +40,22 @@ class App extends Component {
         {ReactDOM.createPortal(<Navbar />, document.getElementById('navbar-container'))}
         {flashMessage && <FlashMessage message={flashMessage} />}
 
-        <Wrapper>
-          <Switch>
-            <Route path="/lifelist" component={Lifelist} />
+        <Switch>
+          <Route path="/lifelist" component={Lifelist} />
 
-            <Route path="/settings" component={Settings} />
+          <Route path="/settings" component={Settings} />
 
-            <Route path="/:groupedBy/:groupName" component={BirdList} />
+          <Route path="/:groupedBy/:groupName" component={BirdList} />
 
-            <Route path="/families/">
-              <GroupList groupPlural="families" groupSingular="family" />
-            </Route>
-            <Route path="/orders/">
-              <GroupList groupPlural="orders" groupSingular="order" />
-            </Route>
+          <Route path="/families/">
+            <GroupList groupPlural="families" groupSingular="family" />
+          </Route>
+          <Route path="/orders/">
+            <GroupList groupPlural="orders" groupSingular="order" />
+          </Route>
 
-            <Route path="/">{this.handleGroupRedirect()}</Route>
-          </Switch>
-        </Wrapper>
+          <Route path="/">{this.handleGroupRedirect()}</Route>
+        </Switch>
       </>
     );
   }

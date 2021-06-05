@@ -1,0 +1,13 @@
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.25rem;
+}
+
+.btn-primary, .btn-dark {
+  &, &:hover, &:active, &:focus {
+    color: #fff !important;
+  }
+}
