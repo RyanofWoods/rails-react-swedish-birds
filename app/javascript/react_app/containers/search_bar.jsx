@@ -85,29 +85,49 @@ class SearchBar extends Component {
       return <Link {...linkProps}><div>{c}</div></Link>;
     };
 
-    const listItems = () => {
-      if (results.length === 0 && this.state.input.length > 0) {
-        return <li><div><p>Sorry, no results</p></div></li>;
+    const unorderedList = () => {
+      // no input
+      if (this.state.input.length === 0) return null;
+
+      // no results
+      if (results.length === 0) {
+        return (
+          <ul>
+            <li>
+              <div>
+                <p>Sorry, no results</p>
+              </div>
+            </li>
+          </ul>
+        );
       }
 
-      return results.map((bird) => (
-        <li key={bird.scientific_name}>{listItemContent(bird)}</li>
-      ));
+      // input and results
+      return (
+        <ul>
+          {
+            results.map((bird) => (
+              <li key={bird.scientific_name}>{listItemContent(bird)}</li>
+            ))
+          }
+        </ul>
+      );
     };
 
-    const dropdownClasses = this.state.showDropdown ? '' : ' d-none';
-
     return (
-      <div id="search-bar-container">
+      <div id="search-bar-container" className="form-group">
         <input
           type="text"
           placeholder="Search for a bird..."
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
+          className="form-control"
         />
 
-        <ul className={dropdownClasses}>{listItems()}</ul>
+        {
+          this.state.showDropdown && unorderedList()
+        }
       </div>
     );
   }
