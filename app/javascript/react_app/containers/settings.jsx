@@ -78,9 +78,11 @@ class Settings extends Component {
           </select>
         </div>
 
-        <div className="form-check">
-          <input className="form-check-input checkbox-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
-          <label className="form-check-label">Ask for confirmation when marking a bird as seen? </label>
+        <div className="form-group">
+          <div className="form-check">
+            <input className="form-check-input checkbox-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
+            <label className="form-check-label">Ask for confirmation when marking a bird as seen? </label>
+          </div>
         </div>
 
         <div className="form-group">

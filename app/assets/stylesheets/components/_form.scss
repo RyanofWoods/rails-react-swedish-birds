@@ -1,7 +1,9 @@
 form {
+  .form-group {
+    margin: 1.5rem 0;
+  }
   .form-group, .form-check {
     color: $dark-gray;
-    margin: 1.5rem 0;
 
     label {
       font-weight: 700;
