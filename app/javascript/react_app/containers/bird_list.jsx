@@ -17,18 +17,21 @@ class BirdList extends Component {
   }
 
   componentDidUpdate() {
-    const { hash } = this.props.location;
+    if (!this.hasScrolled) {
+      const { hash } = this.props.location;
 
-    if (hash !== '') {
-      const e = document.getElementById(hash.slice(1));
+      if (hash !== '') {
+        const e = document.getElementById(hash.slice(1));
 
-      if (e) {
-        const header = document.getElementById('group-header');
-        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        if (e) {
+          const header = document.getElementById('group-header');
+          const headerHeight = header ? header.getBoundingClientRect().height : 0;
 
-        const yPos = e.getBoundingClientRect().top - headerHeight;
+          const yPos = e.getBoundingClientRect().top - headerHeight;
 
-        window.scrollTo(0, yPos);
+          window.scrollTo(0, yPos);
+          this.hasScrolled = true;
+        }
       }
     }
   }
