@@ -41,6 +41,7 @@ class Bird extends Component {
     } = this.props;
 
     const checkboxProps = {
+      classes: 'checkbox-checked-hover-pointer-none mr-3',
       checked: seen,
       id: scientific_name,
       // add click event only for birds not seen yet
@@ -50,7 +51,7 @@ class Bird extends Component {
 
     return (
       <li id={dashify(scientific_name)} className="list-group-item">
-        <div className="list-item-start">
+        <div className="list-item-start d-flex align-items-center justify-content-center">
           <Checkbox {...checkboxProps} />
         </div>
 
