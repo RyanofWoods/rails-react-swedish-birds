@@ -1,6 +1,6 @@
 footer {
-  background-color: #fff;
-  color: #000;
+  background-color: $primary;
+  color: $body-bg;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -19,8 +19,13 @@ footer {
     }
 
     i {
+      color: $body-bg;
       font-size: 30px;
       padding: 8px;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
