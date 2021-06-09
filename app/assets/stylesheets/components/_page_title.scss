@@ -24,4 +24,17 @@
       font-weight: 700;
     }
   }
+  @include media-breakpoint-down(sm) {
+    h1 {
+     font-size: 34px;
+    }
+    h3 {
+      span {
+        font-size: 24px;
+      }
+      font-size: 16px;
+      margin-left: 1rem;
+    }
+  }
 }
+
