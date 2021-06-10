@@ -51,8 +51,12 @@
     border: none;
     border-radius: $border-radius-lg;
     height: 95px;
-    font-size: 18px;
 
+    @include media-breakpoint-down(sm) {
+      p {
+        font-size: 14px;
+      }
+    }
     i {
       font-size: 24px;
     }
@@ -64,6 +68,7 @@
     }
     p {
       margin-bottom: 0;
+      word-break: break-word;
     }
     .list-item-start {
       margin-right: 1rem;
@@ -80,11 +85,14 @@
     }
     .list-item-grow {
       flex-grow: 1;
-      font-size: 20px;
       font-family: $headers-font;
     }
     .list-item-end {
       justify-self: end;
+    }
+    // mobile and smaller screens
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
     }
   }
 }
