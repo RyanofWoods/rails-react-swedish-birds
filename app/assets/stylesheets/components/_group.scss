@@ -4,7 +4,7 @@
     position: -webkit-sticky !important;
     position: sticky !important;
     top: -1px; //bug with top: 0px as it has a gap of 1 px
-    height: fit-content;
+    min-height: fit-content !important;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     z-index: 40;
@@ -50,7 +50,8 @@
     padding: 12px 15px 12px 15px;
     border: none;
     border-radius: $border-radius-lg;
-    height: 95px;
+    height: fit-content;
+    min-height: 95px;
 
     @include media-breakpoint-down(sm) {
       p {
