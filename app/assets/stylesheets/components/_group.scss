@@ -77,7 +77,7 @@
         font-weight: bold;
       }
     }
-    .list-item-start, .list-item-start-small-mobile {
+    .list-item-start, .list-item-end, .list-item-start-small-mobile {
       min-width: 64px;
     }
     .list-item-start-small {
@@ -89,6 +89,7 @@
     }
     .list-item-end {
       justify-self: end;
+      text-align: end;
     }
     // mobile and smaller screens
     @include media-breakpoint-down(sm) {
