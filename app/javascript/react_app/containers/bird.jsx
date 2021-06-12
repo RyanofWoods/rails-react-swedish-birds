@@ -51,7 +51,7 @@ class Bird extends Component {
 
     return (
       <li id={dashify(scientific_name)} className="list-group-item">
-        <div className="list-item-start d-flex align-items-center justify-content-center">
+        <div className="list-item-start-small-mobile d-flex align-items-center justify-content-center">
           <Checkbox {...checkboxProps} />
         </div>
 
