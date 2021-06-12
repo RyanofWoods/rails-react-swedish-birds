@@ -48,7 +48,7 @@ class BirdList extends Component {
       action: this.props.sortBirds,
       userLangPref,
       columns: [
-        { title: 'Seen', sortRef: 'seen' },
+        { title: 'Seen', sortRef: 'seen', smallOnMobile: true },
         { title: 'Names', sortRef: 'name' },
         { title: 'Details', sortRef: 'details' },
       ],

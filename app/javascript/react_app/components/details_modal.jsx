@@ -10,7 +10,7 @@ const DetailsModal = ({ close }) => {
   );
 
   return (
-    <Modal title="Shorthand detail symbols" close={close}>
+    <Modal title="Detail shorthand" close={close}>
       <div className="detailsModalContent">
         <p><em>Information is regarding to Sweden</em></p>
 

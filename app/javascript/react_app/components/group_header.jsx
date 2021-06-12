@@ -73,6 +73,7 @@ const GroupHeader = ({
     }
 
     if (column.small) classes += '-small';
+    if (column.smallOnMobile) classes += '-small-mobile';
 
     let onClick;
 
