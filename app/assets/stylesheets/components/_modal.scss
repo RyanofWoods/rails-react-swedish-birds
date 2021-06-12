@@ -51,8 +51,18 @@
   .modal-component {
     max-width: 90vw;
 
+    .modal-header {
+      padding: 0.25rem 1rem;
+    }
+    .modal-body {
+      padding: 0.5rem 0 0.5rem 0;
+    }
     & .detailsModalContent {
       font-size: 12.5px;
+
+      & > p {
+        margin-bottom: 8px !important;
+      }
       .contentGroup {
         padding-top: 8px;
       }
