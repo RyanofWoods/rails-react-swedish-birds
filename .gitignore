@@ -34,6 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+package-lock.json
 # Ignore .env file containing credentials.
 .env*
 # Ignore Mac and Linux file system files
