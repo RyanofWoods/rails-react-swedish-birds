@@ -9,6 +9,7 @@ import Group from '../components/group';
 import SearchBar from './search_bar';
 import GroupHeader from '../components/group_header';
 import PageTitle from '../components/page_title';
+import OptionsBar from '../components/options_bar';
 
 class GroupList extends Component {
   componentDidMount() {
@@ -53,6 +54,7 @@ class GroupList extends Component {
       <>
         <PageTitle {...titleProps} />
         <SearchBar />
+        <OptionsBar />
 
         <ul className="list-group mt-4">
           <GroupHeader {...groupHeaderProps} />

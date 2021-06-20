@@ -8,6 +8,7 @@ import Bird from './bird';
 import BackLink from '../components/back_link';
 import GroupHeader from '../components/group_header';
 import PageTitle from '../components/page_title';
+import OptionsBar from '../components/options_bar';
 
 class BirdList extends Component {
   componentDidMount() {
@@ -60,10 +61,15 @@ class BirdList extends Component {
       totalAmount: totalBirds,
     };
 
+    const backLinkProps = {
+      to: '/',
+    };
+
     return (
       <>
         <PageTitle {...titleProps} />
-        <BackLink to="/" />
+        <BackLink {...backLinkProps} />
+        <OptionsBar backLinkProps={backLinkProps} />
 
         <ul className="list-group mt-3">
           <GroupHeader {...groupHeaderProps} />
