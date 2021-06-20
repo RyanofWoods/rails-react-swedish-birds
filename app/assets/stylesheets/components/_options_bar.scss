@@ -1,0 +1,27 @@
+#options-bar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  min-height: fit-content !important;
+  width: 100%;
+  left:0;
+  bottom: -1px;
+  z-index: 40;
+  padding: 4px 15px 4px 15px;
+  background-color: $primary !important;
+
+  @include media-breakpoint-up(sm) {
+    padding: 4px 30px 4px 30px;
+  }
+  &, a {
+    color: #fff;
+  }
+  p {
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { fetchLifelist, sortLifelist } from '../actions';
 import { nameContent } from '../utils';
 
 import BackLink from '../components/back_link';
+import OptionsBar from '../components/options_bar';
 import GroupHeader from '../components/group_header';
 
 class Lifelist extends Component {
@@ -34,11 +35,16 @@ class Lifelist extends Component {
       ],
     };
 
+    const backLinkProps = {
+      to: '/',
+    };
+
     return (
       <>
         <h1>Lifelist</h1>
 
-        <BackLink to="/" />
+        <BackLink {...backLinkProps} />
+        <OptionsBar backLinkProps={backLinkProps} />
 
         <ol className="list-group mt-3">
           <GroupHeader {...groupHeaderProps} />
