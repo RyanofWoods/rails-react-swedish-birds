@@ -9,7 +9,7 @@ import reduxPromise from 'redux-promise';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 // internal modules;
-import App from './containers/app';
+import App from './components/app';
 
 import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { markSeen, setFlashMessage } from '../actions';
-import { dashify, nameContent } from '../utils';
+import { markSeen, setFlashMessage } from '../../actions';
+import { dashify, nameContent } from '../../utils';
 
-import Modal from '../components/modal';
-import DetailsModal from '../components/details_modal';
-import Checkbox from '../components/checkbox';
+import Modal from './modal';
+import DetailsModal from './details_modal';
+import Checkbox from './checkbox';
 
 class Bird extends Component {
   constructor(props) {

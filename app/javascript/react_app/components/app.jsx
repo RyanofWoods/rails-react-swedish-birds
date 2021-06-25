@@ -6,12 +6,12 @@ import { bindActionCreators } from 'redux';
 
 import { setPrevLocation } from '../actions';
 
-import GroupList from './group_list';
-import BirdList from './bird_list';
-import Settings from './settings';
-import Navbar from '../components/navbar';
-import FlashMessage from './flash_message';
-import Lifelist from './lifelist';
+import GroupList from './group/group_list';
+import BirdList from './bird/bird_list';
+import Settings from './settings/settings';
+import Navbar from './shared/navbar';
+import FlashMessage from './shared/flash_message';
+import Lifelist from './lifelist/lifelist';
 
 class App extends Component {
   componentDidUpdate(prevProps) {

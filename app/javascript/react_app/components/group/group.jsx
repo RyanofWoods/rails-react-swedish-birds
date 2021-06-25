@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { nameContent } from '../utils';
+import { nameContent } from '../../utils';
 
 const Group = (props) => {
   const {
