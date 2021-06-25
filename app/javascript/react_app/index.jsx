@@ -9,7 +9,7 @@ import reduxPromise from 'redux-promise';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 // internal modules;
-import App from './containers/app';
+import App from './components/app';
 
 import groupsReducer from './reducers/groups_reducer';
 import selectedGroupReducer from './reducers/selected_group_reducer';
@@ -21,7 +21,7 @@ import groupListScrollPositionReducer from './reducers/group_list_scroll_positio
 import SearchReducer from './reducers/search_reducer';
 
 // modules for loading the app with setting defaults and then user settings
-import SETTING_DEFAULTS from './setting_defaults';
+import SETTING_DEFAULTS from './helpers/setting_defaults';
 import { loadSettings } from './actions';
 
 // reducers

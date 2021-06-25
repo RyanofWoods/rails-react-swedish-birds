@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchLifelist, sortLifelist } from '../actions';
-import { nameContent } from '../utils';
+import { fetchLifelist, sortLifelist } from '../../actions';
+import { nameContent } from '../../helpers/utils';
 
-import BackLink from '../components/back_link';
-import OptionsBar from '../components/options_bar';
-import GroupHeader from '../components/group_header';
+import BackLink from '../shared/back_link';
+import OptionsBar from '../shared/options_bar';
+import GroupHeader from '../shared/group_header';
 
 class Lifelist extends Component {
   componentDidMount() {

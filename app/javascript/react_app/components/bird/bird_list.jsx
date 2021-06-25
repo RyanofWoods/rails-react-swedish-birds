@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchGroup, sortBirds } from '../actions';
+import { fetchGroup, sortBirds } from '../../actions';
 
 import Bird from './bird';
-import BackLink from '../components/back_link';
-import GroupHeader from '../components/group_header';
-import PageTitle from '../components/page_title';
-import OptionsBar from '../components/options_bar';
+import BackLink from '../shared/back_link';
+import GroupHeader from '../shared/group_header';
+import PageTitle from '../shared/page_title';
+import OptionsBar from '../shared/options_bar';
 
 class BirdList extends Component {
   componentDidMount() {
