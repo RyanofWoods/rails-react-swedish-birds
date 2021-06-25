@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { capitalize } from '../../utils';
+import { capitalize } from '../../helpers/utils';
 import { fetchGroups, sortGroups, setGroupListScrollPos } from '../../actions';
 
 import Group from './group';

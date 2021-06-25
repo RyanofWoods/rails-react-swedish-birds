@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { markSeen, setFlashMessage } from '../../actions';
-import { dashify, nameContent } from '../../utils';
+import { dashify, nameContent } from '../../helpers/utils';
 
 import Modal from './modal';
 import DetailsModal from './details_modal';

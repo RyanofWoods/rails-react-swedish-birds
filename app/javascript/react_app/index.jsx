@@ -21,7 +21,7 @@ import groupListScrollPositionReducer from './reducers/group_list_scroll_positio
 import SearchReducer from './reducers/search_reducer';
 
 // modules for loading the app with setting defaults and then user settings
-import SETTING_DEFAULTS from './setting_defaults';
+import SETTING_DEFAULTS from './helpers/setting_defaults';
 import { loadSettings } from './actions';
 
 // reducers
