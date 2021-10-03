@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { markSeen, setFlashMessage } from '../../actions';
-import { dashify, nameContent } from '../../helpers/utils';
+import '../../helpers/extend_string_class';
+import nameContent from '../../helpers/utils';
 
 import Modal from './modal';
 import DetailsModal from './details_modal';
@@ -50,7 +51,7 @@ class Bird extends Component {
     };
 
     return (
-      <li id={dashify(scientific_name)} className="list-group-item">
+      <li id={scientific_name.dashify()} className="list-group-item">
         <div className="list-item-start-small-mobile d-flex align-items-center justify-content-center">
           <Checkbox {...checkboxProps} />
         </div>
