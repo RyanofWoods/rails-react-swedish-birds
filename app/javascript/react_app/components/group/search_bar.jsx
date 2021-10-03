@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { fetchSearchBirds, clearSearchBirds } from '../../actions';
-import { hashify } from '../../helpers/utils';
+import '../../helpers/extend_string_class';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -78,7 +78,7 @@ class SearchBar extends Component {
       const linkProps = {
         to: {
           pathname: url,
-          hash: hashify(scientific_name),
+          hash: scientific_name.hashify(),
         },
       };
 

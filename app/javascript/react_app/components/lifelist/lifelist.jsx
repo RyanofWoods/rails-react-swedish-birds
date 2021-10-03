@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { fetchLifelist, sortLifelist } from '../../actions';
-import { nameContent } from '../../helpers/utils';
+import nameContent from '../../helpers/utils';
 
 import BackLink from '../shared/back_link';
 import OptionsBar from '../shared/options_bar';
