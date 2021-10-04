@@ -4,20 +4,28 @@ footer {
   bottom: 0;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 20px 30px 20px; // extra bottom padding for options bar
 
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  > div {
+    padding: 0 20px;
+  }
+  div.footer-icons {
+    display: flex;
+    justify-content: center;
+  }
   p {
     margin-bottom: 0;
   }
-
   a {
     &, &:hover {
       text-decoration: none;
     }
-
     i {
       color: $body-bg;
       font-size: 30px;
