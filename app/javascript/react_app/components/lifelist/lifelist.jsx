@@ -6,6 +6,7 @@ import { fetchLifelist, sortLifelist } from '../../actions';
 import nameContent from '../../helpers/utils';
 
 import BackLink from '../shared/back_link';
+import PageTitle from '../shared/page_title';
 import OptionsBar from '../shared/options_bar';
 import GroupHeader from '../shared/group_header';
 
@@ -41,7 +42,7 @@ class Lifelist extends Component {
 
     return (
       <>
-        <h1>Lifelist</h1>
+        <PageTitle title="Lifelist" />
 
         <BackLink {...backLinkProps} />
         <OptionsBar backLinkProps={backLinkProps} />
