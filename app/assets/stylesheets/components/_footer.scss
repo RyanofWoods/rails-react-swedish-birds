@@ -6,7 +6,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px 30px 20px; // extra bottom padding for options bar
+  padding: 20px 20px 38px 20px; // extra bottom padding for options bar
 
   @include media-breakpoint-down(sm) {
     flex-direction: column;

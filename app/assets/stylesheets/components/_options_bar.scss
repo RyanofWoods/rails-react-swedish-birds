@@ -7,11 +7,18 @@
   left:0;
   bottom: -1px;
   z-index: 40;
-  padding: 4px 15px 4px 15px;
+  padding: 6px 15px 6px 15px;
   background-color: $primary !important;
 
   @include media-breakpoint-up(sm) {
     padding: 4px 30px 4px 30px;
+
+    p, a {
+      font-size: 16px;
+    }
+  }
+  p, a {
+    font-size: 18px;
   }
   &, a {
     color: #fff;
