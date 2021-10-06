@@ -46,7 +46,7 @@ class OptionsBar extends Component {
         <div key="options-bar" id="options-bar">
           { backLinkProps && <BackLink {...backLinkProps} /> }
 
-          <p className="ml-auto" onClick={OptionsBar.handleGoUpClick}>Go Up</p>
+          <p className="ml-auto hover-pointer hover-opacity" onClick={OptionsBar.handleGoUpClick}>Go Up</p>
         </div>
       )
     );
