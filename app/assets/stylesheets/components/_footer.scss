@@ -23,9 +23,6 @@ footer {
     margin-bottom: 0;
   }
   a {
-    &, &:hover {
-      text-decoration: none;
-    }
     i {
       color: $body-bg;
       font-size: 30px;
