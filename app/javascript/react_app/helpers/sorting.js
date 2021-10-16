@@ -1,10 +1,7 @@
-const handleSortHeaderClick = (args) => {
-  const {
-    sortingFunction, groups, prevSortedBy, clickedHeader, userLangPref,
-  } = args;
+const determineSortBy = ({ prevSortedBy, clickedHeader, userLangPref }) => {
   let newSortedBy = {};
 
-  const newSort = () => {
+  const newSortBy = () => {
     let key;
 
     if (clickedHeader === 'name') {
@@ -35,12 +32,22 @@ const handleSortHeaderClick = (args) => {
       }
     } else {
       // new header click
-      newSort();
+      newSortBy();
     }
   } else {
     // was null
-    newSort();
+    newSortBy();
   }
+
+  return newSortedBy;
+};
+
+const handleSortHeaderClick = (args) => {
+  const {
+    sortingFunction, groups,
+  } = args;
+
+  const newSortedBy = determineSortBy(args);
 
   return {
     sortedGroups: sortingFunction(groups, newSortedBy),
