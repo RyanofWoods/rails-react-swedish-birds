@@ -1,3 +1,8 @@
+const nameHash = {
+  en: 'english_name',
+  se: 'swedish_name',
+};
+
 const determineSortBy = ({ prevSortedBy, clickedHeader, userLangPref }) => {
   let newSortedBy = {};
 
@@ -16,24 +21,24 @@ const determineSortBy = ({ prevSortedBy, clickedHeader, userLangPref }) => {
     newSortedBy[key] = 'asc';
   };
 
-  // if the key exists, increment it null > asc > desc
-  if (prevSortedBy) {
-    if (clickedHeader in prevSortedBy || (clickedHeader === 'name' && (Object.keys(prevSortedBy)[0] === 'english_name' || Object.keys(prevSortedBy)[0] === 'swedish_name'))) {
-      const key = (clickedHeader === 'name') ? Object.keys(prevSortedBy)[0] : clickedHeader;
+  const sameHeaderClick = () => (
+    clickedHeader in prevSortedBy || (clickedHeader === 'name' && Object.values(nameHash).includes(Object.keys(prevSortedBy)[0]))
+  );
 
-      if (prevSortedBy[key] === 'asc') {
-        newSortedBy[key] = 'desc';
-      } else if (userLangPref === 'both' && key === 'english_name') {
-        // increment through two languages before going back to null
-        // en asc > en desc > se asc > se desc > null
-        newSortedBy.swedish_name = 'asc';
-      } else {
-        newSortedBy = null;
-      }
+  const incrementSortBy = () => {
+    const key = Object.keys(prevSortedBy)[0];
+
+    if (prevSortedBy[key] === 'asc') {
+      newSortedBy[key] = 'desc';
+    } else if (userLangPref === 'both' && key === 'english_name') {
+      newSortedBy.swedish_name = 'asc';
     } else {
-      // new header click
-      newSortBy();
+      newSortedBy = null;
     }
+  };
+
+  if (prevSortedBy && sameHeaderClick()) {
+    incrementSortBy();
   } else {
     // was null
     newSortBy();
