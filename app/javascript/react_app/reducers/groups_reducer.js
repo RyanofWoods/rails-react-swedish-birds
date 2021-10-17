@@ -1,4 +1,5 @@
 import { FETCH_GROUPS, MARK_SEEN, SORT_GROUPS } from '../actions';
+import { handleSortHeaderClick } from '../helpers/sorting';
 
 const groupsReducer = (state, action) => {
   if (state === undefined) {
@@ -57,54 +58,6 @@ const groupsReducer = (state, action) => {
     return sortedGroups;
   };
 
-  const handleSortHeaderClick = ({ clickedHeader, userLangPref }) => {
-    const { sortedBy } = state;
-    let newSortedBy = {};
-
-    const newSort = () => {
-      let key;
-
-      if (clickedHeader === 'name') {
-        if (userLangPref === 'se') {
-          key = 'swedish_name';
-        } else {
-          key = 'english_name';
-        }
-      } else {
-        key = clickedHeader;
-      }
-      newSortedBy[key] = 'asc';
-    };
-
-    // if the key exists, increment it null > asc > desc
-    if (sortedBy) {
-      if (clickedHeader in sortedBy || (clickedHeader === 'name' && (Object.keys(sortedBy)[0] === 'english_name' || Object.keys(sortedBy)[0] === 'swedish_name'))) {
-        const key = (clickedHeader === 'name') ? Object.keys(sortedBy)[0] : clickedHeader;
-
-        if (sortedBy[key] === 'asc') {
-          newSortedBy[key] = 'desc';
-        } else if (userLangPref === 'both' && key === 'english_name') {
-          // increment through two languages before going back to null
-          // en asc > en desc > se asc > se desc > null
-          newSortedBy.swedish_name = 'asc';
-        } else {
-          newSortedBy = null;
-        }
-      } else {
-        // new header click
-        newSort();
-      }
-    } else {
-      // was null
-      newSort();
-    }
-
-    return {
-      sortedGroups: sortGroups(state.groups, newSortedBy),
-      sortedBy: newSortedBy,
-    };
-  };
-
   switch (action.type) {
     case FETCH_GROUPS:
       return {
@@ -117,9 +70,16 @@ const groupsReducer = (state, action) => {
         action.payload.bird_order_scientific_name,
       );
     case SORT_GROUPS:
+      const result = handleSortHeaderClick({
+        sortingFunction: sortGroups,
+        groups: state.groups,
+        prevSortedBy: state.sortedBy,
+        ...action.payload,
+      });
       return {
         ...state,
-        ...handleSortHeaderClick(action.payload),
+        sortedGroups: result.sortedGroups,
+        sortedBy: result.sortedBy,
       };
     default:
       return state;

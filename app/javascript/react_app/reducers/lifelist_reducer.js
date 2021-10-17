@@ -1,4 +1,5 @@
 import { FETCH_LIFELIST, SORT_LIFELIST } from '../actions';
+import { handleSortHeaderClick } from '../helpers/sorting';
 
 const lifelistReducer = (state = [], action) => {
   if (state === undefined) {
@@ -42,67 +43,24 @@ const lifelistReducer = (state = [], action) => {
     return sortedLifelist;
   };
 
-  const handleSortHeaderClick = ({ clickedHeader, userLangPref }) => {
-    const { sortedBy } = state;
-    let newSortedBy = {};
-
-    const newSort = () => {
-      let key;
-
-      if (clickedHeader === 'name') {
-        if (userLangPref === 'se') {
-          key = 'swedish_name';
-        } else {
-          key = 'english_name';
-        }
-      } else {
-        key = clickedHeader;
-      }
-      newSortedBy[key] = 'asc';
-    };
-
-    // if the key exists, increment it null > asc > desc
-    if (sortedBy) {
-      if (clickedHeader in sortedBy || (clickedHeader === 'name' && (Object.keys(sortedBy)[0] === 'english_name' || Object.keys(sortedBy)[0] === 'swedish_name'))) {
-        const key = (clickedHeader === 'name') ? Object.keys(sortedBy)[0] : clickedHeader;
-
-        if (sortedBy[key] === 'asc') {
-          newSortedBy[key] = 'desc';
-        } else if (userLangPref === 'both' && key === 'english_name') {
-          // increment through two languages before going back to null
-          // en asc > en desc > se asc > se desc > null
-          newSortedBy.swedish_name = 'asc';
-        } else {
-          newSortedBy = null;
-        }
-      } else {
-        // new header click
-        newSort();
-      }
-    } else {
-      // was null
-      newSort();
-    }
-
-    return {
-      sortedLifelist: sortLifelist(state.lifelist, newSortedBy),
-      sortedBy: newSortedBy,
-    };
-  };
-
   switch (action.type) {
     case FETCH_LIFELIST:
-      // eslint-disable-next-line no-undef
-      // eslint-disable-next-line no-case-declarations
       const lifelistWithIndexes = addIndex(action.payload.observations);
       return {
         lifelist: lifelistWithIndexes,
         sortedLifelist: sortLifelist(lifelistWithIndexes),
       };
     case SORT_LIFELIST:
+      const result = handleSortHeaderClick({
+        sortingFunction: sortLifelist,
+        groups: state.lifelist,
+        prevSortedBy: state.sortedBy,
+        ...action.payload,
+      });
       return {
         ...state,
-        ...handleSortHeaderClick(action.payload),
+        sortedLifelist: result.sortedGroups,
+        sortedBy: result.sortedBy,
       };
     default:
       return state;
