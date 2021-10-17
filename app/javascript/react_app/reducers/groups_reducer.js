@@ -1,5 +1,5 @@
 import { FETCH_GROUPS, MARK_SEEN, SORT_GROUPS } from '../actions';
-import handleSortHeaderClick from '../helpers/sorting';
+import { handleSortHeaderClick } from '../helpers/sorting';
 
 const groupsReducer = (state, action) => {
   if (state === undefined) {

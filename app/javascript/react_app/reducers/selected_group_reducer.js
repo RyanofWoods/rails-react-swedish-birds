@@ -1,5 +1,5 @@
 import { FETCH_GROUP, MARK_SEEN, SORT_BIRDS } from '../actions';
-import handleSortHeaderClick from '../helpers/sorting';
+import { handleSortHeaderClick } from '../helpers/sorting';
 
 const selectedGroupReducer = (state, action) => {
   if (state === undefined) {

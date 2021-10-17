@@ -1,5 +1,5 @@
 import { FETCH_LIFELIST, SORT_LIFELIST } from '../actions';
-import handleSortHeaderClick from '../helpers/sorting';
+import { handleSortHeaderClick } from '../helpers/sorting';
 
 const lifelistReducer = (state = [], action) => {
   if (state === undefined) {

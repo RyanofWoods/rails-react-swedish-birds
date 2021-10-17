@@ -55,4 +55,4 @@ const handleSortHeaderClick = (args) => {
   };
 };
 
-export default handleSortHeaderClick;
+export { determineSortBy, handleSortHeaderClick };
