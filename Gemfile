@@ -36,7 +36,7 @@ gem 'pundit'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
-
+gem 'minitest-ci'
 gem 'pg_search'
 
 group :development, :test do
