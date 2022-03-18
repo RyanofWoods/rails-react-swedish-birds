@@ -18,3 +18,7 @@ crested_tit_observation:
   id: 5
   bird_id: 347
   user_id: 1
+greylag_goose_observation:
+  id: 6
+  bird_id: 7
+  user_id: 1
