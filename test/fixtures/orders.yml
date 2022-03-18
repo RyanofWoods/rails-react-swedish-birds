@@ -1,0 +1,10 @@
+waterfowl:
+  id: 1
+  scientific_name: Anseriformes
+  english_name: Waterfowl
+  swedish_name: Andfåglar
+perching_birds:
+  id: 24
+  scientific_name: Passeriformes
+  english_name: Perching birds
+  swedish_name: Tättingar

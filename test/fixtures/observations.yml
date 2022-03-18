@@ -1,0 +1,20 @@
+blue_tit_observation:
+  id: 1
+  bird_id: 351
+  user_id: 1
+great_tit_observation:
+  id: 2
+  bird_id: 353
+  user_id: 1
+white_throated_sparrow_observation:
+  id: 3
+  bird_id: 539
+  user_id: 1
+red_breasted_observation:
+  id: 4
+  bird_id: 2
+  user_id: 1
+crested_tit_observation:
+  id: 5
+  bird_id: 347
+  user_id: 1
