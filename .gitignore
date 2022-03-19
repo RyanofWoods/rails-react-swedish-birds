@@ -40,3 +40,4 @@ package-lock.json
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+test/reports
