@@ -28,6 +28,18 @@ jobs:
           key: bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - restore_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: Yarn Install
+          command: |
+            yarn install --cache-folder ~/.cache/yarn
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - ~/.cache
+
       - run: |
           bundle exec rake db:create
           bundle exec rake db:schema:load
