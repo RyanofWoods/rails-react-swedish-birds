@@ -16,6 +16,7 @@ jobs:
           POSTGRES_DB: swedish-birds_test
 
     steps:
+      - run: .circleci/bin/halt-for-documentation-only-changes.sh && circleci step halt || true
       - checkout
       - restore_cache:
           key: bundle-{{ checksum "Gemfile.lock" }}
