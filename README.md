@@ -1,1 +1,14 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Test
+==
+Run Minitest tests:
+--
+```sh
+rails test
+```
+
+See Coverage:
+--
+Run the tests and then:
+```sh
+open coverage/index.html
+```
