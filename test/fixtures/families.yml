@@ -4,6 +4,18 @@ ducks_geese_swans:
   english_name: Ducks, Geese and Swans
   swedish_name: Änder
   order_id: 1
+owls:
+  id: 36
+  scientific_name: Strigidae
+  english_name: Owls
+  swedish_name: Ugglor
+  order_id: 19
+woodpeckers:
+  id: 41
+  scientific_name: Picidae
+  english_name: Woodpeckers
+  swedish_name: Hackspettar
+  order_id: 22
 tits:
   id: 47
   scientific_name: Paridae
@@ -15,6 +27,12 @@ bush_tits:
   scientific_name: Aegithalidae
   english_name: Bushtits
   swedish_name: Stjärtmesar
+  order_id: 24
+sparrows:
+  id: 67
+  scientific_name: Passeridae
+  english_name: Old World Sparrows
+  swedish_name: Sparvfinkar
   order_id: 24
 new_world_sparrows:
   id: 73
