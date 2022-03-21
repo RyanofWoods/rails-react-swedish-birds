@@ -1,0 +1,20 @@
+waterfowl:
+  id: 1
+  scientific_name: Anseriformes
+  english_name: Waterfowl
+  swedish_name: Andfåglar
+owls:
+  id: 19
+  scientific_name: Strigiformes
+  english_name: Owls
+  swedish_name: Ugglefåglar
+woodpeckers_and_alies:
+  id: 22
+  scientific_name: Piciformes
+  english_name: Woodpeckers and allies
+  swedish_name: Hackspettartade fåglar
+perching_birds:
+  id: 24
+  scientific_name: Passeriformes
+  english_name: Perching birds
+  swedish_name: Tättingar

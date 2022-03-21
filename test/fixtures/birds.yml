@@ -1,0 +1,104 @@
+red_breasted_goose:
+  id: 2
+  scientific_name: Branta ruficollis
+  english_name: Red-breasted Goose
+  swedish_name: Rödhalsad Gås
+  family_id: 1
+  details: T**
+  population_category: 7
+greylag_goose:
+  id: 7
+  scientific_name: Anser anser
+  english_name: Greylag Goose
+  swedish_name: Grågås
+  family_id: 1
+  details: Hf 3
+  population_category: 3
+pygmy_owl:
+  id: 295
+  scientific_name: Glaucidium passerinum
+  english_name: Eurasian Pygmy Owl
+  swedish_name: Sparvuggla
+  family_id: 36
+  details: Hs 4
+  population_category: 4
+great_spotted_woodpecker:
+  id: 309
+  scientific_name: Dendrocopos major
+  english_name: Great Spotted Woodpecker
+  swedish_name: Större Hackspett
+  family_id: 41
+  details: Hs 2-3
+  population_category: 3
+white_backed_woodpecker:
+  id: 310
+  scientific_name: Dendrocopos leucotos
+  english_name: White-backed Woodpecker
+  swedish_name: Vitryggig Hackspett
+  family_id: 41
+  details: Hs 5
+  population_category: 5
+european_crested_tit:
+  id: 347
+  scientific_name: Lophophanes cristatus
+  english_name: European Crested Tit
+  swedish_name: Tofsmes
+  family_id: 47
+  details: Hf 3
+  population_category: 3
+blue_tit:
+  id: 351
+  scientific_name: Cyanistes caeruleus
+  english_name: Eurasian Blue Tit
+  swedish_name: Blåmes
+  family_id: 47
+  details: Hs (f) 2
+  population_category: 2
+azure_tit:
+  id: 352
+  scientific_name: Cyanistes cyanus
+  english_name: Azure Tit
+  swedish_name: Azurmes
+  family_id: 47
+  details: T***
+  population_category: 8
+great_tit:
+  id: 353
+  scientific_name: Parus major
+  english_name: Great Tit
+  swedish_name: Talgoxe
+  family_id: 47
+  details: Hs (f) 1
+  population_category: 1
+long_tailed_tit:
+  id: 373
+  scientific_name: Aegithalos caudatus
+  english_name: Long-tailed Tit
+  swedish_name: Stjärtmes
+  family_id: 53
+  details: Hs (f) 3
+  population_category: 3
+house_sparrow:
+  id: 475
+  scientific_name: Passer domesticus
+  english_name: House Sparrow
+  swedish_name: Gråsparv
+  family_id: 67
+  details: Hs 2
+  population_category: 2
+tree_sparrow:
+  id: 477
+  scientific_name: Passer montanus
+  english_name: Eurasian Tree Sparrow
+  swedish_name: Pilfink
+  family_id: 67
+  details: Hs 2
+  population_category: 2
+white_throated_sparrow:
+  id: 539
+  scientific_name: Zonotrichia albicollis
+  english_name: White-throated Sparrow
+  swedish_name: Vitstrupig Sparv
+  family_id: 73
+  details: T***
+  population_category: 8
