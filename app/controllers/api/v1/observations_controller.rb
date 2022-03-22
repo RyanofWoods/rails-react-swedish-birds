@@ -1,6 +1,6 @@
 class Api::V1::ObservationsController < Api::V1::BaseController
   before_action :set_bird, only: [:create]
-  after_action :verify_authorized, only: [:index, :create]
+  after_action :verify_authorized, only: [:index]
 
   def index
     throw_error unless user_signed_in?
@@ -11,9 +11,7 @@ class Api::V1::ObservationsController < Api::V1::BaseController
   end
 
   def create
-    throw_error unless user_signed_in? && @bird
-
-    authorize @bird, policy_class: ObservationPolicy
+    return throw_error unless @bird
 
     if Observation.create(bird: @bird, user: current_user)
       render json: {
