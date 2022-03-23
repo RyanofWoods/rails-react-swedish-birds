@@ -11,7 +11,7 @@ const DetailsModal = ({ close }) => {
 
   return (
     <Modal title="Detail shorthand" close={close}>
-      <div className="detailsModalContent">
+      <div className="detailsModalContent modal-body">
         <p><em>Information is regarding to Sweden</em></p>
 
         <div className="contentGroup">
