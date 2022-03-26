@@ -21,11 +21,17 @@ class Bird extends Component {
     this.toggleSeenModal = this.toggleSeenModal.bind(this);
     this.toggleDetailsModal = this.toggleDetailsModal.bind(this);
     this.handleMarkSeen = this.handleMarkSeen.bind(this);
+    this.handleConfirm = this.handleConfirm.bind(this);
   }
 
   handleMarkSeen() {
     this.props.markSeen(this.props.scientific_name);
     this.props.setFlashMessage('Bird marked as seen!');
+  }
+
+  handleConfirm() {
+    this.handleMarkSeen();
+    this.toggleSeenModal();
   }
 
   toggleDetailsModal() {
@@ -62,8 +68,18 @@ class Bird extends Component {
 
         {
           this.state.showSeenModal && (
-            <Modal title="Confirm sighting" confirmButtonText="Confirm" close={this.toggleSeenModal} action={this.handleMarkSeen}>
-              <p>Are you sure you want to mark this bird as seen? This cannot be reversed.</p>
+            <Modal title="Confirm sighting" close={this.toggleSeenModal}>
+              <div className="modal-body">
+                <p>Are you sure you want to mark this bird as seen? This cannot be reversed.</p>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-primary hover-pointer" onClick={this.handleConfirm}>
+                  Confirm
+                </button>
+                <button type="button" className="btn btn-dark hover-pointer" onClick={this.toggleSeenModal}>
+                  Close
+                </button>
+              </div>
             </Modal>
           )
         }
