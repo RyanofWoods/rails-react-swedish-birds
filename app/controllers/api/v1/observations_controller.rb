@@ -13,12 +13,16 @@ class Api::V1::ObservationsController < Api::V1::BaseController
   def create
     return throw_error unless @bird
 
-    if Observation.create(bird: @bird, user: current_user)
+    observation = Observation.new(bird: @bird, user: current_user, note: observation_params[:note])
+
+    if observation.save
       render json: {
                     bird_scientific_name: @bird.scientific_name,
                     bird_order_scientific_name: @bird.family.order.scientific_name,
                     bird_family_scientific_name: @bird.family.scientific_name,
-                    seen: true }
+                    note: observation.note,
+                    seen: true
+                  }
     else
       throw_error
     end
@@ -32,5 +36,9 @@ class Api::V1::ObservationsController < Api::V1::BaseController
 
   def set_bird
     @bird = Bird.find_by(scientific_name: params[:bird_id].capitalize)
+  end
+
+  def observation_params
+    params.permit(:note)
   end
 end
