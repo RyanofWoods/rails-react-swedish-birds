@@ -19,12 +19,24 @@ class Api::V1::ObservationControllerTest < ActionDispatch::IntegrationTest
 
   test 'POST #create successfully creates an observation for the logged in user' do
     sign_in @user
+    note = 'First observation notes'
+
+    assert_difference('@user.observations.count', 1) do
+      post api_v1_bird_observations_url(@bird_id, params: { note: note })
+    end
+    assert_response :success
+    expected = { 'bird_scientific_name'=> 'Neo', 'bird_order_scientific_name'=> 'Passeriformes', 'bird_family_scientific_name'=> 'Paridae', 'note'=>note, 'seen'=> true }
+    assert_equal(expected, json_response)
+  end
+
+  test 'POST #create successfully creates an observation even without a given note' do
+    sign_in @user
 
     assert_difference('@user.observations.count', 1) do
       post api_v1_bird_observations_url(@bird_id)
     end
     assert_response :success
-    expected = { 'bird_scientific_name'=> 'Neo', 'bird_order_scientific_name'=> 'Passeriformes', 'bird_family_scientific_name'=> 'Paridae', 'seen'=> true }
+    expected = { 'bird_scientific_name'=> 'Neo', 'bird_order_scientific_name'=> 'Passeriformes', 'bird_family_scientific_name'=> 'Paridae', 'note'=>nil, 'seen'=> true }
     assert_equal(expected, json_response)
   end
 
