@@ -14,32 +14,60 @@ class Bird extends Component {
   constructor(props) {
     super(props);
 
+    this.today = new Date().toLocaleDateString('en-CA');
+
     this.state = {
       showSeenModal: false,
       showDetailsModal: false,
+      dateUnknown: false,
+      observedAt: this.today,
+      note: '',
     };
+
     this.toggleSeenModal = this.toggleSeenModal.bind(this);
     this.toggleDetailsModal = this.toggleDetailsModal.bind(this);
     this.handleMarkSeen = this.handleMarkSeen.bind(this);
     this.handleConfirm = this.handleConfirm.bind(this);
+    this.handleDateUnknown = this.handleDateUnknown.bind(this);
+    this.handleDatePicked = this.handleDatePicked.bind(this);
+    this.handleNoteChanged = this.handleNoteChanged.bind(this);
   }
 
   handleMarkSeen() {
-    this.props.markSeen(this.props.scientific_name);
-    this.props.setFlashMessage('Bird marked as seen!');
+    const observationDate = this.state.observedAt === '' ? 0 : this.state.observedAt;
+    this.props.markSeen({
+      birdScientificName: this.props.scientific_name,
+      note: this.state.note,
+      observedAt: observationDate,
+    });
+    this.props.setFlashMessage('Bird marked as observed!');
   }
 
-  handleConfirm() {
+  handleConfirm(event) {
+    event.preventDefault();
     this.handleMarkSeen();
     this.toggleSeenModal();
   }
 
-  toggleDetailsModal() {
-    this.setState((prevState) => ({ showDetailsModal: !prevState.showDetailsModal }));
+  handleDateUnknown() {
+    this.setState((prevState) => ({ dateUnknown: !prevState.dateUnknown }));
+    this.setState({ observedAt: '' });
+  }
+
+  handleDatePicked(event) {
+    this.setState({ observedAt: event.target.value });
+  }
+
+  handleNoteChanged(event) {
+    this.setState({ note: event.target.value });
   }
 
   toggleSeenModal() {
     this.setState((prevState) => ({ showSeenModal: !prevState.showSeenModal }));
+  }
+
+  toggleDetailsModal() {
+    this.setState((prevState) => ({ showDetailsModal: !prevState.showDetailsModal }));
   }
 
   render() {
@@ -68,18 +96,36 @@ class Bird extends Component {
 
         {
           this.state.showSeenModal && (
-            <Modal title="Confirm sighting" close={this.toggleSeenModal}>
-              <div className="modal-body">
-                <p>Are you sure you want to mark this bird as seen? This cannot be reversed.</p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-primary hover-pointer" onClick={this.handleConfirm}>
-                  Confirm
-                </button>
-                <button type="button" className="btn btn-dark hover-pointer" onClick={this.toggleSeenModal}>
-                  Close
-                </button>
-              </div>
+            <Modal title="Confirm observation" close={this.toggleSeenModal}>
+              <form onSubmit={this.handleConfirm}>
+                <div className="modal-body">
+                  <p>
+                    Are you sure you want to mark this bird as observed? This cannot be reversed.
+                  </p>
+                  <div className="d-flex align-items-end">
+                    <div className="form-group">
+                      <label>Date of observation</label>
+                      <input type="date" className="form-control" value={this.state.observedAt} max={this.today} disabled={this.state.dateUnknown} onChange={this.handleDatePicked} />
+                    </div>
+                    <div className="form-check" id="date-unknown">
+                      <input type="checkbox" className="form-check-input checkbox-input" onClick={this.handleDateUnknown} style={{ backgroundColor: 'white' }} />
+                      <label className="form-check-label" style={{ lineHeight: '1.2rem' }}>I don&#39;t know</label>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label>Note</label>
+                    <textarea onChange={this.handleNoteChanged} className="form-control" placeholder="Add a note about your observation..." />
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button type="submit" className="btn btn-primary hover-pointer">
+                    Confirm
+                  </button>
+                  <button type="button" className="btn btn-dark hover-pointer" onClick={this.toggleSeenModal}>
+                    Close
+                  </button>
+                </div>
+              </form>
             </Modal>
           )
         }

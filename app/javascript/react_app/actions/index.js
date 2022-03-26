@@ -42,7 +42,7 @@ export function fetchGroup(groupedBy, groupName, populationThreshold = 9) {
   };
 }
 
-export function markSeen(birdScientificName) {
+export function markSeen({ birdScientificName, note, observedAt }) {
   const url = `${BASE_URL}/birds/${birdScientificName}/observations`;
   const csrfToken = document.querySelector('meta[name="csrf-token"]').attributes.content.value;
 
@@ -54,6 +54,7 @@ export function markSeen(birdScientificName) {
         'Content-Type': 'application/json',
         'X-CSRF-Token': csrfToken,
       },
+      body: JSON.stringify({ birdScientificName, note, observed_at: observedAt }),
       credentials: 'same-origin',
     }).then((r) => r.json());
 
