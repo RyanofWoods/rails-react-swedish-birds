@@ -13,7 +13,7 @@ class Api::V1::ObservationsController < Api::V1::BaseController
   def create
     return throw_error unless @bird
 
-    observation = Observation.new(bird: @bird, user: current_user, note: observation_params[:note])
+    observation = Observation.new(bird: @bird, user: current_user, note: observation_params[:note], observed_at: observation_params[:observed_at])
 
     if observation.save
       render json: {
@@ -21,17 +21,18 @@ class Api::V1::ObservationsController < Api::V1::BaseController
                     bird_order_scientific_name: @bird.family.order.scientific_name,
                     bird_family_scientific_name: @bird.family.scientific_name,
                     note: observation.note,
+                    observed_at: observation.observed_at,
                     seen: true
                   }
     else
-      throw_error
+      throw_error(error: observation.errors.full_messages.join)
     end
   end
 
   private
 
-  def throw_error
-    render json: { error: "Bad request" }, status: :bad_request
+  def throw_error(error: 'Bad request')
+    render json: { error: error }, status: :bad_request
   end
 
   def set_bird
@@ -39,6 +40,6 @@ class Api::V1::ObservationsController < Api::V1::BaseController
   end
 
   def observation_params
-    params.permit(:note)
+    params.permit(:note, :observed_at)
   end
 end
