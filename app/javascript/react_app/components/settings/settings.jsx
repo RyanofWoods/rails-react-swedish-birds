@@ -35,7 +35,7 @@ class Settings extends Component {
 
   render() {
     const {
-      groupBy, seenConfirmation, language, populationThreshold,
+      groupBy, language, populationThreshold,
     } = this.state.settings;
 
     const populationText = () => {
@@ -76,13 +76,6 @@ class Settings extends Component {
             <option value="se">Swedish</option>
             <option value="both">Both</option>
           </select>
-        </div>
-
-        <div className="form-group">
-          <div className="form-check">
-            <input className="form-check-input checkbox-input" type="checkbox" checked={seenConfirmation} value={seenConfirmation} onChange={(event) => this.settingsChange('seenConfirmation', event.target.checked)} />
-            <label className="form-check-label">Ask for confirmation when marking a bird as seen? </label>
-          </div>
         </div>
 
         <div className="form-group">
