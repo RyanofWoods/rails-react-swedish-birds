@@ -1,5 +1,5 @@
 class Observation < ApplicationRecord
-  validates :bird, uniqueness: [scope: :user, message: 'User can only add an observation for a bird species once.']
+  validates :bird, uniqueness: { scope: :user, message: 'can only have one observation per user.' }
   validates :observed_at, presence: { message: 'must be a Date or zero.' }
 
   belongs_to :bird
