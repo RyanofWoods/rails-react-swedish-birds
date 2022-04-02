@@ -7,5 +7,13 @@ json.group_swedish_name @group_swedish_name
 
 json.birds @birds do |bird|
   json.extract! bird, :scientific_name, :english_name, :swedish_name, :details
-  json.seen current_user.seen_bird?(bird)
+
+  observation = @observations.find_by(bird: bird)
+  json.seen observation.present?
+
+  if observation.present?
+    json.observation do
+      json.extract! observation, :observed_at, :note
+    end
+  end
 end
