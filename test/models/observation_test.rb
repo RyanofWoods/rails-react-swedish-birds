@@ -3,7 +3,26 @@ require 'test_helper'
 class ObservationTest < ActiveSupport::TestCase
   setup do
     @user = users(:ryan)
+    @other_user = users(:sara)
     @bird = birds(:azure_tit)
+    @valid_attributes = { bird: @bird, note: 'note', observed_at: '26/03/2022' }
+  end
+
+  test 'a user cannot have two observations for one bird' do
+    observation = @user.observations.new(@valid_attributes)
+    assert_equal(true, observation.save)
+
+    observation = @user.observations.new(@valid_attributes)
+    assert_equal(false, observation.save)
+    assert_includes(observation.errors.full_messages, 'Bird can only have one observation per user.')
+  end
+
+  test 'users can each have an observation for the same bird.' do
+    observation = @user.observations.new(@valid_attributes)
+    assert_equal(true, observation.save)
+
+    other_observation = @other_user.observations.new(@valid_attributes)
+    assert_equal(true, other_observation.save)
   end
 
   test 'cannot be saved without observed_at' do
