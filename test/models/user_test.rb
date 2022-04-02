@@ -1,50 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test '#family_birds_seen_count is correct with no given population threshold' do
-    user = users(:ryan)
-    tit_family = families(:tits)
-
-    expected = user_family_observations(user, family: tit_family).count
-    actual = user.family_birds_seen_count(tit_family)
-
-    assert_equal(expected, actual)
-  end
-
-  test '#family_birds_seen_count is correct with a given population threshold' do
-    user = users(:ryan)
-    tit_family = families(:tits)
-
-    population_one_count = user_family_observations(user, family: tit_family, population_category: 1).count
-    population_two_count = user_family_observations(user, family: tit_family, population_category: 2).count
-    expected = population_one_count + population_two_count
-    actual = user.family_birds_seen_count(tit_family, 2)
-
-    assert_equal(expected, actual)
-  end
-
-  test '#order_birds_seen_count is correct with no given population threshold' do
-    user = users(:ryan)
-    perching_birds_order = orders(:perching_birds)
-
-    expected = user_order_observations(user, order: perching_birds_order).count
-    actual = user.order_birds_seen_count(perching_birds_order)
-
-    assert_equal(expected, actual)
-  end
-
-  test '#order_birds_seen_count is correct with a given population threshold' do
-    user = users(:ryan)
-    perching_birds_order = orders(:perching_birds)
-
-    population_one_count = user_order_observations(user, order: perching_birds_order, population_category: 1).count
-    population_two_count = user_order_observations(user, order: perching_birds_order, population_category: 2).count
-    expected = population_one_count + population_two_count
-    actual = user.order_birds_seen_count(perching_birds_order, 2)
-
-    assert_equal(expected, actual)
-  end
-
   test '#seen_bird? returns true when the user has an observation for the given bird' do
     bird = birds(:blue_tit)
     user = users(:ryan)

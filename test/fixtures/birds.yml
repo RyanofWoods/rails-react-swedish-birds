@@ -30,6 +30,14 @@ great_spotted_woodpecker:
   family_id: 41
   details: Hs 2-3
   population_category: 3
+green_woodpecker:
+  id: 312
+  scientific_name: Picus viridis
+  english_name: European Green Woodpecker
+  swedish_name: Gröngöling
+  family_id: 41
+  details: Hs 3
+  population_category: 3
 white_backed_woodpecker:
   id: 310
   scientific_name: Dendrocopos leucotos
