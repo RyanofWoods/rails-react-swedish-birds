@@ -1,20 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test '#seen_bird? returns true when the user has an observation for the given bird' do
-    bird = birds(:blue_tit)
-    user = users(:ryan)
-
-    assert(user.seen_bird?(bird))
-  end
-
-  test '#seen_bird? returns false when the user does not have an observation for the given bird' do
-    bird = birds(:azure_tit)
-    user = users(:ryan)
-
-    refute(user.seen_bird?(bird))
-  end
-
   test '#groups_data returns correctly for a collection of Families' do
     user = users(:ryan)
     families = Family.where(id: [1, 47])

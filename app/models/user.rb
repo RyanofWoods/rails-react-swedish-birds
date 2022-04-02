@@ -53,12 +53,4 @@ class User < ApplicationRecord
       groups: groups
     }
   end
-
-  def seen_bird?(bird)
-    if Observation.find_by(user: self, bird: bird)
-      true
-    else
-      false
-    end
-  end
 end

@@ -29,14 +29,22 @@ class Api::V1::OrdersControllerTest < ActionDispatch::IntegrationTest
           'english_name'=> birds(:great_spotted_woodpecker).english_name,
           'swedish_name'=> birds(:great_spotted_woodpecker).swedish_name,
           'details'=> birds(:great_spotted_woodpecker).details,
-          'seen'=> true
+          'seen'=> true,
+          'observation'=> {
+            'observed_at'=> '2022-01-01',
+            'note'=> 'note'
+          }
         },
         {
           'scientific_name'=> birds(:green_woodpecker).scientific_name,
           'english_name'=> birds(:green_woodpecker).english_name,
           'swedish_name'=> birds(:green_woodpecker).swedish_name,
           'details'=>  birds(:green_woodpecker).details,
-          'seen'=> true
+          'seen'=> true,
+          'observation'=> {
+            'observed_at'=> '2022-01-01',
+            'note'=> nil
+          }
         },
         {
           'scientific_name'=> birds(:white_backed_woodpecker).scientific_name,
