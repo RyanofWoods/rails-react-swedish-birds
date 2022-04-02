@@ -1,6 +1,5 @@
 class Api::V1::GroupsController < Api::V1::BaseController
   before_action :set_group, only: [:show]
-  after_action :verify_authorized, only: [:index]
 
   def show
     return unless @group && user_signed_in?
@@ -24,8 +23,7 @@ class Api::V1::GroupsController < Api::V1::BaseController
 
     pop_cat = params[:population_category_at_least].to_i if params[:population_category_at_least]
 
-    raw_data = authorize current_user.groups_data(groups, pop_cat),
-                         policy_class: GroupPolicy
+    raw_data = current_user.groups_data(groups, pop_cat)
 
     render json: raw_data
   end
