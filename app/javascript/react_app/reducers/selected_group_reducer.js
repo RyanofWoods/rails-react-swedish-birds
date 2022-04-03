@@ -8,12 +8,15 @@ const selectedGroupReducer = (state, action) => {
     };
   }
 
-  const updatedState = (name, seen) => {
+  const updatedState = (name, seen, observed_at, note) => {
     const stateCopy = { ...state };
 
     const birdIndex = stateCopy.birds.findIndex((elem) => elem.scientific_name === name);
-
     stateCopy.birds[birdIndex].seen = seen;
+    stateCopy.birds[birdIndex].observation = {
+      observed_at,
+      note,
+    };
     stateCopy.total_seen += 1;
 
     return stateCopy;
@@ -61,6 +64,8 @@ const selectedGroupReducer = (state, action) => {
       return updatedState(
         action.payload.bird_scientific_name,
         action.payload.seen,
+        action.payload.observed_at,
+        action.payload.note,
       );
     case SORT_BIRDS:
       const result = handleSortHeaderClick({
