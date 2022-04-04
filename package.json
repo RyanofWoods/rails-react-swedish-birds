@@ -26,17 +26,16 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
     "@webpack-cli/serve": "^1.6.1",
-    "eslint": "^7.26.0",
-    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "ts-standard": "^11.0.0",
     "typescript": "^4.6.3",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.3.0"
   },
   "scripts": {
-    "lint": "eslint app/**/*.js app/**/*.jsx"
+    "lint": "ts-standard app"
   }
 }
