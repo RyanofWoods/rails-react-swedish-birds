@@ -42,6 +42,6 @@
     "webpack-dev-server": "^4.3.0"
   },
   "scripts": {
-    "lint": "ts-standard app"
+    "lint": "ts-standard app/javascript/beta_app"
   }
 }
