@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/beta', to: 'pages#beta'
   root to: 'pages#home'
   get '/*path', to: 'pages#home'
 end
