@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get '/groups', to: 'groups#index'
@@ -14,6 +14,10 @@ Rails.application.routes.draw do
       resources :birds, only: [] do
         resources :observations, only: [:create]
       end
+    end
+
+    namespace :beta do
+      resources :birds, only: :index
     end
   end
 
