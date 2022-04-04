@@ -1,7 +1,27 @@
 import React from 'react';
 import Modal from './modal';
 
-const DetailsModal = ({ close }) => {
+const DetailsModal = ({ close, observation, seen }) => {
+  const observationDetails = () => {
+    const { note, observed_at: observedAt } = observation;
+    const dateText = (observedAt === null) ? 'Date unknown' : observedAt;
+    const noteText = (note === null) ? 'No note added' : note;
+
+    const info = ({ headerText, paragraphText }) => (
+      <>
+        <h4 style={{ color: 'black', fontSize: '1.3rem' }} className="mt-4">{headerText}</h4>
+        <p>{paragraphText}</p>
+      </>
+    );
+
+    return (
+      <>
+        {info({ headerText: 'Observation date', paragraphText: dateText })}
+        {info({ headerText: 'Note', paragraphText: noteText })}
+      </>
+    );
+  };
+
   const t = (strings, isKeyBold) => (
     <div className="detailsModalItem">
       <p className={isKeyBold && 'font-weight-bold'}>{strings[0]}</p>
@@ -10,7 +30,7 @@ const DetailsModal = ({ close }) => {
   );
 
   return (
-    <Modal title="Detail shorthand" close={close}>
+    <Modal title="Details" close={close}>
       <div className="detailsModalContent modal-body">
         <p><em>Information is regarding to Sweden</em></p>
 
@@ -44,6 +64,8 @@ const DetailsModal = ({ close }) => {
           {t(['****', 'Seen once/few times ever'])}
           {t(['[]', 'No wild finds. Escaped from captivity'])}
         </div>
+
+        {seen && observationDetails()}
       </div>
     </Modal>
   );

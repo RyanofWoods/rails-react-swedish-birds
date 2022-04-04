@@ -48,7 +48,7 @@ const Bird = (props) => {
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} />
+          <DetailsModal close={toggleDetailsModal} {...props} />
         )
       }
     </li>
