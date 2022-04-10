@@ -6,8 +6,10 @@ import { logger } from 'redux-logger'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './components/app'
+import birdSlice from './features/birdSlice'
 
 const reducer = {
+  birdsData: birdSlice.reducer
 }
 
 const store = configureStore({
