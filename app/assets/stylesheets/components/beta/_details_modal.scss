@@ -1,0 +1,33 @@
+.population-bars-container {
+  display: flex;
+  margin-bottom: 1rem;
+  p {
+    margin-left: 16px;
+  }
+}
+
+.date {
+  border: 1px solid #70997B;
+  font-size: 16px;
+  line-height: 1;
+  color: #70997B !important;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background-color: #EFF4F1;
+  width: fit-content;
+  margin-right: 8px !important;
+}
+
+.house-bg-breeding {
+ fill: #F5E9DE;
+}
+.house-bg-occasional {
+ fill: #E4F6FF;
+}
+
+.house-breeding {
+ fill: #DA7C2B;
+}
+.house-occasional {
+ fill: #5AC6FF;
+}

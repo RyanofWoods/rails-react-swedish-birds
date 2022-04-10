@@ -1,0 +1,35 @@
+$dark-brown: #484444;
+$orange: #F5E9DE;
+$blue: #E4F6FF;
+$white: white;
+
+.population-tooltip-container {
+  border: 1px solid $dark-brown;
+  border-radius: 8px;
+  width: 200px;
+  background-color: $white;
+  position: absolute;
+  z-index: 5;
+  right: 100px;
+
+  .population-tooltip-header-container {
+    padding: 0.5rem;
+    border-bottom: 1px solid $dark-brown;
+    border-radius: 8px 8px 0 0;
+    &.tooltip-blue {
+      background-color: $blue;
+    }
+    &.tooltip-orange {
+      background-color: $orange;
+    }
+  }
+  .population-tooltip-header {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0;
+    font-style: $body-font;
+  }
+  .population-bars-container > p {
+    font-size: 10px;
+  }
+}

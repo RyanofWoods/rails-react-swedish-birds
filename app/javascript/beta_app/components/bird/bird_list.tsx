@@ -7,7 +7,7 @@ const BirdList: React.FC = () => {
   const birds = useAppSelector(state => state.birdsData.filteredBirds)
 
   return (
-    <ul className='list-group'>
+    <ul className='bird-list'>
       {
         birds.map((birdData) => (
           <Bird key={birdData.scientificName} bird={birdData} />
