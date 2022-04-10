@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { fetchBirds } from '../api'
 import { useAppDispatch } from '../hooks'
+import BirdList from './bird/bird_list'
 
 import Navbar from './shared/navbar'
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
   return (
     <>
       {ReactDOM.createPortal(<Navbar />, navbarContainer)}
+      <BirdList />
     </>
   )
 }
