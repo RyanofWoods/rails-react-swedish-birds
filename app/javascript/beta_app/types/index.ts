@@ -23,7 +23,7 @@ interface Observation {
   note: string | null
 }
 
-interface BirdWithObservation extends Bird {
+export interface BirdWithObservation extends Bird {
   seen: true
   observation: Observation
 }
