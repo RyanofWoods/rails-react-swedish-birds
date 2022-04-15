@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     end
 
     namespace :beta do
-      resources :birds, only: :index
+      resources :birds, only: :index do
+        resources :observations, only: [:create]
+      end
     end
   end
 
