@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     end
 
     namespace :beta do
+      get '/search', to: 'search#index'
+
       resources :birds, only: :index do
         resources :observations, only: [:create]
       end
