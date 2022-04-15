@@ -4,10 +4,14 @@ export interface State {
 
 type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
+export type ScientificName = string
+type EnglishName = string
+type SwedishName = string
+
 interface Bird {
-  scientificName: string
-  englishName: string
-  swedishName: string
+  scientificName: ScientificName
+  englishName: EnglishName
+  swedishName: SwedishName
   details: string
   populationCategory: PopulationCategory
 }
