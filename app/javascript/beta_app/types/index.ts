@@ -4,14 +4,14 @@ export interface State {
 
 type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
-export type ScientificName = string
-type EnglishName = string
-type SwedishName = string
+export type BirdScientificName = string
+type BirdEnglishName = string
+type BirdSwedishName = string
 
 interface Bird {
-  scientificName: ScientificName
-  englishName: EnglishName
-  swedishName: SwedishName
+  scientificName: BirdScientificName
+  englishName: BirdEnglishName
+  swedishName: BirdSwedishName
   details: string
   populationCategory: PopulationCategory
 }
@@ -19,7 +19,7 @@ interface Bird {
 export type BirdWithOrWithoutObservation = BirdWithObservation | BirdWithoutObservation
 
 interface Observation {
-  observedAt: string
+  observedAt: string | null
   note: string | null
 }
 
