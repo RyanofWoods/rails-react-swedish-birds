@@ -53,6 +53,8 @@ class Api::Beta::ObservationControllerTest < ActionDispatch::IntegrationTest
       "scientificName"=>"Neo",
       "englishName"=>"New",
       "swedishName"=>"Ny",
+      "familyScientificName"=>"Paridae",
+      "orderScientificName"=>"Passeriformes",
       "seen"=>true,
       "observation"=> {
         'note'=>note,
@@ -76,6 +78,8 @@ class Api::Beta::ObservationControllerTest < ActionDispatch::IntegrationTest
       "scientificName"=>"Neo",
       "englishName"=>"New",
       "swedishName"=>"Ny",
+      "familyScientificName"=>"Paridae",
+      "orderScientificName"=>"Passeriformes",
       "seen"=>true,
       "observation"=> {
         'note'=>nil,
