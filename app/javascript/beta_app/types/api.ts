@@ -11,3 +11,7 @@ export interface createObservationRequest {
 }
 
 export interface createObservationResponse extends BirdWithObservation {}
+
+export interface searchBirdsResponse {
+  birds: BirdScientificName[]
+}
