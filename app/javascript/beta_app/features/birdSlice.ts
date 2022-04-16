@@ -16,8 +16,11 @@ export const birdSlice = createSlice({
       state.birds = payload.birds
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
-      const birdToUpdateIndex = state.birds.findIndex(bird => bird.scientificName === payload.scientificName)
-      state.birds[birdToUpdateIndex] = payload
+      const updateBirds = (birds: BirdWithOrWithoutObservation[]): void => {
+        const birdToUpdateIndex = birds.findIndex(bird => bird.scientificName === payload.scientificName)
+        birds[birdToUpdateIndex] = payload
+      }
+      updateBirds(state.birds)
     })
   }
 })
