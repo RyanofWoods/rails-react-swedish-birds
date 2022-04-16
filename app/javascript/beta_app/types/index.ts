@@ -1,5 +1,6 @@
 export interface State {
   birds: BirdWithOrWithoutObservation[]
+  filters: BirdFilters
 }
 
 type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9

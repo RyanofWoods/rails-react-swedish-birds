@@ -4,7 +4,13 @@ import { fetchBirds, createObservation } from '../api'
 import { State } from '../types'
 
 const initialState: State = {
-  birds: []
+  birds: [],
+  filters: {
+    searchScope: [],
+    seenScope: 'all',
+    orderScientificName: null,
+    familyScientificName: null
+  }
 }
 
 export const birdSlice = createSlice({
