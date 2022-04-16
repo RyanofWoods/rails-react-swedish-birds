@@ -19,7 +19,7 @@ interface Bird {
 export type BirdWithOrWithoutObservation = BirdWithObservation | BirdWithoutObservation
 
 interface Observation {
-  observedAt: string
+  observedAt: string | null
   note: string | null
 }
 
