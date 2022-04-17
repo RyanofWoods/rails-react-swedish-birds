@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 import { fetchBirds, createObservation } from '../api'
+import filterBirds from '../helpers/filter_birds'
 import { BirdWithOrWithoutObservation, State } from '../types'
 
 const initialState: State = {
@@ -21,7 +22,7 @@ export const birdSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
       state.birds = payload.birds
-      state.filteredBirds = state.birds
+      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
       const updateBirds = (birds: BirdWithOrWithoutObservation[]): void => {
