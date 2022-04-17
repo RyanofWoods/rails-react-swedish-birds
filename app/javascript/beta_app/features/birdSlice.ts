@@ -9,8 +9,8 @@ const initialState: State = {
   filters: {
     searchScope: [],
     seenScope: 'all',
-    orderScientificName: null,
-    familyScientificName: null
+    orderScientificNameScope: null,
+    familyScientificNameScope: null
   }
 }
 

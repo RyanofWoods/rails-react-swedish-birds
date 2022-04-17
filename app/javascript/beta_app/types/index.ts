@@ -43,6 +43,6 @@ interface BirdWithoutObservation extends Bird {
 export interface BirdFilters {
   searchScope: BirdScientificName[]
   seenScope: 'all' | 'seen' | 'unseen'
-  orderScientificName: string | null
-  familyScientificName: string | null
+  orderScientificNameScope: string | null
+  familyScientificNameScope: string | null
 }
