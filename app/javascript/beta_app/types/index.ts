@@ -35,7 +35,7 @@ export interface BirdWithObservation extends Bird {
   observation: Observation
 }
 
-interface BirdWithoutObservation extends Bird {
+export interface BirdWithoutObservation extends Bird {
   seen: false
   observation: undefined
 }
