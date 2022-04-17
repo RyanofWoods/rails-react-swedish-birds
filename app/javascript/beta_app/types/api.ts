@@ -1,7 +1,15 @@
-import { BirdWithOrWithoutObservation, BirdWithObservation, BirdScientificName } from './index'
+import { BirdWithOrWithoutObservation, BirdWithObservation, BirdScientificName, Order, Family } from './index'
 
 export interface fetchBirdsResponse {
   birds: BirdWithOrWithoutObservation[]
+}
+
+export interface fetchFamiliesResponse {
+  families: Family[]
+}
+
+export interface fetchOrdersResponse {
+  orders: Order[]
 }
 
 export interface createObservationRequest {

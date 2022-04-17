@@ -1,5 +1,7 @@
 export interface State {
   birds: BirdWithOrWithoutObservation[]
+  families: Family[]
+  orders: Order[]
   filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
 }
@@ -10,15 +12,15 @@ export type BirdScientificName = string
 type BirdEnglishName = string
 type BirdSwedishName = string
 
-type familyScientificName = string
-type orderScientificName = string
+type FamilyScientificName = string
+type OrderScientificName = string
 
 interface Bird {
   scientificName: BirdScientificName
   englishName: BirdEnglishName
   swedishName: BirdSwedishName
-  familyScientificName: familyScientificName
-  orderScientificName: orderScientificName
+  familyScientificName: FamilyScientificName
+  orderScientificName: OrderScientificName
   details: string
   populationCategory: PopulationCategory
 }
@@ -45,4 +47,17 @@ export interface BirdFilters {
   seenScope: 'all' | 'seen' | 'unseen'
   orderScientificNameScope: string | null
   familyScientificNameScope: string | null
+}
+
+export interface Family {
+  scientificName: FamilyScientificName
+  englishName: string
+  swedishName: string
+  orderScientificName: OrderScientificName
+}
+
+export interface Order {
+  scientificName: OrderScientificName
+  englishName: string
+  swedishName: string
 }
