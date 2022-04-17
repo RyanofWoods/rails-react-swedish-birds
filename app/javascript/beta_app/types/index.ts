@@ -46,3 +46,9 @@ export interface BirdFilters {
   orderScientificNameScope: string | null
   familyScientificNameScope: string | null
 }
+
+export interface Order {
+  scientificName: OrderScientificName
+  englishName: string
+  swedishName: string
+}
