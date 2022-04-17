@@ -1,5 +1,6 @@
 export interface State {
   birds: BirdWithOrWithoutObservation[]
+  filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
 }
 
