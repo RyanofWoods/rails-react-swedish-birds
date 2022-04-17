@@ -48,6 +48,13 @@ export interface BirdFilters {
   familyScientificNameScope: string | null
 }
 
+export interface Family {
+  scientificName: FamilyScientificName
+  englishName: string
+  swedishName: string
+  orderScientificName: OrderScientificName
+}
+
 export interface Order {
   scientificName: OrderScientificName
   englishName: string
