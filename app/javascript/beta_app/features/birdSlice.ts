@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { fetchBirds, createObservation } from '../api'
+import { fetchBirds, createObservation, searchBirds } from '../api'
 import filterBirds from '../helpers/filter_birds'
 import { BirdFilters, BirdWithOrWithoutObservation, State } from '../types'
 
@@ -38,6 +38,10 @@ export const birdSlice = createSlice({
       }
       updateBirds(state.birds)
       updateBirds(state.filteredBirds)
+    })
+    builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
+      state.filters.searchScope = payload.birds
+      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
     })
   }
 })
