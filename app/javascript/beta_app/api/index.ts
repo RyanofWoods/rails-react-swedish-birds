@@ -18,7 +18,7 @@ export const createObservation = createAsyncThunk(
 export const searchBirds = createAsyncThunk(
   'birds/search',
   async (query: string) => {
-    const response = await client.post<searchBirdsResponse>(`/search?query=${query}`, query)
+    const response = await client.get<searchBirdsResponse>(`/search?query=${query}`)
     return response.result
   }
 )
