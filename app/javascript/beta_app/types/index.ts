@@ -10,15 +10,15 @@ export type BirdScientificName = string
 type BirdEnglishName = string
 type BirdSwedishName = string
 
-type familyScientificName = string
-type orderScientificName = string
+type FamilyScientificName = string
+type OrderScientificName = string
 
 interface Bird {
   scientificName: BirdScientificName
   englishName: BirdEnglishName
   swedishName: BirdSwedishName
-  familyScientificName: familyScientificName
-  orderScientificName: orderScientificName
+  familyScientificName: FamilyScientificName
+  orderScientificName: OrderScientificName
   details: string
   populationCategory: PopulationCategory
 }
