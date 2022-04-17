@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     namespace :beta do
       get '/search', to: 'search#index'
 
-      resources :orders, only: :index
+      resources :orders, :families, only: :index
 
       resources :birds, only: :index do
         resources :observations, only: [:create]
