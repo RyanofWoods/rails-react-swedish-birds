@@ -2,12 +2,17 @@ import React from 'react'
 
 const defaultValue = 'default'
 
+export interface Option {
+  value: string
+  text: string
+}
+
 interface SelectProps {
   label?: string
   id: string
   ariaLabel: string
   defaultText: string
-  options: Array<{ value: string, text: string }>
+  options: Option[]
   handleChange: (value: string | null) => void
 }
 
