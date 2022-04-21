@@ -12,8 +12,8 @@ export type BirdScientificName = string
 type BirdEnglishName = string
 type BirdSwedishName = string
 
-type FamilyScientificName = string
-type OrderScientificName = string
+export type FamilyScientificName = string
+export type OrderScientificName = string
 
 interface Bird {
   scientificName: BirdScientificName
