@@ -17,6 +17,8 @@ const FilterRadioButton = <T extends RadioValue>(props: FilterRadioButtonProps<T
     onChangeHandler(value)
   }
 
+  const isSelected = value === selectedRadio
+
   return (
     <div className='radio-item'>
       <input
@@ -25,7 +27,8 @@ const FilterRadioButton = <T extends RadioValue>(props: FilterRadioButtonProps<T
         type='radio'
         role='radio'
         name={name}
-        aria-checked={value === selectedRadio}
+        checked={isSelected}
+        aria-checked={isSelected}
         onChange={onRadioChange}
       />
       <label className='form-check-label' htmlFor={String(value)}>
