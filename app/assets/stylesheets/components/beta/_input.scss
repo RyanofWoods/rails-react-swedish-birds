@@ -1,0 +1,39 @@
+$green: #70997B;
+$white: white;
+$dark-brown: #484444;
+$medium-brown: #88827F;
+$light-green: #EFF4F1;
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.form-group {
+  color: $dark-brown;
+
+  label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.form-control {
+  border: 1px solid $dark-brown;
+  border-radius: 4px;
+  height: 2.5rem;
+  &:focus {
+    border-color: $green;
+  }
+}
+
+.form-control::placeholder {
+  color: $medium-brown;
+  font-size: 1rem;
+}
+
+.custom-select:focus, .form-control:focus {
+  border: 2px solid $dark-brown;
+  box-shadow: none;
+}
+
