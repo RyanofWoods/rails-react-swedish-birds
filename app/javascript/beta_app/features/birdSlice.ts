@@ -23,6 +23,7 @@ export const birdSlice = createSlice({
   reducers: {
     updateFilters (state, action: PayloadAction<Partial<BirdFilters>>) {
       state.filters = { ...state.filters, ...action.payload }
+      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
     },
     resetFilters (state) {
       state.filters = initialState.filters
