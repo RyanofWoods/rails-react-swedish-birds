@@ -5,6 +5,7 @@ import { useAppDispatch } from '../hooks'
 import BirdList from './bird/bird_list'
 
 import Navbar from './shared/navbar'
+import FilterGroup from './filters/filter_group'
 
 const navbarContainer = document.getElementById('navbar-container') as HTMLElement
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   return (
     <>
       {ReactDOM.createPortal(<Navbar />, navbarContainer)}
+      <FilterGroup />
       <BirdList />
     </>
   )
