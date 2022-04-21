@@ -55,4 +55,5 @@ export const birdSlice = createSlice({
   }
 })
 
+export const { resetFilters, updateFilters } = birdSlice.actions
 export default birdSlice
