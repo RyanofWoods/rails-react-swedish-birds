@@ -6,6 +6,7 @@ import BirdList from './bird/bird_list'
 
 import Navbar from './shared/navbar'
 import FilterGroup from './filters/filter_group'
+import Counter from './filters/counter'
 
 const navbarContainer = document.getElementById('navbar-container') as HTMLElement
 
@@ -19,6 +20,7 @@ const App: React.FC = () => {
     <>
       {ReactDOM.createPortal(<Navbar />, navbarContainer)}
       <FilterGroup />
+      <Counter />
       <BirdList />
     </>
   )
