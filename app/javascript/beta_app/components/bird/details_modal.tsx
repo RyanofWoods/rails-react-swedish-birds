@@ -1,17 +1,19 @@
 import React from 'react'
 import Modal from '../shared/modal'
 
-import { BirdWithOrWithoutObservation } from '../../types'
+import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
 import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population_info'
 import BirdHouse from './bird_house'
+import getNameAttribute from '../../helpers/name_helper'
 
 interface DetailsModalProps {
   close: () => void
   bird: BirdWithOrWithoutObservation
+  userSettings: UserSettings
 }
 
-const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird }) => {
+const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }) => {
   const observationDetails = (): JSX.Element | undefined => {
     if (bird.observation != null) {
       let dateText
@@ -55,8 +57,8 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird }) => {
       <div className='detailsModalContent modal-body'>
 
         <h4 className='mt-2'>Name</h4>
-        <p className='main-name'>{bird.swedishName}</p>
-        <p>{bird.englishName}</p>
+        <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
+        <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
 
         <h4 className='mt-4'>Information</h4>
         <p>Information regarding to Sweden</p>

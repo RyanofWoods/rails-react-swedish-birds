@@ -67,7 +67,7 @@ export interface Order {
   swedishName: string
 }
 
-interface UserSettings {
+export interface UserSettings {
   primaryNameLanguage: Language
   secondaryNameLanguage: Language
 }
