@@ -1,3 +1,8 @@
+$orange: #DA7C2B;
+$light-orange: #F5E9DE;
+$blue: #5AC6FF;
+$light-blue: #E4F6FF;
+
 input[type="checkbox"] {
   position: relative;
   transition: transform ease-in 0.1s;
@@ -38,13 +43,13 @@ input[type="checkbox"]:before, input[type="checkbox"]:after {
 input[type="checkbox"]:before {
   display: none;
   top: -75%;
-  background-image: radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 20%, $primary 20%, transparent 30%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 10%, $primary 15%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%);
+  background-image: radial-gradient(circle, $orange 20%, transparent 20%), radial-gradient(circle, transparent 20%, $primary 20%, transparent 30%), radial-gradient(circle, $blue 20%, transparent 20%), radial-gradient(circle, $orange 20%, transparent 20%), radial-gradient(circle, transparent 10%, $primary 15%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $blue 20%, transparent 20%);
   background-size: 40% 40%, 50% 50%, 45% 45%, 50% 50%, 48% 48%, 40% 40%, 45% 45%, 40% 40%, 48% 48%;
 }
 input[type="checkbox"]:after {
   display: none;
   bottom: -75%;
-  background-image: radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, transparent 10%, $primary 15%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%);
+  background-image: radial-gradient(circle, $blue 20%, transparent 20%), radial-gradient(circle, $orange 20%, transparent 20%), radial-gradient(circle, transparent 10%, $orange 15%, transparent 20%), radial-gradient(circle, $blue 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%), radial-gradient(circle, $primary 20%, transparent 20%);
   background-size: 45% 45%, 50% 50%, 48% 48%, 50% 50%, 45% 45%, 40% 40%, 50% 50%;
 }
 input[type="checkbox"].animate:before {
@@ -77,5 +82,29 @@ input[type="checkbox"].animate:after {
   100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+.checkbox-container {
+ width: 36px;
+ display: flex;
+ align-items: center;
+}
+
+.checkbox-beta {
+  border: 1px solid #484444 !important;
+  border-radius: 4px !important;
+}
+
+input[type="checkbox"]:checked.fadeaway {
+  animation: fadeaway 1s linear forwards;
+}
+
+@keyframes fadeaway {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

@@ -1,0 +1,53 @@
+$dark-brown: #484444;
+$white: white;
+
+.bird-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid $dark-brown;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .bird-date {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    width: 36px;
+  }
+  .bird-names {
+    margin: 0 12px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+}
+
+.bird-card + .bird-card {
+  margin-top: 12px;
+}
+
+.main-name {
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+#details-link {
+  color: #70997B;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.2rem;
+
+  &:hover {
+    color: $dark-brown;
+  }
+}

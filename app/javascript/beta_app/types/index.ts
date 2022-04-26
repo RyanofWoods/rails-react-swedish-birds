@@ -6,7 +6,7 @@ export interface State {
   filters: BirdFilters
 }
 
-type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+export type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 export type BirdScientificName = string
 type BirdEnglishName = string

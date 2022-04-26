@@ -1,0 +1,35 @@
+$orange: #DA7C2B;
+$light-orange: #F5E9DE;
+$blue: #5AC6FF;
+$light-blue: #E4F6FF;
+
+.population-bars {
+  display: flex;
+  .bar, .bar-filled {
+    width: 5px;
+    height: 23px;
+    border-radius: 4px;
+    margin-right: 2px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  .bar.bar-blue {
+    background-color: $light-blue;
+  }
+
+  .bar-filled.bar-blue {
+    background-color: $blue;
+  }
+
+  .bar.bar-orange {
+    background-color: $light-orange;
+  }
+
+  .bar-filled.bar-orange {
+    background-color: $orange;
+  }
+}
+
