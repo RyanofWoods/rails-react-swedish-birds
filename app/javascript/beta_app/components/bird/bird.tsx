@@ -8,7 +8,11 @@ import DetailsModal from './details_modal'
 import PopulationTooltip from './population_tooltip'
 import CheckboxAndDate from './checkbox_and_date'
 
-const Bird: React.FC<{bird: BirdWithOrWithoutObservation}> = ({ bird }) => {
+interface BirdProps {
+  bird: BirdWithOrWithoutObservation
+}
+
+const Bird: React.FC<BirdProps> = ({ bird }) => {
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
   const [showInfoBox, setShowInfoBox] = useState(false)
