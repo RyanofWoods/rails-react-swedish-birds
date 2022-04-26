@@ -14,6 +14,10 @@ const initialState: State = {
     seenScope: 'all',
     orderScientificNameScope: null,
     familyScientificNameScope: null
+  },
+  userSettings: {
+    primaryNameLanguage: 'SE',
+    secondaryNameLanguage: 'EN'
   }
 }
 

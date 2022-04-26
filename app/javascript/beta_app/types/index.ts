@@ -4,7 +4,10 @@ export interface State {
   orders: Order[]
   filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
+  userSettings: UserSettings
 }
+
+type Language = 'EN' | 'SE' | 'SC'
 
 export type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
@@ -62,4 +65,9 @@ export interface Order {
   scientificName: OrderScientificName
   englishName: string
   swedishName: string
+}
+
+interface UserSettings {
+  primaryNameLanguage: Language
+  secondaryNameLanguage: Language
 }
