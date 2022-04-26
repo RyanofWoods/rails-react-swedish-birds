@@ -7,7 +7,7 @@ export interface State {
   userSettings: UserSettings
 }
 
-type Language = 'EN' | 'SE' | 'SC'
+export type Language = 'EN' | 'SE' | 'SC'
 
 export type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
