@@ -8,7 +8,6 @@ interface PopulationBarsProps {
 }
 
 const PopulationBars: React.FC<PopulationBarsProps> = ({ population }) => {
-
   let populationLevel = population
   if (!isBreedingBird(population)) populationLevel -= 5
 

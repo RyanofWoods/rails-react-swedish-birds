@@ -59,7 +59,7 @@ const migrationText = (bird: BirdWithOrWithoutObservation): string => {
   if (bird.details.includes('(V)')) {
     text.push('Rarely seen during winter')
   }
-  if (bird.details.match(/V[^)]/)) {
+  if (bird.details.match(/V[^)]/) != null) {
     text.push('Can be seen in winter')
   }
   if (bird.populationCategory > 5) {
