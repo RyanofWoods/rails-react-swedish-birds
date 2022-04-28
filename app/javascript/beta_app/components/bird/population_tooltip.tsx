@@ -14,7 +14,7 @@ const PopulationTooltip: React.FC<PopulationTooltipProps> = ({ bird }) => {
 
   return (
     <div className='population-tooltip-container'>
-      <div className={`population-tooltip-header-container ${isBreedingBird(population) ? 'tooltip-orange' : 'tooltip-blue'}`} >
+      <div className={`population-tooltip-header-container ${isBreedingBird(population) ? 'tooltip-orange' : 'tooltip-blue'}`}>
         {!isBreedingBird(population) && <p className='population-tooltip-header'>Occasional guest in Sweden</p>}
         {isBreedingBird(population) && <p className='population-tooltip-header'>Breeds in Sweden</p>}
       </div>
