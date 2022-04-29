@@ -27,6 +27,21 @@ export const tawnyOwl: BirdWithObservation = {
   }
 }
 
+export const greatGreyOwl: BirdWithObservation = {
+  scientificName: 'Strix nebulosa',
+  englishName: 'Great Grey Owl',
+  swedishName: 'Lappuggla',
+  familyScientificName: 'Strigidae',
+  orderScientificName: 'Strigiformes',
+  details: 'Hs 4-5',
+  populationCategory: 5,
+  seen: true,
+  observation: {
+    observedAt: '2021/12/24',
+    note: 'Saw in a meadow perched on a small spruce tree.'
+  }
+}
+
 export const blueTit: BirdWithObservation = {
   scientificName: 'Cyanistes caeruleus',
   englishName: 'Eurasian Blue Tit',
