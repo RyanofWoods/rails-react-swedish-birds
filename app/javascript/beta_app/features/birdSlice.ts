@@ -15,6 +15,10 @@ const initialState: State = {
     orderScientificNameScope: null,
     familyScientificNameScope: null
   },
+  sorting: {
+    column: null,
+    ordering: 'asc'
+  },
   userSettings: {
     primaryNameLanguage: 'SE',
     secondaryNameLanguage: 'EN'
