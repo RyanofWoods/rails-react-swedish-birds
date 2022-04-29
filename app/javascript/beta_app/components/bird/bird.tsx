@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 
-import { BirdWithOrWithoutObservation } from '../../types'
+import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'
 import DetailsModal from './details_modal'
 import PopulationTooltip from './population_tooltip'
 import CheckboxAndDate from './checkbox_and_date'
+import getNameAttribute from '../../helpers/name_helper'
 
-const Bird: React.FC<{bird: BirdWithOrWithoutObservation}> = ({ bird }) => {
+interface BirdProps {
+  bird: BirdWithOrWithoutObservation
+  userSettings: UserSettings
+}
+
+const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
   const [showInfoBox, setShowInfoBox] = useState(false)
@@ -34,8 +40,8 @@ const Bird: React.FC<{bird: BirdWithOrWithoutObservation}> = ({ bird }) => {
       {showInfoBox && <PopulationTooltip bird={bird} />}
       <CheckboxAndDate bird={bird} toggleSeenModal={toggleSeenModal} />
       <div className='bird-names'>
-        <p className='main-name'>{bird.swedishName}</p>
-        <p>{bird.englishName}</p>
+        <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
+        <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
         <a id='details-link' onClick={toggleDetailsModal}>Details</a>
       </div>
       <div onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} className='position-relative' role='button'>
@@ -43,12 +49,12 @@ const Bird: React.FC<{bird: BirdWithOrWithoutObservation}> = ({ bird }) => {
       </div>
       {
         showSeenModal && (
-          <ObservationModal close={toggleSeenModal} bird={bird} />
+          <ObservationModal close={toggleSeenModal} bird={bird} userSettings={userSettings} />
         )
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} bird={bird} />
+          <DetailsModal close={toggleDetailsModal} bird={bird} userSettings={userSettings} />
         )
       }
     </li>

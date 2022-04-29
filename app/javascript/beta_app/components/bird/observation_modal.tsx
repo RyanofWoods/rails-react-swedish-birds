@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
-import { BirdWithOrWithoutObservation } from '../../types'
+import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
 import { useAppDispatch } from '../../hooks'
 import { createObservation } from '../../api'
+import getNameAttribute from '../../helpers/name_helper'
 
 interface ObservationModalProps {
   close: () => void
   bird: BirdWithOrWithoutObservation
+  userSettings: UserSettings
 }
 
-const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird }) => {
+const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSettings }) => {
   const today = new Date().toLocaleDateString('en-CA')
 
   const dispatch = useAppDispatch()
@@ -52,8 +54,8 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird }) => {
       <form onSubmit={handleConfirm}>
         <div className='modal-body'>
           <h4 className='mt-4'>Name</h4>
-          <p className='main-name'>{bird.swedishName}</p>
-          <p>{bird.englishName}</p>
+          <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
+          <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
           <div className='d-flex align-items-end'>
             <div className='form-group'>
               <label>Date of observation</label>

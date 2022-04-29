@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
 
 import { updateFilters } from '../../features/birdSlice'
+import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
-import { Family, Order, FamilyScientificName, OrderScientificName } from '../../types'
+import { Family, Order, FamilyScientificName, OrderScientificName, UserSettings } from '../../types'
 import Select, { Option } from '../shared/select'
 
 interface FamilyAndOrderFilterProps {
   families: Family[]
   orders: Order[]
+  userSettings: UserSettings
 }
 
-const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, orders }) => {
+const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, orders, userSettings }) => {
   const dispatch = useAppDispatch()
   const [filteredFamilies, setFilteredFamilies] = useState(families)
 
@@ -39,7 +41,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, o
     familiesOrOrders.map(element => {
       return {
         value: element.scientificName,
-        text: element.englishName
+        text: getNameAttribute(element, userSettings.primaryNameLanguage)
       }
     })
   )
