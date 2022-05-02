@@ -9,6 +9,19 @@ class BirdTest < ActiveSupport::TestCase
     @bird_two = @family_one.birds.create!(english_name: 'bird_two', scientific_name: 'bird_two', swedish_name: 'bird_two', details: 'details', population_category: 2)
     @bird_three = @family_one.birds.create!(english_name: 'bird_three', scientific_name: 'bird_three', swedish_name: 'bird_three', details: 'details', population_category: 3)
     @outsider_bird = @family_two.birds.create!(english_name: 'outsider', scientific_name: 'outsider', swedish_name: 'outsider', details: 'details', population_category: 3)
+    @new_bird = Bird.new(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1, family: families(:tits))
+  end
+
+  test 'Birds cannot be created without a population_category' do
+    @new_bird.population_category = nil
+
+    assert_difference('Bird.count', 0) do
+      @new_bird.save
+    end
+
+    actual = @new_bird.errors.full_messages
+    expected = "Population category can't be blank"
+    assert_includes(actual, expected)
   end
 
   test '.search_by_name searches by English name when given the language preference of "EN"' do
