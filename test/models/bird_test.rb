@@ -24,6 +24,12 @@ class BirdTest < ActiveSupport::TestCase
     assert_includes(actual, expected)
   end
 
+  test '.all does not include birds with a population category of nil (never seen in Sweden)' do
+    non_occuring_bird = birds(:white_winged_scoter)
+    actual = Bird.all
+    refute_includes(actual, non_occuring_bird)
+  end
+
   test '.search_by_name searches by English name when given the language preference of "EN"' do
     actual = Bird.search_by_name('tit', 'EN', 7)
 

@@ -14,6 +14,14 @@ greylag_goose:
   family_id: 1
   details: Hf 3
   population_category: 3
+white_winged_scoter:
+  id: 44
+  scientific_name: Melanitta deglandi
+  english_name: White-winged Scoter
+  swedish_name: Amerikansk Knölsvärta
+  family_id: 1
+  details: '-'
+  population_category: 0
 pygmy_owl:
   id: 295
   scientific_name: Glaucidium passerinum
