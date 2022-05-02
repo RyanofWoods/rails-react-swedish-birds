@@ -2,7 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { fetchBirds, createObservation, searchBirds, fetchOrders, fetchFamilies } from '../api'
 import filterBirds from '../helpers/filter_birds'
-import { BirdFilters, BirdWithOrWithoutObservation, State } from '../types'
+import clickSortingColumn from '../helpers/click_sorting_column'
+import { sortBirds } from '../helpers/sort_birds'
+import { BirdColumn, BirdFilters, BirdWithOrWithoutObservation, State } from '../types'
 
 const initialState: State = {
   birds: [],
@@ -37,6 +39,10 @@ export const birdSlice = createSlice({
     },
     resetFilters (state) {
       state.filters = initialState.filters
+    },
+    updateSorting (state, action: PayloadAction<BirdColumn>) {
+      state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
+      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
     }
   },
   extraReducers: (builder) => {
@@ -68,5 +74,5 @@ export const birdSlice = createSlice({
   }
 })
 
-export const { resetFilters, updateFilters } = birdSlice.actions
+export const { resetFilters, updateFilters, updateSorting } = birdSlice.actions
 export default birdSlice
