@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V1::ObservationControllerTest < ActionDispatch::IntegrationTest
   setup do
-    new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', family: families(:tits))
+    new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1, family: families(:tits))
     @bird_id = new_bird.scientific_name
     @user = users(:ryan)
     @today = Date.today
