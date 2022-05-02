@@ -5,6 +5,8 @@ class Bird < ApplicationRecord
   belongs_to :family
   has_many :observations
 
+  default_scope { where.not(population_category: 0) }
+
   include PgSearch::Model
   pg_search_scope :search_by_english_and_scientific_name,
                   against: [:scientific_name, :english_name],
