@@ -2,7 +2,7 @@ import React from 'react'
 import { useAppSelector } from '../../hooks'
 
 const Counter = (): JSX.Element => {
-  const birds = useAppSelector(state => state.birdsData.filteredBirds)
+  const birds = useAppSelector(state => state.birdsData.sortedBirds)
   const birdsTotal = birds.length
   const birdsSeen = birds.filter(bird => bird.seen).length
 

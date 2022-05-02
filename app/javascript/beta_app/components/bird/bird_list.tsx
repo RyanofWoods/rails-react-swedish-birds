@@ -4,7 +4,7 @@ import Bird from './bird'
 import { useAppSelector } from '../../hooks'
 
 const BirdList: React.FC = () => {
-  const birds = useAppSelector(state => state.birdsData.filteredBirds)
+  const birds = useAppSelector(state => state.birdsData.sortedBirds)
   const userSettings = useAppSelector(state => state.birdsData.userSettings)
 
   return (

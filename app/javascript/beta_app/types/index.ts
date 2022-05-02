@@ -5,6 +5,7 @@ export interface State {
   filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
   sorting: BirdSorting
+  sortedBirds: BirdWithOrWithoutObservation[]
   userSettings: UserSettings
 }
 
