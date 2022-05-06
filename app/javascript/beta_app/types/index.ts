@@ -62,7 +62,7 @@ export interface BirdSorting {
 }
 
 export type BirdColumn = 'seen' | 'name' | 'population'
-type ColumnOrdering = 'asc' | 'desc'
+export type ColumnOrdering = 'asc' | 'desc'
 
 export interface Family {
   scientificName: FamilyScientificName
