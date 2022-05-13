@@ -4,7 +4,7 @@ interface CheckboxProps {
   classes: string
   checked: boolean
   id: string
-  onClick: () => void
+  onChange: () => void
   showDateHandler: () => void
 }
 
@@ -17,7 +17,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   // Setting didMount to true upon mounting
   useEffect(() => { setDidMount(true) }, [])
 
-  const { checked, onClick, classes, showDateHandler } = props
+  const { checked, onChange, classes, showDateHandler } = props
   let newClasses = `${classes} checkbox-beta`
   newClasses += (animateClass) ? ' animate' : ''
   newClasses += (fadeClass) ? ' fadeaway' : ''
@@ -25,7 +25,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   const newCheckboxProps = {
     type: 'checkbox',
     className: newClasses,
-    onClick,
+    onChange,
     checked
   }
 
