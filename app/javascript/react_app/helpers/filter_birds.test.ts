@@ -6,7 +6,8 @@ const initialFilters: BirdFilters = {
   searchScope: [],
   seenScope: 'all',
   orderScientificNameScope: null,
-  familyScientificNameScope: null
+  familyScientificNameScope: null,
+  searchValue: ''
 }
 
 const initialBirds: BirdWithOrWithoutObservation[] = [
@@ -36,6 +37,14 @@ test('when the searchScope is not empty, it filters the birds appropriately', ()
   const expected = [blueTit, greatTit]
   const actual = filterBirds({ birds, filters })
   expect(actual).toEqual(expected)
+})
+
+test('when the searchScope is empty because the search query results in no birds, it returns no birds', () => {
+  filters.searchScope = []
+  filters.searchValue = 'no bird has this name'
+
+  const actual = filterBirds({ birds, filters })
+  expect(actual).toEqual([])
 })
 
 test('when seenScope is "seen" it returns only seen birds', () => {
