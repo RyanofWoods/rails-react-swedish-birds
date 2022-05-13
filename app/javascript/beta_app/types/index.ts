@@ -5,6 +5,7 @@ export interface State {
   filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
   sorting: BirdSorting
+  sortedBirds: BirdWithOrWithoutObservation[]
   userSettings: UserSettings
 }
 
@@ -60,8 +61,8 @@ export interface BirdSorting {
   ordering: ColumnOrdering
 }
 
-type BirdColumn = 'seen' | 'name' | 'population'
-type ColumnOrdering = 'asc' | 'desc'
+export type BirdColumn = 'seen' | 'name' | 'population'
+export type ColumnOrdering = 'asc' | 'desc'
 
 export interface Family {
   scientificName: FamilyScientificName

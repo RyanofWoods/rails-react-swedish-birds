@@ -4,6 +4,9 @@
   "dependencies": {
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.16.7",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@popperjs/core": "^2.9.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
