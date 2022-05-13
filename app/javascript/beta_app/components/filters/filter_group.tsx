@@ -9,12 +9,13 @@ const FilterGroup: React.FC = () => {
   const orders = useAppSelector(state => state.birdsData.orders)
   const families = useAppSelector(state => state.birdsData.families)
   const userSettings = useAppSelector(state => state.birdsData.userSettings)
+  const selectedSeenValue = useAppSelector(state => state.birdsData.filters.seenScope)
   const searchValue = useAppSelector(state => state.birdsData.filters.searchValue)
 
   return (
     <>
       <SearchBar searchValue={searchValue} />
-      <SeenBirdsFilter />
+      <SeenBirdsFilter selectedValue={selectedSeenValue} />
       <FamilyAndOrderFilter orders={orders} families={families} userSettings={userSettings} />
     </>
   )

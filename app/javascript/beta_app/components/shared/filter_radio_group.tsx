@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import FilterRadioButton from './filter_radio_button'
 
@@ -19,10 +19,8 @@ interface FilterRadioGroupProps<T> {
 
 const FilterRadioGroup = <T extends RadioValue>(props: FilterRadioGroupProps<T>): JSX.Element => {
   const { arialabel, options, name, selectedValue, handleOnChange } = props
-  const [selectedRadio, setSelectedRadio] = useState(selectedValue)
 
   const onChangeHandler = (value: T): void => {
-    setSelectedRadio(value)
     handleOnChange(value)
   }
 
@@ -31,7 +29,7 @@ const FilterRadioGroup = <T extends RadioValue>(props: FilterRadioGroupProps<T>)
       {
         options.map(option => {
           return (
-            <FilterRadioButton<T> key={option.value} value={option.value} label={option.label} name={name} selectedRadio={selectedRadio} onChangeHandler={onChangeHandler} />
+            <FilterRadioButton<T> key={option.value} value={option.value} label={option.label} name={name} selectedRadio={selectedValue} onChangeHandler={onChangeHandler} />
           )
         })
       }
