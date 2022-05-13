@@ -1,1 +1,1 @@
-import '../beta_app/index.tsx';
+import '../beta_app/index.tsx'
