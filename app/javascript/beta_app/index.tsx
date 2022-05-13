@@ -3,7 +3,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { logger } from 'redux-logger'
-import { BrowserRouter } from 'react-router-dom'
 
 import App from './components/app'
 import birdSlice from './features/birdSlice'
@@ -24,9 +23,7 @@ const root = document.getElementById('root')
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </Provider>,
   root
 )

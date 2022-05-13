@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Navbar = (): JSX.Element => (
   <div className='navbar navbar-expand-sm navbar-light'>
-    <Link to='/beta' className='navbar-brand hover-pointer hover-opacity'>
+    <div className='navbar-brand'>
       <p>Swedish Birds</p>
-    </Link>
+    </div>
 
     <span className='navbar-toggler-icon ml-auto hover-pointer hover-opacity' id='dropdownMenuLink' data-toggle='dropdown' />
 
