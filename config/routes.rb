@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: 'pages#beta'
-  get '/*path', to: 'pages#beta'
+  root to: 'pages#react'
+  get '/*path', to: 'pages#react'
 end
