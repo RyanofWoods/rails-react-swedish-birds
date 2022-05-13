@@ -98,4 +98,26 @@ class BirdTest < ActiveSupport::TestCase
     expected = { scientific_name: 'Glaucidium passerinum', english_name: 'Eurasian Pygmy Owl', swedish_name: 'Sparvuggla', family: { scientific_name: 'Strigidae' }, order: { scientific_name: 'Strigiformes' } }
     assert_includes(actual, expected)
   end
+
+  test '.search_by_all_names searches by English name' do
+    actual = Bird.search_by_all_names('spar')
+
+    assert_includes(actual, birds(:pygmy_owl))
+    assert_includes(actual, birds(:house_sparrow))
+    assert_includes(actual, birds(:tree_sparrow))
+    assert_includes(actual, birds(:white_throated_sparrow))
+  end
+
+  test '.search_by_all_names searches by Scientific name' do
+    actual = Bird.search_by_all_names('major')
+
+    assert_includes(actual, birds(:great_tit))
+    assert_includes(actual, birds(:great_spotted_woodpecker))
+  end
+
+  test '.search_by_all_names searches by Swedish name' do
+    actual = Bird.search_by_all_names('uggla')
+
+    assert_includes(actual, birds(:pygmy_owl))
+  end
 end
