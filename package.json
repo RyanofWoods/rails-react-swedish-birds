@@ -58,8 +58,8 @@
     ]
   },
   "scripts": {
-    "lint": "ts-standard app/javascript/beta_app",
-    "test": "jest app/javascript/beta_app",
+    "lint": "ts-standard app/javascript",
+    "test": "jest app/javascript",
     "prepare": "husky install"
   }
 }
