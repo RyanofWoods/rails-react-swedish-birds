@@ -39,6 +39,8 @@ export const birdSlice = createSlice({
     },
     resetFilters (state) {
       state.filters = initialState.filters
+      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
+      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
     },
     updateSorting (state, action: PayloadAction<BirdColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
