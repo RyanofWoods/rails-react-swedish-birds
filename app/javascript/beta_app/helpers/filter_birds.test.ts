@@ -1,4 +1,5 @@
-import { BirdWithOrWithoutObservation, BirdWithObservation, BirdWithoutObservation, BirdFilters } from '../types'
+import { BirdFilters, BirdWithOrWithoutObservation } from '../types'
+import { barnOwl, blueTit, greatTit, tawnyOwl } from './bird_fixtures_test'
 import filterBirds from './filter_birds'
 
 const initialFilters: BirdFilters = {
@@ -6,63 +7,6 @@ const initialFilters: BirdFilters = {
   seenScope: 'all',
   orderScientificNameScope: null,
   familyScientificNameScope: null
-}
-
-const barnOwl: BirdWithoutObservation = {
-  scientificName: 'Tyto alba',
-  englishName: 'Western Barn Owl',
-  swedishName: 'Tornuggla',
-  familyScientificName: 'Tytonidae',
-  orderScientificName: 'Strigiformes',
-  details: 'Hs 5',
-  populationCategory: 5,
-  seen: false,
-  observation: undefined
-}
-
-const tawnyOwl: BirdWithObservation = {
-  scientificName: 'Strix aluco',
-  englishName: 'Tawny Owl',
-  swedishName: 'Kattuggla',
-  familyScientificName: 'Strigidae',
-  orderScientificName: 'Strigiformes',
-  details: 'Hs 3',
-  populationCategory: 3,
-  seen: true,
-  observation: {
-    observedAt: '2022/04/15',
-    note: null
-  }
-}
-
-const blueTit: BirdWithObservation = {
-  scientificName: 'Cyanistes caeruleus',
-  englishName: 'Eurasian Blue Tit',
-  swedishName: 'Blåmes',
-  familyScientificName: 'Paridae',
-  orderScientificName: 'Passeriformes',
-  details: 'Hs (f) 2',
-  populationCategory: 2,
-  seen: true,
-  observation: {
-    observedAt: '2022/01/10',
-    note: 'Note.'
-  }
-}
-
-const greatTit: BirdWithObservation = {
-  scientificName: 'Parus major',
-  englishName: 'Great Tit',
-  swedishName: 'Talgoxe',
-  familyScientificName: 'Paridae',
-  orderScientificName: 'Passeriformes',
-  details: 'Hs (f) 1',
-  populationCategory: 1,
-  seen: true,
-  observation: {
-    observedAt: null,
-    note: 'Lots of notes.'
-  }
 }
 
 const initialBirds: BirdWithOrWithoutObservation[] = [
@@ -73,11 +17,11 @@ const initialBirds: BirdWithOrWithoutObservation[] = [
 ]
 
 let filters = { ...initialFilters }
-let birds = [...initialBirds]
+let birds = initialBirds
 
 beforeEach(() => {
   filters = { ...initialFilters }
-  birds = [...initialBirds]
+  birds = initialBirds
 })
 
 test('when there are no filters it returns all the birds', () => {
