@@ -54,6 +54,7 @@ export interface BirdFilters {
   seenScope: SeenScope
   orderScientificNameScope: string | null
   familyScientificNameScope: string | null
+  searchValue: string
 }
 
 export interface BirdSorting {

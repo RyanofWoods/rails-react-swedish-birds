@@ -15,7 +15,8 @@ const initialState: State = {
     searchScope: [],
     seenScope: 'all',
     orderScientificNameScope: null,
-    familyScientificNameScope: null
+    familyScientificNameScope: null,
+    searchValue: ''
   },
   sorting: {
     column: null,
@@ -39,6 +40,8 @@ export const birdSlice = createSlice({
     },
     resetFilters (state) {
       state.filters = initialState.filters
+      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
+      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
     },
     updateSorting (state, action: PayloadAction<BirdColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
@@ -65,6 +68,9 @@ export const birdSlice = createSlice({
       updateBirds(state.birds)
       updateBirds(state.filteredBirds)
       updateBirds(state.sortedBirds)
+    })
+    builder.addCase(searchBirds.pending, (state, action) => {
+      state.filters.searchValue = action.meta.arg
     })
     builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
       state.filters.searchScope = payload.birds

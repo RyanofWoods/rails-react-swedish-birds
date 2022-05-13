@@ -4,7 +4,11 @@ import { updateFilters } from '../../features/birdSlice'
 import { useAppDispatch } from '../../hooks'
 import { SeenScope } from '../../types'
 
-const SeenBirdsFilter: React.FC = () => {
+interface SeenBirdsFilterProps {
+  selectedValue: SeenScope
+}
+
+const SeenBirdsFilter: React.FC<SeenBirdsFilterProps> = ({ selectedValue }) => {
   const dispatch = useAppDispatch()
 
   const options: Array<RadioOption<SeenScope>> = [
@@ -18,7 +22,7 @@ const SeenBirdsFilter: React.FC = () => {
   }
 
   return (
-    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue='all' name='birdlist' handleOnChange={handleChange} />
+    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue={selectedValue} name='birdlist' handleOnChange={handleChange} />
   )
 }
 
