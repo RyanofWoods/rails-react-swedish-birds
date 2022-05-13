@@ -1,4 +1,4 @@
-class Api::Beta::FamiliesController < Api::V1::BaseController
+class Api::Beta::FamiliesController < Api::Beta::BaseController
   def index
     @families = Family.all.includes(:order)
   end
