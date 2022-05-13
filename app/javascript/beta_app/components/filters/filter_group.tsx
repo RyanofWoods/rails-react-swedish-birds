@@ -9,6 +9,8 @@ const FilterGroup: React.FC = () => {
   const orders = useAppSelector(state => state.birdsData.orders)
   const families = useAppSelector(state => state.birdsData.families)
   const userSettings = useAppSelector(state => state.birdsData.userSettings)
+  const selectedOrderOption = useAppSelector(state => state.birdsData.filters.orderScientificNameScope)
+  const selectedFamilyOption = useAppSelector(state => state.birdsData.filters.familyScientificNameScope)
   const selectedSeenValue = useAppSelector(state => state.birdsData.filters.seenScope)
   const searchValue = useAppSelector(state => state.birdsData.filters.searchValue)
 
@@ -16,7 +18,7 @@ const FilterGroup: React.FC = () => {
     <>
       <SearchBar searchValue={searchValue} />
       <SeenBirdsFilter selectedValue={selectedSeenValue} />
-      <FamilyAndOrderFilter orders={orders} families={families} userSettings={userSettings} />
+      <FamilyAndOrderFilter orders={orders} families={families} userSettings={userSettings} selectedOrderOption={selectedOrderOption} selectedFamilyOption={selectedFamilyOption} />
     </>
   )
 }

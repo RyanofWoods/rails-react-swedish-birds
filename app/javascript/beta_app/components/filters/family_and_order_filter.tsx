@@ -10,23 +10,34 @@ interface FamilyAndOrderFilterProps {
   families: Family[]
   orders: Order[]
   userSettings: UserSettings
+  selectedOrderOption: string | null
+  selectedFamilyOption: string | null
 }
 
-const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, orders, userSettings }) => {
+const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
+  const { families, orders, userSettings, selectedOrderOption, selectedFamilyOption } = props
+
   const dispatch = useAppDispatch()
   const [filteredFamilies, setFilteredFamilies] = useState(families)
+
+  const updateFamiliesBySelectedOrder = (): void => {
+    const orderFamilies = (): Family[] => (
+      families.filter(family => family.orderScientificName === selectedOrderOption)
+    )
+    const newFamilies = (selectedOrderOption === null) ? families : orderFamilies
+
+    setFilteredFamilies(newFamilies)
+  }
 
   useEffect(() => {
     setFilteredFamilies(families)
   }, [families])
 
-  const handleOrderChange = (value: OrderScientificName | null): void => {
-    const orderFamilies = (): Family[] => (
-      families.filter(family => family.orderScientificName === value)
-    )
-    const newFamilies = (value === null) ? families : orderFamilies
+  useEffect(() => {
+    updateFamiliesBySelectedOrder()
+  }, [selectedOrderOption])
 
-    setFilteredFamilies(newFamilies)
+  const handleOrderChange = (value: OrderScientificName | null): void => {
     void dispatch(updateFilters({
       orderScientificNameScope: value,
       familyScientificNameScope: null
@@ -55,6 +66,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, o
         options={tranformToOptions(orders)}
         defaultText='Orders'
         handleChange={handleOrderChange}
+        selectedValue={selectedOrderOption}
       />
       <Select
         label='Families'
@@ -63,6 +75,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = ({ families, o
         options={tranformToOptions(filteredFamilies)}
         defaultText='Families'
         handleChange={handleFamilyChange}
+        selectedValue={selectedFamilyOption}
       />
     </>
   )

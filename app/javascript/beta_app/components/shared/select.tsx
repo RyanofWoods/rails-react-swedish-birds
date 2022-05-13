@@ -14,11 +14,12 @@ interface SelectProps {
   defaultText: string
   options: Option[]
   handleChange: (value: string | null) => void
+  selectedValue: string | null
 }
 
 const Select: React.FC<SelectProps> = (props) => {
   const {
-    defaultText, options, ariaLabel, label, id, handleChange
+    defaultText, options, ariaLabel, label, id, handleChange, selectedValue
   } = props
 
   const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
@@ -33,8 +34,8 @@ const Select: React.FC<SelectProps> = (props) => {
         className='form-control custom-select'
         id={id}
         aria-label={ariaLabel}
-        defaultValue={defaultText}
         onChange={onSelectChange}
+        value={selectedValue ?? defaultValue}
       >
         <option value={defaultValue}>{defaultText}</option>
         {options.map((option) => <option key={option.value} value={option.value}>{option.text}</option>)}
