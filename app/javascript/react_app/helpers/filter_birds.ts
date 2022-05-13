@@ -7,6 +7,8 @@ interface Options {
 
 const filterBirds = ({ birds, filters }: Options): BirdWithOrWithoutObservation[] => {
   const { searchScope, seenScope, familyScientificNameScope, orderScientificNameScope } = filters
+  if (filters.searchScope.length === 0 && filters.searchValue.length > 0) return []
+
   return birds.filter(bird => {
     if (searchScope.length > 0) {
       if (!searchScope.includes(bird.scientificName)) return false
