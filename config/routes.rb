@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/groups', to: 'groups#index'
       get 'birds/search', to: 'birds#search'
-      
+
       resources :families, only: [:show]
       resources :orders, only: [:show]
 
@@ -27,7 +27,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/beta', to: 'pages#beta'
-  root to: 'pages#home'
-  get '/*path', to: 'pages#home'
+  root to: 'pages#beta'
+  get '/*path', to: 'pages#beta'
 end
