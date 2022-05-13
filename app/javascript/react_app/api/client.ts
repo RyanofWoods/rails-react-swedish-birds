@@ -20,7 +20,7 @@ interface Response<T> {
   url: string
 }
 
-const BASE_URL = '/api/beta'
+const BASE_URL = '/api'
 
 export async function client<T> (endpoint: string, data: Data = {}): Promise<Response<T>> {
   const { body, ...customConfig } = data

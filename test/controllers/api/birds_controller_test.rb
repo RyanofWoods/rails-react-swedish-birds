@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::Beta::BirdsControllerTest < ActionDispatch::IntegrationTest
+class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @family = families(:woodpeckers)
     @user = users(:ryan)
@@ -12,7 +12,7 @@ class Api::Beta::BirdsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'GET #index returns an unauthorized response if not logged in' do
-    get api_beta_birds_url
+    get api_birds_url
 
     assert_response :unauthorized
     expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
@@ -22,7 +22,7 @@ class Api::Beta::BirdsControllerTest < ActionDispatch::IntegrationTest
   test 'GET #index returns all birds with any user observations joined on' do
     sign_in @user
 
-    get api_beta_birds_url
+    get api_birds_url
 
     assert_response :success
     expected_birds = [

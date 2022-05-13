@@ -1,12 +1,12 @@
 require 'test_helper'
 
-class Api::Beta::SearchControllerTest < ActionDispatch::IntegrationTest
+class Api::SearchControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:ryan)
   end
 
   test 'POST #create returns an unauthorized response if there is no logged in user' do
-    get api_beta_search_url(query: 'tit')
+    get api_search_url(query: 'tit')
 
     assert_response :unauthorized
     expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
@@ -16,7 +16,7 @@ class Api::Beta::SearchControllerTest < ActionDispatch::IntegrationTest
   test 'GET #index returns all the matching bird scientific names' do
     sign_in @user
 
-    get api_beta_search_url(query: 'tit')
+    get api_search_url(query: 'tit')
 
     birds = Bird.search_by_all_names('tit')
     expected = { 'birds'=> birds.pluck(:scientific_name) }
