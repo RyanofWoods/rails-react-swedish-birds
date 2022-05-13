@@ -61,8 +61,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
 
         <h4 className='mt-4'>Information</h4>
-        <p>Information regarding to Sweden</p>
-        <p>{bird.details}</p>
+        <p className='mb-3'>Information regarding to Sweden</p>
 
         {migrationSection()}
 
