@@ -15,7 +15,8 @@ const initialState: State = {
     searchScope: [],
     seenScope: 'all',
     orderScientificNameScope: null,
-    familyScientificNameScope: null
+    familyScientificNameScope: null,
+    searchValue: ''
   },
   sorting: {
     column: null,
@@ -67,6 +68,9 @@ export const birdSlice = createSlice({
       updateBirds(state.birds)
       updateBirds(state.filteredBirds)
       updateBirds(state.sortedBirds)
+    })
+    builder.addCase(searchBirds.pending, (state, action) => {
+      state.filters.searchValue = action.meta.arg
     })
     builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
       state.filters.searchScope = payload.birds

@@ -4,7 +4,11 @@ import { useAppDispatch } from '../../hooks'
 
 import Input from '../shared/input'
 
-const SearchBar: React.FC = () => {
+interface SearchBarProps {
+  searchValue: string
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
   const dispatch = useAppDispatch()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -19,6 +23,7 @@ const SearchBar: React.FC = () => {
         ariaLabel='search for a bird'
         placeholder='Search for a bird...'
         handleChange={handleChange}
+        value={searchValue}
       />
     </>
   )
