@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class Api::Beta::OrdersControllerTest < ActionDispatch::IntegrationTest
+class Api::OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test 'GET #index returns an unauthorized response if not logged in' do
-    get api_beta_orders_url
+    get api_orders_url
 
     assert_response :unauthorized
     expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
@@ -13,7 +13,7 @@ class Api::Beta::OrdersControllerTest < ActionDispatch::IntegrationTest
   test 'GET #index returns all the Orders' do
     sign_in users(:ryan)
 
-    get api_beta_orders_url
+    get api_orders_url
 
     assert_response :success
     actual = json_response['orders']

@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class Api::Beta::FamiliesControllerTest < ActionDispatch::IntegrationTest
+class Api::FamiliesControllerTest < ActionDispatch::IntegrationTest
 
   test 'GET #index returns an unauthorized response if not logged in' do
-    get api_beta_families_url
+    get api_families_url
 
     assert_response :unauthorized
     expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
@@ -13,7 +13,7 @@ class Api::Beta::FamiliesControllerTest < ActionDispatch::IntegrationTest
   test 'GET #index returns all the Families' do
     sign_in users(:ryan)
 
-    get api_beta_families_url
+    get api_families_url
 
     assert_response :success
     actual = json_response['families']

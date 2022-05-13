@@ -1,4 +1,4 @@
-class Api::Beta::ObservationsController < Api::Beta::BaseController
+class Api::ObservationsController < Api::BaseController
   before_action :set_bird, only: [:create]
 
   def create
