@@ -4,11 +4,4 @@ class Order < ApplicationRecord
 
   has_many :families
   has_many :birds, through: :families
-
-  def birds_with_population_higher_or_equal_to(population_category = nil)
-    # this captures all the birds apart from the ones with unknown population (pop_cat 100)
-    population_category ||= 9
-
-    birds.where('population_category <= ?', population_category.to_i)
-  end
 end
