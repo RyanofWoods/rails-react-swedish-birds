@@ -40,7 +40,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
       {showInfoBox && <PopulationTooltip bird={bird} />}
       <CheckboxAndDate bird={bird} toggleSeenModal={toggleSeenModal} />
       <div className='bird-names'>
-        <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
+        <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
         <a id='details-link' onClick={toggleDetailsModal}>Details</a>
       </div>

@@ -53,7 +53,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
     <Modal title='Mark as seen' close={close}>
       <form onSubmit={handleConfirm}>
         <div className='modal-body'>
-          <h4 className='mt-4'>Name</h4>
+          <h4 className='mt-2'>Name</h4>
           <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
           <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
           <div className='d-flex align-items-end'>
@@ -63,10 +63,10 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
             </div>
             <div className='form-check' id='date-unknown'>
               <input type='checkbox' className='form-check-input checkbox-input bg-white checkbox-beta' onClick={handleDateUnknown} />
-              <label className='form-check-label' style={{ lineHeight: '1.2rem' }}>I don&#39;t know</label>
+              <label className='form-check-label' style={{ lineHeight: '1.2rem', fontSize: '1rem' }}>I don&#39;t know</label>
             </div>
           </div>
-          <div className='form-group'>
+          <div className='form-group mt-0'>
             <label>Note</label>
             <textarea onChange={handleNoteChanged} className='form-control' placeholder='Add a note about your observation...' />
           </div>

@@ -37,7 +37,7 @@ const BirdListHeader: React.FC = () => {
 
     return (
       <>
-        <p>{capitalize(column)}</p>
+        <p className='bold-600 mr-2'>{capitalize(column)}</p>
         <div>
           <SortIcon order={ordering} />
         </div>
