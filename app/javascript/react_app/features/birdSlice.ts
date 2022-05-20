@@ -29,30 +29,36 @@ const initialState: State = {
   }
 }
 
+const refilterBirds = (state: State): void => {
+  state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
+  resortBirds(state)
+}
+
+const resortBirds = (state: State): void => {
+  state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+}
+
 export const birdSlice = createSlice({
   name: 'bird',
   initialState,
   reducers: {
     updateFilters (state, action: PayloadAction<Partial<BirdFilters>>) {
       state.filters = { ...state.filters, ...action.payload }
-      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
-      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+      refilterBirds(state)
     },
     resetFilters (state) {
       state.filters = initialState.filters
-      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
-      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+      refilterBirds(state)
     },
     updateSorting (state, action: PayloadAction<BirdColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
-      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+      resortBirds(state)
     }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
       state.birds = payload.birds
-      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
-      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+      refilterBirds(state)
     })
     builder.addCase(fetchFamilies.fulfilled, (state, { payload }) => {
       state.families = payload.families
@@ -74,8 +80,7 @@ export const birdSlice = createSlice({
     })
     builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
       state.filters.searchScope = payload.birds
-      state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
-      state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+      refilterBirds(state)
     })
   }
 })
