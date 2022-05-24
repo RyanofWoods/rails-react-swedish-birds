@@ -24,9 +24,9 @@ const FilterGroup: React.FC = () => {
 
   return (
     <>
-      <SearchBar searchValue={searchValue} />
       <SeenBirdsFilter selectedValue={selectedSeenValue} />
       <FamilyAndOrderFilter orders={orders} families={families} userSettings={userSettings} selectedOrderOption={selectedOrderOption} selectedFamilyOption={selectedFamilyOption} />
+      <SearchBar searchValue={searchValue} />
       <div className='d-flex justify-content-end'>
         <a id='reset-filter' href='' onClick={handleReset}>Reset filters</a>
       </div>
