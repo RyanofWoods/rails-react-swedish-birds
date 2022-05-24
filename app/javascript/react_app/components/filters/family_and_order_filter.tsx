@@ -58,9 +58,8 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
   )
 
   return (
-    <>
+    <div id='filter-selects'>
       <Select
-        label='Orders'
         id='select-order'
         ariaLabel='Select order to filter the birds by'
         options={tranformToOptions(orders)}
@@ -69,7 +68,6 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
         selectedValue={selectedOrderOption}
       />
       <Select
-        label='Families'
         id='select-family'
         ariaLabel='Select a family to filter the birds by'
         options={tranformToOptions(filteredFamilies)}
@@ -77,7 +75,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
         handleChange={handleFamilyChange}
         selectedValue={selectedFamilyOption}
       />
-    </>
+    </div>
   )
 }
 

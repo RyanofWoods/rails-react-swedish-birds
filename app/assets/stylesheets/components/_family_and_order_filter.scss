@@ -1,0 +1,9 @@
+#filter-selects {
+  display: flex;
+  .form-group {
+    width: 50%;
+    &:first-child {
+      margin-right: 0.75rem;
+    }
+  }
+}
