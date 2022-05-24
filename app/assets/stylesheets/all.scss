@@ -2,7 +2,21 @@ a, a:hover {
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'Fugaz One', cursive;
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-family: 'Fugaz One', cursive;
+  font-size: 1.5rem;
+}
+
 h4 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.bold-600 {
+  font-weight: 600;
 }

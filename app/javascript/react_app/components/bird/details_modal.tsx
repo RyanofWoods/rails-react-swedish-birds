@@ -57,7 +57,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
       <div className='detailsModalContent modal-body'>
 
         <h4 className='mt-2'>Name</h4>
-        <p className='main-name'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
+        <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
 
         <h4 className='mt-4'>Information</h4>

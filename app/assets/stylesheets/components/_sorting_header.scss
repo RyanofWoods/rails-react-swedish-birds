@@ -1,7 +1,6 @@
 #sorting-header {
   padding: 0px;
   margin-bottom: 14px;
-  font-size: 1rem;
   border: none;
   background-color: transparent;
 
@@ -16,9 +15,5 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    p {
-      margin-right: 4px;
-    }
   }
 }
