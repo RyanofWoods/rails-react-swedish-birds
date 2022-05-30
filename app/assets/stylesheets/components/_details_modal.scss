@@ -7,27 +7,27 @@
 }
 
 .date {
-  border: 1px solid #70997B;
+  border: 1px solid $green;
   font-size: 16px;
   line-height: 1;
-  color: #70997B !important;
+  color: $green !important;
   padding: 6px 16px;
   border-radius: 4px;
-  background-color: #EFF4F1;
+  background-color: $light-green;
   width: fit-content;
   margin-right: 8px !important;
 }
 
 .house-bg-breeding {
- fill: #F5E9DE;
+ fill: $light-orange;
 }
 .house-bg-occasional {
- fill: #E4F6FF;
+ fill: $light-blue;
 }
 
 .house-breeding {
- fill: #DA7C2B;
+ fill: $orange;
 }
 .house-occasional {
- fill: #5AC6FF;
+ fill: $blue;
 }
