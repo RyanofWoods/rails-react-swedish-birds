@@ -6,7 +6,7 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+$body-bg:                 #F9FDFF;
 $font-size-base: 1rem;
 
 // Colors
@@ -23,9 +23,5 @@ $border-radius-lg: 12px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
-$body-bg: #F8F4E9;
-$primary: #AEB884;
-$primary-muted: #82925a;
-$secondary:  #DFA36D;
-$secondary-muted: #F5E9DE;
-$dark: #BCBCBC;
+$primary: $green;
+$dark: $dark-brown;
