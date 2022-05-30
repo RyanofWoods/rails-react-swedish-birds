@@ -1,5 +1,5 @@
 $dark-brown: #484444;
-$orange: #F5E9DE;
+$light-orange: #F5E9DE;
 $blue: #E4F6FF;
 $white: white;
 
@@ -20,7 +20,7 @@ $white: white;
       background-color: $blue;
     }
     &.tooltip-orange {
-      background-color: $orange;
+      background-color: $light-orange;
     }
   }
   .population-tooltip-header {
