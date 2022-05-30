@@ -38,7 +38,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, toggleSeenModal
   }
 
   const checkboxProps = {
-    classes: 'checkbox-checked-hover-pointer-none checkbox-beta',
+    classes: 'checkbox-checked-hover-pointer-none',
     checked: bird.seen,
     id: bird.scientificName,
     onChange: toggleSeenModal

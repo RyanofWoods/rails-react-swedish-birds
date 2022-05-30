@@ -4,15 +4,14 @@ input[type="checkbox"] {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  border-radius: 6px;
-  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 4px;
   margin: 0 0.5rem 0 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  background-color: #F8F4E9;
-  border: 1px solid #9BA398;
+  background-color: $white;
+  border: 1px solid #484444;
 }
 input[type="checkbox"]:checked {
   background-color: $primary !important;
@@ -84,11 +83,6 @@ input[type="checkbox"].animate:after {
  width: 36px;
  display: flex;
  align-items: center;
-}
-
-.checkbox-beta {
-  border: 1px solid #484444 !important;
-  border-radius: 4px !important;
 }
 
 input[type="checkbox"]:checked.fadeaway {

@@ -18,7 +18,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   useEffect(() => { setDidMount(true) }, [])
 
   const { checked, onChange, classes, showDateHandler } = props
-  let newClasses = `${classes} checkbox-beta`
+  let newClasses = `${classes}`
   newClasses += (animateClass) ? ' animate' : ''
   newClasses += (fadeClass) ? ' fadeaway' : ''
 
