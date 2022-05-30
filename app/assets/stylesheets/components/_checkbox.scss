@@ -11,7 +11,7 @@ input[type="checkbox"] {
   appearance: none;
   -webkit-print-color-adjust: exact;
   background-color: $white;
-  border: 1px solid #484444;
+  border: 1px solid $dark-brown;
 }
 input[type="checkbox"]:checked {
   background-color: $primary !important;
