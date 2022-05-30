@@ -1,18 +1,16 @@
-$orange: #DA7C2B;
-
 .counter-section {
   margin-bottom: 32px;
   p {
     margin: 0;
   }
   .counter-item {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $dark-brown;
     display: flex;
     align-items: center;
     height: 64px;
   }
   .counter-item:first-child {
-    border-top: 1px solid black;
+    border-top: 1px solid $dark-brown;
   }
   .counter-number {
     font-size: 1.625rem;

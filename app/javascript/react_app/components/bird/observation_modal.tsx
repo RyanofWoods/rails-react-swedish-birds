@@ -62,7 +62,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
               <input type='date' className='form-control' value={observedAt} max={today} disabled={dateUnknown} onChange={handleDatePicked} />
             </div>
             <div className='form-check' id='date-unknown'>
-              <input type='checkbox' className='form-check-input checkbox-input bg-white checkbox-beta' onClick={handleDateUnknown} />
+              <input type='checkbox' className='form-check-input checkbox-input' onClick={handleDateUnknown} />
               <label className='form-check-label' style={{ lineHeight: '1.2rem', fontSize: '1rem' }}>I don&#39;t know</label>
             </div>
           </div>

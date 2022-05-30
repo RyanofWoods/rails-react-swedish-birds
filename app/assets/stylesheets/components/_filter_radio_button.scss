@@ -1,8 +1,3 @@
-$green: #70997B;
-$white: white;
-$dark-brown: #484444;
-$light-green: #EFF4F1;
-
 .radio-section {
   display: flex;
   justify-content: space-between;
@@ -24,8 +19,8 @@ $light-green: #EFF4F1;
     padding: 12px 12px;
     padding-right: 2rem;
     background-color: $white;
-    border: 1px solid #484444;
-    border-radius: 4px;
+    border: 1px solid $dark-brown;
+    border-radius: $border-radius;
     cursor: pointer;
     font-size: 1rem !important;
     font-weight: 400 !important;
