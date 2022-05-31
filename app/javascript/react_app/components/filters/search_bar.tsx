@@ -18,6 +18,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
   return (
     <>
       <Input
+        formGroupClasses='mt-0'
         id='search'
         type='text'
         ariaLabel='search for a bird'
