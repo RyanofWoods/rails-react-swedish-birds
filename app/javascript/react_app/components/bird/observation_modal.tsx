@@ -55,7 +55,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
         <div className='modal-body'>
           <h4 className='mt-2'>Name</h4>
           <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
-          <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
+          <p className='m-0'>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
           <div className='d-flex align-items-end'>
             <div className='form-group'>
               <label>Date of observation</label>
