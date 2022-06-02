@@ -10,13 +10,14 @@ interface InputProps {
   handleBlur?: (event: React.FocusEvent<HTMLInputElement>) => void
   handleFocus?: (event: React.FocusEvent<HTMLInputElement>) => void
   value: string
+  formGroupClasses?: string
 }
 
 const Input: React.FC<InputProps> = (props) => {
-  const { label, id, ariaLabel, placeholder, type, handleChange, handleBlur, handleFocus, value } = props
+  const { label, id, ariaLabel, placeholder, type, handleChange, handleBlur, handleFocus, value, formGroupClasses } = props
 
   return (
-    <div className='form-group'>
+    <div className={`form-group ${formGroupClasses ?? ''}`}>
       {(label !== undefined) && <label htmlFor={id}>{label}</label>}
       <input
         type={type}
