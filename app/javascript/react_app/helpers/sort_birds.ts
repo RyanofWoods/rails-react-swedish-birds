@@ -1,5 +1,6 @@
 import { BirdWithOrWithoutObservation, BirdSorting } from '../types'
 import getNameAttribute from './name_helper'
+import { compareString } from './sort_helpers'
 
 interface SortBirdsOptions {
   birds: BirdWithOrWithoutObservation[]
@@ -13,12 +14,6 @@ const BirdSeenToNumber = (bird: BirdWithOrWithoutObservation): number => {
   if (bird.observation.observedAt === null) return 0
 
   return Date.parse(bird.observation.observedAt)
-}
-
-const compareString = (a: string, b: string): -1 | 0 | 1 => {
-  if (a === b) return 0
-
-  return (a < b) ? -1 : 1
 }
 
 export const sortBirds = ({ birds, sorting, primaryNameLanguage }: SortBirdsOptions): BirdWithOrWithoutObservation[] => {

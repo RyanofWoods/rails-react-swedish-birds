@@ -1,4 +1,5 @@
 import React from 'react'
+import { compareString } from '../../helpers/sort_helpers'
 
 const defaultValue = 'default'
 
@@ -27,6 +28,8 @@ const Select: React.FC<SelectProps> = (props) => {
     handleChange(value === defaultValue ? null : value)
   }
 
+  const sortedOptions = options.sort((a, b) => compareString(a.text, b.text))
+
   return (
     <div className='form-group'>
       {(label !== undefined) && <label htmlFor={id}>{label}</label>}
@@ -38,7 +41,7 @@ const Select: React.FC<SelectProps> = (props) => {
         value={selectedValue ?? defaultValue}
       >
         <option value={defaultValue}>{defaultText}</option>
-        {options.map((option) => <option key={option.value} value={option.value}>{option.text}</option>)}
+        {sortedOptions.map((option) => <option key={option.value} value={option.value}>{option.text}</option>)}
       </select>
     </div>
   )
