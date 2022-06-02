@@ -47,6 +47,14 @@ test('when the searchScope is empty because the search query results in no birds
   expect(actual).toEqual([])
 })
 
+test('when the searchScope is empty because the trigram search return nothing on one character searches, it returns all the birds', () => {
+  filters.searchScope = []
+  filters.searchValue = 't'
+
+  const actual = filterBirds({ birds, filters })
+  expect(actual).toEqual(birds)
+})
+
 test('when seenScope is "seen" it returns only seen birds', () => {
   filters.seenScope = 'seen'
 
