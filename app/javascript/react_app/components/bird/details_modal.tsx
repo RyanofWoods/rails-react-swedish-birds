@@ -58,7 +58,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
 
         <h4 className='mt-2'>Name</h4>
         <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
-        <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
+        <p className='m-0'>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
 
         <h4 className='mt-4'>Information</h4>
         <p className='mb-3'>Information regarding to Sweden</p>
@@ -71,8 +71,10 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
         </div>
 
         {bird.seen && observationDetails()}
+      </div>
 
-        <button type='button' className='btn btn-dark hover-pointer mt-4' onClick={close}>
+      <div className='modal-footer'>
+        <button type='button' className='btn btn-dark' onClick={close}>
           Close
         </button>
       </div>
