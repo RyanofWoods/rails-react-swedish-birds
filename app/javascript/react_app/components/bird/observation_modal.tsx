@@ -21,7 +21,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
   const [dateUnknown, setDateUnknown] = useState(false)
 
   const handleObservation = (): void => {
-    const observationDate = (observedAt === '') ? 0 : observedAt
+    const observationDate = (dateUnknown) ? 0 : observedAt
     void dispatch(createObservation({
       birdScientificName: bird.scientificName,
       observedAt: observationDate,
