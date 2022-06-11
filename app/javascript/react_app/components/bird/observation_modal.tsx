@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Modal from '../shared/modal'
 import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
 import { useAppDispatch } from '../../hooks'
-import { createObservation } from '../../api'
+import { createObservation, editObservation } from '../../api'
 import getNameAttribute from '../../helpers/name_helper'
 
 interface ObservationModalProps {
@@ -16,13 +16,27 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
 
   const dispatch = useAppDispatch()
 
-  const [observedAt, setObservedAt] = useState(today)
-  const [note, setNote] = useState('')
-  const [dateUnknown, setDateUnknown] = useState(false)
+  const initialState = (): { observedAt: string, note: string, dateUnknown: boolean } => {
+    if (bird.seen) {
+      return {
+        observedAt: bird.observation.observedAt ?? today,
+        note: bird.observation.note ?? '',
+        dateUnknown: bird.observation.observedAt === null
+      }
+    } else {
+      return { observedAt: today, note: '', dateUnknown: false }
+    }
+  }
+
+  const [dateUnknown, setDateUnknown] = useState(initialState().dateUnknown)
+  const [observedAt, setObservedAt] = useState((dateUnknown) ? '' : initialState().observedAt)
+  const [note, setNote] = useState(initialState().note)
 
   const handleObservation = (): void => {
     const observationDate = (dateUnknown) ? 0 : observedAt
-    void dispatch(createObservation({
+    const action = (bird.seen) ? editObservation : createObservation
+
+    void dispatch(action({
       birdScientificName: bird.scientificName,
       observedAt: observationDate,
       note
@@ -30,7 +44,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
   }
 
   const handleDateUnknown = (): void => {
-    const inputDate = (dateUnknown) ? today : ''
+    const inputDate = (dateUnknown) ? initialState().observedAt : ''
     setObservedAt(inputDate)
     setDateUnknown((prevState) => !prevState)
   }
@@ -49,8 +63,10 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
     close()
   }
 
+  const title = (bird.seen) ? 'Edit your observation' : 'Mark as seen'
+
   return (
-    <Modal title='Mark as seen' close={close}>
+    <Modal title={title} close={close}>
       <form onSubmit={handleConfirm}>
         <div className='modal-body'>
           <h4 className='mt-2'>Name</h4>
@@ -62,13 +78,13 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
               <input type='date' className='form-control' value={observedAt} max={today} disabled={dateUnknown} onChange={handleDatePicked} />
             </div>
             <div className='form-check' id='date-unknown'>
-              <input type='checkbox' className='form-check-input checkbox-input' onClick={handleDateUnknown} />
+              <input defaultChecked={dateUnknown} type='checkbox' className='form-check-input checkbox-input' onClick={handleDateUnknown} />
               <label className='form-check-label' style={{ lineHeight: '1.2rem', fontSize: '1rem' }}>I don&#39;t know</label>
             </div>
           </div>
           <div className='form-group mt-0'>
             <label>Note</label>
-            <textarea onChange={handleNoteChanged} className='form-control' placeholder='Add a note about your observation...' />
+            <textarea value={note} onChange={handleNoteChanged} className='form-control' placeholder='Add a note about your observation...' />
           </div>
         </div>
         <div className='modal-footer'>
