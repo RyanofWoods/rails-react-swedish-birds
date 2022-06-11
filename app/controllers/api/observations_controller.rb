@@ -32,6 +32,8 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def observation_params
-    params.permit(:note, :observed_at)
+    params.permit(:note, :observed_at).tap do |params|
+      params[:observed_at] = 0 if params[:observed_at] == '0'
+    end
   end
 end

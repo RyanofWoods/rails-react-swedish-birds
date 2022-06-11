@@ -67,7 +67,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     assert_difference('@user.observations.count', 1) do
-      post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: @observed_at.to_s })
+      post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: '0' })
     end
     assert_response :success
     expected = {
