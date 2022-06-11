@@ -7,7 +7,7 @@ interface Data {
   headers?: {}
 }
 
-type RequestType = 'GET' | 'POST'
+type RequestType = 'GET' | 'POST' | 'PATCH'
 
 interface Config {
   method: RequestType
@@ -66,4 +66,8 @@ client.get = async function <T>(endpoint: string, customConfig = {}) {
 
 client.post = async function <T>(endpoint: string, body: {}, customConfig = {}) {
   return await client<T>('POST', endpoint, { ...customConfig, body })
+}
+
+client.patch = async function <T>(endpoint: string, body: {}, customConfig = {}) {
+  return await client<T>('PATCH', endpoint, { ...customConfig, body })
 }
