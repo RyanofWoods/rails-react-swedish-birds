@@ -20,7 +20,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
   const [note, setNote] = useState('')
   const [dateUnknown, setDateUnknown] = useState(false)
 
-  const handleMarkSeen = (): void => {
+  const handleObservation = (): void => {
     const observationDate = (observedAt === '') ? 0 : observedAt
     void dispatch(createObservation({
       birdScientificName: bird.scientificName,
@@ -45,7 +45,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
 
   const handleConfirm = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
-    handleMarkSeen()
+    handleObservation()
     close()
   }
 
