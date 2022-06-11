@@ -16,7 +16,7 @@ class Api::ObservationsController < Api::BaseController
   private
 
   def unknown_bird
-    throw_error(error: "Cannot find a bird with the scientific name of #{params[:bird_id]}.")
+    throw_error(error: "Cannot find a bird with the scientific name of #{bird_scientific_name}.")
   end
 
   def throw_error(error: 'Bad request')
@@ -24,7 +24,11 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def set_bird
-    @bird = Bird.find_by(scientific_name: params[:bird_id].capitalize)
+    @bird = Bird.find_by(scientific_name: bird_scientific_name.capitalize)
+  end
+
+  def bird_scientific_name
+    params[:bird_id]
   end
 
   def observation_params
