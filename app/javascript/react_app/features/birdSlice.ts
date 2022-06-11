@@ -38,6 +38,17 @@ const resortBirds = (state: State): void => {
   state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
+const updateAllBirds = (state: State, updatedBird: BirdWithOrWithoutObservation): void => {
+  updateBirds(state.birds, updatedBird)
+  updateBirds(state.filteredBirds, updatedBird)
+  updateBirds(state.sortedBirds, updatedBird)
+}
+
+const updateBirds = (birds: BirdWithOrWithoutObservation[], updatedBird: BirdWithOrWithoutObservation): void => {
+  const birdToUpdateIndex = birds.findIndex(bird => bird.scientificName === updatedBird.scientificName)
+  birds[birdToUpdateIndex] = updatedBird
+}
+
 export const birdSlice = createSlice({
   name: 'bird',
   initialState,
@@ -67,13 +78,7 @@ export const birdSlice = createSlice({
       state.orders = payload.orders
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
-      const updateBirds = (birds: BirdWithOrWithoutObservation[]): void => {
-        const birdToUpdateIndex = birds.findIndex(bird => bird.scientificName === payload.scientificName)
-        birds[birdToUpdateIndex] = payload
-      }
-      updateBirds(state.birds)
-      updateBirds(state.filteredBirds)
-      updateBirds(state.sortedBirds)
+      updateAllBirds(state, payload)
     })
     builder.addCase(searchBirds.pending, (state, action) => {
       state.filters.searchValue = action.meta.arg
