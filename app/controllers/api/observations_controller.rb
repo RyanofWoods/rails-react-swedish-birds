@@ -6,9 +6,11 @@ class Api::ObservationsController < Api::BaseController
 
     @observation = current_user.observations.new(observation_params.merge(bird: @bird))
 
-    return if @observation.save
-
-    throw_error(error: @observation.errors.full_messages.join)
+    if @observation.save
+      render :show
+    else
+      throw_error(error: @observation.errors.full_messages.join)
+    end
   end
 
   private
