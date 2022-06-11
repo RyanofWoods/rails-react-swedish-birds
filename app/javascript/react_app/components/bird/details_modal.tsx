@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Modal from '../shared/modal'
 
 import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
@@ -6,6 +6,7 @@ import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population_info'
 import BirdHouse from './bird_house'
 import getNameAttribute from '../../helpers/name_helper'
+import ObservationModal from './observation_modal'
 
 interface DetailsModalProps {
   close: () => void
@@ -14,6 +15,12 @@ interface DetailsModalProps {
 }
 
 const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }) => {
+  const [showObservationModal, setShowObservationModal] = useState(false)
+
+  const toggleObservationModal = (): void => {
+    setShowObservationModal((prevState) => !prevState)
+  }
+
   const observationDetails = (): JSX.Element | undefined => {
     if (bird.observation != null) {
       let dateText
@@ -36,7 +43,8 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
 
       return (
         <>
-          <h4 className='mt-4'>My first observation</h4>
+          <h4 className='mt-4 d-inline'>My first observation</h4>
+          <a className='ml-3 link' onClick={toggleObservationModal}>Edit</a>
           {dateText}
           <h4 className='mt-4'>Note</h4>
           <p>{noteText}</p>
@@ -78,6 +86,11 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
           Close
         </button>
       </div>
+      {
+        showObservationModal && (
+          <ObservationModal close={toggleObservationModal} bird={bird} userSettings={userSettings} />
+        )
+      }
     </Modal>
   )
 }
