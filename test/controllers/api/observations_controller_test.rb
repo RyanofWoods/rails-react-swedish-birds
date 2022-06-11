@@ -81,7 +81,91 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
       "seen"=>true,
       "observation"=> {
         'note'=>nil,
-        'observedAt'=>@observed_at.to_s
+        'observedAt'=>nil
+      }
+    }
+    assert_equal(expected, json_response)
+  end
+
+  test 'PATCH #update returns an unauthorized response if there is no logged in user' do
+    patch api_observation_url(@new_bird.scientific_name)
+
+    assert_response :unauthorized
+    expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
+    assert_equal(expected, json_response)
+  end
+
+  test 'PATCH #update returns an error when the given bird scientific name is invalid' do
+    sign_in @user
+
+    patch api_observation_url('Invalid name', observed_at: 0, note: 'A new note.')
+
+    assert_response :bad_request
+    expected = { 'error'=> 'Cannot find a bird with the scientific name of Invalid name.' }
+    assert_equal(expected, json_response)
+  end
+
+  test 'PATCH #update returns an error when the user does not have an observation for the given bird' do
+    another_user = users(:sara)
+    observation = another_user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+
+    sign_in @user
+
+    patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
+
+    assert_response :not_found
+    expected = { 'error'=> %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}") }
+    assert_equal(expected, json_response)
+  end
+
+  test 'PATCH #update successfully edits the observation' do
+    observation = @user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    sign_in @user
+
+    patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
+    assert_response :success
+    observation = @user.observations.last
+    assert_nil(nil, observation.observed_at)
+    assert_equal('A new note.', observation.note)
+    expected = {
+      "details"=>nil,
+      "populationCategory"=>1,
+      "scientificName"=>"Neo",
+      "englishName"=>"New",
+      "swedishName"=>"Ny",
+      "familyScientificName"=>"Paridae",
+      "orderScientificName"=>"Passeriformes",
+      "seen"=>true,
+      "observation"=> {
+        'note'=>'A new note.',
+        'observedAt'=> nil
+      }
+    }
+    assert_equal(expected, json_response)
+  end
+
+  test "PATCH #update successfully edits the observation and it doesn't override attributes when given nil" do
+    observation = @user.observations.create(bird: @new_bird, observed_at: @observed_at, note: 'Note')
+    sign_in @user
+    new_date = Date.yesterday
+
+    patch api_observation_url(@new_bird.scientific_name, observed_at: new_date.to_s, note: nil)
+    assert_response :success
+    observation = @user.observations.last
+    assert_equal(new_date, observation.observed_at)
+    assert_equal('Note', observation.note)
+    expected = {
+      "details"=>nil,
+      "populationCategory"=>1,
+      "scientificName"=>"Neo",
+      "englishName"=>"New",
+      "swedishName"=>"Ny",
+      "familyScientificName"=>"Paridae",
+      "orderScientificName"=>"Passeriformes",
+      "seen"=>true,
+      "observation"=> {
+        'note'=>'Note',
+        'observedAt'=> new_date.to_s
       }
     }
     assert_equal(expected, json_response)

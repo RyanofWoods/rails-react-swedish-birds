@@ -1,5 +1,6 @@
 class Api::ObservationsController < Api::BaseController
-  before_action :set_bird, only: [:create]
+  before_action :set_bird, only: [:create, :update]
+  before_action :set_observation, only: [:update]
 
   def create
     return unknown_bird unless @bird
@@ -7,6 +8,18 @@ class Api::ObservationsController < Api::BaseController
     @observation = current_user.observations.new(observation_params.merge(bird: @bird))
 
     if @observation.save
+      render :show
+    else
+      throw_error(error: @observation.errors.full_messages.join)
+    end
+  end
+
+  def update
+    return unknown_bird unless @bird
+
+    return no_observation unless @observation
+
+    if @observation.update(observation_params.compact)
       render :show
     else
       throw_error(error: @observation.errors.full_messages.join)
@@ -23,12 +36,21 @@ class Api::ObservationsController < Api::BaseController
     render json: { error: error }, status: :bad_request
   end
 
+  def no_observation
+    render json: { error: %(No observation was found for a bird with a scientific name of "#{bird_scientific_name}") },
+           status: :not_found
+  end
+
   def set_bird
     @bird = Bird.find_by(scientific_name: bird_scientific_name.capitalize)
   end
 
+  def set_observation
+    @observation = current_user.observations.find_by(bird: @bird)
+  end
+
   def bird_scientific_name
-    params[:bird_id]
+    params[:bird_id] || params[:id]
   end
 
   def observation_params

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :birds, only: :index do
       resources :observations, only: [:create]
     end
+
+    resources :observations, only: [:update]
   end
 
   root to: 'pages#react'
