@@ -20,3 +20,15 @@ h4 {
 .bold-600 {
   font-weight: 600;
 }
+
+.link {
+  color: $green;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-brown;
+  }
+}

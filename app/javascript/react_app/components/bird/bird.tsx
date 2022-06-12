@@ -42,7 +42,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
       <div className='bird-names'>
         <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
-        <a id='details-link' onClick={toggleDetailsModal}>Details</a>
+        <a id='details-link' className='link' onClick={toggleDetailsModal}>Details</a>
       </div>
       <div onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} className='position-relative' role='button'>
         <PopulationBars population={bird.populationCategory} />

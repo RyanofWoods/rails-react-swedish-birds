@@ -32,14 +32,7 @@
 }
 
 #details-link {
-  color: $green;
-  text-decoration: underline;
-  font-size: 0.75rem;
-  font-weight: 600;
   cursor: pointer;
   margin-top: 0.2rem;
-
-  &:hover {
-    color: $dark-brown;
-  }
 }
+
