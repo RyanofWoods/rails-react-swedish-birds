@@ -31,9 +31,9 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, toggleSeenModal
     }
 
     return (
-      <div className='bird-date'>
+      <a className='bird-date' onClick={toggleSeenModal}>
         {dateContents()}
-      </div>
+      </a>
     )
   }
 
