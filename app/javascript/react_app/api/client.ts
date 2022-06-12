@@ -7,8 +7,10 @@ interface Data {
   headers?: {}
 }
 
+type RequestType = 'GET' | 'POST'
+
 interface Config {
-  method: 'GET' | 'POST'
+  method: RequestType
   headers: {}
   body?: string
 }
