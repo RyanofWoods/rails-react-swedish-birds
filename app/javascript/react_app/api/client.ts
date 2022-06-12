@@ -7,8 +7,10 @@ interface Data {
   headers?: {}
 }
 
+type RequestType = 'GET' | 'POST' | 'PATCH'
+
 interface Config {
-  method: 'GET' | 'POST'
+  method: RequestType
   headers: {}
   body?: string
 }
@@ -22,12 +24,12 @@ interface Response<T> {
 
 const BASE_URL = '/api'
 
-export async function client<T> (endpoint: string, data: Data = {}): Promise<Response<T>> {
+export async function client<T> (method: RequestType, endpoint: string, data: Data = {}): Promise<Response<T>> {
   const { body, ...customConfig } = data
   const headers = { 'Content-Type': 'application/json' }
 
   const config: Config = {
-    method: (body != null) ? 'POST' : 'GET',
+    method,
     ...customConfig,
     headers: {
       ...headers,
@@ -59,9 +61,13 @@ export async function client<T> (endpoint: string, data: Data = {}): Promise<Res
 }
 
 client.get = async function <T>(endpoint: string, customConfig = {}) {
-  return await client<T>(endpoint, { ...customConfig })
+  return await client<T>('GET', endpoint, { ...customConfig })
 }
 
 client.post = async function <T>(endpoint: string, body: {}, customConfig = {}) {
-  return await client<T>(endpoint, { ...customConfig, body })
+  return await client<T>('POST', endpoint, { ...customConfig, body })
+}
+
+client.patch = async function <T>(endpoint: string, body: {}, customConfig = {}) {
+  return await client<T>('PATCH', endpoint, { ...customConfig, body })
 }
