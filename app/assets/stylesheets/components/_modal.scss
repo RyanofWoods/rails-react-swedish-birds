@@ -16,6 +16,11 @@
   max-width: 450px;
   z-index: 100;
 
+  .close {
+    color: $dark-brown;
+    opacity: 1;
+  }
+
   .modal-header, .modal-footer {
     border: none;
   }
