@@ -57,12 +57,8 @@
     .modal-body {
       padding: 0.5rem 0 0.5rem 0;
     }
-    & .detailsModalContent {
-      font-size: 12.5px;
-
-      .contentGroup {
+    & .detailsModalContent .contentGroup {
         padding-top: 8px;
-      }
     }
   }
 }
