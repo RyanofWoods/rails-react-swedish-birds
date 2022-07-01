@@ -92,7 +92,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
             Confirm
           </button>
           <button type='button' className='btn btn-dark' onClick={close}>
-            Close
+            Cancel
           </button>
         </div>
       </form>
