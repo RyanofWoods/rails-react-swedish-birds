@@ -20,7 +20,15 @@
     color: $dark-brown;
     opacity: 1;
   }
-
+  .modal-footer {
+    padding: 0 1rem 1rem 1rem;
+    & :not(:first-child) {
+      margin-top: 8px;
+    }
+    &  > * {
+      margin: 0;
+    }
+  }
   .modal-header, .modal-footer {
     border: none;
   }
