@@ -2,7 +2,7 @@
   "name": "rails_swedish_birds_checklist",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
