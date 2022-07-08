@@ -82,7 +82,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
       </div>
 
       <div className='modal-footer'>
-        <button type='button' className='btn btn-dark' onClick={close}>
+        <button type='button' className='btn btn-outline-dark' onClick={close}>
           Close
         </button>
       </div>
