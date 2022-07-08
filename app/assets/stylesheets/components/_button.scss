@@ -6,6 +6,12 @@
   letter-spacing: 0.05rem;
 }
 
+.btn-primary {
+  &:hover {
+    background-color: $dark-brown; 
+  }
+}
+
 .btn-primary, .btn-dark {
   &, &:hover, &:active, &:focus {
     color: #fff !important;
