@@ -69,7 +69,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
     <Modal title={title} close={close}>
       <form onSubmit={handleConfirm}>
         <div className='modal-body'>
-          <h4 className='mt-2'>Name</h4>
+          <h4>Name</h4>
           <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
           <p className='m-0'>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
           <div className='d-flex align-items-end'>
