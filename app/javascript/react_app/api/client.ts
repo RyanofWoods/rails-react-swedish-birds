@@ -54,9 +54,10 @@ export async function client<T> (method: RequestType, endpoint: string, data: Da
         url: response.url
       }
     }
-    throw new Error(response.statusText)
+    return await Promise.reject(result.error)
   } catch (err: any) {
-    return await Promise.reject(err.message ?? result)
+    const errorMessage = err ?? 'Something went wrong.'
+    return await Promise.reject(errorMessage)
   }
 }
 
