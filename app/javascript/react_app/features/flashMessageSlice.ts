@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { createObservation, editObservation } from '../api'
 import { FlashMessageState } from '../types/flashMessageData'
 
 const initialState: FlashMessageState = {
@@ -12,6 +13,14 @@ export const flashMessageSlice = createSlice({
     clearFlashMessage (state) {
       state.flashMessage = null
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(createObservation.rejected, (state, { error }) => {
+      state.flashMessage = { type: 'error', message: (error.message as string) }
+    })
+    builder.addCase(editObservation.rejected, (state, { error }) => {
+      state.flashMessage = { type: 'error', message: (error.message as string) }
+    })
   }
 })
 
