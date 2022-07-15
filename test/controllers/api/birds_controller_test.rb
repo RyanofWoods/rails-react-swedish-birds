@@ -11,12 +11,45 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     @other_user.observations.create!(bird: birds(:white_backed_woodpecker), observed_at: '2022-01-02')
   end
 
-  test 'GET #index returns an unauthorized response if not logged in' do
+  test 'GET #index returns all birds with no observations joined on when not logged in' do
     get api_birds_url
 
-    assert_response :unauthorized
-    expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
-    assert_equal(expected, json_response)
+    assert_response :success
+    expected_birds = [
+      {
+        'scientificName'=> birds(:great_spotted_woodpecker).scientific_name,
+        'englishName'=> birds(:great_spotted_woodpecker).english_name,
+        'swedishName'=> birds(:great_spotted_woodpecker).swedish_name,
+        'familyScientificName'=> birds(:great_spotted_woodpecker).family.scientific_name,
+        'orderScientificName'=> birds(:great_spotted_woodpecker).family.order.scientific_name,
+        'details'=> birds(:great_spotted_woodpecker).details,
+        'populationCategory'=> birds(:great_spotted_woodpecker).population_category,
+        'seen'=> false
+      },
+      {
+        'scientificName'=> birds(:green_woodpecker).scientific_name,
+        'englishName'=> birds(:green_woodpecker).english_name,
+        'swedishName'=> birds(:green_woodpecker).swedish_name,
+        'familyScientificName'=> birds(:green_woodpecker).family.scientific_name,
+        'orderScientificName'=> birds(:green_woodpecker).family.order.scientific_name,
+        'details'=>  birds(:green_woodpecker).details,
+        'populationCategory'=>  birds(:green_woodpecker).population_category,
+        'seen'=> false
+      },
+      {
+        'scientificName'=> birds(:white_backed_woodpecker).scientific_name,
+        'englishName'=> birds(:white_backed_woodpecker).english_name,
+        'swedishName'=> birds(:white_backed_woodpecker).swedish_name,
+        'familyScientificName'=> birds(:white_backed_woodpecker).family.scientific_name,
+        'orderScientificName'=> birds(:white_backed_woodpecker).family.order.scientific_name,
+        'details'=>  birds(:white_backed_woodpecker).details,
+        'populationCategory'=>  birds(:white_backed_woodpecker).population_category,
+        'seen'=> false
+      }
+    ]
+
+    actual_birds = json_response['birds']
+    expected_birds.each { |bird| assert_includes(actual_birds, bird) }
   end
 
   test 'GET #index returns all birds with any user observations joined on' do
