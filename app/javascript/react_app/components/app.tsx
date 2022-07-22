@@ -7,6 +7,7 @@ import BirdList from './bird/bird_list'
 import Navbar from './shared/navbar'
 import FilterGroup from './filters/filter_group'
 import Counter from './filters/counter'
+import FlashMessage from './shared/flash_message'
 
 const navbarContainer = document.getElementById('navbar-container') as HTMLElement
 
@@ -22,6 +23,7 @@ const App: React.FC = () => {
       <FilterGroup />
       <Counter />
       <BirdList />
+      <FlashMessage />
     </>
   )
 }
