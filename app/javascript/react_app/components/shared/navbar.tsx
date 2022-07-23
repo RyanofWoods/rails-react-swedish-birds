@@ -1,6 +1,23 @@
 import React from 'react'
 
+import { useAppSelector } from '../../hooks'
+
 const Navbar = (): JSX.Element => {
+  const isUserLoggedIn = useAppSelector(state => state.userData.isLoggedIn)
+  let authenticationLink: string
+  let authenticationLinkMethod: string
+  let authenticationText: string
+
+  if (isUserLoggedIn === true) {
+    authenticationLink = '/users/sign_out'
+    authenticationLinkMethod = 'delete'
+    authenticationText = 'Log out'
+  } else {
+    authenticationLink = '/users/sign_in'
+    authenticationLinkMethod = 'get'
+    authenticationText = 'Log in'
+  }
+
   return (
     <div className='navbar navbar-expand-sm navbar-light'>
       <div className='navbar-brand'>
@@ -17,7 +34,7 @@ const Navbar = (): JSX.Element => {
 
       <ul className='navbar-nav nav-collapse'>
         <li className='nav-item dropdown-menu dropdown-menu-right' aria-labelledby='dropdownMenuLink'>
-          <a href='/users/sign_out' data-method='delete' className='dropdown-item'>Log out</a>
+          <a href={authenticationLink} data-method={authenticationLinkMethod} className='dropdown-item'>{authenticationText}</a>
         </li>
       </ul>
     </div>
