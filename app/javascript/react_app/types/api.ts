@@ -29,3 +29,7 @@ export interface editObservationResponse extends BirdWithObservation {}
 export interface searchBirdsResponse {
   birds: BirdScientificName[]
 }
+
+export interface isUserLoggedInResponse {
+  isLoggedIn: boolean
+}
