@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { createObservation, editObservation } from '../api'
-import { FlashMessageState } from '../types/flashMessageData'
+import { FlashMessage, FlashMessageState } from '../types/flashMessageData'
 
 const initialState: FlashMessageState = {
   flashMessage: null
@@ -12,6 +12,9 @@ export const flashMessageSlice = createSlice({
   reducers: {
     clearFlashMessage (state) {
       state.flashMessage = null
+    },
+    setFlashMessage (state, action: PayloadAction<FlashMessage>) {
+      state.flashMessage = action.payload
     }
   },
   extraReducers: (builder) => {
@@ -24,5 +27,5 @@ export const flashMessageSlice = createSlice({
   }
 })
 
-export const { clearFlashMessage } = flashMessageSlice.actions
+export const { clearFlashMessage, setFlashMessage } = flashMessageSlice.actions
 export default flashMessageSlice
