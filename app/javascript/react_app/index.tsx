@@ -7,10 +7,12 @@ import { logger } from 'redux-logger'
 import App from './components/app'
 import birdSlice from './features/birdSlice'
 import flashMessageSlice from './features/flashMessageSlice'
+import userSlice from './features/userSlice'
 
 const reducer = {
   birdsData: birdSlice.reducer,
-  flashMessageData: flashMessageSlice.reducer
+  flashMessageData: flashMessageSlice.reducer,
+  userData: userSlice.reducer
 }
 
 const store = configureStore({
