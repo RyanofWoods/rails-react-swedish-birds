@@ -7,8 +7,8 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'redirected to login if not logged in' do
+  test 'success if not logged in' do
     get '/'
-    assert_redirected_to controller: 'devise/sessions', action: 'new'
+    assert_response :success
   end
 end
