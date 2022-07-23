@@ -38,7 +38,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
   return (
     <li className='bird-card'>
       {showInfoBox && <PopulationTooltip bird={bird} />}
-      <CheckboxAndDate bird={bird} toggleSeenModal={toggleSeenModal} />
+      <CheckboxAndDate bird={bird} handleChange={toggleSeenModal} />
       <div className='bird-names'>
         <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
