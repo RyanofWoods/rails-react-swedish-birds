@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
+import { UserDataState } from '../types/userData'
+
+const initialState: UserDataState = {
+  isLoggedIn: undefined
 }
 
 export const userSlice = createSlice({
