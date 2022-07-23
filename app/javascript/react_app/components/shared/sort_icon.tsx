@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSortUp, faSortDown, faSort } from '@fortawesome/free-solid-svg-icons'
 
-import { ColumnOrdering } from '../../types'
+import { ColumnOrdering } from '../../types/birdData'
 
 interface SortIconProps {
   order: ColumnOrdering | null

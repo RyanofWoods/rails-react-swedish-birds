@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PopulationCategory } from '../../types'
+import { PopulationCategory } from '../../types/birdData'
 import { isBreedingBird } from '../../helpers/breeding_bird'
 
 interface PopulationBarsProps {

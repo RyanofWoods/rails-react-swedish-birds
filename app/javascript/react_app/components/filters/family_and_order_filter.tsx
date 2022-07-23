@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { updateFilters } from '../../features/birdSlice'
 import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
-import { Family, Order, FamilyScientificName, OrderScientificName, UserSettings } from '../../types'
+import { Family, Order, FamilyScientificName, OrderScientificName, UserSettings } from '../../types/birdData'
 import Select, { Option } from '../shared/select'
 
 interface FamilyAndOrderFilterProps {

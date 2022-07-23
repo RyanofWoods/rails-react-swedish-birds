@@ -2,7 +2,7 @@ import React from 'react'
 import FilterRadioButtonGroup, { RadioOption } from '../shared/filter_radio_group'
 import { updateFilters } from '../../features/birdSlice'
 import { useAppDispatch } from '../../hooks'
-import { SeenScope } from '../../types'
+import { SeenScope } from '../../types/birdData'
 
 interface SeenBirdsFilterProps {
   selectedValue: SeenScope

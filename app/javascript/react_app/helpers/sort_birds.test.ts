@@ -1,4 +1,4 @@
-import { BirdSorting, BirdWithOrWithoutObservation, Language } from '../types'
+import { BirdSorting, BirdWithOrWithoutObservation, Language } from '../types/birdData'
 import { barnOwl, tawnyOwl, greatGreyOwl, blueTit, greatTit } from './bird_fixtures_test'
 import { sortBirds } from './sort_birds'
 

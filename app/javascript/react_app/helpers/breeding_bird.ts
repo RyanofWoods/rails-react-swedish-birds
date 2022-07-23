@@ -1,4 +1,4 @@
-import { PopulationCategory } from '../types'
+import { PopulationCategory } from '../types/birdData'
 
 const BREEDINGBIRDTHRESHOLD = 5
 
