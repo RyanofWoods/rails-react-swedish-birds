@@ -7,20 +7,30 @@ import ObservationModal from './observation_modal'
 import DetailsModal from './details_modal'
 import PopulationTooltip from './population_tooltip'
 import CheckboxAndDate from './checkbox_and_date'
+import { setFlashMessage } from '../../features/flashMessageSlice'
 import getNameAttribute from '../../helpers/name_helper'
+import { useAppDispatch } from '../../hooks'
 
 interface BirdProps {
   bird: BirdWithOrWithoutObservation
   userSettings: UserSettings
+  isUserLoggedIn: boolean
 }
 
-const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
+const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
+  const dispatch = useAppDispatch()
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
   const [showInfoBox, setShowInfoBox] = useState(false)
+  const [restrictedAccessAttempted, setRestrictedAccessAttempted] = useState(false)
 
   const toggleSeenModal = (): void => {
-    setShowSeenModal((prevState) => !prevState)
+    if (isUserLoggedIn) {
+      setShowSeenModal((prevState) => !prevState)
+      setRestrictedAccessAttempted(false)
+    } else {
+      setRestrictedAccessAttempted(true)
+    }
   }
 
   const toggleDetailsModal = (): void => {
@@ -33,6 +43,10 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings }) => {
 
   const handleMouseOut = (): void => {
     setShowInfoBox(false)
+  }
+
+  if (restrictedAccessAttempted) {
+    void dispatch(setFlashMessage({ message: 'You must log in to make an observation', type: 'error' }))
   }
 
   return (
