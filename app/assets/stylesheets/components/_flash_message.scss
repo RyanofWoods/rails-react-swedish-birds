@@ -1,0 +1,38 @@
+.flash {
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+  border-radius: 0;
+  background-color: $dark;
+  color: #fff;
+  text-align: center;
+  font-size: x-large;
+
+  @include media-breakpoint-down(sm) {
+    font-size: large;
+  }
+
+  &.flash-success {
+    background-color: $success;
+  }
+
+  &.flash-error {
+    background-color: $danger;
+  }
+
+  p {
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  button {
+    margin-left: 0.75rem;
+    justify-self: flex-end;
+    color: inherit;
+    background-color: inherit;
+  }
+}

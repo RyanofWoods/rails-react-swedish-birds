@@ -1,4 +1,4 @@
-import { BirdSorting } from '../types'
+import { BirdSorting } from '../types/birdData'
 import clickSortingColumn from './click_sorting_column'
 
 const initialSorting: BirdSorting = {

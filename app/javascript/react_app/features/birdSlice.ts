@@ -4,9 +4,9 @@ import { fetchBirds, createObservation, editObservation, searchBirds, fetchOrder
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortBirds } from '../helpers/sort_birds'
-import { BirdColumn, BirdFilters, BirdWithOrWithoutObservation, State } from '../types'
+import { BirdColumn, BirdFilters, BirdWithOrWithoutObservation, BirdDataState } from '../types/birdData'
 
-const initialState: State = {
+const initialState: BirdDataState = {
   birds: [],
   families: [],
   orders: [],
@@ -29,16 +29,16 @@ const initialState: State = {
   }
 }
 
-const refilterBirds = (state: State): void => {
+const refilterBirds = (state: BirdDataState): void => {
   state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
   resortBirds(state)
 }
 
-const resortBirds = (state: State): void => {
+const resortBirds = (state: BirdDataState): void => {
   state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
-const updateAllBirds = (state: State, updatedBird: BirdWithOrWithoutObservation): void => {
+const updateAllBirds = (state: BirdDataState, updatedBird: BirdWithOrWithoutObservation): void => {
   updateBirds(state.birds, updatedBird)
   updateBirds(state.filteredBirds, updatedBird)
   updateBirds(state.sortedBirds, updatedBird)

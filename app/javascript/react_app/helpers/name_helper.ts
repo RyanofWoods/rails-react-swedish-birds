@@ -1,4 +1,4 @@
-import { BirdWithOrWithoutObservation, Family, Order, Language } from '../types'
+import { BirdWithOrWithoutObservation, Family, Order, Language } from '../types/birdData'
 
 const getNameAttribute = (object: BirdWithOrWithoutObservation | Family | Order, language: Language): string => {
   switch (language) {

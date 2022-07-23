@@ -1,4 +1,4 @@
-import { BirdWithOrWithoutObservation, BirdSorting } from '../types'
+import { BirdWithOrWithoutObservation, BirdSorting } from '../types/birdData'
 import getNameAttribute from './name_helper'
 import { compareString } from './sort_helpers'
 

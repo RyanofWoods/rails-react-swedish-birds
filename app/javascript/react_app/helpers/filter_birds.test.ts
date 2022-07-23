@@ -1,4 +1,4 @@
-import { BirdFilters, BirdWithOrWithoutObservation } from '../types'
+import { BirdFilters, BirdWithOrWithoutObservation } from '../types/birdData'
 import { barnOwl, blueTit, greatTit, tawnyOwl } from './bird_fixtures_test'
 import filterBirds from './filter_birds'
 

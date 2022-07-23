@@ -1,4 +1,4 @@
-import { BirdWithOrWithoutObservation } from '../types'
+import { BirdWithOrWithoutObservation } from '../types/birdData'
 
 const populationInfo = (bird: BirdWithOrWithoutObservation): string => {
   const text = []

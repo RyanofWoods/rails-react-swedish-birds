@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { BirdWithOrWithoutObservation, UserSettings } from '../../types'
+import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'

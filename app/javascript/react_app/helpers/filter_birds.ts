@@ -1,4 +1,4 @@
-import { BirdFilters, BirdWithOrWithoutObservation } from '../types'
+import { BirdFilters, BirdWithOrWithoutObservation } from '../types/birdData'
 
 interface Options {
   birds: BirdWithOrWithoutObservation[]
