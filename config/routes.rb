@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
 
     resources :observations, only: [:update]
+    resources :users, only: [:index]
   end
 
   root to: 'pages#react'

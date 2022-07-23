@@ -4,10 +4,10 @@ import Checkbox from './checkbox'
 
 interface CheckboxAndDateProps {
   bird: BirdWithOrWithoutObservation
-  toggleSeenModal: () => void
+  handleChange: () => void
 }
 
-const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, toggleSeenModal }) => {
+const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange }) => {
   const [showDate, setShowDate] = useState(bird.seen)
 
   const birdDateStyled = (): JSX.Element | null => {
@@ -31,7 +31,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, toggleSeenModal
     }
 
     return (
-      <a className='bird-date' onClick={toggleSeenModal}>
+      <a className='bird-date' onClick={handleChange}>
         {dateContents()}
       </a>
     )
@@ -41,7 +41,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, toggleSeenModal
     classes: 'checkbox-checked-hover-pointer-none',
     checked: bird.seen,
     id: bird.scientificName,
-    onChange: toggleSeenModal
+    onChange: handleChange
   }
 
   const showDateHandler = (): void => {
