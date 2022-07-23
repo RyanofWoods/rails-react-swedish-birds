@@ -1,4 +1,4 @@
-export interface State {
+export interface BirdDataState {
   birds: BirdWithOrWithoutObservation[]
   families: Family[]
   orders: Order[]
