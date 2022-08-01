@@ -43,8 +43,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
 
       return (
         <>
-          <h4 className='mt-4 d-inline'>My first observation</h4>
-          <a className='ml-3 link' onClick={toggleObservationModal}>Edit</a>
+          <h4 className='mt-4'>My first observation</h4>
           {dateText}
           <h4 className='mt-4'>Note</h4>
           <p>{noteText}</p>
@@ -82,6 +81,13 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
       </div>
 
       <div className='modal-footer'>
+        {
+          bird.seen && (
+            <button type='button' className='btn btn-primary' onClick={toggleObservationModal}>
+              Edit my observation
+            </button>
+          )
+        }
         <button type='button' className='btn btn-outline-dark' onClick={close}>
           Close
         </button>
