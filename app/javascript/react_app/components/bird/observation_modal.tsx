@@ -63,7 +63,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
     close()
   }
 
-  const title = (bird.seen) ? 'Edit your observation' : 'Mark as seen'
+  const title = (bird.seen) ? 'Edit observation' : 'Mark as seen'
 
   return (
     <Modal title={title} close={close}>
