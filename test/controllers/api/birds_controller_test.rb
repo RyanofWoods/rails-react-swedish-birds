@@ -49,7 +49,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     ]
 
     actual_birds = json_response['birds']
-    expected_birds.each { |bird| assert_includes(actual_birds, bird) }
+    assert_serialized_array(expected_birds, actual_birds, 'englishName')
   end
 
   test 'GET #index returns all birds with any user observations joined on' do
@@ -100,6 +100,6 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     ]
 
     actual_birds = json_response['birds']
-    expected_birds.each { |bird| assert_includes(actual_birds, bird) }
+    assert_serialized_array(expected_birds, actual_birds, 'englishName')
   end
 end
