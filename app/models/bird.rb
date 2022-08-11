@@ -6,6 +6,9 @@ class Bird < ApplicationRecord
   has_many :observations
 
   default_scope { where.not(population_category: 0) }
+  scope :with_user_observations, lambda { |user_id|
+    Bird.eager_load(:observations).joins(sanitize_sql_array(["AND observations.user_id = ?", user_id]))
+  }
 
   include PgSearch::Model
   pg_search_scope :search_by_english_and_scientific_name,
