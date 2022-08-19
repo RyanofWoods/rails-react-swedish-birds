@@ -20,12 +20,11 @@ const PopulationBars: React.FC<PopulationBarsProps> = ({ population }) => {
 
   return (
     <div className='population-bars'>
-      {isBreedingBird(population) && <div className={populationLevel <= 5 ? `bar-filled ${color}` : `bar ${color}`} />}
+      <div className={populationLevel <= 5 ? `bar-filled ${color}` : `bar ${color}`} />
       <div className={populationLevel <= 4 ? `bar-filled ${color}` : `bar ${color}`} />
       <div className={populationLevel <= 3 ? `bar-filled ${color}` : `bar ${color}`} />
       <div className={populationLevel <= 2 ? `bar-filled ${color}` : `bar ${color}`} />
       <div className={populationLevel === 1 ? `bar-filled ${color}` : `bar ${color}`} />
-      {!isBreedingBird(population) && <div className='bar-filled bg-white' />}
     </div>
   )
 }
