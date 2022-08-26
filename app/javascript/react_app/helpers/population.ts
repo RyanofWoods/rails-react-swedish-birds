@@ -1,4 +1,16 @@
-import { BirdWithOrWithoutObservation } from '../types/birdData'
+import { BirdWithOrWithoutObservation, PopulationCategory, PopulationLevel } from '../types/birdData'
+
+const POPULATION_BREEDING_THRESHOLD = 5
+
+const isBreedingBird = (population: PopulationCategory): boolean => {
+  return population <= POPULATION_BREEDING_THRESHOLD
+}
+
+const populationCategoryToLevel = (populationCategory: PopulationCategory): PopulationLevel => {
+  const cappedCategory = isBreedingBird(populationCategory) ? populationCategory : populationCategory - POPULATION_BREEDING_THRESHOLD
+  const inversedCategory = POPULATION_BREEDING_THRESHOLD + 1 - cappedCategory as PopulationLevel
+  return inversedCategory
+}
 
 const populationInfo = (bird: BirdWithOrWithoutObservation): string => {
   const text = []
@@ -68,4 +80,4 @@ const migrationText = (bird: BirdWithOrWithoutObservation): string => {
   return text.join('. ') + '.'
 }
 
-export { populationInfo, migrationText }
+export { isBreedingBird, populationCategoryToLevel, populationInfo, migrationText }

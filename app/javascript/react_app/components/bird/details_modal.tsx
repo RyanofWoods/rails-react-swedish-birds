@@ -3,7 +3,7 @@ import Modal from '../shared/modal'
 
 import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
-import { populationInfo, migrationText } from '../../helpers/population_info'
+import { populationInfo, migrationText } from '../../helpers/population'
 import BirdHouse from './bird_house'
 import getNameAttribute from '../../helpers/name_helper'
 import ObservationModal from './observation_modal'

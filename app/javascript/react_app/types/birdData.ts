@@ -12,6 +12,9 @@ export interface BirdDataState {
 export type Language = 'EN' | 'SE' | 'SC'
 
 export type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+// represents the amount of birds - the inverse of populationCategory (but to 5)
+// as 1 and 6 of populationCategory (breeding and non-breeding respectively) are the most common
+export type PopulationLevel = 1 | 2 | 3 | 4 | 5
 
 export type BirdScientificName = string
 type BirdEnglishName = string

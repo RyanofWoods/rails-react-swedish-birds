@@ -1,31 +1,23 @@
 import React from 'react'
 
 import { PopulationCategory } from '../../types/birdData'
-import { isBreedingBird } from '../../helpers/breeding_bird'
+import { isBreedingBird, populationCategoryToLevel } from '../../helpers/population'
 
 interface PopulationBarsProps {
   population: PopulationCategory
 }
 
 const PopulationBars: React.FC<PopulationBarsProps> = ({ population }) => {
-  let populationLevel = population
-  if (!isBreedingBird(population)) populationLevel -= 5
-
-  let color
-  if (isBreedingBird(population)) {
-    color = 'bar-orange'
-  } else {
-    color = 'bar-blue'
-  }
+  const populationLevel = populationCategoryToLevel(population)
+  const color = (isBreedingBird(population)) ? 'bar-orange' : 'bar-blue'
 
   return (
     <div className='population-bars'>
-      {isBreedingBird(population) && <div className={populationLevel <= 5 ? `bar-filled ${color}` : `bar ${color}`} />}
-      <div className={populationLevel <= 4 ? `bar-filled ${color}` : `bar ${color}`} />
-      <div className={populationLevel <= 3 ? `bar-filled ${color}` : `bar ${color}`} />
-      <div className={populationLevel <= 2 ? `bar-filled ${color}` : `bar ${color}`} />
-      <div className={populationLevel === 1 ? `bar-filled ${color}` : `bar ${color}`} />
-      {!isBreedingBird(population) && <div className='bar-filled bg-white' />}
+      {
+        [...Array(5)].map((_, index) => (
+          <div className={populationLevel >= index + 1 ? `bar-filled ${color}` : `bar ${color}`} key={index} />
+        ))
+      }
     </div>
   )
 }
