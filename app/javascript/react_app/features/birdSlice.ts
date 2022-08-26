@@ -61,6 +61,11 @@ export const birdSlice = createSlice({
       state.filters = initialState.filters
       refilterBirds(state)
     },
+    resetSearch (state) {
+      state.filters.searchValue = ''
+      state.filters.searchScope = []
+      refilterBirds(state)
+    },
     updateSorting (state, action: PayloadAction<BirdColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
       resortBirds(state)
@@ -93,5 +98,5 @@ export const birdSlice = createSlice({
   }
 })
 
-export const { resetFilters, updateFilters, updateSorting } = birdSlice.actions
+export const { resetFilters, resetSearch, updateFilters, updateSorting } = birdSlice.actions
 export default birdSlice

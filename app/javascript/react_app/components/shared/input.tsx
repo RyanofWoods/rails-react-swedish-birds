@@ -11,10 +11,11 @@ interface InputProps {
   handleFocus?: (event: React.FocusEvent<HTMLInputElement>) => void
   value: string
   formGroupClasses?: string
+  children?: JSX.Element
 }
 
 const Input: React.FC<InputProps> = (props) => {
-  const { label, id, ariaLabel, placeholder, type, handleChange, handleBlur, handleFocus, value, formGroupClasses } = props
+  const { label, id, ariaLabel, placeholder, type, handleChange, handleBlur, handleFocus, value, formGroupClasses, children } = props
 
   return (
     <div className={`form-group ${formGroupClasses ?? ''}`}>
@@ -30,6 +31,7 @@ const Input: React.FC<InputProps> = (props) => {
         onFocus={handleFocus}
         value={value}
       />
+      {children}
     </div>
   )
 }
