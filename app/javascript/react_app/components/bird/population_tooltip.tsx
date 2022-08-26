@@ -3,7 +3,7 @@ import React from 'react'
 import { BirdWithOrWithoutObservation } from '../../types/birdData'
 import { isBreedingBird } from '../../helpers/breeding_bird'
 import PopulationBars from './population_bars'
-import { populationInfo } from '../../helpers/population_info'
+import { populationInfo } from '../../helpers/population'
 
 interface PopulationTooltipProps {
   bird: BirdWithOrWithoutObservation
