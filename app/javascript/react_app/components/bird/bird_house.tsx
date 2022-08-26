@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { isBreedingBird } from '../../helpers/breeding_bird'
+import { isBreedingBird } from '../../helpers/population'
 
 interface BirdHouseProps {
   population: number

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { BirdWithOrWithoutObservation } from '../../types/birdData'
-import { isBreedingBird } from '../../helpers/breeding_bird'
+import { isBreedingBird } from '../../helpers/population'
 import PopulationBars from './population_bars'
 import { populationInfo } from '../../helpers/population'
 

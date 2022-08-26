@@ -1,4 +1,11 @@
 import { BirdWithOrWithoutObservation } from '../types/birdData'
+import { PopulationCategory } from '../types/birdData'
+
+const BREEDINGBIRDTHRESHOLD = 5
+
+const isBreedingBird = (population: PopulationCategory): boolean => {
+  return population <= BREEDINGBIRDTHRESHOLD
+}
 
 const populationInfo = (bird: BirdWithOrWithoutObservation): string => {
   const text = []
@@ -68,4 +75,4 @@ const migrationText = (bird: BirdWithOrWithoutObservation): string => {
   return text.join('. ') + '.'
 }
 
-export { populationInfo, migrationText }
+export { isBreedingBird, populationInfo, migrationText }
