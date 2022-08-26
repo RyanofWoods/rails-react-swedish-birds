@@ -1,10 +1,9 @@
-import { BirdWithOrWithoutObservation } from '../types/birdData'
-import { PopulationCategory } from '../types/birdData'
+import { BirdWithOrWithoutObservation, PopulationCategory } from '../types/birdData'
 
-const BREEDINGBIRDTHRESHOLD = 5
+const POPULATION_BREEDING_THRESHOLD = 5
 
 const isBreedingBird = (population: PopulationCategory): boolean => {
-  return population <= BREEDINGBIRDTHRESHOLD
+  return population <= POPULATION_BREEDING_THRESHOLD
 }
 
 const populationInfo = (bird: BirdWithOrWithoutObservation): string => {
