@@ -30,8 +30,9 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
       if (observedAt === null) {
         dateText = <p className='date'>Date unknown</p>
       } else {
-        const month = observedAt.substring(5, 7)
-        const monthFormatted = Intl.DateTimeFormat('en', { month: 'long' }).format(new Date(month))
+        const parsedDate = new Date(observedAt)
+        const monthFormatted = Intl.DateTimeFormat('en', { month: 'long' }).format(parsedDate)
+
         dateText = (
           <div className='d-flex'>
             <p className='date'>{observedAt.substring(8, 10)}</p>
