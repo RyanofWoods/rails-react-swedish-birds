@@ -17,8 +17,8 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange })
       if (bird.observation.observedAt === null) {
         return <p>Seen</p>
       } else {
-        const month = bird.observation.observedAt.substring(5, 7)
-        const monthFormatted = Intl.DateTimeFormat('en', { month: 'short' }).format(new Date(month))
+        const parsedDate = new Date(bird.observation.observedAt)
+        const monthFormatted = Intl.DateTimeFormat('en', { month: 'short' }).format(parsedDate)
 
         return (
           <>
