@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_070213) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_133156) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -20,9 +19,9 @@ ActiveRecord::Schema.define(version: 2022_05_02_070213) do
     t.string "scientific_name"
     t.string "english_name"
     t.string "swedish_name"
-    t.bigint "family_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "family_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "details"
     t.integer "population_category"
     t.index ["family_id"], name: "index_birds_on_family_id"
@@ -32,17 +31,17 @@ ActiveRecord::Schema.define(version: 2022_05_02_070213) do
     t.string "scientific_name"
     t.string "english_name"
     t.string "swedish_name"
-    t.bigint "order_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "order_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_families_on_order_id"
   end
 
   create_table "observations", force: :cascade do |t|
-    t.bigint "bird_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "bird_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "note"
     t.date "observed_at"
     t.index ["bird_id"], name: "index_observations_on_bird_id"
@@ -52,8 +51,8 @@ ActiveRecord::Schema.define(version: 2022_05_02_070213) do
   create_table "orders", force: :cascade do |t|
     t.string "scientific_name"
     t.string "swedish_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "english_name"
   end
 
@@ -61,10 +60,10 @@ ActiveRecord::Schema.define(version: 2022_05_02_070213) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "authentication_token", limit: 30
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true

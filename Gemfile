@@ -12,9 +12,10 @@ gem 'minitest-ci'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'pg_search'
 gem 'puma', '~> 4.3'
-gem 'rails', '~> 6.1.5'
+gem 'rails', '~> 7.0.4'
 gem 'sass-rails', '>= 6'
 gem 'simple_form'
+gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
@@ -28,7 +29,7 @@ end
 group :development do
   gem 'listen', '~> 3.2'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
   gem 'web-console', '>= 3.3.0'
 end
 
