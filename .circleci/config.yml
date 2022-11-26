@@ -5,7 +5,7 @@ version: 2.1
 jobs:
   run-tests:
     docker:
-      - image: cimg/ruby:2.7.5-node
+      - image: cimg/ruby:3.0.4-node
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
