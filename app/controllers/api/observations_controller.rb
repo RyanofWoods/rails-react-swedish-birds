@@ -1,4 +1,5 @@
 class Api::ObservationsController < Api::BaseController
+  before_action :ensure_logged_in
   before_action :set_bird, only: [:create, :update]
   before_action :set_observation, only: [:update]
 
