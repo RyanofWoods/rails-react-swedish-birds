@@ -15,6 +15,7 @@ gem 'puma', '~> 4.3'
 gem 'rails', '~> 7.0.4'
 gem 'sass-rails', '>= 6'
 gem 'simple_form'
+gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
