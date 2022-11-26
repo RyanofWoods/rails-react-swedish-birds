@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |_repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.0.4'
 
 gem 'autoprefixer-rails'
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.15.0', require: false
 gem 'devise'
 gem 'font-awesome-sass'
 gem 'jbuilder', '~> 2.7'
