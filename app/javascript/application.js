@@ -5,3 +5,6 @@
 
 import 'bootstrap'
 import 'react_app/index.tsx'
+
+// Needed for custom anchor methods such as DELETE
+require('@rails/ujs').start()
