@@ -4,3 +4,4 @@
 // that code so it'll be compiled.
 
 import 'bootstrap'
+import 'react_app/index.tsx'
