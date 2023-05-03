@@ -38,6 +38,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange })
   }
 
   const checkboxProps = {
+    ariaLabel: 'Create observation for bird',
     classes: 'checkbox-checked-hover-pointer-none',
     checked: bird.seen,
     id: bird.scientificName,
