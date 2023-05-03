@@ -15,7 +15,7 @@ gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.1.5'
 gem 'sass-rails', '>= 6'
 gem 'simple_form'
-gem 'webpacker', '6.0.0.rc.6'
+gem 'shakapacker', '~> 6.0'
 
 group :development, :test do
   gem 'dotenv-rails'
