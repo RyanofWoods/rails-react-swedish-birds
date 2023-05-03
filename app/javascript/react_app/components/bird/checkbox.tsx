@@ -1,6 +1,7 @@
 import React, { useEffect, useState, AnimationEvent } from 'react'
 
 interface CheckboxProps {
+  ariaLabel?: string
   classes: string
   checked: boolean
   id: string
@@ -17,12 +18,13 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   // Setting didMount to true upon mounting
   useEffect(() => { setDidMount(true) }, [])
 
-  const { checked, onChange, classes, showDateHandler } = props
+  const { ariaLabel, checked, onChange, classes, showDateHandler } = props
   let newClasses = `${classes}`
   newClasses += (animateClass) ? ' animate' : ''
   newClasses += (fadeClass) ? ' fadeaway' : ''
 
   const newCheckboxProps = {
+    'aria-label': ariaLabel,
     type: 'checkbox',
     className: newClasses,
     onChange,
