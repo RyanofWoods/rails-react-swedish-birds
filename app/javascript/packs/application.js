@@ -4,9 +4,3 @@
 // that code so it'll be compiled.
 
 import 'bootstrap'
-
-require('@rails/ujs').start()
-require('turbolinks').start()
-
-document.addEventListener('turbolinks:load', () => {
-})
