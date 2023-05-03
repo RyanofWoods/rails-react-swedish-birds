@@ -58,7 +58,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
         <button className='link details-link' onClick={toggleDetailsModal}>Details</button>
       </div>
-      <div onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} className='position-relative' role='button'>
+      <div onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} className='position-relative'>
         <PopulationBars population={bird.populationCategory} />
       </div>
       {
