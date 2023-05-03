@@ -31,9 +31,9 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange })
     }
 
     return (
-      <a className='bird-date' onClick={handleChange}>
+      <button className='bird-date' onClick={handleChange}>
         {dateContents()}
-      </a>
+      </button>
     )
   }
 

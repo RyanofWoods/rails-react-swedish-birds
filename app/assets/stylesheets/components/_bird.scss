@@ -13,6 +13,8 @@
   }
   
   .bird-date {
+    background: none;
+    border: none;
     color: inherit;
     display: flex;
     flex-direction: column;
@@ -33,7 +35,10 @@
 }
 
 #details-link {
-  cursor: pointer;
+  background: none;
+  border: none;
   margin-top: 0.2rem;
+  padding: 0;
+  text-align: left;
 }
 
