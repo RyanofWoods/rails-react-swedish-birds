@@ -2,7 +2,8 @@ require 'test_helper'
 
 class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1, family: families(:tits))
+    @new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1,
+                            family: families(:tits))
     @user = users(:ryan)
     @observed_at = Date.today
   end
@@ -11,7 +12,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     post api_bird_observations_url(@new_bird.scientific_name)
 
     assert_response :unauthorized
-    expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
+    expected = { 'error' => 'You need to sign in or sign up before continuing.' }
     assert_equal(expected, json_response)
   end
 
@@ -21,7 +22,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     post api_bird_observations_url('Invalid name')
 
     assert_response :bad_request
-    expected = { 'error'=> 'Cannot find a bird with the scientific name of Invalid name.' }
+    expected = { 'error' => 'Cannot find a bird with the scientific name of Invalid name.' }
     assert_equal(expected, json_response)
   end
 
@@ -32,7 +33,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: nil })
 
     assert_response :bad_request
-    expected = { 'error'=> 'Observed at must be a Date or zero.' }
+    expected = { 'error' => 'Observed at must be a Date or zero.' }
     assert_equal(expected, json_response)
   end
 
@@ -46,17 +47,17 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     observation = @user.observations.last
     assert_response :success
     expected = {
-      "details"=>nil,
-      "populationCategory"=>1,
-      "scientificName"=>"Neo",
-      "englishName"=>"New",
-      "swedishName"=>"Ny",
-      "familyScientificName"=>"Paridae",
-      "orderScientificName"=>"Passeriformes",
-      "seen"=>true,
-      "observation"=> {
-        'note'=>note,
-        'observedAt'=>@observed_at.to_s
+      "details" => nil,
+      "populationCategory" => 1,
+      "scientificName" => "Neo",
+      "englishName" => "New",
+      "swedishName" => "Ny",
+      "familyScientificName" => "Paridae",
+      "orderScientificName" => "Passeriformes",
+      "seen" => true,
+      "observation" => {
+        'note' => note,
+        'observedAt' => @observed_at.to_s
       }
     }
     assert_equal(@observed_at, observation.observed_at)
@@ -71,17 +72,17 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :success
     expected = {
-      "details"=>nil,
-      "populationCategory"=>1,
-      "scientificName"=>"Neo",
-      "englishName"=>"New",
-      "swedishName"=>"Ny",
-      "familyScientificName"=>"Paridae",
-      "orderScientificName"=>"Passeriformes",
-      "seen"=>true,
-      "observation"=> {
-        'note'=>nil,
-        'observedAt'=>nil
+      "details" => nil,
+      "populationCategory" => 1,
+      "scientificName" => "Neo",
+      "englishName" => "New",
+      "swedishName" => "Ny",
+      "familyScientificName" => "Paridae",
+      "orderScientificName" => "Passeriformes",
+      "seen" => true,
+      "observation" => {
+        'note' => nil,
+        'observedAt' => nil
       }
     }
     assert_equal(expected, json_response)
@@ -91,7 +92,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     patch api_observation_url(@new_bird.scientific_name)
 
     assert_response :unauthorized
-    expected = { 'error'=> 'You need to sign in or sign up before continuing.' }
+    expected = { 'error' => 'You need to sign in or sign up before continuing.' }
     assert_equal(expected, json_response)
   end
 
@@ -101,7 +102,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     patch api_observation_url('Invalid name', observed_at: 0, note: 'A new note.')
 
     assert_response :bad_request
-    expected = { 'error'=> 'Cannot find a bird with the scientific name of Invalid name.' }
+    expected = { 'error' => 'Cannot find a bird with the scientific name of Invalid name.' }
     assert_equal(expected, json_response)
   end
 
@@ -114,7 +115,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
 
     assert_response :not_found
-    expected = { 'error'=> %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}") }
+    expected = { 'error' => %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}") }
     assert_equal(expected, json_response)
   end
 
@@ -128,17 +129,17 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_nil(nil, observation.observed_at)
     assert_equal('A new note.', observation.note)
     expected = {
-      "details"=>nil,
-      "populationCategory"=>1,
-      "scientificName"=>"Neo",
-      "englishName"=>"New",
-      "swedishName"=>"Ny",
-      "familyScientificName"=>"Paridae",
-      "orderScientificName"=>"Passeriformes",
-      "seen"=>true,
-      "observation"=> {
-        'note'=>'A new note.',
-        'observedAt'=> nil
+      "details" => nil,
+      "populationCategory" => 1,
+      "scientificName" => "Neo",
+      "englishName" => "New",
+      "swedishName" => "Ny",
+      "familyScientificName" => "Paridae",
+      "orderScientificName" => "Passeriformes",
+      "seen" => true,
+      "observation" => {
+        'note' => 'A new note.',
+        'observedAt' => nil
       }
     }
     assert_equal(expected, json_response)
@@ -155,17 +156,17 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_equal(new_date, observation.observed_at)
     assert_equal('Note', observation.note)
     expected = {
-      "details"=>nil,
-      "populationCategory"=>1,
-      "scientificName"=>"Neo",
-      "englishName"=>"New",
-      "swedishName"=>"Ny",
-      "familyScientificName"=>"Paridae",
-      "orderScientificName"=>"Passeriformes",
-      "seen"=>true,
-      "observation"=> {
-        'note'=>'Note',
-        'observedAt'=> new_date.to_s
+      "details" => nil,
+      "populationCategory" => 1,
+      "scientificName" => "Neo",
+      "englishName" => "New",
+      "swedishName" => "Ny",
+      "familyScientificName" => "Paridae",
+      "orderScientificName" => "Passeriformes",
+      "seen" => true,
+      "observation" => {
+        'note' => 'Note',
+        'observedAt' => new_date.to_s
       }
     }
     assert_equal(expected, json_response)
