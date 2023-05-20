@@ -23,6 +23,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
   const [showDetailsModal, setShowDetailsModal] = useState(false)
   const [showInfoBox, setShowInfoBox] = useState(false)
   const [restrictedAccessAttempted, setRestrictedAccessAttempted] = useState(false)
+  const observation = bird.observation
 
   const toggleSeenModal = (): void => {
     if (isUserLoggedIn) {
@@ -68,7 +69,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} bird={bird} userSettings={userSettings} />
+          <DetailsModal close={toggleDetailsModal} bird={bird} observation={observation} userSettings={userSettings} />
         )
       }
     </li>

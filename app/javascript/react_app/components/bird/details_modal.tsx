@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
 
-import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
+import { BirdWithOrWithoutObservation, Observation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population'
 import BirdHouse from './bird_house'
@@ -11,20 +11,21 @@ import ObservationModal from './observation_modal'
 interface DetailsModalProps {
   close: () => void
   bird: BirdWithOrWithoutObservation
+  observation?: Observation
   userSettings: UserSettings
 }
 
-const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }) => {
+const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, userSettings }) => {
   const [showObservationModal, setShowObservationModal] = useState(false)
-
+  const seen = observation != null
   const toggleObservationModal = (): void => {
     setShowObservationModal((prevState) => !prevState)
   }
 
   const observationDetails = (): JSX.Element | undefined => {
-    if (bird.observation != null) {
+    if (seen) {
       let dateText
-      const { note, observedAt } = bird.observation
+      const { note, observedAt } = observation
       const noteText = (note === null) ? 'No note added' : note
 
       if (observedAt === null) {
@@ -78,12 +79,12 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, userSettings }
           <p>{populationInfo(bird)}</p>
         </div>
 
-        {bird.seen && observationDetails()}
+        {seen && observationDetails()}
       </div>
 
       <div className='modal-footer'>
         {
-          bird.seen && (
+          seen && (
             <button type='button' className='btn btn-primary' onClick={toggleObservationModal}>
               Edit my observation
             </button>
