@@ -31,13 +31,14 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange })
     }
 
     return (
-      <a className='bird-date' onClick={handleChange}>
+      <button className='bird-date' onClick={handleChange}>
         {dateContents()}
-      </a>
+      </button>
     )
   }
 
   const checkboxProps = {
+    ariaLabel: 'Create observation for bird',
     classes: 'checkbox-checked-hover-pointer-none',
     checked: bird.seen,
     id: bird.scientificName,

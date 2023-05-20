@@ -1,9 +1,12 @@
 #reset-filter {
+  background: none;
+  border: none;
   margin-bottom: 2rem;
   color: $green;
   text-decoration: underline;
   font-size: 1rem;
   font-weight: 600;
+
   &:hover {
     color: $dark-brown;
   }
