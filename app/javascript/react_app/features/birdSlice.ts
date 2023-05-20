@@ -4,7 +4,7 @@ import { fetchBirds, createObservation, editObservation, searchBirds, fetchObser
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortBirds } from '../helpers/sort_birds'
-import { BirdColumn, BirdFilters, BirdWithOrWithoutObservation, BirdDataState } from '../types/birdData'
+import { BirdColumn, BirdFilters, BirdWithOrWithoutObservation, BirdDataState, BirdScientificName, Observation } from '../types/birdData'
 
 const initialState: BirdDataState = {
   birds: [],
@@ -43,6 +43,10 @@ const updateAllBirds = (state: BirdDataState, updatedBird: BirdWithOrWithoutObse
   updateBirds(state.birds, updatedBird)
   updateBirds(state.filteredBirds, updatedBird)
   updateBirds(state.sortedBirds, updatedBird)
+}
+
+const insertOrReplaceObservation = (state: BirdDataState, birdScientificName: BirdScientificName, observation: Observation): void => {
+  state.observations[birdScientificName] = observation
 }
 
 const updateBirds = (birds: BirdWithOrWithoutObservation[], updatedBird: BirdWithOrWithoutObservation): void => {
@@ -88,9 +92,11 @@ export const birdSlice = createSlice({
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
       updateAllBirds(state, payload)
+      insertOrReplaceObservation(state, payload.scientificName, payload.observation)
     })
     builder.addCase(editObservation.fulfilled, (state, { payload }) => {
       updateAllBirds(state, payload)
+      insertOrReplaceObservation(state, payload.scientificName, payload.observation)
     })
     builder.addCase(searchBirds.pending, (state, action) => {
       state.filters.searchValue = action.meta.arg
