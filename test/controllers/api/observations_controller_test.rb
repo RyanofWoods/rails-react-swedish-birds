@@ -6,6 +6,41 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
                             family: families(:tits))
     @user = users(:ryan)
     @observed_at = Date.today
+
+    @family = families(:woodpeckers)
+    @other_user = users(:sara)
+    @other_user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-01', note: 'note')
+    @other_user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
+  end
+
+
+  test "GET #index returns all the user's observations as a hash if logged in" do
+    sign_in @other_user
+
+    get api_observations_url
+
+    assert_response :success
+    expected_observations = {
+      birds(:great_spotted_woodpecker).scientific_name => {
+        'observedAt'=> '2022-01-01',
+        'note'=> 'note'
+      },
+      birds(:green_woodpecker).scientific_name => {
+        'observedAt'=> '2022-01-01',
+        'note'=> nil
+      }
+    }
+
+    actual_observations = json_response['observations']
+    assert_equal(expected_observations, actual_observations)
+  end
+
+  test "GET #index returns an empty hash if not logged in" do
+    get api_observations_url
+
+    assert_response :success
+    actual_observations = json_response['observations']
+    assert_equal({}, actual_observations)
   end
 
   test 'POST #create returns an unauthorized response if there is no logged in user' do

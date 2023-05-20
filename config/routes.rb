@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resources :observations, only: [:create]
     end
 
-    resources :observations, only: [:update]
+    resources :observations, only: [:index, :update]
     resources :users, only: [:index]
   end
 
