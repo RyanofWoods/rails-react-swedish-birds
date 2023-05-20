@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
+import { BirdWithOrWithoutObservation, Observation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'
@@ -13,17 +13,17 @@ import { useAppDispatch } from '../../hooks'
 
 interface BirdProps {
   bird: BirdWithOrWithoutObservation
+  observation: Observation
   userSettings: UserSettings
   isUserLoggedIn: boolean
 }
 
-const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
+const Bird: React.FC<BirdProps> = ({ bird, observation, userSettings, isUserLoggedIn }) => {
   const dispatch = useAppDispatch()
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
   const [showInfoBox, setShowInfoBox] = useState(false)
   const [restrictedAccessAttempted, setRestrictedAccessAttempted] = useState(false)
-  const observation = bird.observation
 
   const toggleSeenModal = (): void => {
     if (isUserLoggedIn) {
