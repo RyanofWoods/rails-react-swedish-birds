@@ -64,7 +64,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
       </div>
       {
         showSeenModal && (
-          <ObservationModal close={toggleSeenModal} bird={bird} userSettings={userSettings} />
+          <ObservationModal close={toggleSeenModal} bird={bird} observation={observation} userSettings={userSettings} />
         )
       }
       {

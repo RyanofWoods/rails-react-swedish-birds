@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
-import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
+import { BirdWithOrWithoutObservation, Observation, UserSettings } from '../../types/birdData'
 import { useAppDispatch } from '../../hooks'
 import { createObservation, editObservation } from '../../api'
 import getNameAttribute from '../../helpers/name_helper'
@@ -8,20 +8,21 @@ import getNameAttribute from '../../helpers/name_helper'
 interface ObservationModalProps {
   close: () => void
   bird: BirdWithOrWithoutObservation
+  observation?: Observation
   userSettings: UserSettings
 }
 
-const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSettings }) => {
+const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, observation, userSettings }) => {
   const today = new Date().toLocaleDateString('en-CA')
-
+  const seen = observation != null
   const dispatch = useAppDispatch()
 
   const initialState = (): { observedAt: string, note: string, dateUnknown: boolean } => {
-    if (bird.seen) {
+    if (seen) {
       return {
-        observedAt: bird.observation.observedAt ?? today,
-        note: bird.observation.note ?? '',
-        dateUnknown: bird.observation.observedAt === null
+        observedAt: observation.observedAt ?? today,
+        note: observation.note ?? '',
+        dateUnknown: observation.observedAt === null
       }
     } else {
       return { observedAt: today, note: '', dateUnknown: false }
@@ -34,7 +35,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
 
   const handleObservation = (): void => {
     const observationDate = (dateUnknown) ? 0 : observedAt
-    const action = (bird.seen) ? editObservation : createObservation
+    const action = (seen) ? editObservation : createObservation
 
     void dispatch(action({
       birdScientificName: bird.scientificName,
@@ -63,7 +64,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, userSe
     close()
   }
 
-  const title = (bird.seen) ? 'Edit observation' : 'Mark as seen'
+  const title = (seen) ? 'Edit observation' : 'Mark as seen'
 
   return (
     <Modal title={title} close={close}>

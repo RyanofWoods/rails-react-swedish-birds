@@ -96,7 +96,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, u
       </div>
       {
         showObservationModal && (
-          <ObservationModal close={toggleObservationModal} bird={bird} userSettings={userSettings} />
+          <ObservationModal close={toggleObservationModal} bird={bird} observation={observation} userSettings={userSettings} />
         )
       }
     </Modal>
