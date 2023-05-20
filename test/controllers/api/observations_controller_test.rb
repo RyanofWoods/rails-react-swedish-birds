@@ -28,7 +28,6 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
 
   test 'POST #create throws an error when observed_at is not a date or 0' do
     sign_in @user
-    observed_at = nil
 
     post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: nil })
 
@@ -108,19 +107,21 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
 
   test 'PATCH #update returns an error when the user does not have an observation for the given bird' do
     another_user = users(:sara)
-    observation = another_user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    another_user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
 
     sign_in @user
 
     patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
 
     assert_response :not_found
-    expected = { 'error' => %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}") }
+    expected = {
+      'error' => %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}")
+    }
     assert_equal(expected, json_response)
   end
 
   test 'PATCH #update successfully edits the observation' do
-    observation = @user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    @user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
     sign_in @user
 
     patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
@@ -146,7 +147,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "PATCH #update successfully edits the observation and it doesn't override attributes when given nil" do
-    observation = @user.observations.create(bird: @new_bird, observed_at: @observed_at, note: 'Note')
+    @user.observations.create(bird: @new_bird, observed_at: @observed_at, note: 'Note')
     sign_in @user
     new_date = Date.yesterday
 
