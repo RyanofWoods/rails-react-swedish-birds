@@ -9,6 +9,12 @@ AllCops:
     - 'support/**/*'
     - 'tmp/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*'
+Metrics/ClassLength:
+  Exclude:
+    - 'test/**/*'
 Style/ConditionalAssignment:
   Enabled: false
 Style/StringLiterals:
