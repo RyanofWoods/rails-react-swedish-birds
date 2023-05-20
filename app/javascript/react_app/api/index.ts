@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { fetchBirdsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
+import { fetchBirdsResponse, fetchObservationsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
 import { client } from './client'
 
 export const fetchBirds = createAsyncThunk('birds/fetchBirds', async () => {
@@ -14,6 +14,11 @@ export const fetchFamilies = createAsyncThunk('birds/fetchFamilies', async () =>
 
 export const fetchOrders = createAsyncThunk('birds/fetchOrders', async () => {
   const response = await client.get<fetchOrdersResponse>('/orders')
+  return response.result
+})
+
+export const fetchObservations = createAsyncThunk('birds/fetchObservatons', async () => {
+  const response = await client.get<fetchObservationsResponse>('/observations')
   return response.result
 })
 
