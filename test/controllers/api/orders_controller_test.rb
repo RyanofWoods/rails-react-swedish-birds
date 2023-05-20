@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::OrdersControllerTest < ActionDispatch::IntegrationTest
-
   test 'GET #index returns all the Orders if not logged in' do
     get api_orders_url
 
@@ -20,15 +19,15 @@ class Api::OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_equal(actual.size, Order.all.size)
 
     expected = {
-      'scientificName'=> orders(:owls).scientific_name,
-      'englishName'=> orders(:owls).english_name,
-      'swedishName'=> orders(:owls).swedish_name,
+      'scientificName' => orders(:owls).scientific_name,
+      'englishName' => orders(:owls).english_name,
+      'swedishName' => orders(:owls).swedish_name
     }
     assert_includes(actual, expected)
     expected = {
-      'scientificName'=> orders(:woodpeckers_and_alies).scientific_name,
-      'englishName'=> orders(:woodpeckers_and_alies).english_name,
-      'swedishName'=> orders(:woodpeckers_and_alies).swedish_name,
+      'scientificName' => orders(:woodpeckers_and_alies).scientific_name,
+      'englishName' => orders(:woodpeckers_and_alies).english_name,
+      'swedishName' => orders(:woodpeckers_and_alies).swedish_name
     }
     assert_includes(actual, expected)
   end
