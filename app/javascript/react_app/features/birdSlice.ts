@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { fetchBirds, createObservation, editObservation, searchBirds, fetchOrders, fetchFamilies } from '../api'
+import { fetchBirds, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortBirds } from '../helpers/sort_birds'
@@ -10,6 +10,7 @@ const initialState: BirdDataState = {
   birds: [],
   families: [],
   orders: [],
+  observations: {},
   filteredBirds: [],
   filters: {
     searchScope: [],
@@ -81,6 +82,9 @@ export const birdSlice = createSlice({
     })
     builder.addCase(fetchOrders.fulfilled, (state, { payload }) => {
       state.orders = payload.orders
+    })
+    builder.addCase(fetchObservations.fulfilled, (state, { payload }) => {
+      state.observations = payload.observations
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
       updateAllBirds(state, payload)

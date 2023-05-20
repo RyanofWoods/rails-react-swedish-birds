@@ -2,6 +2,7 @@ export interface BirdDataState {
   birds: BirdWithOrWithoutObservation[]
   families: Family[]
   orders: Order[]
+  observations: ObservationDict
   filteredBirds: BirdWithOrWithoutObservation[]
   filters: BirdFilters
   sorting: BirdSorting
