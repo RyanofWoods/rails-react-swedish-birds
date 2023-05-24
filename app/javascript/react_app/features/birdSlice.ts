@@ -31,7 +31,7 @@ const initialState: BirdDataState = {
 }
 
 const refilterBirds = (state: BirdDataState): void => {
-  state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters })
+  state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters, observations: state.observations })
   resortBirds(state)
 }
 
