@@ -36,7 +36,7 @@ const refilterBirds = (state: BirdDataState): void => {
 }
 
 const resortBirds = (state: BirdDataState): void => {
-  state.sortedBirds = sortBirds({ birds: state.filteredBirds, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+  state.sortedBirds = sortBirds({ birds: state.filteredBirds, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
 const updateAllBirds = (state: BirdDataState, updatedBird: BirdWithOrWithoutObservation): void => {
