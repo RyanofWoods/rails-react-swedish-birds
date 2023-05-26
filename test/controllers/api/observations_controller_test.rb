@@ -13,7 +13,6 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     @other_user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
   end
 
-
   test "GET #index returns all the user's observations as a hash if logged in" do
     sign_in @other_user
 
@@ -22,12 +21,12 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     expected_observations = {
       birds(:great_spotted_woodpecker).scientific_name => {
-        'observedAt'=> '2022-01-01',
-        'note'=> 'note'
+        'observedAt' => '2022-01-01',
+        'note' => 'note'
       },
       birds(:green_woodpecker).scientific_name => {
-        'observedAt'=> '2022-01-01',
-        'note'=> nil
+        'observedAt' => '2022-01-01',
+        'note' => nil
       }
     }
 
@@ -81,18 +80,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     observation = @user.observations.last
     assert_response :success
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => note,
-        'observedAt' => @observed_at.to_s
-      }
+      'note' => note,
+      'observedAt' => @observed_at.to_s
     }
     assert_equal(@observed_at, observation.observed_at)
     assert_equal(expected, json_response)
@@ -106,18 +95,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :success
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => nil,
-        'observedAt' => nil
-      }
+      'note' => nil,
+      'observedAt' => nil
     }
     assert_equal(expected, json_response)
   end
@@ -165,18 +144,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_nil(nil, observation.observed_at)
     assert_equal('A new note.', observation.note)
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => 'A new note.',
-        'observedAt' => nil
-      }
+      'note' => 'A new note.',
+      'observedAt' => nil
     }
     assert_equal(expected, json_response)
   end
@@ -192,18 +161,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_equal(new_date, observation.observed_at)
     assert_equal('Note', observation.note)
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => 'Note',
-        'observedAt' => new_date.to_s
-      }
+      'note' => 'Note',
+      'observedAt' => new_date.to_s
     }
     assert_equal(expected, json_response)
   end
