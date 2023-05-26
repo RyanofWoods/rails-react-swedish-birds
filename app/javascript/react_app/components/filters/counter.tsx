@@ -1,10 +1,12 @@
 import React from 'react'
 import { useAppSelector } from '../../hooks'
+import calculateObservedBirdsCount from '../../helpers/calculate_observed_birds_count'
 
 const Counter = (): JSX.Element => {
   const birds = useAppSelector(state => state.birdsData.sortedBirds)
+  const observations = useAppSelector(state => state.birdsData.observations)
   const birdsTotal = birds.length
-  const birdsSeen = birds.filter(bird => bird.seen).length
+  const birdsSeen = calculateObservedBirdsCount(birds, observations)
 
   return (
     <div className='counter-section'>

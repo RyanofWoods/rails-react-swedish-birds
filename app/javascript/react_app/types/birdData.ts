@@ -1,11 +1,12 @@
 export interface BirdDataState {
-  birds: BirdWithOrWithoutObservation[]
+  birds: Bird[]
   families: Family[]
   orders: Order[]
-  filteredBirds: BirdWithOrWithoutObservation[]
+  observations: ObservationDict
+  filteredBirds: Bird[]
   filters: BirdFilters
   sorting: BirdSorting
-  sortedBirds: BirdWithOrWithoutObservation[]
+  sortedBirds: Bird[]
   userSettings: UserSettings
 }
 
@@ -23,7 +24,7 @@ type BirdSwedishName = string
 export type FamilyScientificName = string
 export type OrderScientificName = string
 
-interface Bird {
+export interface Bird {
   scientificName: BirdScientificName
   englishName: BirdEnglishName
   swedishName: BirdSwedishName
@@ -33,21 +34,12 @@ interface Bird {
   populationCategory: PopulationCategory
 }
 
-export type BirdWithOrWithoutObservation = BirdWithObservation | BirdWithoutObservation
-
-interface Observation {
+export interface ObservationDict {
+  [birdScientificName: BirdScientificName]: Observation
+}
+export interface Observation {
   observedAt: string | null
   note: string | null
-}
-
-export interface BirdWithObservation extends Bird {
-  seen: true
-  observation: Observation
-}
-
-export interface BirdWithoutObservation extends Bird {
-  seen: false
-  observation: undefined
 }
 
 export type SeenScope = 'all' | 'seen' | 'unseen'

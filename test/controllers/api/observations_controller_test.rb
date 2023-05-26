@@ -6,6 +6,40 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
                             family: families(:tits))
     @user = users(:ryan)
     @observed_at = Date.today
+
+    @family = families(:woodpeckers)
+    @other_user = users(:sara)
+    @other_user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-01', note: 'note')
+    @other_user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
+  end
+
+  test "GET #index returns all the user's observations as a hash if logged in" do
+    sign_in @other_user
+
+    get api_observations_url
+
+    assert_response :success
+    expected_observations = {
+      birds(:great_spotted_woodpecker).scientific_name => {
+        'observedAt' => '2022-01-01',
+        'note' => 'note'
+      },
+      birds(:green_woodpecker).scientific_name => {
+        'observedAt' => '2022-01-01',
+        'note' => nil
+      }
+    }
+
+    actual_observations = json_response['observations']
+    assert_equal(expected_observations, actual_observations)
+  end
+
+  test "GET #index returns an empty hash if not logged in" do
+    get api_observations_url
+
+    assert_response :success
+    actual_observations = json_response['observations']
+    assert_equal({}, actual_observations)
   end
 
   test 'POST #create returns an unauthorized response if there is no logged in user' do
@@ -46,18 +80,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     observation = @user.observations.last
     assert_response :success
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => note,
-        'observedAt' => @observed_at.to_s
-      }
+      'note' => note,
+      'observedAt' => @observed_at.to_s
     }
     assert_equal(@observed_at, observation.observed_at)
     assert_equal(expected, json_response)
@@ -71,18 +95,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :success
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => nil,
-        'observedAt' => nil
-      }
+      'note' => nil,
+      'observedAt' => nil
     }
     assert_equal(expected, json_response)
   end
@@ -130,18 +144,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_nil(nil, observation.observed_at)
     assert_equal('A new note.', observation.note)
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => 'A new note.',
-        'observedAt' => nil
-      }
+      'note' => 'A new note.',
+      'observedAt' => nil
     }
     assert_equal(expected, json_response)
   end
@@ -157,18 +161,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     assert_equal(new_date, observation.observed_at)
     assert_equal('Note', observation.note)
     expected = {
-      "details" => nil,
-      "populationCategory" => 1,
-      "scientificName" => "Neo",
-      "englishName" => "New",
-      "swedishName" => "Ny",
-      "familyScientificName" => "Paridae",
-      "orderScientificName" => "Passeriformes",
-      "seen" => true,
-      "observation" => {
-        'note' => 'Note',
-        'observedAt' => new_date.to_s
-      }
+      'note' => 'Note',
+      'observedAt' => new_date.to_s
     }
     assert_equal(expected, json_response)
   end

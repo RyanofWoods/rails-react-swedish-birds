@@ -1,30 +1,32 @@
 import React, { useState } from 'react'
-import { BirdWithOrWithoutObservation } from '../../types/birdData'
+import { Bird, Observation } from '../../types/birdData'
 import Checkbox from './checkbox'
 
 interface CheckboxAndDateProps {
-  bird: BirdWithOrWithoutObservation
+  bird: Bird
+  observation?: Observation
   handleChange: () => void
 }
 
-const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange }) => {
-  const [showDate, setShowDate] = useState(bird.seen)
+const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, observation, handleChange }) => {
+  const seen = observation !== undefined
+  const [showDate, setShowDate] = useState(seen)
 
   const birdDateStyled = (): JSX.Element | null => {
-    if (bird.observation === undefined) return null
+    if (observation === undefined) return null
 
     const dateContents = (): JSX.Element => {
-      if (bird.observation.observedAt === null) {
+      if (observation.observedAt === null) {
         return <p>Seen</p>
       } else {
-        const parsedDate = new Date(bird.observation.observedAt)
+        const parsedDate = new Date(observation.observedAt)
         const monthFormatted = Intl.DateTimeFormat('en', { month: 'short' }).format(parsedDate)
 
         return (
           <>
-            <p>{bird.observation.observedAt.substring(8, 10)}</p>
+            <p>{observation.observedAt.substring(8, 10)}</p>
             <p>{monthFormatted}</p>
-            <p>{bird.observation.observedAt.substring(0, 4)}</p>
+            <p>{observation.observedAt.substring(0, 4)}</p>
           </>
         )
       }
@@ -40,7 +42,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, handleChange })
   const checkboxProps = {
     ariaLabel: 'Create observation for bird',
     classes: 'checkbox-checked-hover-pointer-none',
-    checked: bird.seen,
+    checked: seen,
     id: bird.scientificName,
     onChange: handleChange
   }

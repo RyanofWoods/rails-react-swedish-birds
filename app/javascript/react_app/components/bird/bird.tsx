@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { BirdWithOrWithoutObservation, UserSettings } from '../../types/birdData'
+import { Bird as BirdT, Observation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'
@@ -12,12 +12,13 @@ import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
 
 interface BirdProps {
-  bird: BirdWithOrWithoutObservation
+  bird: BirdT
+  observation: Observation
   userSettings: UserSettings
   isUserLoggedIn: boolean
 }
 
-const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
+const Bird: React.FC<BirdProps> = ({ bird, observation, userSettings, isUserLoggedIn }) => {
   const dispatch = useAppDispatch()
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
@@ -52,7 +53,7 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
   return (
     <li className='bird-card'>
       {showInfoBox && <PopulationTooltip bird={bird} />}
-      <CheckboxAndDate bird={bird} handleChange={toggleSeenModal} />
+      <CheckboxAndDate bird={bird} observation={observation} handleChange={toggleSeenModal} />
       <div className='bird-names'>
         <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
@@ -63,12 +64,12 @@ const Bird: React.FC<BirdProps> = ({ bird, userSettings, isUserLoggedIn }) => {
       </div>
       {
         showSeenModal && (
-          <ObservationModal close={toggleSeenModal} bird={bird} userSettings={userSettings} />
+          <ObservationModal close={toggleSeenModal} bird={bird} observation={observation} userSettings={userSettings} />
         )
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} bird={bird} userSettings={userSettings} />
+          <DetailsModal close={toggleDetailsModal} bird={bird} observation={observation} userSettings={userSettings} />
         )
       }
     </li>

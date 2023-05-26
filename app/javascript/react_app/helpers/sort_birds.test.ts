@@ -1,5 +1,6 @@
-import { BirdSorting, BirdWithOrWithoutObservation, Language } from '../types/birdData'
+import { BirdSorting, Bird, Language } from '../types/birdData'
 import { barnOwl, tawnyOwl, greatGreyOwl, blueTit, greatTit } from './bird_fixtures_test'
+import observations from './observations.mock'
 import { sortBirds } from './sort_birds'
 
 const initialSorting: BirdSorting = {
@@ -7,7 +8,7 @@ const initialSorting: BirdSorting = {
   ordering: 'asc'
 }
 
-const initialBirds: BirdWithOrWithoutObservation[] = [
+const initialBirds: Bird[] = [
   barnOwl,
   tawnyOwl,
   blueTit,
@@ -29,7 +30,7 @@ beforeEach(() => {
 
 test('when there are no sorting it returns all the birds intact', () => {
   const expected = initialBirds
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -38,7 +39,7 @@ test('when column is seen and ordering is asc', () => {
   sorting.ordering = 'asc'
 
   const expected = [greatTit, greatGreyOwl, blueTit, tawnyOwl, barnOwl]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -47,7 +48,7 @@ test('when column is seen and ordering is desc', () => {
   sorting.ordering = 'desc'
 
   const expected = [barnOwl, tawnyOwl, blueTit, greatGreyOwl, greatTit]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -57,7 +58,7 @@ test('when column is name, ordering is asc and primaryNameLanguage is EN', () =>
   primaryNameLanguage = 'EN'
 
   const expected = [blueTit, greatGreyOwl, greatTit, tawnyOwl, barnOwl]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -67,7 +68,7 @@ test('when column is name, ordering is desc and primaryNameLanguage is EN', () =
   primaryNameLanguage = 'EN'
 
   const expected = [barnOwl, tawnyOwl, greatTit, greatGreyOwl, blueTit]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -77,7 +78,7 @@ test('when column is name, ordering is asc and primaryNameLanguage is SE', () =>
   primaryNameLanguage = 'SE'
 
   const expected = [blueTit, tawnyOwl, greatGreyOwl, greatTit, barnOwl]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -87,7 +88,7 @@ test('when column is name, ordering is desc and primaryNameLanguage is SE', () =
   primaryNameLanguage = 'SE'
 
   const expected = [barnOwl, greatTit, greatGreyOwl, tawnyOwl, blueTit]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -97,7 +98,7 @@ test('when column is name, ordering is asc and primaryNameLanguage is SC', () =>
   primaryNameLanguage = 'SC'
 
   const expected = [blueTit, greatTit, tawnyOwl, greatGreyOwl, barnOwl]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -107,7 +108,7 @@ test('when column is name, ordering is desc and primaryNameLanguage is SC', () =
   primaryNameLanguage = 'SC'
 
   const expected = [barnOwl, greatGreyOwl, tawnyOwl, greatTit, blueTit]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -116,7 +117,7 @@ test('when column is population and ordering is asc', () => {
   sorting.ordering = 'asc'
 
   const expected = [greatTit, blueTit, tawnyOwl, barnOwl, greatGreyOwl]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -125,7 +126,7 @@ test('when column is population and ordering is desc', () => {
   sorting.ordering = 'desc'
 
   const expected = [greatGreyOwl, barnOwl, tawnyOwl, blueTit, greatTit]
-  const actual = sortBirds({ birds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
 })
 
@@ -136,7 +137,7 @@ test('it does not mutate the original array of Birds', () => {
   sorting.ordering = 'desc'
 
   const expected = [barnOwl, tawnyOwl, greatGreyOwl]
-  const actual = sortBirds({ birds: originalBirds, sorting, primaryNameLanguage })
+  const actual = sortBirds({ birds: originalBirds, observations, sorting, primaryNameLanguage })
   expect(actual).toEqual(expected)
   expect(originalBirds).toEqual(originalCopy)
 })

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { fetchBirdsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
+import { fetchBirdsResponse, fetchObservationsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
 import { client } from './client'
 
 export const fetchBirds = createAsyncThunk('birds/fetchBirds', async () => {
@@ -17,11 +17,16 @@ export const fetchOrders = createAsyncThunk('birds/fetchOrders', async () => {
   return response.result
 })
 
+export const fetchObservations = createAsyncThunk('birds/fetchObservatons', async () => {
+  const response = await client.get<fetchObservationsResponse>('/observations')
+  return response.result
+})
+
 export const createObservation = createAsyncThunk(
   'birds/createObservation',
   async (args: createObservationRequest) => {
     const response = await client.post<createObservationResponse>(`/birds/${args.birdScientificName}/observations`, { observed_at: args.observedAt, note: args.note })
-    return response.result
+    return { observation: response.result, birdScientificName: args.birdScientificName }
   }
 )
 
@@ -29,7 +34,7 @@ export const editObservation = createAsyncThunk(
   'birds/editObservation',
   async (args: editObservationRequest) => {
     const response = await client.patch<editObservationResponse>(`/observations/${args.birdScientificName}`, { observed_at: args.observedAt, note: args.note })
-    return response.result
+    return { observation: response.result, birdScientificName: args.birdScientificName }
   }
 )
 

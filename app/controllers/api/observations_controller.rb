@@ -1,7 +1,16 @@
 class Api::ObservationsController < Api::BaseController
-  before_action :ensure_logged_in
+  before_action :ensure_logged_in, only: [:create, :update]
   before_action :set_bird, only: [:create, :update]
   before_action :set_observation, only: [:update]
+
+  def index
+    if signed_in?
+      @observations = current_user.observations.joins(:bird).select(:note, :observed_at, :scientific_name)
+      render :index
+    else
+      render json: { observations: {} }, status: :ok
+    end
+  end
 
   def create
     return unknown_bird unless @bird

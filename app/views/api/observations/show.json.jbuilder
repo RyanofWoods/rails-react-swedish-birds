@@ -1,1 +1,1 @@
-json.partial! 'api/shared/bird_with_observation', bird: @bird, observation: @observation
+json.partial! 'api/shared/observation',  observation: @observation

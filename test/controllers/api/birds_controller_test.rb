@@ -4,14 +4,9 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @family = families(:woodpeckers)
     @user = users(:ryan)
-    @user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-01', note: 'note')
-    @user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
-    @other_user = users(:sara)
-    @other_user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-02')
-    @other_user.observations.create!(bird: birds(:white_backed_woodpecker), observed_at: '2022-01-02')
   end
 
-  test 'GET #index returns all birds with no observations joined on when not logged in' do
+  test 'GET #index returns all birds when not logged in' do
     get api_birds_url
 
     assert_response :success
@@ -23,8 +18,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:great_spotted_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:great_spotted_woodpecker).family.order.scientific_name,
         'details' => birds(:great_spotted_woodpecker).details,
-        'populationCategory' => birds(:great_spotted_woodpecker).population_category,
-        'seen' => false
+        'populationCategory' => birds(:great_spotted_woodpecker).population_category
       },
       {
         'scientificName' => birds(:green_woodpecker).scientific_name,
@@ -33,8 +27,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:green_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:green_woodpecker).family.order.scientific_name,
         'details' => birds(:green_woodpecker).details,
-        'populationCategory' => birds(:green_woodpecker).population_category,
-        'seen' => false
+        'populationCategory' => birds(:green_woodpecker).population_category
       },
       {
         'scientificName' => birds(:white_backed_woodpecker).scientific_name,
@@ -43,8 +36,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:white_backed_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:white_backed_woodpecker).family.order.scientific_name,
         'details' => birds(:white_backed_woodpecker).details,
-        'populationCategory' => birds(:white_backed_woodpecker).population_category,
-        'seen' => false
+        'populationCategory' => birds(:white_backed_woodpecker).population_category
       }
     ]
 
@@ -52,7 +44,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     assert_serialized_array(expected_birds, actual_birds, 'englishName')
   end
 
-  test 'GET #index returns all birds with any user observations joined on' do
+  test 'GET #index returns all birds when logged in' do
     sign_in @user
 
     get api_birds_url
@@ -66,12 +58,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:great_spotted_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:great_spotted_woodpecker).family.order.scientific_name,
         'details' => birds(:great_spotted_woodpecker).details,
-        'populationCategory' => birds(:great_spotted_woodpecker).population_category,
-        'seen' => true,
-        'observation' => {
-          'observedAt' => '2022-01-01',
-          'note' => 'note'
-        }
+        'populationCategory' => birds(:great_spotted_woodpecker).population_category
       },
       {
         'scientificName' => birds(:green_woodpecker).scientific_name,
@@ -80,12 +67,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:green_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:green_woodpecker).family.order.scientific_name,
         'details' => birds(:green_woodpecker).details,
-        'populationCategory' => birds(:green_woodpecker).population_category,
-        'seen' => true,
-        'observation' => {
-          'observedAt' => '2022-01-01',
-          'note' => nil
-        }
+        'populationCategory' => birds(:green_woodpecker).population_category
       },
       {
         'scientificName' => birds(:white_backed_woodpecker).scientific_name,
@@ -94,8 +76,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
         'familyScientificName' => birds(:white_backed_woodpecker).family.scientific_name,
         'orderScientificName' => birds(:white_backed_woodpecker).family.order.scientific_name,
         'details' => birds(:white_backed_woodpecker).details,
-        'populationCategory' => birds(:white_backed_woodpecker).population_category,
-        'seen' => false
+        'populationCategory' => birds(:white_backed_woodpecker).population_category
       }
     ]
 
