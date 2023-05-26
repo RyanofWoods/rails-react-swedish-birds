@@ -1,7 +1,7 @@
-import { BirdWithOrWithoutObservation, ObservationDict } from '../types/birdData'
+import { Bird, ObservationDict } from '../types/birdData'
 import calculateObservedBirdsCount from './calculate_observed_birds_count'
 
-const birds: BirdWithOrWithoutObservation[] = [
+const birds: Bird[] = [
   {
     scientificName: 'Tyto alba',
     englishName: 'Western Barn Owl',
@@ -9,12 +9,7 @@ const birds: BirdWithOrWithoutObservation[] = [
     familyScientificName: 'Tytonidae',
     orderScientificName: 'Strigiformes',
     details: 'Hs 5',
-    populationCategory: 5,
-    seen: true,
-    observation: {
-      observedAt: '2022/04/15',
-      note: null
-    }
+    populationCategory: 5
   },
   {
     scientificName: 'Strix aluco',
@@ -23,9 +18,7 @@ const birds: BirdWithOrWithoutObservation[] = [
     familyScientificName: 'Strigidae',
     orderScientificName: 'Strigiformes',
     details: 'Hs 3',
-    populationCategory: 3,
-    seen: false,
-    observation: undefined
+    populationCategory: 3
   },
   {
     scientificName: 'Strix nebulosa',
@@ -34,9 +27,7 @@ const birds: BirdWithOrWithoutObservation[] = [
     familyScientificName: 'Strigidae',
     orderScientificName: 'Strigiformes',
     details: 'Hs 4-5',
-    populationCategory: 5,
-    seen: false,
-    observation: undefined
+    populationCategory: 5
   }
 ]
 

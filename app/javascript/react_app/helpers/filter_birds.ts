@@ -1,12 +1,12 @@
-import { BirdFilters, BirdWithOrWithoutObservation, ObservationDict } from '../types/birdData'
+import { BirdFilters, Bird, ObservationDict } from '../types/birdData'
 
 interface Options {
-  birds: BirdWithOrWithoutObservation[]
+  birds: Bird[]
   observations: ObservationDict
   filters: BirdFilters
 }
 
-const filterBirds = ({ birds, observations, filters }: Options): BirdWithOrWithoutObservation[] => {
+const filterBirds = ({ birds, observations, filters }: Options): Bird[] => {
   const { searchScope, seenScope, familyScientificNameScope, orderScientificNameScope } = filters
   if (filters.searchScope.length === 0 && filters.searchValue.length > 1) return []
 

@@ -1,73 +1,51 @@
-import { BirdWithoutObservation, BirdWithObservation } from '../types/birdData'
+import { Bird } from '../types/birdData'
 
-export const barnOwl: BirdWithoutObservation = {
+export const barnOwl: Bird = {
   scientificName: 'Tyto alba',
   englishName: 'Western Barn Owl',
   swedishName: 'Tornuggla',
   familyScientificName: 'Tytonidae',
   orderScientificName: 'Strigiformes',
   details: 'Hs 5',
-  populationCategory: 5,
-  seen: false,
-  observation: undefined
+  populationCategory: 5
 }
 
-export const tawnyOwl: BirdWithObservation = {
+export const tawnyOwl: Bird = {
   scientificName: 'Strix aluco',
   englishName: 'Tawny Owl',
   swedishName: 'Kattuggla',
   familyScientificName: 'Strigidae',
   orderScientificName: 'Strigiformes',
   details: 'Hs 3',
-  populationCategory: 3,
-  seen: true,
-  observation: {
-    observedAt: '2022/04/15',
-    note: null
-  }
+  populationCategory: 3
 }
 
-export const greatGreyOwl: BirdWithObservation = {
+export const greatGreyOwl: Bird = {
   scientificName: 'Strix nebulosa',
   englishName: 'Great Grey Owl',
   swedishName: 'Lappuggla',
   familyScientificName: 'Strigidae',
   orderScientificName: 'Strigiformes',
   details: 'Hs 4-5',
-  populationCategory: 5,
-  seen: true,
-  observation: {
-    observedAt: '2021/12/24',
-    note: 'Saw in a meadow perched on a small spruce tree.'
-  }
+  populationCategory: 5
 }
 
-export const blueTit: BirdWithObservation = {
+export const blueTit: Bird = {
   scientificName: 'Cyanistes caeruleus',
   englishName: 'Eurasian Blue Tit',
   swedishName: 'Blåmes',
   familyScientificName: 'Paridae',
   orderScientificName: 'Passeriformes',
   details: 'Hs (f) 2',
-  populationCategory: 2,
-  seen: true,
-  observation: {
-    observedAt: '2022/01/10',
-    note: 'Note.'
-  }
+  populationCategory: 2
 }
 
-export const greatTit: BirdWithObservation = {
+export const greatTit: Bird = {
   scientificName: 'Parus major',
   englishName: 'Great Tit',
   swedishName: 'Talgoxe',
   familyScientificName: 'Paridae',
   orderScientificName: 'Passeriformes',
   details: 'Hs (f) 1',
-  populationCategory: 1,
-  seen: true,
-  observation: {
-    observedAt: null,
-    note: 'Lots of notes.'
-  }
+  populationCategory: 1
 }

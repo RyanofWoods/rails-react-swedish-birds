@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { BirdWithOrWithoutObservation, Observation, UserSettings } from '../../types/birdData'
+import { Bird as BirdT, Observation, UserSettings } from '../../types/birdData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'
@@ -12,7 +12,7 @@ import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
 
 interface BirdProps {
-  bird: BirdWithOrWithoutObservation
+  bird: BirdT
   observation: Observation
   userSettings: UserSettings
   isUserLoggedIn: boolean

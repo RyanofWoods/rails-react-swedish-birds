@@ -1,6 +1,6 @@
-import { BirdWithOrWithoutObservation, Family, Order, Language } from '../types/birdData'
+import { Bird, Family, Order, Language } from '../types/birdData'
 
-const getNameAttribute = (object: BirdWithOrWithoutObservation | Family | Order, language: Language): string => {
+const getNameAttribute = (object: Bird | Family | Order, language: Language): string => {
   switch (language) {
     case 'EN':
       return object.englishName

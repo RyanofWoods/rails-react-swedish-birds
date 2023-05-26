@@ -1,9 +1,9 @@
-import { BirdWithOrWithoutObservation, BirdSorting, ObservationDict, Observation } from '../types/birdData'
+import { Bird, BirdSorting, ObservationDict, Observation } from '../types/birdData'
 import getNameAttribute from './name_helper'
 import { compareString } from './sort_helpers'
 
 interface SortBirdsOptions {
-  birds: BirdWithOrWithoutObservation[]
+  birds: Bird[]
   observations: ObservationDict
   sorting: BirdSorting
   primaryNameLanguage: 'EN' | 'SE' | 'SC'
@@ -17,8 +17,8 @@ const observationToNumber = (observation: Observation): number => {
   return Date.parse(observation.observedAt)
 }
 
-export const sortBirds = ({ birds, observations, sorting, primaryNameLanguage }: SortBirdsOptions): BirdWithOrWithoutObservation[] => {
-  const sort = (birdsToSort: BirdWithOrWithoutObservation[]): BirdWithOrWithoutObservation[] => {
+export const sortBirds = ({ birds, observations, sorting, primaryNameLanguage }: SortBirdsOptions): Bird[] => {
+  const sort = (birdsToSort: Bird[]): Bird[] => {
     switch (sorting.column) {
       case 'seen':
         return birdsToSort.sort((a, b) => {

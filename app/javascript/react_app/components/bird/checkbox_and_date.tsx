@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { BirdWithOrWithoutObservation, Observation } from '../../types/birdData'
+import { Bird, Observation } from '../../types/birdData'
 import Checkbox from './checkbox'
 
 interface CheckboxAndDateProps {
-  bird: BirdWithOrWithoutObservation
+  bird: Bird
   observation?: Observation
   handleChange: () => void
 }

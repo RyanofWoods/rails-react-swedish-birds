@@ -1,4 +1,4 @@
-import { BirdFilters, BirdWithOrWithoutObservation } from '../types/birdData'
+import { BirdFilters, Bird } from '../types/birdData'
 import { barnOwl, blueTit, greatTit, tawnyOwl } from './bird_fixtures_test'
 import observations from './observations.mock'
 import filterBirds from './filter_birds'
@@ -11,7 +11,7 @@ const initialFilters: BirdFilters = {
   searchValue: ''
 }
 
-const initialBirds: BirdWithOrWithoutObservation[] = [
+const initialBirds: Bird[] = [
   barnOwl,
   tawnyOwl,
   blueTit,

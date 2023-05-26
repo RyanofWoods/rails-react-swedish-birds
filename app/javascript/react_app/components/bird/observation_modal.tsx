@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
-import { BirdWithOrWithoutObservation, Observation, UserSettings } from '../../types/birdData'
+import { Bird, Observation, UserSettings } from '../../types/birdData'
 import { useAppDispatch } from '../../hooks'
 import { createObservation, editObservation } from '../../api'
 import getNameAttribute from '../../helpers/name_helper'
 
 interface ObservationModalProps {
   close: () => void
-  bird: BirdWithOrWithoutObservation
+  bird: Bird
   observation?: Observation
   userSettings: UserSettings
 }

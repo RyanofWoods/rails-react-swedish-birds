@@ -1,4 +1,4 @@
-import { BirdSorting, BirdWithOrWithoutObservation, Language } from '../types/birdData'
+import { BirdSorting, Bird, Language } from '../types/birdData'
 import { barnOwl, tawnyOwl, greatGreyOwl, blueTit, greatTit } from './bird_fixtures_test'
 import observations from './observations.mock'
 import { sortBirds } from './sort_birds'
@@ -8,7 +8,7 @@ const initialSorting: BirdSorting = {
   ordering: 'asc'
 }
 
-const initialBirds: BirdWithOrWithoutObservation[] = [
+const initialBirds: Bird[] = [
   barnOwl,
   tawnyOwl,
   blueTit,
