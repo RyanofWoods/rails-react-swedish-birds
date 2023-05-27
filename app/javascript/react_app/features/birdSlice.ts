@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { fetchBirds, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
+import { fetchSpecies, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
 import filterSpecies from '../helpers/filter_species'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortSpecies } from '../helpers/sort_species'
@@ -66,7 +66,7 @@ export const birdSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
+    builder.addCase(fetchSpecies.fulfilled, (state, { payload }) => {
       state.species = payload.species
       refilterSpecies(state)
     })

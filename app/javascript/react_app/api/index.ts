@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { fetchSpeciesResponse, fetchObservationsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchSpeciesResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
 import { client } from './client'
 
-export const fetchBirds = createAsyncThunk('birds/fetchBirds', async () => {
+export const fetchSpecies = createAsyncThunk('birds/fetchSpecies', async () => {
   const response = await client.get<fetchSpeciesResponse>('/species')
   return response.result
 })
