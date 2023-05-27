@@ -12,9 +12,9 @@ const populationCategoryToLevel = (populationCategory: PopulationCategory): Popu
   return inversedCategory
 }
 
-const populationInfo = (bird: Species): string => {
+const populationInfo = (species: Species): string => {
   const text = []
-  switch (bird.populationCategory) {
+  switch (species.populationCategory) {
     case 1:
       text.push('Est. observations above 1,000,000')
       break
@@ -45,36 +45,36 @@ const populationInfo = (bird: Species): string => {
     default:
       text.push('No info available')
   }
-  if (bird.details.includes('[')) {
+  if (species.details.includes('[')) {
     text.push('No wild finds, probably escaped from captivity')
   }
   return text.join('. ') + '.'
 }
 
-const migrationText = (bird: Species): string => {
+const migrationText = (species: Species): string => {
   const text = []
-  if (bird.details.includes('Hs ')) {
-    text.push('Breeding non-migratory bird')
+  if (species.details.includes('Hs ')) {
+    text.push('Breeding non-migratory species')
   }
-  if (bird.details.includes('Hf ')) {
-    text.push('Breeding migratory bird')
+  if (species.details.includes('Hf ')) {
+    text.push('Breeding migratory species')
   }
-  if (bird.details.includes('Hs+f ')) {
-    text.push('Breeding bird, part stays and part migrates')
+  if (species.details.includes('Hs+f ')) {
+    text.push('Breeding species, part stays and part migrates')
   }
-  if (bird.details.includes('Hs (f) ')) {
-    text.push('Breeding bird, most stay and minority migrates')
+  if (species.details.includes('Hs (f) ')) {
+    text.push('Breeding species, most stay and minority migrates')
   }
-  if (bird.details.includes('F')) {
+  if (species.details.includes('F')) {
     text.push('Large amounts passes through the country in spring and autumn during migration')
   }
-  if (bird.details.includes('(V)')) {
+  if (species.details.includes('(V)')) {
     text.push('Rarely seen during winter')
   }
-  if (bird.details.match(/V[^)]/) != null) {
+  if (species.details.match(/V[^)]/) != null) {
     text.push('Can be seen in winter')
   }
-  if (bird.populationCategory > 5) {
+  if (species.populationCategory > 5) {
     text.push('Occasional guest')
   }
   return text.join('. ') + '.'
