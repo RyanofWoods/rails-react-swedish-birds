@@ -7,12 +7,12 @@ import getNameAttribute from '../../helpers/name_helper'
 
 interface ObservationModalProps {
   close: () => void
-  bird: Species
+  species: Species
   observation?: Observation
   userSettings: UserSettings
 }
 
-const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, observation, userSettings }) => {
+const ObservationModal: React.FC<ObservationModalProps> = ({ close, species, observation, userSettings }) => {
   const today = new Date().toLocaleDateString('en-CA')
   const seen = observation != null
   const dispatch = useAppDispatch()
@@ -38,7 +38,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, observ
     const action = (seen) ? editObservation : createObservation
 
     void dispatch(action({
-      speciesScientificName: bird.scientificName,
+      speciesScientificName: species.scientificName,
       observedAt: observationDate,
       note
     }))
@@ -71,8 +71,8 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, observ
       <form onSubmit={handleConfirm}>
         <div className='modal-body'>
           <h4>Name</h4>
-          <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
-          <p className='m-0'>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
+          <p className='bold-600 m-0'>{getNameAttribute(species, userSettings.primaryNameLanguage)}</p>
+          <p className='m-0'>{getNameAttribute(species, userSettings.secondaryNameLanguage)}</p>
           <div className='d-flex align-items-end'>
             <div className='form-group'>
               <label>Date of observation</label>
