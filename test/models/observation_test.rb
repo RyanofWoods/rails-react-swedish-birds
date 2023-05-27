@@ -4,11 +4,11 @@ class ObservationTest < ActiveSupport::TestCase
   setup do
     @user = users(:ryan)
     @other_user = users(:sara)
-    @bird = species(:azure_tit)
-    @valid_attributes = { species: @bird, note: 'note', observed_at: '26/03/2022' }
+    @species = species(:azure_tit)
+    @valid_attributes = { species: @species, note: 'note', observed_at: '26/03/2022' }
   end
 
-  test 'a user cannot have two observations for one bird' do
+  test 'a user cannot have two observations for one species' do
     observation = @user.observations.new(@valid_attributes)
     assert_equal(true, observation.save)
 
@@ -17,7 +17,7 @@ class ObservationTest < ActiveSupport::TestCase
     assert_includes(observation.errors.full_messages, 'Species can only have one observation per user.')
   end
 
-  test 'users can each have an observation for the same bird.' do
+  test 'users can each have an observation for the same species.' do
     observation = @user.observations.new(@valid_attributes)
     assert_equal(true, observation.save)
 
@@ -26,7 +26,7 @@ class ObservationTest < ActiveSupport::TestCase
   end
 
   test 'cannot be saved without observed_at' do
-    observation = @user.observations.new(species: @bird, note: 'note')
+    observation = @user.observations.new(species: @species, note: 'note')
 
     assert_equal(false, observation.save)
     assert_includes(observation.errors.full_messages, 'Observed at must be a Date or zero.')
@@ -34,7 +34,7 @@ class ObservationTest < ActiveSupport::TestCase
 
   test 'a string date gets correctly corrected for observed_at' do
     observed_at = '26/03/2022'
-    observation = @user.observations.new(species: @bird, note: 'note', observed_at: observed_at)
+    observation = @user.observations.new(species: @species, note: 'note', observed_at: observed_at)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
@@ -44,7 +44,7 @@ class ObservationTest < ActiveSupport::TestCase
 
   test 'observed_at gets saved as nil when 0' do
     observed_at = 0
-    observation = @user.observations.new(species: @bird, note: 'note', observed_at: observed_at)
+    observation = @user.observations.new(species: @species, note: 'note', observed_at: observed_at)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
@@ -54,7 +54,7 @@ class ObservationTest < ActiveSupport::TestCase
 
   test 'an actual note get correctly saved' do
     note = 'First observation note'
-    observation = @user.observations.new(species: @bird, note: note, observed_at: Date.today)
+    observation = @user.observations.new(species: @species, note: note, observed_at: Date.today)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
@@ -63,7 +63,7 @@ class ObservationTest < ActiveSupport::TestCase
   end
 
   test 'observation can be saved without a note' do
-    observation = @user.observations.new(species: @bird, observed_at: Date.today)
+    observation = @user.observations.new(species: @species, observed_at: Date.today)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
@@ -72,7 +72,7 @@ class ObservationTest < ActiveSupport::TestCase
 
   test "note gets saved as nil when it's nil" do
     note = nil
-    observation = @user.observations.new(species: @bird, note: note, observed_at: Date.today)
+    observation = @user.observations.new(species: @species, note: note, observed_at: Date.today)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
@@ -82,7 +82,7 @@ class ObservationTest < ActiveSupport::TestCase
 
   test "note gets saved as nil when it's an empty string" do
     note = ''
-    observation = @user.observations.new(species: @bird, note: note, observed_at: Date.today)
+    observation = @user.observations.new(species: @species, note: note, observed_at: Date.today)
 
     assert_difference('@user.observations.count', 1) do
       observation.save
