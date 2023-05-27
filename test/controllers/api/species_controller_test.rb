@@ -1,16 +1,16 @@
 require 'test_helper'
 
-class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
+class Api::SpeciesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @family = families(:woodpeckers)
     @user = users(:ryan)
   end
 
-  test 'GET #index returns all birds when not logged in' do
-    get api_birds_url
+  test 'GET #index returns all species when not logged in' do
+    get api_species_index_url
 
     assert_response :success
-    expected_birds = [
+    expected_species = [
       {
         'scientificName' => species(:great_spotted_woodpecker).scientific_name,
         'englishName' => species(:great_spotted_woodpecker).english_name,
@@ -40,17 +40,17 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
       }
     ]
 
-    actual_birds = json_response['birds']
-    assert_serialized_array(expected_birds, actual_birds, 'englishName')
+    actual_species = json_response['species']
+    assert_serialized_array(expected_species, actual_species, 'englishName')
   end
 
-  test 'GET #index returns all birds when logged in' do
+  test 'GET #index returns all species when logged in' do
     sign_in @user
 
-    get api_birds_url
+    get api_species_index_url
 
     assert_response :success
-    expected_birds = [
+    expected_species = [
       {
         'scientificName' => species(:great_spotted_woodpecker).scientific_name,
         'englishName' => species(:great_spotted_woodpecker).english_name,
@@ -80,7 +80,7 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
       }
     ]
 
-    actual_birds = json_response['birds']
-    assert_serialized_array(expected_birds, actual_birds, 'englishName')
+    actual_species = json_response['species']
+    assert_serialized_array(expected_species, actual_species, 'englishName')
   end
 end

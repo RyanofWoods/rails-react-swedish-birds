@@ -44,7 +44,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'POST #create returns an unauthorized response if there is no logged in user' do
-    post api_bird_observations_url(@new_bird.scientific_name)
+    post api_species_observations_url(@new_bird.scientific_name)
 
     assert_response :unauthorized
     expected = { 'error' => 'You need to sign in or sign up before continuing.' }
@@ -54,7 +54,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   test 'POST #create throws an error when the given bird scientific name is invalid' do
     sign_in @user
 
-    post api_bird_observations_url('Invalid name')
+    post api_species_observations_url('Invalid name')
 
     assert_response :bad_request
     expected = { 'error' => 'Cannot find a bird with the scientific name of Invalid name.' }
@@ -64,7 +64,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   test 'POST #create throws an error when observed_at is not a date or 0' do
     sign_in @user
 
-    post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: nil })
+    post api_species_observations_url(@new_bird.scientific_name, params: { observed_at: nil })
 
     assert_response :bad_request
     expected = { 'error' => 'Observed at must be a Date or zero.' }
@@ -76,7 +76,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     note = 'First observation notes'
 
     assert_difference('@user.observations.count', 1) do
-      post api_bird_observations_url(@new_bird.scientific_name, params: { note: note, observed_at: @observed_at.to_s })
+      post api_species_observations_url(@new_bird.scientific_name,
+                                        params: { note: note, observed_at: @observed_at.to_s })
     end
     observation = @user.observations.last
     assert_response :success
@@ -92,7 +93,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     assert_difference('@user.observations.count', 1) do
-      post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: '0' })
+      post api_species_observations_url(@new_bird.scientific_name, params: { observed_at: '0' })
     end
     assert_response :success
     expected = {

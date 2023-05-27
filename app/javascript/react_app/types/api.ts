@@ -1,7 +1,7 @@
 import { Bird, BirdScientificName, ObservationDict, Order, Family, Observation } from './birdData'
 
-export interface fetchBirdsResponse {
-  birds: Bird[]
+export interface fetchSpeciesResponse {
+  species: Bird[]
 }
 
 export interface fetchFamiliesResponse {

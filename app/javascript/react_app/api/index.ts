@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { fetchBirdsResponse, fetchObservationsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
+import { fetchSpeciesResponse, fetchObservationsResponse, createObservationResponse, createObservationRequest, editObservationRequest, editObservationResponse, searchBirdsResponse, fetchOrdersResponse, fetchFamiliesResponse, isUserLoggedInResponse } from '../types/api'
 import { client } from './client'
 
 export const fetchBirds = createAsyncThunk('birds/fetchBirds', async () => {
-  const response = await client.get<fetchBirdsResponse>('/birds')
+  const response = await client.get<fetchSpeciesResponse>('/species')
   return response.result
 })
 
@@ -25,7 +25,7 @@ export const fetchObservations = createAsyncThunk('birds/fetchObservatons', asyn
 export const createObservation = createAsyncThunk(
   'birds/createObservation',
   async (args: createObservationRequest) => {
-    const response = await client.post<createObservationResponse>(`/birds/${args.birdScientificName}/observations`, { observed_at: args.observedAt, note: args.note })
+    const response = await client.post<createObservationResponse>(`/species/${args.birdScientificName}/observations`, { observed_at: args.observedAt, note: args.note })
     return { observation: response.result, birdScientificName: args.birdScientificName }
   }
 )

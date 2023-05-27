@@ -67,7 +67,7 @@ export const birdSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
-      state.birds = payload.birds
+      state.birds = payload.species
       refilterBirds(state)
     })
     builder.addCase(fetchFamilies.fulfilled, (state, { payload }) => {

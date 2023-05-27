@@ -60,7 +60,7 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def bird_scientific_name
-    params[:bird_id] || params[:id]
+    params[:species_id] || params[:id]
   end
 
   def observation_params
