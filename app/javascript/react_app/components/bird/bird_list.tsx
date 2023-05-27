@@ -3,7 +3,7 @@ import Bird from './bird'
 
 import { useAppSelector } from '../../hooks'
 import BirdListHeader from './bird_list_header'
-import { Observation } from '../../types/birdData'
+import { Observation } from '../../types/speciesData'
 
 const BirdList: React.FC = () => {
   const birds = useAppSelector(state => state.birdsData.sortedBirds)

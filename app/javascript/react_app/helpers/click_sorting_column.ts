@@ -1,4 +1,4 @@
-import { SpeciesColumn, SpeciesSorting } from '../types/birdData'
+import { SpeciesColumn, SpeciesSorting } from '../types/speciesData'
 
 interface ClickSortingColumnOptions {
   sorting: SpeciesSorting

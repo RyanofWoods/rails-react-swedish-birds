@@ -1,4 +1,4 @@
-import { SpeciesFilters, Species, ObservationDict } from '../types/birdData'
+import { SpeciesFilters, Species, ObservationDict } from '../types/speciesData'
 
 interface Options {
   birds: Species[]

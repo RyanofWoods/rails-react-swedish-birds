@@ -1,4 +1,4 @@
-import { Species, SpeciesScientificName, ObservationDict, Order, Family, Observation } from './birdData'
+import { Species, SpeciesScientificName, ObservationDict, Order, Family, Observation } from './speciesData'
 
 export interface fetchSpeciesResponse {
   species: Species[]

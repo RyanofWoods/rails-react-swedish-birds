@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
 
-import { Species, Observation, UserSettings } from '../../types/birdData'
+import { Species, Observation, UserSettings } from '../../types/speciesData'
 import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population'
 import BirdHouse from './bird_house'

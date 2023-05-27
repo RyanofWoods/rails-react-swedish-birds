@@ -1,4 +1,4 @@
-import { Species, PopulationCategory, PopulationLevel } from '../types/birdData'
+import { Species, PopulationCategory, PopulationLevel } from '../types/speciesData'
 
 const POPULATION_BREEDING_THRESHOLD = 5
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
-import { Species, Observation, UserSettings } from '../../types/birdData'
+import { Species, Observation, UserSettings } from '../../types/speciesData'
 import { useAppDispatch } from '../../hooks'
 import { createObservation, editObservation } from '../../api'
 import getNameAttribute from '../../helpers/name_helper'

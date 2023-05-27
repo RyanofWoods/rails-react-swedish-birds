@@ -4,7 +4,7 @@ import { fetchBirds, createObservation, editObservation, searchBirds, fetchObser
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortBirds } from '../helpers/sort_birds'
-import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/birdData'
+import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/speciesData'
 
 const initialState: SpeciesDataState = {
   birds: [],

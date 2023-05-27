@@ -1,4 +1,4 @@
-import { SpeciesSorting, Species, Language } from '../types/birdData'
+import { SpeciesSorting, Species, Language } from '../types/speciesData'
 import { barnOwl, tawnyOwl, greatGreyOwl, blueTit, greatTit } from './bird_fixtures_test'
 import observations from './observations.mock'
 import { sortBirds } from './sort_birds'

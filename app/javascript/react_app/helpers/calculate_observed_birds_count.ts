@@ -1,4 +1,4 @@
-import { Species, ObservationDict } from '../types/birdData'
+import { Species, ObservationDict } from '../types/speciesData'
 
 const calculateObservedBirdsCount = (birds: Species[], observations: ObservationDict): number => {
   const observedBirdScientifics = Object.keys(observations)

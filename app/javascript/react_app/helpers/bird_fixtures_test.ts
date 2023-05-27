@@ -1,4 +1,4 @@
-import { Species } from '../types/birdData'
+import { Species } from '../types/speciesData'
 
 export const barnOwl: Species = {
   scientificName: 'Tyto alba',

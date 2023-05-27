@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Species, Observation } from '../../types/birdData'
+import { Species, Observation } from '../../types/speciesData'
 import Checkbox from './checkbox'
 
 interface CheckboxAndDateProps {

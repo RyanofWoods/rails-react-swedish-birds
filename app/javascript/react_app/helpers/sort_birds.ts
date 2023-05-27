@@ -1,4 +1,4 @@
-import { Species, SpeciesSorting, ObservationDict, Observation } from '../types/birdData'
+import { Species, SpeciesSorting, ObservationDict, Observation } from '../types/speciesData'
 import getNameAttribute from './name_helper'
 import { compareString } from './sort_helpers'
 

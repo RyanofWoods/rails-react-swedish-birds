@@ -1,4 +1,4 @@
-import { SpeciesFilters, Species } from '../types/birdData'
+import { SpeciesFilters, Species } from '../types/speciesData'
 import { barnOwl, blueTit, greatTit, tawnyOwl } from './bird_fixtures_test'
 import observations from './observations.mock'
 import filterBirds from './filter_birds'

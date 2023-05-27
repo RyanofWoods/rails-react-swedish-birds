@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Species, Observation, UserSettings } from '../../types/birdData'
+import { Species, Observation, UserSettings } from '../../types/speciesData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'

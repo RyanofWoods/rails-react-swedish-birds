@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Species } from '../../types/birdData'
+import { Species } from '../../types/speciesData'
 import { isBreedingBird, populationInfo } from '../../helpers/population'
 import PopulationBars from './population_bars'
 

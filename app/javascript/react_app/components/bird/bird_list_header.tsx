@@ -2,7 +2,7 @@ import React from 'react'
 import { updateSorting } from '../../features/birdSlice'
 import { capitalize } from '../../helpers/string_helpers'
 import { useAppDispatch, useAppSelector } from '../../hooks'
-import { SpeciesColumn } from '../../types/birdData'
+import { SpeciesColumn } from '../../types/speciesData'
 import SortIcon from '../shared/sort_icon'
 
 interface ColumnOption {

@@ -1,4 +1,4 @@
-import { Species, ObservationDict } from '../types/birdData'
+import { Species, ObservationDict } from '../types/speciesData'
 import calculateObservedBirdsCount from './calculate_observed_birds_count'
 
 const birds: Species[] = [
