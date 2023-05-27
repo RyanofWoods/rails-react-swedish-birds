@@ -1,5 +1,5 @@
 import React from 'react'
-import Bird from './bird'
+import SpeciesCard from './species_cart'
 
 import { useAppSelector } from '../../hooks'
 import BirdListHeader from './bird_list_header'
@@ -19,7 +19,7 @@ const BirdList: React.FC = () => {
         {
           birds.map((birdData) => {
             const observation: Observation | undefined = observations[birdData.scientificName]
-            return <Bird key={birdData.scientificName} bird={birdData} observation={observation} userSettings={userSettings} isUserLoggedIn={isUserLoggedIn} />
+            return <SpeciesCard key={birdData.scientificName} species={birdData} observation={observation} userSettings={userSettings} isUserLoggedIn={isUserLoggedIn} />
           })
         }
       </ul>
