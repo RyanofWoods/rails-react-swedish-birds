@@ -26,8 +26,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
         formGroupClasses='mt-0 search-container'
         id='search'
         type='text'
-        ariaLabel='search for a bird'
-        placeholder='Search for a bird...'
+        ariaLabel='search for a species'
+        placeholder='Search for a species...'
         handleChange={handleChange}
         value={searchValue}
       >
