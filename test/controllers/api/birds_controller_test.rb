@@ -12,31 +12,31 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     expected_birds = [
       {
-        'scientificName' => birds(:great_spotted_woodpecker).scientific_name,
-        'englishName' => birds(:great_spotted_woodpecker).english_name,
-        'swedishName' => birds(:great_spotted_woodpecker).swedish_name,
-        'familyScientificName' => birds(:great_spotted_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:great_spotted_woodpecker).family.order.scientific_name,
-        'details' => birds(:great_spotted_woodpecker).details,
-        'populationCategory' => birds(:great_spotted_woodpecker).population_category
+        'scientificName' => species(:great_spotted_woodpecker).scientific_name,
+        'englishName' => species(:great_spotted_woodpecker).english_name,
+        'swedishName' => species(:great_spotted_woodpecker).swedish_name,
+        'familyScientificName' => species(:great_spotted_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:great_spotted_woodpecker).family.order.scientific_name,
+        'details' => species(:great_spotted_woodpecker).details,
+        'populationCategory' => species(:great_spotted_woodpecker).population_category
       },
       {
-        'scientificName' => birds(:green_woodpecker).scientific_name,
-        'englishName' => birds(:green_woodpecker).english_name,
-        'swedishName' => birds(:green_woodpecker).swedish_name,
-        'familyScientificName' => birds(:green_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:green_woodpecker).family.order.scientific_name,
-        'details' => birds(:green_woodpecker).details,
-        'populationCategory' => birds(:green_woodpecker).population_category
+        'scientificName' => species(:green_woodpecker).scientific_name,
+        'englishName' => species(:green_woodpecker).english_name,
+        'swedishName' => species(:green_woodpecker).swedish_name,
+        'familyScientificName' => species(:green_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:green_woodpecker).family.order.scientific_name,
+        'details' => species(:green_woodpecker).details,
+        'populationCategory' => species(:green_woodpecker).population_category
       },
       {
-        'scientificName' => birds(:white_backed_woodpecker).scientific_name,
-        'englishName' => birds(:white_backed_woodpecker).english_name,
-        'swedishName' => birds(:white_backed_woodpecker).swedish_name,
-        'familyScientificName' => birds(:white_backed_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:white_backed_woodpecker).family.order.scientific_name,
-        'details' => birds(:white_backed_woodpecker).details,
-        'populationCategory' => birds(:white_backed_woodpecker).population_category
+        'scientificName' => species(:white_backed_woodpecker).scientific_name,
+        'englishName' => species(:white_backed_woodpecker).english_name,
+        'swedishName' => species(:white_backed_woodpecker).swedish_name,
+        'familyScientificName' => species(:white_backed_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:white_backed_woodpecker).family.order.scientific_name,
+        'details' => species(:white_backed_woodpecker).details,
+        'populationCategory' => species(:white_backed_woodpecker).population_category
       }
     ]
 
@@ -52,31 +52,31 @@ class Api::BirdsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     expected_birds = [
       {
-        'scientificName' => birds(:great_spotted_woodpecker).scientific_name,
-        'englishName' => birds(:great_spotted_woodpecker).english_name,
-        'swedishName' => birds(:great_spotted_woodpecker).swedish_name,
-        'familyScientificName' => birds(:great_spotted_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:great_spotted_woodpecker).family.order.scientific_name,
-        'details' => birds(:great_spotted_woodpecker).details,
-        'populationCategory' => birds(:great_spotted_woodpecker).population_category
+        'scientificName' => species(:great_spotted_woodpecker).scientific_name,
+        'englishName' => species(:great_spotted_woodpecker).english_name,
+        'swedishName' => species(:great_spotted_woodpecker).swedish_name,
+        'familyScientificName' => species(:great_spotted_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:great_spotted_woodpecker).family.order.scientific_name,
+        'details' => species(:great_spotted_woodpecker).details,
+        'populationCategory' => species(:great_spotted_woodpecker).population_category
       },
       {
-        'scientificName' => birds(:green_woodpecker).scientific_name,
-        'englishName' => birds(:green_woodpecker).english_name,
-        'swedishName' => birds(:green_woodpecker).swedish_name,
-        'familyScientificName' => birds(:green_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:green_woodpecker).family.order.scientific_name,
-        'details' => birds(:green_woodpecker).details,
-        'populationCategory' => birds(:green_woodpecker).population_category
+        'scientificName' => species(:green_woodpecker).scientific_name,
+        'englishName' => species(:green_woodpecker).english_name,
+        'swedishName' => species(:green_woodpecker).swedish_name,
+        'familyScientificName' => species(:green_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:green_woodpecker).family.order.scientific_name,
+        'details' => species(:green_woodpecker).details,
+        'populationCategory' => species(:green_woodpecker).population_category
       },
       {
-        'scientificName' => birds(:white_backed_woodpecker).scientific_name,
-        'englishName' => birds(:white_backed_woodpecker).english_name,
-        'swedishName' => birds(:white_backed_woodpecker).swedish_name,
-        'familyScientificName' => birds(:white_backed_woodpecker).family.scientific_name,
-        'orderScientificName' => birds(:white_backed_woodpecker).family.order.scientific_name,
-        'details' => birds(:white_backed_woodpecker).details,
-        'populationCategory' => birds(:white_backed_woodpecker).population_category
+        'scientificName' => species(:white_backed_woodpecker).scientific_name,
+        'englishName' => species(:white_backed_woodpecker).english_name,
+        'swedishName' => species(:white_backed_woodpecker).swedish_name,
+        'familyScientificName' => species(:white_backed_woodpecker).family.scientific_name,
+        'orderScientificName' => species(:white_backed_woodpecker).family.order.scientific_name,
+        'details' => species(:white_backed_woodpecker).details,
+        'populationCategory' => species(:white_backed_woodpecker).population_category
       }
     ]
 

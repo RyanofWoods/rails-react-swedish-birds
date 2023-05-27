@@ -5,7 +5,7 @@ class Api::ObservationsController < Api::BaseController
 
   def index
     if signed_in?
-      @observations = current_user.observations.joins(:bird).select(:note, :observed_at, :scientific_name)
+      @observations = current_user.observations.joins(:species).select(:note, :observed_at, :scientific_name)
       render :index
     else
       render json: { observations: {} }, status: :ok
@@ -15,7 +15,7 @@ class Api::ObservationsController < Api::BaseController
   def create
     return unknown_bird unless @bird
 
-    @observation = current_user.observations.new(observation_params.merge(bird: @bird))
+    @observation = current_user.observations.new(observation_params.merge(species: @bird))
 
     if @observation.save
       render :show
@@ -52,11 +52,11 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def set_bird
-    @bird = Bird.find_by(scientific_name: bird_scientific_name.capitalize)
+    @bird = Species.find_by(scientific_name: bird_scientific_name.capitalize)
   end
 
   def set_observation
-    @observation = current_user.observations.find_by(bird: @bird)
+    @observation = current_user.observations.find_by(species: @bird)
   end
 
   def bird_scientific_name

@@ -2,15 +2,16 @@ require 'test_helper'
 
 class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1,
-                            family: families(:tits))
+    @new_bird = Species.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1,
+                               family: families(:tits))
     @user = users(:ryan)
     @observed_at = Date.today
 
     @family = families(:woodpeckers)
     @other_user = users(:sara)
-    @other_user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-01', note: 'note')
-    @other_user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
+    @other_user.observations.create!(species: species(:great_spotted_woodpecker), observed_at: '2022-01-01',
+                                     note: 'note')
+    @other_user.observations.create!(species: species(:green_woodpecker), observed_at: '2022-01-01')
   end
 
   test "GET #index returns all the user's observations as a hash if logged in" do
@@ -20,11 +21,11 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     expected_observations = {
-      birds(:great_spotted_woodpecker).scientific_name => {
+      species(:great_spotted_woodpecker).scientific_name => {
         'observedAt' => '2022-01-01',
         'note' => 'note'
       },
-      birds(:green_woodpecker).scientific_name => {
+      species(:green_woodpecker).scientific_name => {
         'observedAt' => '2022-01-01',
         'note' => nil
       }
@@ -121,7 +122,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
 
   test 'PATCH #update returns an error when the user does not have an observation for the given bird' do
     another_user = users(:sara)
-    another_user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    another_user.observations.create!(species: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
 
     sign_in @user
 
@@ -135,7 +136,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'PATCH #update successfully edits the observation' do
-    @user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    @user.observations.create!(species: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
     sign_in @user
 
     patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
@@ -151,7 +152,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "PATCH #update successfully edits the observation and it doesn't override attributes when given nil" do
-    @user.observations.create(bird: @new_bird, observed_at: @observed_at, note: 'Note')
+    @user.observations.create(species: @new_bird, observed_at: @observed_at, note: 'Note')
     sign_in @user
     new_date = Date.yesterday
 

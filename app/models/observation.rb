@@ -1,8 +1,8 @@
 class Observation < ApplicationRecord
-  validates :bird, uniqueness: { scope: :user, message: 'can only have one observation per user.' }
+  validates :species, uniqueness: { scope: :user, message: 'can only have one observation per user.' }
   validates :observed_at, presence: { message: 'must be a Date or zero.' }
 
-  belongs_to :bird
+  belongs_to :species
   belongs_to :user
 
   before_save :nullify_blank_notes, :format_unknown_observed_at

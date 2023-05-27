@@ -9,7 +9,7 @@ class Api::SearchControllerTest < ActionDispatch::IntegrationTest
     get api_search_url(query: 'tit')
 
     assert_response :success
-    birds = Bird.search_by_all_names('tit')
+    birds = Species.search_by_all_names('tit')
     expected = { 'birds' => birds.pluck(:scientific_name) }
     assert_equal(expected, json_response)
   end
@@ -19,7 +19,7 @@ class Api::SearchControllerTest < ActionDispatch::IntegrationTest
 
     get api_search_url(query: 'tit')
 
-    birds = Bird.search_by_all_names('tit')
+    birds = Species.search_by_all_names('tit')
     expected = { 'birds' => birds.pluck(:scientific_name) }
     assert_equal(expected, json_response)
   end
