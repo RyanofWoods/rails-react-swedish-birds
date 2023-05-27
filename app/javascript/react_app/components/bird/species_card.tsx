@@ -51,10 +51,10 @@ const SpeciesCard: React.FC<SpeciesProps> = ({ species, observation, userSetting
   }
 
   return (
-    <li className='bird-card'>
+    <li className='species-card'>
       {showInfoBox && <PopulationTooltip species={species} />}
       <CheckboxAndDate species={species} observation={observation} handleChange={toggleSeenModal} />
-      <div className='bird-names'>
+      <div className='species-names'>
         <p className='bold-600 m-0'>{getNameAttribute(species, userSettings.primaryNameLanguage)}</p>
         <p>{getNameAttribute(species, userSettings.secondaryNameLanguage)}</p>
         <button className='link details-link' onClick={toggleDetailsModal}>Details</button>

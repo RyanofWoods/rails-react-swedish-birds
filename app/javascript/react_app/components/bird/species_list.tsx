@@ -14,7 +14,7 @@ const SpeciesList: React.FC = () => {
     <>
       <SpeciesListHeader />
 
-      <ul className='bird-list'>
+      <ul className='species-list'>
         {
           species.map((speciesData) => {
             const observation: Observation | undefined = observations[speciesData.scientificName]

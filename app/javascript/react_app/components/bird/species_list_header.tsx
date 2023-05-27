@@ -14,11 +14,11 @@ const SpeciesListHeader: React.FC = () => {
   const columnOptions: ColumnOption[] = [
     {
       column: 'seen',
-      classes: 'bird-date'
+      classes: 'species-date'
     },
     {
       column: 'name',
-      classes: 'bird-names'
+      classes: 'species-names'
     },
     {
       column: 'population',
@@ -46,7 +46,7 @@ const SpeciesListHeader: React.FC = () => {
   }
 
   return (
-    <div id='sorting-header' className='bird-card'>
+    <div id='sorting-header' className='species-card'>
       {
         columnOptions.map(({ column, classes }) => (
           <button key={column} className={classes} onClick={() => onChangeHandler(column)}>
