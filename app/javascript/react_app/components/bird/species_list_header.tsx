@@ -10,7 +10,7 @@ interface ColumnOption {
   classes: string
 }
 
-const BirdListHeader: React.FC = () => {
+const SpeciesListHeader: React.FC = () => {
   const columnOptions: ColumnOption[] = [
     {
       column: 'seen',
@@ -58,4 +58,4 @@ const BirdListHeader: React.FC = () => {
   )
 }
 
-export default BirdListHeader
+export default SpeciesListHeader

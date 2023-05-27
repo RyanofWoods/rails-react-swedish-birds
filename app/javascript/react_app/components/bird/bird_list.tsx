@@ -2,7 +2,7 @@ import React from 'react'
 import SpeciesCard from './species_cart'
 
 import { useAppSelector } from '../../hooks'
-import BirdListHeader from './bird_list_header'
+import SpeciesListHeader from './species_list_header'
 import { Observation } from '../../types/speciesData'
 
 const BirdList: React.FC = () => {
@@ -13,7 +13,7 @@ const BirdList: React.FC = () => {
 
   return (
     <>
-      <BirdListHeader />
+      <SpeciesListHeader />
 
       <ul className='bird-list'>
         {
