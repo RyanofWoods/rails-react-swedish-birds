@@ -5,11 +5,11 @@ import { isBreedingBird, populationInfo } from '../../helpers/population'
 import PopulationBars from './population_bars'
 
 interface PopulationTooltipProps {
-  bird: Species
+  species: Species
 }
 
-const PopulationTooltip: React.FC<PopulationTooltipProps> = ({ bird }) => {
-  const { populationCategory: population } = bird
+const PopulationTooltip: React.FC<PopulationTooltipProps> = ({ species }) => {
+  const { populationCategory: population } = species
 
   return (
     <div className='population-tooltip-container'>
@@ -18,8 +18,8 @@ const PopulationTooltip: React.FC<PopulationTooltipProps> = ({ bird }) => {
         {isBreedingBird(population) && <p className='population-tooltip-header'>Breeds in Sweden</p>}
       </div>
       <div className='population-bars-container m-0 p-2'>
-        <PopulationBars population={bird.populationCategory} />
-        <p>{populationInfo(bird)}</p>
+        <PopulationBars population={species.populationCategory} />
+        <p>{populationInfo(species)}</p>
       </div>
     </div>
   )
