@@ -89,7 +89,7 @@ export const birdSlice = createSlice({
       state.filters.searchValue = action.meta.arg
     })
     builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
-      state.filters.searchScope = payload.birds
+      state.filters.searchScope = payload.species
       refilterBirds(state)
     })
   }

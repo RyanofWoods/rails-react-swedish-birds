@@ -31,7 +31,7 @@ export interface createObservationResponse extends Observation {}
 export interface editObservationResponse extends Observation {}
 
 export interface searchBirdsResponse {
-  birds: BirdScientificName[]
+  species: BirdScientificName[]
 }
 
 export interface isUserLoggedInResponse {

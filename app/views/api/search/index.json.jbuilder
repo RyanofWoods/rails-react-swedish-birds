@@ -1,1 +1,1 @@
-json.birds @birds.pluck(:scientific_name)
+json.species @species.pluck(:scientific_name)
