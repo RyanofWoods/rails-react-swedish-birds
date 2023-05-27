@@ -1,7 +1,7 @@
 import { SpeciesFilters, Species } from '../types/speciesData'
-import { barnOwl, blueTit, greatTit, tawnyOwl } from './bird_fixtures_test'
+import { barnOwl, blueTit, greatTit, tawnyOwl } from './species_fixtures_test'
 import observations from './observations.mock'
-import filterBirds from './filter_birds'
+import filterSpecies from './filter_species'
 
 const initialFilters: SpeciesFilters = {
   searchScope: [],
@@ -11,7 +11,7 @@ const initialFilters: SpeciesFilters = {
   searchValue: ''
 }
 
-const initialBirds: Species[] = [
+const initialSpecies: Species[] = [
   barnOwl,
   tawnyOwl,
   blueTit,
@@ -19,56 +19,56 @@ const initialBirds: Species[] = [
 ]
 
 let filters = { ...initialFilters }
-let birds = initialBirds
+let species = initialSpecies
 
 beforeEach(() => {
   filters = { ...initialFilters }
-  birds = initialBirds
+  species = initialSpecies
 })
 
-test('when there are no filters it returns all the birds', () => {
-  const expected = initialBirds
-  const actual = filterBirds({ birds, observations, filters })
+test('when there are no filters it returns all the species', () => {
+  const expected = initialSpecies
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
-test('when the searchScope is not empty, it filters the birds appropriately', () => {
+test('when the searchScope is not empty, it filters the species appropriately', () => {
   filters.searchScope = ['Cyanistes caeruleus', 'Parus major']
 
   const expected = [blueTit, greatTit]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
-test('when the searchScope is empty because the search query results in no birds, it returns no birds', () => {
+test('when the searchScope is empty because the search query results in no species, it returns no species', () => {
   filters.searchScope = []
-  filters.searchValue = 'no bird has this name'
+  filters.searchValue = 'no species has this name'
 
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual([])
 })
 
-test('when the searchScope is empty because the trigram search return nothing on one character searches, it returns all the birds', () => {
+test('when the searchScope is empty because the trigram search return nothing on one character searches, it returns all the species', () => {
   filters.searchScope = []
   filters.searchValue = 't'
 
-  const actual = filterBirds({ birds, observations, filters })
-  expect(actual).toEqual(birds)
+  const actual = filterSpecies({ species, observations, filters })
+  expect(actual).toEqual(species)
 })
 
-test('when seenScope is "seen" it returns only seen birds', () => {
+test('when seenScope is "seen" it returns only seen species', () => {
   filters.seenScope = 'seen'
 
   const expected = [tawnyOwl, blueTit, greatTit]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
-test('when seenScope is "unseen" it returns only seen birds', () => {
+test('when seenScope is "unseen" it returns only seen species', () => {
   filters.seenScope = 'unseen'
 
   const expected = [barnOwl]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
@@ -76,7 +76,7 @@ test('when orderScientificName is set, but familyScientificName is not, it filte
   filters.orderScientificNameScope = 'Strigiformes'
 
   const expected = [barnOwl, tawnyOwl]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
@@ -85,7 +85,7 @@ test('when orderScientificName and familyScientificName are set, it filters by t
   filters.familyScientificNameScope = 'Tytonidae'
 
   const expected = [barnOwl]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })
 
@@ -93,6 +93,6 @@ test('when orderScientificName is not set, but familyScientificName is, it filte
   filters.familyScientificNameScope = 'Strigidae'
 
   const expected = [tawnyOwl]
-  const actual = filterBirds({ birds, observations, filters })
+  const actual = filterSpecies({ species, observations, filters })
   expect(actual).toEqual(expected)
 })

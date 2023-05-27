@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { fetchBirds, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
-import filterBirds from '../helpers/filter_birds'
+import filterSpecies from '../helpers/filter_species'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortSpecies } from '../helpers/sort_species'
 import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/speciesData'
@@ -30,8 +30,8 @@ const initialState: SpeciesDataState = {
   }
 }
 
-const refilterBirds = (state: SpeciesDataState): void => {
-  state.filteredSpecies = filterBirds({ birds: state.species, filters: state.filters, observations: state.observations })
+const refilterSpecies = (state: SpeciesDataState): void => {
+  state.filteredSpecies = filterSpecies({ species: state.species, filters: state.filters, observations: state.observations })
   resortSpecies(state)
 }
 
@@ -49,16 +49,16 @@ export const birdSlice = createSlice({
   reducers: {
     updateFilters (state, action: PayloadAction<Partial<SpeciesFilters>>) {
       state.filters = { ...state.filters, ...action.payload }
-      refilterBirds(state)
+      refilterSpecies(state)
     },
     resetFilters (state) {
       state.filters = initialState.filters
-      refilterBirds(state)
+      refilterSpecies(state)
     },
     resetSearch (state) {
       state.filters.searchValue = ''
       state.filters.searchScope = []
-      refilterBirds(state)
+      refilterSpecies(state)
     },
     updateSorting (state, action: PayloadAction<SpeciesColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
@@ -68,7 +68,7 @@ export const birdSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
       state.species = payload.species
-      refilterBirds(state)
+      refilterSpecies(state)
     })
     builder.addCase(fetchFamilies.fulfilled, (state, { payload }) => {
       state.families = payload.families
@@ -90,7 +90,7 @@ export const birdSlice = createSlice({
     })
     builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
       state.filters.searchScope = payload.species
-      refilterBirds(state)
+      refilterSpecies(state)
     })
   }
 })
