@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SearchBar from './search_bar'
-import SeenBirdsFilter from './seen_birds_filter'
+import SeenSpeciesFilter from './seen_species_filter'
 import FamilyAndOrderFilter from './family_and_order_filter'
 import { useAppSelector, useAppDispatch } from '../../hooks'
 import { resetFilters } from '../../features/speciesSlice'
@@ -24,7 +24,7 @@ const FilterGroup: React.FC = () => {
 
   return (
     <>
-      <SeenBirdsFilter selectedValue={selectedSeenValue} />
+      <SeenSpeciesFilter selectedValue={selectedSeenValue} />
       <FamilyAndOrderFilter orders={orders} families={families} userSettings={userSettings} selectedOrderOption={selectedOrderOption} selectedFamilyOption={selectedFamilyOption} />
       <SearchBar searchValue={searchValue} />
       <div className='d-flex justify-content-end'>

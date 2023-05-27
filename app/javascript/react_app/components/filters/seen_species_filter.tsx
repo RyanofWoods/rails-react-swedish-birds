@@ -4,17 +4,17 @@ import { updateFilters } from '../../features/speciesSlice'
 import { useAppDispatch } from '../../hooks'
 import { SeenScope } from '../../types/speciesData'
 
-interface SeenBirdsFilterProps {
+interface SeenSpeciesFilterProps {
   selectedValue: SeenScope
 }
 
-const SeenBirdsFilter: React.FC<SeenBirdsFilterProps> = ({ selectedValue }) => {
+const SeenSpeciesFilter: React.FC<SeenSpeciesFilterProps> = ({ selectedValue }) => {
   const dispatch = useAppDispatch()
 
   const options: Array<RadioOption<SeenScope>> = [
-    { value: 'all', label: 'All birds' },
-    { value: 'seen', label: 'Birds I have seen' },
-    { value: 'unseen', label: "Birds I haven't seen" }
+    { value: 'all', label: 'All species' },
+    { value: 'seen', label: 'Species I have seen' },
+    { value: 'unseen', label: "Species I haven't seen" }
   ]
 
   const handleChange = (value: SeenScope): void => {
@@ -22,8 +22,8 @@ const SeenBirdsFilter: React.FC<SeenBirdsFilterProps> = ({ selectedValue }) => {
   }
 
   return (
-    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue={selectedValue} name='birdlist' handleOnChange={handleChange} />
+    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue={selectedValue} name='specieslist' handleOnChange={handleChange} />
   )
 }
 
-export default SeenBirdsFilter
+export default SeenSpeciesFilter
