@@ -38,7 +38,7 @@ export const editObservation = createAsyncThunk(
   }
 )
 
-export const searchBirds = createAsyncThunk(
+export const searchSpecies = createAsyncThunk(
   'birds/search',
   async (query: string) => {
     const response = await client.get<searchSpeciesResponse>(`/search?query=${query}`)

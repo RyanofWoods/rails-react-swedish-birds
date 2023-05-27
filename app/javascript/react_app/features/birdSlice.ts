@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { fetchSpecies, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
+import { fetchSpecies, createObservation, editObservation, searchSpecies, fetchObservations, fetchOrders, fetchFamilies } from '../api'
 import filterSpecies from '../helpers/filter_species'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortSpecies } from '../helpers/sort_species'
@@ -85,10 +85,10 @@ export const birdSlice = createSlice({
     builder.addCase(editObservation.fulfilled, (state, { payload }) => {
       insertOrReplaceObservation(state, payload.speciesScientificName, payload.observation)
     })
-    builder.addCase(searchBirds.pending, (state, action) => {
+    builder.addCase(searchSpecies.pending, (state, action) => {
       state.filters.searchValue = action.meta.arg
     })
-    builder.addCase(searchBirds.fulfilled, (state, { payload }) => {
+    builder.addCase(searchSpecies.fulfilled, (state, { payload }) => {
       state.filters.searchScope = payload.species
       refilterSpecies(state)
     })

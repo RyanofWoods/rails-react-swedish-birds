@@ -1,5 +1,5 @@
 import React from 'react'
-import { searchBirds } from '../../api'
+import { searchSpecies } from '../../api'
 import { resetSearch } from '../../features/birdSlice'
 import { useAppDispatch } from '../../hooks'
 
@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
   const dispatch = useAppDispatch()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    void dispatch(searchBirds(event.target.value))
+    void dispatch(searchSpecies(event.target.value))
   }
 
   const resetSearchBar = (): void => {
