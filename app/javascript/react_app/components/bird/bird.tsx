@@ -69,7 +69,7 @@ const Bird: React.FC<BirdProps> = ({ bird, observation, userSettings, isUserLogg
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} bird={bird} observation={observation} userSettings={userSettings} />
+          <DetailsModal close={toggleDetailsModal} species={bird} observation={observation} userSettings={userSettings} />
         )
       }
     </li>
