@@ -1,5 +1,5 @@
 import React from 'react'
-import { updateSorting } from '../../features/birdSlice'
+import { updateSorting } from '../../features/speciesSlice'
 import { capitalize } from '../../helpers/string_helpers'
 import { useAppDispatch, useAppSelector } from '../../hooks'
 import { SpeciesColumn } from '../../types/speciesData'

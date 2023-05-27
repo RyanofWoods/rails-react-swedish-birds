@@ -4,7 +4,7 @@ import SearchBar from './search_bar'
 import SeenBirdsFilter from './seen_birds_filter'
 import FamilyAndOrderFilter from './family_and_order_filter'
 import { useAppSelector, useAppDispatch } from '../../hooks'
-import { resetFilters } from '../../features/birdSlice'
+import { resetFilters } from '../../features/speciesSlice'
 
 const FilterGroup: React.FC = () => {
   const orders = useAppSelector(state => state.speciesData.orders)

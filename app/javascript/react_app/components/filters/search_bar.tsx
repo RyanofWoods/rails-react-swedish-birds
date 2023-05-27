@@ -1,6 +1,6 @@
 import React from 'react'
 import { searchSpecies } from '../../api'
-import { resetSearch } from '../../features/birdSlice'
+import { resetSearch } from '../../features/speciesSlice'
 import { useAppDispatch } from '../../hooks'
 
 import Input from '../shared/input'

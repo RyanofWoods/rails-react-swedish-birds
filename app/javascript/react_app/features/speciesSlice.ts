@@ -43,8 +43,8 @@ const insertOrReplaceObservation = (state: SpeciesDataState, speciesScientificNa
   state.observations[speciesScientificName] = observation
 }
 
-export const birdSlice = createSlice({
-  name: 'bird',
+export const speciesSlice = createSlice({
+  name: 'species',
   initialState,
   reducers: {
     updateFilters (state, action: PayloadAction<Partial<SpeciesFilters>>) {
@@ -95,5 +95,5 @@ export const birdSlice = createSlice({
   }
 })
 
-export const { resetFilters, resetSearch, updateFilters, updateSorting } = birdSlice.actions
-export default birdSlice
+export const { resetFilters, resetSearch, updateFilters, updateSorting } = speciesSlice.actions
+export default speciesSlice

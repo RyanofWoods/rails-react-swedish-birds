@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { updateFilters } from '../../features/birdSlice'
+import { updateFilters } from '../../features/speciesSlice'
 import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
 import { Family, Order, FamilyScientificName, OrderScientificName, UserSettings } from '../../types/speciesData'
