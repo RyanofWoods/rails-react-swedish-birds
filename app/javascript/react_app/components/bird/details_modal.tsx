@@ -4,7 +4,7 @@ import Modal from '../shared/modal'
 import { Species, Observation, UserSettings } from '../../types/speciesData'
 import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population'
-import BirdHouse from './bird_house'
+import HouseIcon from './house_icon'
 import getNameAttribute from '../../helpers/name_helper'
 import ObservationModal from './observation_modal'
 
@@ -56,7 +56,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, species, observation
 
   const migrationSection = (): JSX.Element => (
     <div className='population-bars-container'>
-      <BirdHouse population={species.populationCategory} />
+      <HouseIcon population={species.populationCategory} />
       <p>{migrationText(species)}</p>
     </div>
   )

@@ -3,11 +3,11 @@ import React from 'react'
 import { isBreeding } from '../../helpers/population'
 import { PopulationCategory } from '../../types/speciesData'
 
-interface BirdHouseProps {
+interface HouseIconProps {
   population: PopulationCategory
 }
 
-const BirdHouse: React.FC<BirdHouseProps> = ({ population }) => {
+const HouseIcon: React.FC<HouseIconProps> = ({ population }) => {
   return (
     <div className='house-container'>
       <svg width='35' height='35' viewBox='0 0 35 35' xmlns='http://www.w3.org/2000/svg'>
@@ -19,4 +19,4 @@ const BirdHouse: React.FC<BirdHouseProps> = ({ population }) => {
   )
 }
 
-export default BirdHouse
+export default HouseIcon
