@@ -12,6 +12,7 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - 'test/**/*'
+    - 'db/**/*'
 Metrics/ClassLength:
   Exclude:
     - 'test/**/*'
