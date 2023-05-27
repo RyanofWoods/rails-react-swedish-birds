@@ -61,7 +61,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
     <div id='filter-selects'>
       <Select
         id='select-order'
-        ariaLabel='Select order to filter the birds by'
+        ariaLabel='Select order to filter the species by'
         options={tranformToOptions(orders)}
         defaultText='Orders'
         handleChange={handleOrderChange}
@@ -69,7 +69,7 @@ const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
       />
       <Select
         id='select-family'
-        ariaLabel='Select a family to filter the birds by'
+        ariaLabel='Select a family to filter the species by'
         options={tranformToOptions(filteredFamilies)}
         defaultText='Families'
         handleChange={handleFamilyChange}
