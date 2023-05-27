@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { isBreedingBird } from '../../helpers/population'
+import { PopulationCategory } from '../../types/speciesData'
 
 interface BirdHouseProps {
-  population: number
+  population: PopulationCategory
 }
 
 const BirdHouse: React.FC<BirdHouseProps> = ({ population }) => {
