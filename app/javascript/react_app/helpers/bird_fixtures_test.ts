@@ -1,6 +1,6 @@
-import { Bird } from '../types/birdData'
+import { Species } from '../types/birdData'
 
-export const barnOwl: Bird = {
+export const barnOwl: Species = {
   scientificName: 'Tyto alba',
   englishName: 'Western Barn Owl',
   swedishName: 'Tornuggla',
@@ -10,7 +10,7 @@ export const barnOwl: Bird = {
   populationCategory: 5
 }
 
-export const tawnyOwl: Bird = {
+export const tawnyOwl: Species = {
   scientificName: 'Strix aluco',
   englishName: 'Tawny Owl',
   swedishName: 'Kattuggla',
@@ -20,7 +20,7 @@ export const tawnyOwl: Bird = {
   populationCategory: 3
 }
 
-export const greatGreyOwl: Bird = {
+export const greatGreyOwl: Species = {
   scientificName: 'Strix nebulosa',
   englishName: 'Great Grey Owl',
   swedishName: 'Lappuggla',
@@ -30,7 +30,7 @@ export const greatGreyOwl: Bird = {
   populationCategory: 5
 }
 
-export const blueTit: Bird = {
+export const blueTit: Species = {
   scientificName: 'Cyanistes caeruleus',
   englishName: 'Eurasian Blue Tit',
   swedishName: 'Blåmes',
@@ -40,7 +40,7 @@ export const blueTit: Bird = {
   populationCategory: 2
 }
 
-export const greatTit: Bird = {
+export const greatTit: Species = {
   scientificName: 'Parus major',
   englishName: 'Great Tit',
   swedishName: 'Talgoxe',

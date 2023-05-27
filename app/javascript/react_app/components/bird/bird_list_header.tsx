@@ -2,11 +2,11 @@ import React from 'react'
 import { updateSorting } from '../../features/birdSlice'
 import { capitalize } from '../../helpers/string_helpers'
 import { useAppDispatch, useAppSelector } from '../../hooks'
-import { BirdColumn } from '../../types/birdData'
+import { SpeciesColumn } from '../../types/birdData'
 import SortIcon from '../shared/sort_icon'
 
 interface ColumnOption {
-  column: BirdColumn
+  column: SpeciesColumn
   classes: string
 }
 
@@ -28,11 +28,11 @@ const BirdListHeader: React.FC = () => {
   const sorting = useAppSelector(state => state.birdsData.sorting)
   const dispatch = useAppDispatch()
 
-  const onChangeHandler = (column: BirdColumn): void => {
+  const onChangeHandler = (column: SpeciesColumn): void => {
     dispatch(updateSorting(column))
   }
 
-  const columnText = (column: BirdColumn): JSX.Element => {
+  const columnText = (column: SpeciesColumn): JSX.Element => {
     const ordering = (sorting.column === column) ? sorting.ordering : null
 
     return (

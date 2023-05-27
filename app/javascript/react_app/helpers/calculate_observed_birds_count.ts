@@ -1,6 +1,6 @@
-import { Bird, ObservationDict } from '../types/birdData'
+import { Species, ObservationDict } from '../types/birdData'
 
-const calculateObservedBirdsCount = (birds: Bird[], observations: ObservationDict): number => {
+const calculateObservedBirdsCount = (birds: Species[], observations: ObservationDict): number => {
   const observedBirdScientifics = Object.keys(observations)
 
   return birds.filter(bird => observedBirdScientifics.includes(bird.scientificName)).length

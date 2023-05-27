@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Bird } from '../../types/birdData'
+import { Species } from '../../types/birdData'
 import { isBreedingBird, populationInfo } from '../../helpers/population'
 import PopulationBars from './population_bars'
 
 interface PopulationTooltipProps {
-  bird: Bird
+  bird: Species
 }
 
 const PopulationTooltip: React.FC<PopulationTooltipProps> = ({ bird }) => {

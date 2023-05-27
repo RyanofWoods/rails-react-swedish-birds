@@ -4,9 +4,9 @@ import { fetchBirds, createObservation, editObservation, searchBirds, fetchObser
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
 import { sortBirds } from '../helpers/sort_birds'
-import { BirdColumn, BirdFilters, BirdDataState, BirdScientificName, Observation } from '../types/birdData'
+import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/birdData'
 
-const initialState: BirdDataState = {
+const initialState: SpeciesDataState = {
   birds: [],
   families: [],
   orders: [],
@@ -30,16 +30,16 @@ const initialState: BirdDataState = {
   }
 }
 
-const refilterBirds = (state: BirdDataState): void => {
+const refilterBirds = (state: SpeciesDataState): void => {
   state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters, observations: state.observations })
   resortBirds(state)
 }
 
-const resortBirds = (state: BirdDataState): void => {
+const resortBirds = (state: SpeciesDataState): void => {
   state.sortedBirds = sortBirds({ birds: state.filteredBirds, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
-const insertOrReplaceObservation = (state: BirdDataState, birdScientificName: BirdScientificName, observation: Observation): void => {
+const insertOrReplaceObservation = (state: SpeciesDataState, birdScientificName: SpeciesScientificName, observation: Observation): void => {
   state.observations[birdScientificName] = observation
 }
 
@@ -47,7 +47,7 @@ export const birdSlice = createSlice({
   name: 'bird',
   initialState,
   reducers: {
-    updateFilters (state, action: PayloadAction<Partial<BirdFilters>>) {
+    updateFilters (state, action: PayloadAction<Partial<SpeciesFilters>>) {
       state.filters = { ...state.filters, ...action.payload }
       refilterBirds(state)
     },
@@ -60,7 +60,7 @@ export const birdSlice = createSlice({
       state.filters.searchScope = []
       refilterBirds(state)
     },
-    updateSorting (state, action: PayloadAction<BirdColumn>) {
+    updateSorting (state, action: PayloadAction<SpeciesColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
       resortBirds(state)
     }

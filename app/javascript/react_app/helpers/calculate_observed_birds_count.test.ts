@@ -1,7 +1,7 @@
-import { Bird, ObservationDict } from '../types/birdData'
+import { Species, ObservationDict } from '../types/birdData'
 import calculateObservedBirdsCount from './calculate_observed_birds_count'
 
-const birds: Bird[] = [
+const birds: Species[] = [
   {
     scientificName: 'Tyto alba',
     englishName: 'Western Barn Owl',
