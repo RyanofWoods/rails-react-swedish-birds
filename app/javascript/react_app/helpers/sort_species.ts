@@ -2,8 +2,8 @@ import { Species, SpeciesSorting, ObservationDict, Observation } from '../types/
 import getNameAttribute from './name_helper'
 import { compareString } from './sort_helpers'
 
-interface SortBirdsOptions {
-  birds: Species[]
+interface SortSpeciesOptions {
+  species: Species[]
   observations: ObservationDict
   sorting: SpeciesSorting
   primaryNameLanguage: 'EN' | 'SE' | 'SC'
@@ -17,30 +17,30 @@ const observationToNumber = (observation: Observation): number => {
   return Date.parse(observation.observedAt)
 }
 
-export const sortBirds = ({ birds, observations, sorting, primaryNameLanguage }: SortBirdsOptions): Species[] => {
-  const sort = (birdsToSort: Species[]): Species[] => {
+export const sortSpecies = ({ species, observations, sorting, primaryNameLanguage }: SortSpeciesOptions): Species[] => {
+  const sort = (speciesToSort: Species[]): Species[] => {
     switch (sorting.column) {
       case 'seen':
-        return birdsToSort.sort((a, b) => {
+        return speciesToSort.sort((a, b) => {
           const aObservation = observations[a.scientificName]
           const bObservation = observations[b.scientificName]
           return observationToNumber(aObservation) - observationToNumber(bObservation)
         })
       case 'name':
-        return birdsToSort.sort((a, b) =>
+        return speciesToSort.sort((a, b) =>
           compareString(
             getNameAttribute(a, primaryNameLanguage),
             getNameAttribute(b, primaryNameLanguage)
           )
         )
       case 'population':
-        return birdsToSort.sort((a, b) => a.populationCategory - b.populationCategory)
+        return speciesToSort.sort((a, b) => a.populationCategory - b.populationCategory)
       default:
-        return birdsToSort
+        return speciesToSort
     }
   }
 
-  const birdsCopy = [...birds]
-  const sortedSpecies = sort(birdsCopy)
+  const speciesCopy = [...species]
+  const sortedSpecies = sort(speciesCopy)
   return (sorting.ordering === 'asc') ? sortedSpecies : sortedSpecies.reverse()
 }

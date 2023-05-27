@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { fetchBirds, createObservation, editObservation, searchBirds, fetchObservations, fetchOrders, fetchFamilies } from '../api'
 import filterBirds from '../helpers/filter_birds'
 import clickSortingColumn from '../helpers/click_sorting_column'
-import { sortBirds } from '../helpers/sort_birds'
+import { sortSpecies } from '../helpers/sort_species'
 import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/speciesData'
 
 const initialState: SpeciesDataState = {
@@ -32,11 +32,11 @@ const initialState: SpeciesDataState = {
 
 const refilterBirds = (state: SpeciesDataState): void => {
   state.filteredSpecies = filterBirds({ birds: state.species, filters: state.filters, observations: state.observations })
-  resortBirds(state)
+  resortSpecies(state)
 }
 
-const resortBirds = (state: SpeciesDataState): void => {
-  state.sortedSpecies = sortBirds({ birds: state.filteredSpecies, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+const resortSpecies = (state: SpeciesDataState): void => {
+  state.sortedSpecies = sortSpecies({ species: state.filteredSpecies, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
 const insertOrReplaceObservation = (state: SpeciesDataState, speciesScientificName: SpeciesScientificName, observation: Observation): void => {
@@ -62,7 +62,7 @@ export const birdSlice = createSlice({
     },
     updateSorting (state, action: PayloadAction<SpeciesColumn>) {
       state.sorting = clickSortingColumn({ sorting: state.sorting, clickedHeader: action.payload })
-      resortBirds(state)
+      resortSpecies(state)
     }
   },
   extraReducers: (builder) => {
