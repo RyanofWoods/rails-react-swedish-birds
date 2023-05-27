@@ -25,7 +25,7 @@ const BirdListHeader: React.FC = () => {
       classes: 'population-relative'
     }
   ]
-  const sorting = useAppSelector(state => state.birdsData.sorting)
+  const sorting = useAppSelector(state => state.speciesData.sorting)
   const dispatch = useAppDispatch()
 
   const onChangeHandler = (column: SpeciesColumn): void => {

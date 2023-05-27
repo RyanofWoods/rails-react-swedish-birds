@@ -7,13 +7,13 @@ import { useAppSelector, useAppDispatch } from '../../hooks'
 import { resetFilters } from '../../features/birdSlice'
 
 const FilterGroup: React.FC = () => {
-  const orders = useAppSelector(state => state.birdsData.orders)
-  const families = useAppSelector(state => state.birdsData.families)
-  const userSettings = useAppSelector(state => state.birdsData.userSettings)
-  const selectedOrderOption = useAppSelector(state => state.birdsData.filters.orderScientificNameScope)
-  const selectedFamilyOption = useAppSelector(state => state.birdsData.filters.familyScientificNameScope)
-  const selectedSeenValue = useAppSelector(state => state.birdsData.filters.seenScope)
-  const searchValue = useAppSelector(state => state.birdsData.filters.searchValue)
+  const orders = useAppSelector(state => state.speciesData.orders)
+  const families = useAppSelector(state => state.speciesData.families)
+  const userSettings = useAppSelector(state => state.speciesData.userSettings)
+  const selectedOrderOption = useAppSelector(state => state.speciesData.filters.orderScientificNameScope)
+  const selectedFamilyOption = useAppSelector(state => state.speciesData.filters.familyScientificNameScope)
+  const selectedSeenValue = useAppSelector(state => state.speciesData.filters.seenScope)
+  const searchValue = useAppSelector(state => state.speciesData.filters.searchValue)
 
   const dispatch = useAppDispatch()
 

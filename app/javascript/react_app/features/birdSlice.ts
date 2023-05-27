@@ -7,11 +7,11 @@ import { sortBirds } from '../helpers/sort_birds'
 import { SpeciesColumn, SpeciesFilters, SpeciesDataState, SpeciesScientificName, Observation } from '../types/speciesData'
 
 const initialState: SpeciesDataState = {
-  birds: [],
+  species: [],
   families: [],
   orders: [],
   observations: {},
-  filteredBirds: [],
+  filteredSpecies: [],
   filters: {
     searchScope: [],
     seenScope: 'all',
@@ -23,7 +23,7 @@ const initialState: SpeciesDataState = {
     column: null,
     ordering: 'asc'
   },
-  sortedBirds: [],
+  sortedSpecies: [],
   userSettings: {
     primaryNameLanguage: 'SE',
     secondaryNameLanguage: 'EN'
@@ -31,12 +31,12 @@ const initialState: SpeciesDataState = {
 }
 
 const refilterBirds = (state: SpeciesDataState): void => {
-  state.filteredBirds = filterBirds({ birds: state.birds, filters: state.filters, observations: state.observations })
+  state.filteredSpecies = filterBirds({ birds: state.species, filters: state.filters, observations: state.observations })
   resortBirds(state)
 }
 
 const resortBirds = (state: SpeciesDataState): void => {
-  state.sortedBirds = sortBirds({ birds: state.filteredBirds, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
+  state.sortedSpecies = sortBirds({ birds: state.filteredSpecies, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
 const insertOrReplaceObservation = (state: SpeciesDataState, speciesScientificName: SpeciesScientificName, observation: Observation): void => {
@@ -67,7 +67,7 @@ export const birdSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchBirds.fulfilled, (state, { payload }) => {
-      state.birds = payload.species
+      state.species = payload.species
       refilterBirds(state)
     })
     builder.addCase(fetchFamilies.fulfilled, (state, { payload }) => {

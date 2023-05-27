@@ -10,7 +10,7 @@ import flashMessageSlice from './features/flashMessageSlice'
 import userSlice from './features/userSlice'
 
 const reducer = {
-  birdsData: birdSlice.reducer,
+  speciesData: birdSlice.reducer,
   flashMessageData: flashMessageSlice.reducer,
   userData: userSlice.reducer
 }

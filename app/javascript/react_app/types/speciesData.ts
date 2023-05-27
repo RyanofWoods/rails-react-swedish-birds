@@ -1,12 +1,12 @@
 export interface SpeciesDataState {
-  birds: Species[]
+  species: Species[]
   families: Family[]
   orders: Order[]
   observations: ObservationDict
-  filteredBirds: Species[]
+  filteredSpecies: Species[]
   filters: SpeciesFilters
   sorting: SpeciesSorting
-  sortedBirds: Species[]
+  sortedSpecies: Species[]
   userSettings: UserSettings
 }
 

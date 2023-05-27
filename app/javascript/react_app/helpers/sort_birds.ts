@@ -41,6 +41,6 @@ export const sortBirds = ({ birds, observations, sorting, primaryNameLanguage }:
   }
 
   const birdsCopy = [...birds]
-  const sortedBirds = sort(birdsCopy)
-  return (sorting.ordering === 'asc') ? sortedBirds : sortedBirds.reverse()
+  const sortedSpecies = sort(birdsCopy)
+  return (sorting.ordering === 'asc') ? sortedSpecies : sortedSpecies.reverse()
 }
