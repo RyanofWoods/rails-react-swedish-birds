@@ -3,16 +3,16 @@ import { Species, Observation } from '../../types/speciesData'
 import Checkbox from './checkbox'
 
 interface CheckboxAndDateProps {
-  bird: Species
+  species: Species
   observation?: Observation
   handleChange: () => void
 }
 
-const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, observation, handleChange }) => {
+const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ species, observation, handleChange }) => {
   const seen = observation !== undefined
   const [showDate, setShowDate] = useState(seen)
 
-  const birdDateStyled = (): JSX.Element | null => {
+  const speciesDateStyled = (): JSX.Element | null => {
     if (observation === undefined) return null
 
     const dateContents = (): JSX.Element => {
@@ -40,10 +40,10 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, observation, ha
   }
 
   const checkboxProps = {
-    ariaLabel: 'Create observation for bird',
+    ariaLabel: 'Create observation for species',
     classes: 'checkbox-checked-hover-pointer-none',
     checked: seen,
-    id: bird.scientificName,
+    id: species.scientificName,
     onChange: handleChange
   }
 
@@ -54,7 +54,7 @@ const CheckboxAndDate: React.FC<CheckboxAndDateProps> = ({ bird, observation, ha
   return (
     <>
       {!showDate && <Checkbox showDateHandler={showDateHandler} {...checkboxProps} />}
-      {showDate && birdDateStyled()}
+      {showDate && speciesDateStyled()}
     </>
   )
 }
