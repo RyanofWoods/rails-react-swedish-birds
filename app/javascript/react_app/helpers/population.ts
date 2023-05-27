@@ -2,12 +2,12 @@ import { Species, PopulationCategory, PopulationLevel } from '../types/speciesDa
 
 const POPULATION_BREEDING_THRESHOLD = 5
 
-const isBreedingBird = (population: PopulationCategory): boolean => {
+const isBreeding = (population: PopulationCategory): boolean => {
   return population <= POPULATION_BREEDING_THRESHOLD
 }
 
 const populationCategoryToLevel = (populationCategory: PopulationCategory): PopulationLevel => {
-  const cappedCategory = isBreedingBird(populationCategory) ? populationCategory : populationCategory - POPULATION_BREEDING_THRESHOLD
+  const cappedCategory = isBreeding(populationCategory) ? populationCategory : populationCategory - POPULATION_BREEDING_THRESHOLD
   const inversedCategory = POPULATION_BREEDING_THRESHOLD + 1 - cappedCategory as PopulationLevel
   return inversedCategory
 }
@@ -80,4 +80,4 @@ const migrationText = (bird: Species): string => {
   return text.join('. ') + '.'
 }
 
-export { isBreedingBird, populationCategoryToLevel, populationInfo, migrationText }
+export { isBreeding, populationCategoryToLevel, populationInfo, migrationText }
