@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { fetchSpecies, fetchFamilies, fetchObservations, fetchOrders, isUserLoggedIn } from '../api'
 import { useAppDispatch } from '../hooks'
-import BirdList from './bird/bird_list'
-
+import SpeciesList from './bird/species_list'
 import Navbar from './shared/navbar'
 import FilterGroup from './filters/filter_group'
 import Counter from './filters/counter'
@@ -24,7 +23,7 @@ const App: React.FC = () => {
       {ReactDOM.createPortal(<Navbar />, navbarContainer)}
       <FilterGroup />
       <Counter />
-      <BirdList />
+      <SpeciesList />
       <FlashMessage />
     </>
   )
