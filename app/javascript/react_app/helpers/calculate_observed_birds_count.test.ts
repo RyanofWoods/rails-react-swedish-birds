@@ -1,7 +1,7 @@
 import { Species, ObservationDict } from '../types/speciesData'
-import calculateObservedBirdsCount from './calculate_observed_birds_count'
+import calculateObservedSpeciesCount from './calculate_observed_species_count'
 
-const birds: Species[] = [
+const species: Species[] = [
   {
     scientificName: 'Tyto alba',
     englishName: 'Western Barn Owl',
@@ -37,12 +37,12 @@ const observations: ObservationDict = {
     note: null
   }
 }
-test('when there are no birds or observations', () => {
-  const actual = calculateObservedBirdsCount([], {})
+test('when there are no species or observations', () => {
+  const actual = calculateObservedSpeciesCount([], {})
   expect(actual).toEqual(0)
 })
 
-test('when there are 3 birds and 1 observation', () => {
-  const actual = calculateObservedBirdsCount(birds, observations)
+test('when there are 3 species and 1 observation', () => {
+  const actual = calculateObservedSpeciesCount(species, observations)
   expect(actual).toEqual(1)
 })
