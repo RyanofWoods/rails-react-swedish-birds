@@ -38,7 +38,7 @@ const ObservationModal: React.FC<ObservationModalProps> = ({ close, bird, observ
     const action = (seen) ? editObservation : createObservation
 
     void dispatch(action({
-      birdScientificName: bird.scientificName,
+      speciesScientificName: bird.scientificName,
       observedAt: observationDate,
       note
     }))

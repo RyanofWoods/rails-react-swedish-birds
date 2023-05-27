@@ -39,8 +39,8 @@ const resortBirds = (state: SpeciesDataState): void => {
   state.sortedBirds = sortBirds({ birds: state.filteredBirds, observations: state.observations, sorting: state.sorting, primaryNameLanguage: state.userSettings.primaryNameLanguage })
 }
 
-const insertOrReplaceObservation = (state: SpeciesDataState, birdScientificName: SpeciesScientificName, observation: Observation): void => {
-  state.observations[birdScientificName] = observation
+const insertOrReplaceObservation = (state: SpeciesDataState, speciesScientificName: SpeciesScientificName, observation: Observation): void => {
+  state.observations[speciesScientificName] = observation
 }
 
 export const birdSlice = createSlice({
@@ -80,10 +80,10 @@ export const birdSlice = createSlice({
       state.observations = payload.observations
     })
     builder.addCase(createObservation.fulfilled, (state, { payload }) => {
-      insertOrReplaceObservation(state, payload.birdScientificName, payload.observation)
+      insertOrReplaceObservation(state, payload.speciesScientificName, payload.observation)
     })
     builder.addCase(editObservation.fulfilled, (state, { payload }) => {
-      insertOrReplaceObservation(state, payload.birdScientificName, payload.observation)
+      insertOrReplaceObservation(state, payload.speciesScientificName, payload.observation)
     })
     builder.addCase(searchBirds.pending, (state, action) => {
       state.filters.searchValue = action.meta.arg

@@ -17,12 +17,12 @@ export interface fetchObservationsResponse {
 }
 
 export interface createObservationRequest {
-  birdScientificName: SpeciesScientificName
+  speciesScientificName: SpeciesScientificName
   observedAt: string | 0
   note?: string | null
 }
 export interface editObservationRequest {
-  birdScientificName: SpeciesScientificName
+  speciesScientificName: SpeciesScientificName
   observedAt?: string | 0
   note?: string | null
 }

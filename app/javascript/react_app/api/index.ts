@@ -25,16 +25,16 @@ export const fetchObservations = createAsyncThunk('birds/fetchObservatons', asyn
 export const createObservation = createAsyncThunk(
   'birds/createObservation',
   async (args: createObservationRequest) => {
-    const response = await client.post<createObservationResponse>(`/species/${args.birdScientificName}/observations`, { observed_at: args.observedAt, note: args.note })
-    return { observation: response.result, birdScientificName: args.birdScientificName }
+    const response = await client.post<createObservationResponse>(`/species/${args.speciesScientificName}/observations`, { observed_at: args.observedAt, note: args.note })
+    return { observation: response.result, speciesScientificName: args.speciesScientificName }
   }
 )
 
 export const editObservation = createAsyncThunk(
   'birds/editObservation',
   async (args: editObservationRequest) => {
-    const response = await client.patch<editObservationResponse>(`/observations/${args.birdScientificName}`, { observed_at: args.observedAt, note: args.note })
-    return { observation: response.result, birdScientificName: args.birdScientificName }
+    const response = await client.patch<editObservationResponse>(`/observations/${args.speciesScientificName}`, { observed_at: args.observedAt, note: args.note })
+    return { observation: response.result, speciesScientificName: args.speciesScientificName }
   }
 )
 
