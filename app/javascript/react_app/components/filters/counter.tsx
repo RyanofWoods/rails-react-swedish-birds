@@ -3,20 +3,20 @@ import { useAppSelector } from '../../hooks'
 import calculateObservedSpeciesCount from '../../helpers/calculate_observed_species_count'
 
 const Counter = (): JSX.Element => {
-  const birds = useAppSelector(state => state.speciesData.sortedSpecies)
+  const species = useAppSelector(state => state.speciesData.sortedSpecies)
   const observations = useAppSelector(state => state.speciesData.observations)
-  const birdsTotal = birds.length
-  const birdsSeen = calculateObservedSpeciesCount(birds, observations)
+  const speciesTotal = species.length
+  const speciesSeen = calculateObservedSpeciesCount(species, observations)
 
   return (
     <div className='counter-section'>
       <div className='counter-item'>
-        <p>Number of birds:</p>
-        <p className='counter-number'>{birdsTotal}</p>
+        <p>Number of species:</p>
+        <p className='counter-number'>{speciesTotal}</p>
       </div>
       <div className='counter-item'>
-        <p>Birds seen:</p>
-        <p className='counter-number'>{birdsSeen}</p>
+        <p>Species seen:</p>
+        <p className='counter-number'>{speciesSeen}</p>
       </div>
     </div>
   )
