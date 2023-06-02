@@ -1,6 +1,6 @@
 import React from 'react'
-import { searchBirds } from '../../api'
-import { resetSearch } from '../../features/birdSlice'
+import { searchSpecies } from '../../api'
+import { resetSearch } from '../../features/speciesSlice'
 import { useAppDispatch } from '../../hooks'
 
 import Input from '../shared/input'
@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
   const dispatch = useAppDispatch()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    void dispatch(searchBirds(event.target.value))
+    void dispatch(searchSpecies(event.target.value))
   }
 
   const resetSearchBar = (): void => {
@@ -26,8 +26,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
         formGroupClasses='mt-0 search-container'
         id='search'
         type='text'
-        ariaLabel='search for a bird'
-        placeholder='Search for a bird...'
+        ariaLabel='search for a species'
+        placeholder='Search for a species...'
         handleChange={handleChange}
         value={searchValue}
       >

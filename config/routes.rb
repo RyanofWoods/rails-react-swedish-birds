@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
     resources :orders, :families, only: :index
 
-    resources :birds, only: :index do
+    resources :species, only: :index do
       resources :observations, only: [:create]
     end
 

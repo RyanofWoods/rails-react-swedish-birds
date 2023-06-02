@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Bird as BirdT, Observation, UserSettings } from '../../types/birdData'
+import { Species, Observation, UserSettings } from '../../types/speciesData'
 import PopulationBars from './population_bars'
 
 import ObservationModal from './observation_modal'
@@ -11,14 +11,14 @@ import { setFlashMessage } from '../../features/flashMessageSlice'
 import getNameAttribute from '../../helpers/name_helper'
 import { useAppDispatch } from '../../hooks'
 
-interface BirdProps {
-  bird: BirdT
+interface SpeciesProps {
+  species: Species
   observation: Observation
   userSettings: UserSettings
   isUserLoggedIn: boolean
 }
 
-const Bird: React.FC<BirdProps> = ({ bird, observation, userSettings, isUserLoggedIn }) => {
+const SpeciesCard: React.FC<SpeciesProps> = ({ species, observation, userSettings, isUserLoggedIn }) => {
   const dispatch = useAppDispatch()
   const [showSeenModal, setShowSeenModal] = useState(false)
   const [showDetailsModal, setShowDetailsModal] = useState(false)
@@ -51,29 +51,29 @@ const Bird: React.FC<BirdProps> = ({ bird, observation, userSettings, isUserLogg
   }
 
   return (
-    <li className='bird-card'>
-      {showInfoBox && <PopulationTooltip bird={bird} />}
-      <CheckboxAndDate bird={bird} observation={observation} handleChange={toggleSeenModal} />
-      <div className='bird-names'>
-        <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
-        <p>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
+    <li className='species-card'>
+      {showInfoBox && <PopulationTooltip species={species} />}
+      <CheckboxAndDate species={species} observation={observation} handleChange={toggleSeenModal} />
+      <div className='species-names'>
+        <p className='bold-600 m-0'>{getNameAttribute(species, userSettings.primaryNameLanguage)}</p>
+        <p>{getNameAttribute(species, userSettings.secondaryNameLanguage)}</p>
         <button className='link details-link' onClick={toggleDetailsModal}>Details</button>
       </div>
       <div onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} className='position-relative'>
-        <PopulationBars population={bird.populationCategory} />
+        <PopulationBars population={species.populationCategory} />
       </div>
       {
         showSeenModal && (
-          <ObservationModal close={toggleSeenModal} bird={bird} observation={observation} userSettings={userSettings} />
+          <ObservationModal close={toggleSeenModal} species={species} observation={observation} userSettings={userSettings} />
         )
       }
       {
         showDetailsModal && (
-          <DetailsModal close={toggleDetailsModal} bird={bird} observation={observation} userSettings={userSettings} />
+          <DetailsModal close={toggleDetailsModal} species={species} observation={observation} userSettings={userSettings} />
         )
       }
     </li>
   )
 }
 
-export default Bird
+export default SpeciesCard

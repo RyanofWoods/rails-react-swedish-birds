@@ -1,33 +1,33 @@
-export interface BirdDataState {
-  birds: Bird[]
+export interface SpeciesDataState {
+  species: Species[]
   families: Family[]
   orders: Order[]
   observations: ObservationDict
-  filteredBirds: Bird[]
-  filters: BirdFilters
-  sorting: BirdSorting
-  sortedBirds: Bird[]
+  filteredSpecies: Species[]
+  filters: SpeciesFilters
+  sorting: SpeciesSorting
+  sortedSpecies: Species[]
   userSettings: UserSettings
 }
 
 export type Language = 'EN' | 'SE' | 'SC'
 
 export type PopulationCategory = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-// represents the amount of birds - the inverse of populationCategory (but to 5)
+// represents the amount of species - the inverse of populationCategory (but to 5)
 // as 1 and 6 of populationCategory (breeding and non-breeding respectively) are the most common
 export type PopulationLevel = 1 | 2 | 3 | 4 | 5
 
-export type BirdScientificName = string
-type BirdEnglishName = string
-type BirdSwedishName = string
+export type SpeciesScientificName = string
+type SpeciesEnglishName = string
+type SpeciesSwedishName = string
 
 export type FamilyScientificName = string
 export type OrderScientificName = string
 
-export interface Bird {
-  scientificName: BirdScientificName
-  englishName: BirdEnglishName
-  swedishName: BirdSwedishName
+export interface Species {
+  scientificName: SpeciesScientificName
+  englishName: SpeciesEnglishName
+  swedishName: SpeciesSwedishName
   familyScientificName: FamilyScientificName
   orderScientificName: OrderScientificName
   details: string
@@ -35,7 +35,7 @@ export interface Bird {
 }
 
 export interface ObservationDict {
-  [birdScientificName: BirdScientificName]: Observation
+  [speciesScientificName: SpeciesScientificName]: Observation
 }
 export interface Observation {
   observedAt: string | null
@@ -44,20 +44,20 @@ export interface Observation {
 
 export type SeenScope = 'all' | 'seen' | 'unseen'
 
-export interface BirdFilters {
-  searchScope: BirdScientificName[]
+export interface SpeciesFilters {
+  searchScope: SpeciesScientificName[]
   seenScope: SeenScope
   orderScientificNameScope: string | null
   familyScientificNameScope: string | null
   searchValue: string
 }
 
-export interface BirdSorting {
-  column: BirdColumn | null
+export interface SpeciesSorting {
+  column: SpeciesColumn | null
   ordering: ColumnOrdering
 }
 
-export type BirdColumn = 'seen' | 'name' | 'population'
+export type SpeciesColumn = 'seen' | 'name' | 'population'
 export type ColumnOrdering = 'asc' | 'desc'
 
 export interface Family {

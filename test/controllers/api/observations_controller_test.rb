@@ -2,15 +2,19 @@ require 'test_helper'
 
 class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @new_bird = Bird.create(scientific_name: 'Neo', english_name: 'New', swedish_name: 'Ny', population_category: 1,
-                            family: families(:tits))
+    @new_species = Species.create(
+      scientific_name: 'Neo', english_name: 'New',
+      swedish_name: 'Ny', population_category: 1,
+      family: families(:tits)
+    )
     @user = users(:ryan)
     @observed_at = Date.today
 
     @family = families(:woodpeckers)
     @other_user = users(:sara)
-    @other_user.observations.create!(bird: birds(:great_spotted_woodpecker), observed_at: '2022-01-01', note: 'note')
-    @other_user.observations.create!(bird: birds(:green_woodpecker), observed_at: '2022-01-01')
+    @other_user.observations.create!(species: species(:great_spotted_woodpecker), observed_at: '2022-01-01',
+                                     note: 'note')
+    @other_user.observations.create!(species: species(:green_woodpecker), observed_at: '2022-01-01')
   end
 
   test "GET #index returns all the user's observations as a hash if logged in" do
@@ -20,11 +24,11 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     expected_observations = {
-      birds(:great_spotted_woodpecker).scientific_name => {
+      species(:great_spotted_woodpecker).scientific_name => {
         'observedAt' => '2022-01-01',
         'note' => 'note'
       },
-      birds(:green_woodpecker).scientific_name => {
+      species(:green_woodpecker).scientific_name => {
         'observedAt' => '2022-01-01',
         'note' => nil
       }
@@ -43,27 +47,27 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'POST #create returns an unauthorized response if there is no logged in user' do
-    post api_bird_observations_url(@new_bird.scientific_name)
+    post api_species_observations_url(@new_species.scientific_name)
 
     assert_response :unauthorized
     expected = { 'error' => 'You need to sign in or sign up before continuing.' }
     assert_equal(expected, json_response)
   end
 
-  test 'POST #create throws an error when the given bird scientific name is invalid' do
+  test 'POST #create throws an error when the given species scientific name is invalid' do
     sign_in @user
 
-    post api_bird_observations_url('Invalid name')
+    post api_species_observations_url('Invalid name')
 
     assert_response :bad_request
-    expected = { 'error' => 'Cannot find a bird with the scientific name of Invalid name.' }
+    expected = { 'error' => 'Cannot find a species with the scientific name of Invalid name.' }
     assert_equal(expected, json_response)
   end
 
   test 'POST #create throws an error when observed_at is not a date or 0' do
     sign_in @user
 
-    post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: nil })
+    post api_species_observations_url(@new_species.scientific_name, params: { observed_at: nil })
 
     assert_response :bad_request
     expected = { 'error' => 'Observed at must be a Date or zero.' }
@@ -75,7 +79,8 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     note = 'First observation notes'
 
     assert_difference('@user.observations.count', 1) do
-      post api_bird_observations_url(@new_bird.scientific_name, params: { note: note, observed_at: @observed_at.to_s })
+      post api_species_observations_url(@new_species.scientific_name,
+                                        params: { note: note, observed_at: @observed_at.to_s })
     end
     observation = @user.observations.last
     assert_response :success
@@ -91,7 +96,7 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
 
     assert_difference('@user.observations.count', 1) do
-      post api_bird_observations_url(@new_bird.scientific_name, params: { observed_at: '0' })
+      post api_species_observations_url(@new_species.scientific_name, params: { observed_at: '0' })
     end
     assert_response :success
     expected = {
@@ -102,43 +107,43 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'PATCH #update returns an unauthorized response if there is no logged in user' do
-    patch api_observation_url(@new_bird.scientific_name)
+    patch api_observation_url(@new_species.scientific_name)
 
     assert_response :unauthorized
     expected = { 'error' => 'You need to sign in or sign up before continuing.' }
     assert_equal(expected, json_response)
   end
 
-  test 'PATCH #update returns an error when the given bird scientific name is invalid' do
+  test 'PATCH #update returns an error when the given species scientific name is invalid' do
     sign_in @user
 
     patch api_observation_url('Invalid name', observed_at: 0, note: 'A new note.')
 
     assert_response :bad_request
-    expected = { 'error' => 'Cannot find a bird with the scientific name of Invalid name.' }
+    expected = { 'error' => 'Cannot find a species with the scientific name of Invalid name.' }
     assert_equal(expected, json_response)
   end
 
-  test 'PATCH #update returns an error when the user does not have an observation for the given bird' do
+  test 'PATCH #update returns an error when the user does not have an observation for the given species' do
     another_user = users(:sara)
-    another_user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    another_user.observations.create!(species: @new_species, observed_at: @observed_at.to_s, note: 'Note')
 
     sign_in @user
 
-    patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
+    patch api_observation_url(@new_species.scientific_name, observed_at: 0, note: 'A new note.')
 
     assert_response :not_found
     expected = {
-      'error' => %(No observation was found for a bird with a scientific name of "#{@new_bird.scientific_name}")
+      'error' => %(No observation was found for a species with a scientific name of "#{@new_species.scientific_name}")
     }
     assert_equal(expected, json_response)
   end
 
   test 'PATCH #update successfully edits the observation' do
-    @user.observations.create!(bird: @new_bird, observed_at: @observed_at.to_s, note: 'Note')
+    @user.observations.create!(species: @new_species, observed_at: @observed_at.to_s, note: 'Note')
     sign_in @user
 
-    patch api_observation_url(@new_bird.scientific_name, observed_at: 0, note: 'A new note.')
+    patch api_observation_url(@new_species.scientific_name, observed_at: 0, note: 'A new note.')
     assert_response :success
     observation = @user.observations.last
     assert_nil(nil, observation.observed_at)
@@ -151,11 +156,11 @@ class Api::ObservationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "PATCH #update successfully edits the observation and it doesn't override attributes when given nil" do
-    @user.observations.create(bird: @new_bird, observed_at: @observed_at, note: 'Note')
+    @user.observations.create(species: @new_species, observed_at: @observed_at, note: 'Note')
     sign_in @user
     new_date = Date.yesterday
 
-    patch api_observation_url(@new_bird.scientific_name, observed_at: new_date.to_s, note: nil)
+    patch api_observation_url(@new_species.scientific_name, observed_at: new_date.to_s, note: nil)
     assert_response :success
     observation = @user.observations.last
     assert_equal(new_date, observation.observed_at)

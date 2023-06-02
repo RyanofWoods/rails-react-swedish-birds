@@ -1,11 +1,11 @@
-import { Bird, BirdSorting, ObservationDict, Observation } from '../types/birdData'
+import { Species, SpeciesSorting, ObservationDict, Observation } from '../types/speciesData'
 import getNameAttribute from './name_helper'
 import { compareString } from './sort_helpers'
 
-interface SortBirdsOptions {
-  birds: Bird[]
+interface SortSpeciesOptions {
+  species: Species[]
   observations: ObservationDict
-  sorting: BirdSorting
+  sorting: SpeciesSorting
   primaryNameLanguage: 'EN' | 'SE' | 'SC'
 }
 
@@ -17,30 +17,30 @@ const observationToNumber = (observation: Observation): number => {
   return Date.parse(observation.observedAt)
 }
 
-export const sortBirds = ({ birds, observations, sorting, primaryNameLanguage }: SortBirdsOptions): Bird[] => {
-  const sort = (birdsToSort: Bird[]): Bird[] => {
+export const sortSpecies = ({ species, observations, sorting, primaryNameLanguage }: SortSpeciesOptions): Species[] => {
+  const sort = (speciesToSort: Species[]): Species[] => {
     switch (sorting.column) {
       case 'seen':
-        return birdsToSort.sort((a, b) => {
+        return speciesToSort.sort((a, b) => {
           const aObservation = observations[a.scientificName]
           const bObservation = observations[b.scientificName]
           return observationToNumber(aObservation) - observationToNumber(bObservation)
         })
       case 'name':
-        return birdsToSort.sort((a, b) =>
+        return speciesToSort.sort((a, b) =>
           compareString(
             getNameAttribute(a, primaryNameLanguage),
             getNameAttribute(b, primaryNameLanguage)
           )
         )
       case 'population':
-        return birdsToSort.sort((a, b) => a.populationCategory - b.populationCategory)
+        return speciesToSort.sort((a, b) => a.populationCategory - b.populationCategory)
       default:
-        return birdsToSort
+        return speciesToSort
     }
   }
 
-  const birdsCopy = [...birds]
-  const sortedBirds = sort(birdsCopy)
-  return (sorting.ordering === 'asc') ? sortedBirds : sortedBirds.reverse()
+  const speciesCopy = [...species]
+  const sortedSpecies = sort(speciesCopy)
+  return (sorting.ordering === 'asc') ? sortedSpecies : sortedSpecies.reverse()
 }

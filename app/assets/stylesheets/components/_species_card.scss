@@ -1,4 +1,4 @@
-.bird-card {
+.species-card {
   display: flex;
   align-items: center;
   background-color: white;
@@ -12,7 +12,7 @@
     font-size: 0.875rem;
   }
   
-  .bird-date {
+  .species-date {
     background: none;
     border: none;
     color: inherit;
@@ -22,7 +22,7 @@
     line-height: 1rem;
     width: 36px;
   }
-  .bird-names {
+  .species-names {
     margin: 0 12px;
     display: flex;
     flex-grow: 1;
@@ -30,7 +30,7 @@
   }
 }
 
-.bird-card + .bird-card {
+.species-card + .species-card {
   margin-top: 12px;
 }
 

@@ -1,7 +1,7 @@
-import { Bird, BirdScientificName, ObservationDict, Order, Family, Observation } from './birdData'
+import { Species, SpeciesScientificName, ObservationDict, Order, Family, Observation } from './speciesData'
 
-export interface fetchBirdsResponse {
-  birds: Bird[]
+export interface fetchSpeciesResponse {
+  species: Species[]
 }
 
 export interface fetchFamiliesResponse {
@@ -17,12 +17,12 @@ export interface fetchObservationsResponse {
 }
 
 export interface createObservationRequest {
-  birdScientificName: BirdScientificName
+  speciesScientificName: SpeciesScientificName
   observedAt: string | 0
   note?: string | null
 }
 export interface editObservationRequest {
-  birdScientificName: BirdScientificName
+  speciesScientificName: SpeciesScientificName
   observedAt?: string | 0
   note?: string | null
 }
@@ -30,8 +30,8 @@ export interface editObservationRequest {
 export interface createObservationResponse extends Observation {}
 export interface editObservationResponse extends Observation {}
 
-export interface searchBirdsResponse {
-  birds: BirdScientificName[]
+export interface searchSpeciesResponse {
+  species: SpeciesScientificName[]
 }
 
 export interface isUserLoggedInResponse {

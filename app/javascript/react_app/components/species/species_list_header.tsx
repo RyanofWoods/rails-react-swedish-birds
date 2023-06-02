@@ -1,38 +1,38 @@
 import React from 'react'
-import { updateSorting } from '../../features/birdSlice'
+import { updateSorting } from '../../features/speciesSlice'
 import { capitalize } from '../../helpers/string_helpers'
 import { useAppDispatch, useAppSelector } from '../../hooks'
-import { BirdColumn } from '../../types/birdData'
+import { SpeciesColumn } from '../../types/speciesData'
 import SortIcon from '../shared/sort_icon'
 
 interface ColumnOption {
-  column: BirdColumn
+  column: SpeciesColumn
   classes: string
 }
 
-const BirdListHeader: React.FC = () => {
+const SpeciesListHeader: React.FC = () => {
   const columnOptions: ColumnOption[] = [
     {
       column: 'seen',
-      classes: 'bird-date'
+      classes: 'species-date'
     },
     {
       column: 'name',
-      classes: 'bird-names'
+      classes: 'species-names'
     },
     {
       column: 'population',
       classes: 'population-relative'
     }
   ]
-  const sorting = useAppSelector(state => state.birdsData.sorting)
+  const sorting = useAppSelector(state => state.speciesData.sorting)
   const dispatch = useAppDispatch()
 
-  const onChangeHandler = (column: BirdColumn): void => {
+  const onChangeHandler = (column: SpeciesColumn): void => {
     dispatch(updateSorting(column))
   }
 
-  const columnText = (column: BirdColumn): JSX.Element => {
+  const columnText = (column: SpeciesColumn): JSX.Element => {
     const ordering = (sorting.column === column) ? sorting.ordering : null
 
     return (
@@ -46,7 +46,7 @@ const BirdListHeader: React.FC = () => {
   }
 
   return (
-    <div id='sorting-header' className='bird-card'>
+    <div id='sorting-header' className='species-card'>
       {
         columnOptions.map(({ column, classes }) => (
           <button key={column} className={classes} onClick={() => onChangeHandler(column)}>
@@ -58,4 +58,4 @@ const BirdListHeader: React.FC = () => {
   )
 }
 
-export default BirdListHeader
+export default SpeciesListHeader

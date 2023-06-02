@@ -1,11 +1,11 @@
 class Api::ObservationsController < Api::BaseController
   before_action :ensure_logged_in, only: [:create, :update]
-  before_action :set_bird, only: [:create, :update]
+  before_action :set_species, only: [:create, :update]
   before_action :set_observation, only: [:update]
 
   def index
     if signed_in?
-      @observations = current_user.observations.joins(:bird).select(:note, :observed_at, :scientific_name)
+      @observations = current_user.observations.joins(:species).select(:note, :observed_at, :scientific_name)
       render :index
     else
       render json: { observations: {} }, status: :ok
@@ -13,9 +13,9 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def create
-    return unknown_bird unless @bird
+    return unknown_species unless @species
 
-    @observation = current_user.observations.new(observation_params.merge(bird: @bird))
+    @observation = current_user.observations.new(observation_params.merge(species: @species))
 
     if @observation.save
       render :show
@@ -25,7 +25,7 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def update
-    return unknown_bird unless @bird
+    return unknown_species unless @species
 
     return no_observation unless @observation
 
@@ -38,8 +38,8 @@ class Api::ObservationsController < Api::BaseController
 
   private
 
-  def unknown_bird
-    throw_error(error: "Cannot find a bird with the scientific name of #{bird_scientific_name}.")
+  def unknown_species
+    throw_error(error: "Cannot find a species with the scientific name of #{species_scientific_name}.")
   end
 
   def throw_error(error: 'Bad request')
@@ -47,20 +47,22 @@ class Api::ObservationsController < Api::BaseController
   end
 
   def no_observation
-    render json: { error: %(No observation was found for a bird with a scientific name of "#{bird_scientific_name}") },
+    render json: {
+      error: %(No observation was found for a species with a scientific name of "#{species_scientific_name}")
+    },
            status: :not_found
   end
 
-  def set_bird
-    @bird = Bird.find_by(scientific_name: bird_scientific_name.capitalize)
+  def set_species
+    @species = Species.find_by(scientific_name: species_scientific_name.capitalize)
   end
 
   def set_observation
-    @observation = current_user.observations.find_by(bird: @bird)
+    @observation = current_user.observations.find_by(species: @species)
   end
 
-  def bird_scientific_name
-    params[:bird_id] || params[:id]
+  def species_scientific_name
+    params[:species_id] || params[:id]
   end
 
   def observation_params

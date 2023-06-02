@@ -1,11 +1,11 @@
-import { BirdColumn, BirdSorting } from '../types/birdData'
+import { SpeciesColumn, SpeciesSorting } from '../types/speciesData'
 
 interface ClickSortingColumnOptions {
-  sorting: BirdSorting
-  clickedHeader: BirdColumn
+  sorting: SpeciesSorting
+  clickedHeader: SpeciesColumn
 }
 
-const clickSortingColumn = ({ sorting, clickedHeader }: ClickSortingColumnOptions): BirdSorting => {
+const clickSortingColumn = ({ sorting, clickedHeader }: ClickSortingColumnOptions): SpeciesSorting => {
   if (sorting.column === clickedHeader) {
     if (sorting.ordering === 'asc') {
       return { ...sorting, ordering: 'desc' }

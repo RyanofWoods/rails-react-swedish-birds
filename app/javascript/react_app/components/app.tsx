@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { fetchBirds, fetchFamilies, fetchObservations, fetchOrders, isUserLoggedIn } from '../api'
+import { fetchSpecies, fetchFamilies, fetchObservations, fetchOrders, isUserLoggedIn } from '../api'
 import { useAppDispatch } from '../hooks'
-import BirdList from './bird/bird_list'
-
+import SpeciesList from './species/species_list'
 import Navbar from './shared/navbar'
 import FilterGroup from './filters/filter_group'
 import Counter from './filters/counter'
@@ -14,7 +13,7 @@ const navbarContainer = document.getElementById('navbar-container') as HTMLEleme
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
   void dispatch(isUserLoggedIn())
-  void dispatch(fetchBirds())
+  void dispatch(fetchSpecies())
   void dispatch(fetchFamilies())
   void dispatch(fetchOrders())
   void dispatch(fetchObservations())
@@ -24,7 +23,7 @@ const App: React.FC = () => {
       {ReactDOM.createPortal(<Navbar />, navbarContainer)}
       <FilterGroup />
       <Counter />
-      <BirdList />
+      <SpeciesList />
       <FlashMessage />
     </>
   )

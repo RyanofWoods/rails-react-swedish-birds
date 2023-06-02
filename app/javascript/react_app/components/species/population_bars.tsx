@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { PopulationCategory } from '../../types/birdData'
-import { isBreedingBird, populationCategoryToLevel } from '../../helpers/population'
+import { PopulationCategory } from '../../types/speciesData'
+import { isBreeding, populationCategoryToLevel } from '../../helpers/population'
 
 interface PopulationBarsProps {
   population: PopulationCategory
@@ -9,7 +9,7 @@ interface PopulationBarsProps {
 
 const PopulationBars: React.FC<PopulationBarsProps> = ({ population }) => {
   const populationLevel = populationCategoryToLevel(population)
-  const color = (isBreedingBird(population)) ? 'bar-orange' : 'bar-blue'
+  const color = (isBreeding(population)) ? 'bar-orange' : 'bar-blue'
 
   return (
     <div className='population-bars'>

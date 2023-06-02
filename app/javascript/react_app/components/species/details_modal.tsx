@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import Modal from '../shared/modal'
 
-import { Bird, Observation, UserSettings } from '../../types/birdData'
+import { Species, Observation, UserSettings } from '../../types/speciesData'
 import PopulationBars from './population_bars'
 import { populationInfo, migrationText } from '../../helpers/population'
-import BirdHouse from './bird_house'
+import HouseIcon from './house_icon'
 import getNameAttribute from '../../helpers/name_helper'
 import ObservationModal from './observation_modal'
 
 interface DetailsModalProps {
   close: () => void
-  bird: Bird
+  species: Species
   observation?: Observation
   userSettings: UserSettings
 }
 
-const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, userSettings }) => {
+const DetailsModal: React.FC<DetailsModalProps> = ({ close, species, observation, userSettings }) => {
   const [showObservationModal, setShowObservationModal] = useState(false)
   const seen = observation != null
   const toggleObservationModal = (): void => {
@@ -56,18 +56,18 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, u
 
   const migrationSection = (): JSX.Element => (
     <div className='population-bars-container'>
-      <BirdHouse population={bird.populationCategory} />
-      <p>{migrationText(bird)}</p>
+      <HouseIcon population={species.populationCategory} />
+      <p>{migrationText(species)}</p>
     </div>
   )
 
   return (
-    <Modal title='Bird details' close={close}>
+    <Modal title='Species details' close={close}>
       <div className='detailsModalContent modal-body'>
 
         <h4>Name</h4>
-        <p className='bold-600 m-0'>{getNameAttribute(bird, userSettings.primaryNameLanguage)}</p>
-        <p className='m-0'>{getNameAttribute(bird, userSettings.secondaryNameLanguage)}</p>
+        <p className='bold-600 m-0'>{getNameAttribute(species, userSettings.primaryNameLanguage)}</p>
+        <p className='m-0'>{getNameAttribute(species, userSettings.secondaryNameLanguage)}</p>
 
         <h4 className='mt-4'>Information</h4>
         <p className='mb-3'>Information regarding to Sweden</p>
@@ -75,8 +75,8 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, u
         {migrationSection()}
 
         <div className='population-bars-container'>
-          <PopulationBars population={bird.populationCategory} />
-          <p>{populationInfo(bird)}</p>
+          <PopulationBars population={species.populationCategory} />
+          <p>{populationInfo(species)}</p>
         </div>
 
         {seen && observationDetails()}
@@ -96,7 +96,7 @@ const DetailsModal: React.FC<DetailsModalProps> = ({ close, bird, observation, u
       </div>
       {
         showObservationModal && (
-          <ObservationModal close={toggleObservationModal} bird={bird} observation={observation} userSettings={userSettings} />
+          <ObservationModal close={toggleObservationModal} species={species} observation={observation} userSettings={userSettings} />
         )
       }
     </Modal>
