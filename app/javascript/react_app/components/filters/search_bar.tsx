@@ -1,16 +1,13 @@
 import React from 'react'
 import { searchSpecies } from '../../api'
 import { resetSearch } from '../../features/speciesSlice'
-import { useAppDispatch } from '../../hooks'
+import { useAppDispatch, useAppSelector } from '../../hooks'
 
 import Input from '../shared/input'
 
-interface SearchBarProps {
-  searchValue: string
-}
-
-const SearchBar: React.FC<SearchBarProps> = ({ searchValue }) => {
+const SearchBar: React.FC = () => {
   const dispatch = useAppDispatch()
+  const searchValue = useAppSelector(state => state.speciesData.filters.searchValue)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     void dispatch(searchSpecies(event.target.value))
