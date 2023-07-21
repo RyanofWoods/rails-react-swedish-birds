@@ -1,15 +1,12 @@
 import React from 'react'
 import FilterRadioButtonGroup, { RadioOption } from '../shared/filter_radio_group'
 import { updateFilters } from '../../features/speciesSlice'
-import { useAppDispatch } from '../../hooks'
+import { useAppDispatch, useAppSelector } from '../../hooks'
 import { SeenScope } from '../../types/speciesData'
 
-interface SeenSpeciesFilterProps {
-  selectedValue: SeenScope
-}
-
-const SeenSpeciesFilter: React.FC<SeenSpeciesFilterProps> = ({ selectedValue }) => {
+const SeenSpeciesFilter: React.FC = () => {
   const dispatch = useAppDispatch()
+  const selectedSeenValue = useAppSelector(state => state.speciesData.filters.seenScope)
 
   const options: Array<RadioOption<SeenScope>> = [
     { value: 'all', label: 'All species' },
@@ -22,7 +19,7 @@ const SeenSpeciesFilter: React.FC<SeenSpeciesFilterProps> = ({ selectedValue }) 
   }
 
   return (
-    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue={selectedValue} name='specieslist' handleOnChange={handleChange} />
+    <FilterRadioButtonGroup<SeenScope> options={options} arialabel='label' selectedValue={selectedSeenValue} name='specieslist' handleOnChange={handleChange} />
   )
 }
 

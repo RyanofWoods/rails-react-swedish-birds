@@ -2,22 +2,18 @@ import React, { useEffect, useState } from 'react'
 
 import { updateFilters } from '../../features/speciesSlice'
 import getNameAttribute from '../../helpers/name_helper'
-import { useAppDispatch } from '../../hooks'
-import { Family, Order, FamilyScientificName, OrderScientificName, UserSettings } from '../../types/speciesData'
+import { useAppDispatch, useAppSelector } from '../../hooks'
+import { Family, Order, FamilyScientificName, OrderScientificName } from '../../types/speciesData'
 import Select, { Option } from '../shared/select'
 
-interface FamilyAndOrderFilterProps {
-  families: Family[]
-  orders: Order[]
-  userSettings: UserSettings
-  selectedOrderOption: string | null
-  selectedFamilyOption: string | null
-}
-
-const FamilyAndOrderFilter: React.FC<FamilyAndOrderFilterProps> = (props) => {
-  const { families, orders, userSettings, selectedOrderOption, selectedFamilyOption } = props
-
+const FamilyAndOrderFilter: React.FC = () => {
   const dispatch = useAppDispatch()
+  const orders = useAppSelector(state => state.speciesData.orders)
+  const families = useAppSelector(state => state.speciesData.families)
+  const userSettings = useAppSelector(state => state.speciesData.userSettings)
+  const selectedOrderOption = useAppSelector(state => state.speciesData.filters.orderScientificNameScope)
+  const selectedFamilyOption = useAppSelector(state => state.speciesData.filters.familyScientificNameScope)
+
   const [filteredFamilies, setFilteredFamilies] = useState(families)
 
   const updateFamiliesBySelectedOrder = (): void => {
